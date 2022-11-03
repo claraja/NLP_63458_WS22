@@ -1,0 +1,461 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  3 NOV 2022 21:07
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**expose.tex
+(./expose.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-02-25>
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/koma-script/sc
+rreprt.cls
+Document Class: scrreprt 2020/01/24 v3.29 KOMA-Script document class (report)
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/koma-script/sc
+rkbase.sty
+Package: scrkbase 2020/01/24 v3.29 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/koma-script/sc
+rbase.sty
+Package: scrbase 2020/01/24 v3.29 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/graphics/keyva
+l.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/koma-script/sc
+rlfile.sty
+Package: scrlfile 2020/01/24 v3.29 KOMA-Script package (loading files)
+)))
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/koma-script/to
+cbasic.sty
+Package: tocbasic 2020/01/24 v3.29 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip47
+\scr@dte@tocline@numbox=\box45
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 137.
+Package scrreprt Info: You've used standard option `11pt'.
+(scrreprt)             This is correct!
+(scrreprt)             Internally I'm using `fontsize=11pt'.
+(scrreprt)             If you'd like to set the option with \KOMAoptions,
+(scrreprt)             you'd have to use `fontsize=11pt' there
+(scrreprt)             instead of `11pt', too.
+Class scrreprt Info: File `scrsize11pt.clo' used to setup font sizes on input l
+ine 2421.
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/koma-script/sc
+rsize11pt.clo
+File: scrsize11pt.clo 2020/01/24 v3.29 KOMA-Script font size class option (11pt
+)
+)
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/koma-script/ty
+pearea.sty
+Package: typearea 2020/01/24 v3.29 KOMA-Script package (type area)
+\ta@bcor=\skip48
+\ta@div=\count167
+Package typearea Info: You've used standard option `a4paper'.
+(typearea)             This is correct!
+(typearea)             Internally I'm using `paper=a4'.
+(typearea)             If you'd like to set the option with \KOMAoptions,
+(typearea)             you'd have to use `paper=a4' there
+(typearea)             instead of `a4paper', too.
+\ta@hblk=\skip49
+\ta@vblk=\skip50
+\ta@temp=\skip51
+\footheight=\skip52
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 10
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 418.25555pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 17.3562pt
+(typearea)              \oddsidemargin  = 17.3562pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 595.80026pt
+(typearea)              \topmargin      = -25.16531pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 20.40001pt
+(typearea)              \topskip        = 11.0pt
+(typearea)              \footskip       = 47.6pt
+(typearea)              \baselineskip   = 13.6pt
+(typearea)              on input line 1719.
+)
+\c@part=\count168
+\c@chapter=\count169
+\c@section=\count170
+\c@subsection=\count171
+\c@subsubsection=\count172
+\c@paragraph=\count173
+\c@subparagraph=\count174
+\scr@dte@chapter@maxnumwidth=\skip53
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\chapter on input line 5547.
+\scr@dte@section@maxnumwidth=\skip54
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\section on input line 5557.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\section on input line 5557.
+\scr@dte@part@maxnumwidth=\skip55
+Class scrreprt Info: using compatibility default `afterindent=true'
+(scrreprt)           for `\part on input line 5566.
+\scr@dte@subsection@maxnumwidth=\skip56
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\subsection on input line 5576.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\subsection on input line 5576.
+\scr@dte@subsubsection@maxnumwidth=\skip57
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\subsubsection on input line 5586.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\subsubsection on input line 5586.
+\scr@dte@paragraph@maxnumwidth=\skip58
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\paragraph on input line 5596.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\paragraph on input line 5596.
+\scr@dte@subparagraph@maxnumwidth=\skip59
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\subparagraph on input line 5606.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\subparagraph on input line 5606.
+\abovecaptionskip=\skip60
+\belowcaptionskip=\skip61
+\c@pti@nb@sid@b@x=\box46
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 6842.
+\scr@dte@figure@maxnumwidth=\skip62
+\c@figure=\count175
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 6859.
+\scr@dte@table@maxnumwidth=\skip63
+\c@table=\count176
+Class scrreprt Info: Redefining `\numberline' on input line 7028.
+\bibindent=\dimen134
+)
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/geometry/geome
+try.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/generic/iftex/ifvtex
+.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/generic/iftex/iftex.
+sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+))
+\Gm@cnth=\count177
+\Gm@cntv=\count178
+\c@Gm@tempcnt=\count179
+\Gm@bindingoffset=\dimen135
+\Gm@wd@mp=\dimen136
+\Gm@odd@mp=\dimen137
+\Gm@even@mp=\dimen138
+\Gm@layoutwidth=\dimen139
+\Gm@layoutheight=\dimen140
+\Gm@layouthoffset=\dimen141
+\Gm@layoutvoffset=\dimen142
+\Gm@dimlist=\toks16
+)
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/base/inputenc.
+sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+)
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/base/fontenc.s
+ty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+)
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/generic/babel/babel.
+sty
+Package: babel 2020/02/28 3.41 The Babel package
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/generic/babel/switch
+.def
+File: switch.def 2020/02/28 3.41 Babel switching mechanism
+)
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/generic/babel-german
+/german.ldf
+Language: german 2018/12/08 v2.11 German support for babel (pre-1996 orthograph
+y)
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/generic/babel-german
+/germanb.ldf
+Language: germanb 2018/12/08 v2.11 German support for babel (pre-1996 orthograp
+hy)
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/generic/babel/babel.
+def
+File: babel.def 2020/02/28 3.41 Babel common definitions
+\babel@savecnt=\count180
+\U@D=\dimen143
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/generic/babel/txtbab
+el.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count181
+)
+Package babel Info: Making " an active character on input line 135.
+))
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/generic/babel-german
+/ngerman.ldf
+Language: ngerman 2018/12/08 v2.11 German support for babel (post-1996 orthogra
+phy)
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/generic/babel-german
+/ngermanb.ldf
+Language: ngermanb 2018/12/08 v2.11 German support for babel (post-1996 orthogr
+aphy)
+)))
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/tabto-ltx/tabt
+o.sty
+Package: tabto 2018/12/28  v 1.4  Another tabbing mechanism
+\CurrentLineWidth=\dimen144
+\TabPrevPos=\dimen145
+)
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/lipsum/lipsum.
+sty
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/l3kernel/expl3
+.sty
+Package: expl3 2020-02-25 L3 programming layer (loader) 
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/l3backend/l3ba
+ckend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-23 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count182
+\l__pdf_internal_box=\box47
+))
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/l3packages/xpa
+rse/xparse.sty
+Package: xparse 2020-02-25 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count183
+\g__xparse_grabber_int=\count184
+\l__xparse_m_args_int=\count185
+\l__xparse_v_nesting_int=\count186
+)
+Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/lipsum/lipsum.
+ltd.tex
+File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
+))
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/graphics/graph
+icx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/graphics/graph
+ics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/graphics/trig.
+sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/graphics-cfg/g
+raphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/graphics-def/p
+dftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen146
+\Gin@req@width=\dimen147
+)
+\c@question=\count187
+ (./expose.aux)
+\openout1 = `expose.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(85.35826pt, 658.28194pt, 101.40665pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=658.28194pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-24.31174pt
+* \headheight=17.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=47.6pt
+* \marginparwidth=59.7508pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/context/base/mkii/su
+pp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count188
+\scratchdimen=\dimen148
+\scratchbox=\box48
+\nofMPsegments=\count189
+\nofMParguments=\count190
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count191
+\MPscratchDim=\dimen149
+\MPnumerator=\count192
+\makeMPintoPDFobject=\count193
+\everyMPtoPDFconversion=\toks20
+)
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/epstopdf-pkg/e
+pstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/latexconfig/ep
+stopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)) (./deckblatt.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 35.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 35.
+ [1
+
+
+
+{c:/Programme/Textverarbeitung/TexLive/2019/texmf-var/fonts/map/pdftex/updmap/p
+dftex.map}]) (./expose.toc)
+\tf@toc=\write3
+\openout3 = `expose.toc'.
+
+
+(./einleitung.tex [2
+
+]
+chapter 1.
+) (./motivation.tex [3
+
+]
+chapter 2.
+) (./problembeschreibung.tex [4
+
+]
+chapter 3.
+LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
+17.
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/base/ts1cmss.f
+d
+File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)) (./forschungsfragen.tex [5
+
+]
+chapter 4.
+LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <10.95> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 5.
+) (./forschungsmethode.tex [6
+
+]
+chapter 5.
+
+LaTeX Warning: Citation `nunamaker_systems_1990-1' on page 7 undefined on input
+ line 6.
+
+<pictures/Nunamaker2.png, id=27, 1336.995pt x 917.4275pt>
+File: pictures/Nunamaker2.png Graphic file (type png)
+<use pictures/Nunamaker2.png>
+Package pdftex.def Info: pictures/Nunamaker2.png  used on input line 10.
+(pdftex.def)             Requested size: 426.79135pt x 292.85486pt.
+
+LaTeX Warning: Citation `nunamaker_systems_1990-1' on page 7 undefined on input
+ line 11.
+
+
+LaTeX Warning: Citation `nunamaker_systems_1990-1' on page 7 undefined on input
+ line 11.
+
+[7
+
+ <./pictures/Nunamaker2.png (PNG copy)>]) (./loesungsansatz.tex [8]
+chapter 6.
+) (./stand_der_wissenschaft.tex [9
+
+]
+chapter 7.
+) (./arbeits_und_zeitplan.tex [10
+
+]
+chapter 8.
+<pictures/zeitplan.png, id=41, 1658.195pt x 807.015pt>
+File: pictures/zeitplan.png Graphic file (type png)
+<use pictures/zeitplan.png>
+Package pdftex.def Info: pictures/zeitplan.png  used on input line 6.
+(pdftex.def)             Requested size: 426.79135pt x 207.70093pt.
+) [11
+
+ <./pictures/zeitplan.png>] (./expose.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 5986 strings out of 480994
+ 117598 string characters out of 5902830
+ 741367 words of memory out of 5000000
+ 21434 multiletter control sequences out of 15000+600000
+ 536065 words of font info for 36 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 45i,6n,72p,10218b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/enc/dvips/cm-sup
+er/cm-super-ts1.enc}<c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/font
+s/type1/public/amsfonts/cm/cmss10.pfb><c:/Programme/Textverarbeitung/TexLive/20
+19/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/Programme/Textverar
+beitung/TexLive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb><c:/P
+rogramme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmssbx10.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmssi10.pfb><c:/Programme/Textverarbeitung/TexLive/2019/t
+exmf-dist/fonts/type1/public/cm-super/sfss1095.pfb>
+Output written on expose.pdf (11 pages, 271323 bytes).
+PDF statistics:
+ 69 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+
