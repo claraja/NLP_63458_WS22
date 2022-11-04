@@ -1,0 +1,6 @@
+<http://id.nlm.nih.gov/mesh/M0006028>	<http://id.nlm.nih.gov/mesh/vocab#identifier>	"M0006028" .
+<http://id.nlm.nih.gov/mesh/M0006028>	<http://id.nlm.nih.gov/mesh/vocab#narrowerConcept>	<http://id.nlm.nih.gov/mesh/M0006029> .
+<http://id.nlm.nih.gov/mesh/M0006028>	<http://id.nlm.nih.gov/mesh/vocab#preferredTerm>	<http://id.nlm.nih.gov/mesh/T011484> .
+<http://id.nlm.nih.gov/mesh/M0006028>	<http://id.nlm.nih.gov/mesh/vocab#scopeNote>	"Depressive states usually of moderate intensity in contrast with MAJOR DEPRESSIVE DISORDER present in neurotic and psychotic disorders."@en .
+<http://id.nlm.nih.gov/mesh/M0006028>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://id.nlm.nih.gov/mesh/vocab#Concept> .
+<http://id.nlm.nih.gov/mesh/M0006028>	<http://www.w3.org/2000/01/rdf-schema#label>	"Depression"@en .
