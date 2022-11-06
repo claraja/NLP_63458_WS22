@@ -11,6 +11,20 @@
 
 \newtheorem{question}{Frage}
 
+
+%*************************************************************************
+% Note: Make all your adjustments in here
+%*************************************************************************
+\input{fernuni-hagen-thesis-config}
+\input{classicthesis-config}
+
+%*************************************************************************
+% Bibliographies
+%*************************************************************************
+%\addbibresource{bibliography.bib}
+\addbibresource{NLP.bib}
+%*************************************************************************
+
 \begin{document}
 \input{deckblatt}
 \tableofcontents
@@ -18,13 +32,14 @@
 \input{motivation} 
 \input{problembeschreibung} 
 \input{forschungsfragen} 
-\input{forschungsmethode}
-\input{loesungsansatz}
+%\input{forschungsmethode}
+%\input{loesungsansatz}
 \input{stand_der_wissenschaft}
 \input{arbeits_und_zeitplan} 
 
-\bibliographystyle{abbrv}
-%\usepackage[style=ieee-alphabetic, backend=biber, natbib=true]{biblatex}
+%\bibliographystyle{abbrv}
+\cleardoublepage\include{bibliography}
+\usepackage[style=ieee-alphabetic, backend=biber, natbib=true]{biblatex}
 %\addbibresource{literatur.bib}
 %\bibliography{literatur} % Daten aus der Datei literatur.bib verwenden.
 \end{document}
