@@ -1,17 +1,29 @@
 % !TEX root =expose.tex
 \chapter{Motivation}
 
-Die spezielle Herausforderung unserer Praktikumsaufgabe liegt darin, automatisiert Zusammenhänge zwischen Entitäten 
-medizinischer Texte zu finden und diese Zusammenhänge zu repräsentieren.
-Dem zugrunde liegt das Ziel des Dissertationsprojektes von Stefanie Heidepriem, zu erforschen, wie ein textbasierter 
-Chatbot zur Unterstützung psychisch kranker Menschen entwickelt werden kann.
-Es existieren bereits Frameworks, die in der Lage sind Entitäten, also wichtige Schlüsselbegriffe, automatisiert aus
-Texten zu extrahieren. Dies nennt man Named Entity Recognition.
+Die spezielle Herausforderung der Praktikumsaufgabe liegt darin, automatisiert Zusammenhänge zwischen Entitäten 
+medizinischer Texte zu finden und diese Zusammenhänge zu repräsentieren. Dem zugrunde liegt das Ziel des 
+Dissertationsprojektes von Stefanie Heidepriem, zu erforschen, wie ein textbasierter Chatbot zur Unterstützung 
+psychisch kranker Menschen entwickelt werden kann. 
+Das Dissertationsprojekt  ist unter anderem an das Projekt \glqq MENHIR\grqq angelehnt \cite{menhir}. Dieses Projekt dient der Erforschung 
+von Konversationstechnologien, die psychisch kranke Menschen unterstützen sollen. In diesem Zusammenhang wird auch 
+ein MENHIR-Chatbot entwickelt, der personalisierte Unterstützung und hilfreiche Bewältigungsstrategien bieten soll. 
+Das Forschungsprojekt \glqq STop Obesity Platform\grqq beschäftigt sich mit der Extraktion von Wissen unter anderem aus Chatbots, 
+das anschließend aufbereitet und mit weiteren Informatinen kombiniert werden soll. Dieses Wissen soll anschließend
+medizinischem Fachpersonal zur Verfügung gestellt werden um Menschen mit Übergewicht zu einer gesünderen Lebensweise
+zu animieren \cite{stopobesity}.
+Es ist aber auch denkbar, dass die Problemstellung der Praktikumsaufgabe auch darüber hinaus für weitere Anwendungen 
+interessant sein könnte und mögliche Ergebnisse in verschiedenen Gebieten eingesetzt werden könnten, in denen 
+Informationen in (medizinischen) Texten zueinander in Zusammenhang gebracht werden sollen.
 
-Named Entity Recognition ... [TODO, einige Worte zu NER, aktuelle Entwicklungen, Erkenntnisse im medizinischen Bereich]
+Es existieren bereits Methoden, die in der Lage sind Entitäten, also wichtige Objekte wie zum Beispiel Personen, 
+Organisationen oder Orte, automatisiert aus Texten zu extrahieren. Dies nennt man Named Entity Recognition. Named Entity 
+Recognition ist ein Bereich des Natural Language Processing und seit circa 30 Jahren werden unterschiedliche Techniken 
+zum Lösen der Aufgaben, die in diesen Bereich fallen, entwickelt \cite{trends_in_ner}. Darunter fallen 
+grammatikbasierte und statistische Methoden wie auch Methoden des Machine Learning.
 
-Das übergeordnete Dissertationsprojekt von Stefanie Heidepriem ist unter anderem an das Projekt MENHIR angelehnt. Dieses
-Projekt dient der Erforschung von Konversationstechnologien, die psychisch kranke Menschen ünterstützen sollen. In diesem
-Zusammenhang wird auch ein MENHIR-Chatbot entwickelt, der psychisch kranken Menschen personalisierte Unterstützung und 
-hilfreiche Bewältigungsstrategien bieten soll.
+Außerdem exitistiert schon ein auf den medizinischen Bereich spezialisiertes Vokabular, beziehungsweise eine Wissensbasis, 
+MeSH \cite{mesh}, das regelmäßig aktualisiert wird. Dieses Vokabular wurde von 
+der "United States National Library of Medicine" erstellt. Diese Bibliothek stellt auch schon den Named-Entity Recognizer 
+"MetaMapLite" zur Verfügung, der auch an die Zwecke der Nutzer angepasst und erweitert werden kann \cite{metamaplite}. 
 
