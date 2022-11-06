@@ -1,0 +1,194 @@
+C0009443	acute infective rhinitis	DISEASE
+C0009443	acute nasal catarrh	DISEASE
+C0009443	acute nasopharyngitis [common cold]	DISEASE
+C0009443	acute nasopharyngitis, nos	DISEASE
+C0009443	acute rhinitis	DISEASE
+C0009443	acute rhinorrhea	DISEASE
+C0009443	cold	DISEASE
+C0009443	colds	DISEASE
+C0009443	common cold	DISEASE
+C0009443	common colds	DISEASE
+C0009443	coryza	DISEASE
+C0009443	coryza - acute	DISEASE
+C0009443	head cold	DISEASE
+C0009443	head cold, nos	DISEASE
+C0009443	infectious rhinitis	DISEASE
+C0009443	infective nasopharyngitis	DISEASE
+C0009443	infective nasopharyngitis nos	DISEASE
+C0009443	infective nasopharyngitis, nos	DISEASE
+C0009443	infective rhinitis	DISEASE
+C0009443	nasal catarrh - acute	DISEASE
+C0009443	nasal catarrh, acute	DISEASE
+C0009443	nasopharyngitis - acute	DISEASE
+C0009443	nasopharyngitis, acute	DISEASE
+C0009443	rhinitis - acute	DISEASE
+C0009443	rhinitis, acute	DISEASE
+C0009443	rhinitis, infective	DISEASE
+C0009443	upper respiratory viral infection	DISEASE
+C0009443	upper respiratory viral infections	DISEASE
+C0009443	upper respiratory virus	DISEASE
+C0009443	upper respiratory virus infection	DISEASE
+C0009443	uri	DISEASE
+C0009443	viral upper respiratory infection	DISEASE
+C0011570	depressed mood state	DISEASE
+C0011570	depressed state	DISEASE
+C0011570	depression	DISEASE
+C0011570	depression mental	DISEASE
+C0011570	depression psychic	DISEASE
+C0011570	depression, mental	DISEASE
+C0011570	depression, mental function	DISEASE
+C0011570	depression, nos	DISEASE
+C0011570	depressions	DISEASE
+C0011570	depressive state nos	DISEASE
+C0011570	low mood state	DISEASE
+C0011570	melancholic state	DISEASE
+C0011570	mental depression	DISEASE
+C0011570	miserable state	DISEASE
+C0011570	monopolar depression	DISEASE
+C0011570	monopolar depression nos	DISEASE
+C0011644	dermatosclerosis	DISEASE
+C0011644	disease scleroderma	DISEASE
+C0011644	disease systemic sclerosis	DISEASE
+C0011644	disorder scleroderma	DISEASE
+C0011644	scleroderma	DISEASE
+C0011644	scleroderma disease	DISEASE
+C0011644	scleroderma disorders	DISEASE
+C0011644	scleroderma nos	DISEASE
+C0011644	systemic sclerosis disease	DISEASE
+C0014736	erysipelothrix	DISEASE
+C0014736	erysipelothrix disease	DISEASE
+C0014736	erysipelothrix infection	DISEASE
+C0014736	erysipelothrix infection nos	DISEASE
+C0014736	erysipelothrix infections	DISEASE
+C0014736	erysipelothrix insidiosa infection	DISEASE
+C0014736	infections, erysipelothrix	DISEASE
+C0019360	herpes zona	DISEASE
+C0019360	herpes zoster	DISEASE
+C0019360	herpes zoster disease	DISEASE
+C0019360	herpes zoster infection	DISEASE
+C0019360	herpes zoster nos	DISEASE
+C0019360	herpes zoster, nos	DISEASE
+C0019360	shingles	DISEASE
+C0019360	varicella disease	DISEASE
+C0019360	varicella zoster virus vzv infection	DISEASE
+C0019360	zona	DISEASE
+C0019360	zonas	DISEASE
+C0019360	zoster	DISEASE
+C0019360	zoster [herpes zoster]	DISEASE
+C0019360	zoster nos	DISEASE
+C0085429	genital retraction syndromes	DISEASE
+C0085429	jinjinia bemar	DISEASE
+C0085429	koro	DISEASE
+C0085429	koro disease	DISEASE
+C0085429	koro syndromes	DISEASE
+C0085429	rok-joo	DISEASE
+C0085429	shook yong	DISEASE
+C0085429	shuk yang	DISEASE
+C0085429	suo yang	DISEASE
+C0085429	syndrome, genital retraction	DISEASE
+C0085429	syndrome, koro	DISEASE
+C0221376	hydrosalpinx	DISEASE
+C0271650	chemical diabetes	DISEASE
+C0271650	chemical diabetes mellitus	DISEASE
+C0271650	chemicals diabetes	DISEASE
+C0271650	diabetes chemical	DISEASE
+C0271650	glucose impaired tolerance	DISEASE
+C0271650	glucose intolerance	DISEASE
+C0271650	glucose malabsorption	DISEASE
+C0271650	igt - impaired glucose tolerance	DISEASE
+C0271650	impaired glucose tolerance	DISEASE
+C0271650	impaired glucose tolerance, nos	DISEASE
+C0271650	intolerance, glucose	DISEASE
+C0271650	intolerances, glucose	DISEASE
+C0271650	latent diabetes	DISEASE
+C0271650	latent diabetes mellitus	DISEASE
+C0271650	malabsorption of glucose	DISEASE
+C0271650	prediabetic nonclinical diabetes	DISEASE
+C0271650	tolerances, impaired glucose	DISEASE
+C0560175	carrier of disease	DISEASE
+C0560175	carrier of disorder	DISEASE
+C0560175	carrier state	DISEASE
+C0560175	carrier state, nos	DISEASE
+C0560175	carrier states	DISEASE
+C0560175	carrier, nos	DISEASE
+C0560175	disease carrier	DISEASE
+C0560175	disease carrier state	DISEASE
+C0560175	genetic carrier state	DISEASE
+C1410847	fusion of spine	DISEASE
+C1410847	fusion of spine, site unspecified	DISEASE
+C1411964	mycobacterium; ulcerans	DISEASE
+C1446899	minor	DISEASE
+C1867717	sapd	DISEASE
+C1867717	saposin d	DISEASE
+C1959635	parvovirus b19	DISEASE
+C2363938	gonitis	DISEASE
+C2939419	ca - secondary cancer	DISEASE
+C2939419	malignancies metastatic	DISEASE
+C2939419	malignancy metastatic	DISEASE
+C2939419	malignant neoplasms metastatic	DISEASE
+C2939419	malignant tumors metastatic	DISEASE
+C2939419	metastases	DISEASE
+C2939419	metastases tumor	DISEASE
+C2939419	metastasis neoplasm	DISEASE
+C2939419	metastasized tumor	DISEASE
+C2939419	metastasized tumour	DISEASE
+C2939419	metastatic cancers	DISEASE
+C2939419	metastatic malignant disease	DISEASE
+C2939419	metastatic neoplasm	DISEASE
+C2939419	neoplasia metastasis	DISEASE
+C2939419	neoplasm, secondary	DISEASE
+C2939419	secondaries	DISEASE
+C2939419	secondary malignancies	DISEASE
+C2939419	secondary malignant deposit	DISEASE
+C2939419	secondary malignant neoplastic disease	DISEASE
+C2939419	secondary neoplasia	DISEASE
+C2939419	secondary neoplasias	DISEASE
+C2939419	secondary neoplasm	DISEASE
+C2939419	secondary neoplastic disease	DISEASE
+C2939419	secondary tumor	DISEASE
+C2939419	secondary tumours	DISEASE
+C2939419	tumor metastasis	DISEASE
+C2939419	tumor metastasize	DISEASE
+C2939419	tumor metastasized	DISEASE
+C2939419	tumor secondary	DISEASE
+C2939419	tumor, secondary	DISEASE
+C2939419	tumour metastasis	DISEASE
+C2939419	tumour secondaries	DISEASE
+C2939419	tumour secondary	DISEASE
+C2939419	tumour, metastatic	DISEASE
+C2939419	tumour, secondary	DISEASE
+C3824648	pompholyx	DISEASE
+C3824825	sars	DISEASE
+C3826758	aids	DISEASE
+C5203670	2019 novel coronavirus disease	DISEASE
+C5203670	2019 novel coronavirus infection	DISEASE
+C5203670	2019-ncov disease	DISEASE
+C5203670	2019-ncov diseases	DISEASE
+C5203670	2019-ncov infection	DISEASE
+C5203670	2019-ncov infections	DISEASE
+C5203670	coronavirus disease-19	DISEASE
+C5203670	covid 19	DISEASE
+C5203670	covid-19	DISEASE
+C5203670	covid-19 infection	DISEASE
+C5203670	covid-19 virus diseases	DISEASE
+C5203670	covid-19 virus infection	DISEASE
+C5203670	covid-19 virus infections	DISEASE
+C5203670	covid19	DISEASE
+C5203670	disease 2019, coronavirus	DISEASE
+C5203670	disease caused by 2019 novel coronavirus	DISEASE
+C5203670	disease caused by 2019-ncov	DISEASE
+C5203670	disease caused by sars-cov-2	DISEASE
+C5203670	disease, 2019-ncov	DISEASE
+C5203670	hcov-19 infection	DISEASE
+C5203670	human coronavirus 2019 infection	DISEASE
+C5203670	infection, 2019-ncov	DISEASE
+C5203670	sars coronavirus 2 infection	DISEASE
+C5203670	sars-2 infection	DISEASE
+C5203670	sars-cov-2 disease	DISEASE
+C5203670	sars-cov-2 infection	DISEASE
+C5203670	sars-cov-2 infections	DISEASE
+C5203670	sars-cov2 disease	DISEASE
+C5203670	sars-cov2 infection	DISEASE
+C5203670	sars2 infection	DISEASE
+C5203670	virus disease, covid-19	DISEASE
+C5203670	virus infection, covid-19	DISEASE
