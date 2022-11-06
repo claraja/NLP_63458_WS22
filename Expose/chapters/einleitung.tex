@@ -1,4 +1,8 @@
-% !TEX root =expose.tex
+\automark[section]{chapter}
+\renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\spacedlowsmallcaps{#1}}}
+\refstepcounter{dummy}
+
 \chapter{Einleitung}
 
 \lipsum[1-2]

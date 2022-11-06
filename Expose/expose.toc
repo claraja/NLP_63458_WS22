@@ -10,16 +10,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}{Problembeschreibung}}{3}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}{Forschungsfragen und Ziele}}{5}{chapter.4}%
+\contentsline {chapter}{\numberline {4}{Forschungsfragen}}{5}{chapter.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}{Forschungsmethode}}{6}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}{Lösungsansatz}}{8}{chapter.6}%
+\contentsline {chapter}{\numberline {6}{Forschungsziele}}{8}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}{Stand der Wissenschaft}}{9}{chapter.7}%
+\contentsline {chapter}{\numberline {7}{Lösungsansatz}}{9}{chapter.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}{Arbeits- und Zeitplan}}{10}{chapter.8}%
+\contentsline {chapter}{\numberline {8}{Stand der Wissenschaft}}{10}{chapter.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {9}{Arbeits- und Zeitplan}}{11}{chapter.9}%
 \defcounter {refsection}{0}\relax 
 \vspace {\beforebibskip }
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {}{Literatur}}{11}{section*.3}%
+\contentsline {chapter}{\numberline {}{Literatur}}{12}{section*.3}%
