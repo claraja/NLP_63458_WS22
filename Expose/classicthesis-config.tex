@@ -28,7 +28,7 @@
   drafting=false,   % print version information on the bottom of the pages
   tocaligned=false, % the left column of the toc will be aligned (no indentation)
   dottedtoc=true,   % page numbers in ToC flushed right
-  parts=false,       % use part division
+  parts=true,       % use part division
   eulerchapternumbers=true, % use AMS Euler for chapter font (otherwise Palatino)
   linedheaders=false,       % chaper headers will have line above and beneath
   floatperchapter=true,     % numbering per chapter for all floats (i.e., Figure 1.1)
@@ -90,7 +90,7 @@
   %style=numeric-comp,%
   style=alphabetic,%
   %style=authoryear-comp, % Author 1999, 2010
-  %bibstyle=alphabetic,%,dashed=false, % dashed: substitute rep. author with ---
+  %bibstyle=authoryear,dashed=false, % dashed: substitute rep. author with ---
   sorting=nyt, % name, year, title
   maxbibnames=10, % default: 3, et al.
   %backref=true,%
@@ -126,7 +126,6 @@
 % ****************************************************************************************************
 %\usepackage{pgfplots} % External TikZ/PGF support (thanks to Andreas Nautsch)
 %\usetikzlibrary{external}
-%\usepackage{tikz}
 %\tikzexternalize[mode=list and make, prefix=ext-tikz/]
 % ****************************************************************************************************
 
@@ -299,5 +298,6 @@
 % ********************************************************************
 %\linespread{1.05} % a bit more for Palatino
 % ****************************************************************************************************
-\usepackage{tikz}
-\usepackage{epigraph} 
+\usepackage{tabto}  % Tabulatoren
+\usepackage{lipsum} % lorem ipsum- Leertexte
+\usepackage{enumitem}

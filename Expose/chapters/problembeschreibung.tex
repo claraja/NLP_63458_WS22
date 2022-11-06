@@ -1,0 +1,23 @@
+% !TEX root =expose.tex
+\chapter{Problembeschreibung}
+\label{ch:problembeschreibung}
+
+
+Es soll eine Konsolenapplikationen entwickelt werden, die medizinische Texte analysiert und das darin enthalten Wissen strukturiert in einer XML-Datei dokumentiert oder mittels eines RDF-Modells visualisiert werden. Die Konsolenapplikation soll in Python programmiert werden, wobei für die Textanalyse Klassen und Methoden der Open-Source-Bibliothek spaCy genutzt werden sollen.
+
+Die medizinischen Texte enthalten z.B. Aussagen zu Krankheiten (z.B. Depression) und zählen deren Symptome (z.B. Motivationsverlust) auf. Aufgabe der Konsolenapplikation ist es dann, Schlüsselbegriffe im Text zu finden und miteinander in Bezug zu setzen, indem z.B. Symptome den ihnen zugrunde liegenden Krankheiten zugeordnet werden. Die von spaCy zur Verfügung gestellte Funktionalität besteht aus einer Pipeline von Analyse-Komponenten, die nacheinander auf den zu analysierenden Text angewendet werden. Diese Komponenten dienen dazu, Texte in einzelne Sätze zu zerlegen und die Sätze grammatikalisch zu analysieren.
+
+Neben der grammatikalischen Analyse besteht eine wesentliche Aufgabe von spaCy darin, Schlüsselbegriffe zu finden und zu kategorisieren. Diese Art der Analyse wird allgemein als Named Entity Recognition (NER) bezeichnet. Bei spaCy übernimmt diese Aufgabe der regelbasierte EntityRuler oder der auf statistischen Modellen basierende EntityRecognizer. Eine weitere Komponente ist der EntityLinker, mit dem Begriffe eindeutig den in einer Wissensbasis gespeicherten Entitäten zugeordnet werden können. Auch der EntityLinker basiert auf statistischen Modellen und wird mit Beispielsätzen trainiert.
+
+Die Standard-NER Funktionalität von spaCy erkennt medizinische Begriffe nur unzureichend. Es ist daher notwendig, eine Datenbank mit medizinischen Begriffen und Kategorien zusammenzustellen, die für das Training der NER-Komponenten von spaCy verwendet werden kann.
+
+Die auf dem Campus des National Institute of Health (NIH) im US-Bundestaat Maryland angesiedelte National Library of Medicine stellt mit dem Unified Medical Language System (UMLS) ein mächtiges Werkzeug für die Textanalyse zur Verfügung. Teil von UMLS ist der sogenannte Metathesaurus, der aus einer Vielzahl von Thesauri unterschiedlicher Organisationen zusammengestellt wird. Zu diesen Thesauri gehört der vom National Library of Medicine entwickelte Medical Subject Heading (MeSH)-Thesaurus. MetaMap und das weniger umfangreiche MetaMapLite sind eigene Entity-Recognition-Werzeuge der National Library of Medicine. Die zugrundeliegende Datenbasis dieser Werkzeuge sollen im Rahmen dieses Praktikums dafür verwendet werden, die Named Entity Recognition-Komponenten von spaCy zu trainieren.
+
+Basierend auf den gefundenen Entitäten soll das Python-Programm in der Lage sein, Begriffe wie Krankheiten und Symptome richtig zuzuordnen. Hierzu müssen Aussagesätze, Fragen, Aufzählungen und Überschriften richtig gedeutet werden.
+
+\begin{itemize}
+\item Medizinische Begriffe, die mithilfe von Named Entity Recognition gefunden werden, müssen zueinander in Zusammenhang gebracht werden.
+\item Es gibt keine vorgegebene / einheitliche Struktur für die Wissensrepräsentation von Entity Linking.
+\end{itemize}
+
+

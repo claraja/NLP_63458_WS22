@@ -1,9 +1,0 @@
-[0] Config.pm:304> INFO - This is Biber 2.14
-[0] Config.pm:307> INFO - Logfile is 'expose.blg'
-[79] biber-MSWIN32:322> INFO - === 
-[101] Biber.pm:415> INFO - Reading 'expose.bcf'
-[223] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
-[229] Utils.pm:304> WARN - The file 'expose.bcf' does not contain any citations!
-[242] bbl.pm:652> INFO - Writing 'expose.bbl' with encoding 'UTF-8'
-[242] bbl.pm:755> INFO - Output to expose.bbl
-[242] Biber.pm:128> INFO - WARNINGS: 1
