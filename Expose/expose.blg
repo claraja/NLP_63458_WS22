@@ -1,0 +1,17 @@
+[0] Config.pm:304> INFO - This is Biber 2.14
+[0] Config.pm:307> INFO - Logfile is 'expose.blg'
+[84] biber-MSWIN32:322> INFO - === 
+[109] Biber.pm:415> INFO - Reading 'expose.bcf'
+[244] Biber.pm:943> INFO - Found 1 citekeys in bib section 0
+[265] Biber.pm:4256> INFO - Processing section 0
+[265] Utils.pm:75> INFO - Globbing data source 'NLP.bib'
+[278] Utils.pm:91> INFO - Globbed data source 'NLP.bib' to NLP.bib
+[296] Biber.pm:4455> INFO - Looking for bibtex format file 'NLP.bib' for section 0
+[312] bibtex.pm:1653> INFO - LaTeX decoding ...
+[408] bibtex.pm:1471> INFO - Found BibTeX data source 'NLP.bib'
+[481] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[482] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[482] Biber.pm:4084> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[482] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[492] bbl.pm:652> INFO - Writing 'expose.bbl' with encoding 'UTF-8'
+[493] bbl.pm:755> INFO - Output to expose.bbl
