@@ -1,13 +1,91 @@
 % !TEX root =expose.tex
 \chapter{Lösungsansatz}
 
+Die Wissensrepräsentation medizinischer Texte soll Entitäten unterschiedlicher Kategorie miteinander in Beziehung setzen. Naheliegend ist es z.B., automatisch in einem Text Symptome und Krankheiten zu identifizieren, diese miteinander in Beziehung zu setzen und eine Wissensrepräsentation der Art
+
+\begin{center}
+loss of appetite - is a symptom of - depression
+\end{center}
+
+zu erzeugen. Dazu muss spaCy befähigt werden, nicht nur Fachbegriffe zu erkennen, sondern diese auch richtig zu kategorisieren, als z.B. Krankheit oder Symptom. Folgender Lösungsansatz ist angedacht:
+
+MetaMapLite verwendet eine auf UMLS basierende Datenbasis mit medizinischen Fachbegriffen. Der Umfang der Datenbasis von MetaMapLite ist etwas reduziert und umfasst z.B. nur englische Fachbegriffe. Auf der MetaMapLite-Website kann das zip-Archiv
+
+\begin{center}
+\emph{public\_mm\_data\_lite\_usabase\_2022aa}
+\end{center}
+
+heruntergeladen werden. In diesem Archiv befindet sich die Datei \emph{postings} in dem Unterordner
+
+\begin{center}
+\emph{\textbackslash public\_mm\_lite\textbackslash data\textbackslash ivf \textbackslash 2022AA\textbackslash USAbase\textbackslash indices\textbackslash cuisourceinfo}.
+\end{center}
+
+Die Datei \emph{postings} enthält ca. 11 Millionen englischsprachige Einträge und ist mit einer Größe von etwa 739 MB etwas handlicher als die Datenbestände von UMLS. Um zu prüfen, ob diese Datenbasis geeignet ist, ist ein Auszug von Einträgen, die für den zu analysierenden Beispieltext über Depressionen relevant sind, in der folgenden Tabelle aufgelistet.
+
+CUI bezeichnet den Concept Unique Identifier, mit dem Synonyme gefunden werden können. Der CUI besteht nur aus dem mit dem Buchstaben `C' beginnenden Teil und ist hier ergänzt durch einen sogenannten Term-Type. Der Term-Type `PT' kennzeichnet z.B. bevorzugte Einträge. SUI bezeichnet den String Unique Identifier, mit dem gleichlautende (und damit redundante) Bezeichnungen gefunden werden können.
+
+Die Tabelle listet nur Einträge auf, in denen der Begriff, z.B. `depression', einer in Klammern hinter dem Begriff stehenden Kategorie zugeordnet ist, hier z.B. `disease'. Über den CUI können in der Datei \emph{postings} Synonyme gefunden werden, wobei nur der mit `C' beginnende Teil relevant ist. Diese Synonyme enthalten häufig keine Kategorien in Klammern. Die Kategorien können aber über den CUI den Synonymen zugeordnet werden. Die sehr zahlreichen Synonyme bzw. alternativen Ausdrücke sind in der Tabelle nicht aufgeführt.
+
+\begin{center}
+\begin{tabular}{llll}
+\hline
+\textbf{CUI}	& \textbf{SUI}	& \textbf{Item} & \textbf{Source} \\
+\hline
+FNC0232933 &	S3225525 & \parbox[t]{5cm}{Abnormal menstrual cycle (finding)} &	SNOMEDCT\_US \\
+PTC0424569 &	S3221759 & \parbox[t]{5cm}{Circumstances interfere with sleep (disorder)} &	SNOMEDCT\_US \\
+YC0009806 & S3235964 & Constipation (finding) &	SNOMEDCT\_US \\
+LAC3845528 &	S14560529 &\parbox[t]{5cm}{Depressed mood (e.g., feeling sad, tearful)} & LNC \\
+SYC0344315 &	S3252744 &	Depressed mood (finding) &	SNOMEDCT\_US \\
+GTC0011570 &	S1431189 &	depression (disease) & AOD \\
+SYC0681028 &	S1431190 &	depression (economic) & AOD \\
+ETC0021603 &	S3263624 &	\parbox[t]{5cm}{Disorders of initiating and maintaining sleep (disorder)} & SNOMEDCT\_US \\
+FNC2939186 &	S3264511 &	Disturbance in mood (finding) & SNOMEDCT\_US \\
+SYC0349217 &	S20166983 & Episode of depression (finding) & SNOMEDCT\_US \\
+FNC1288289 &	S3312713 &	Fearful mood (finding) & SNOMEDCT\_US \\
+FNC0150041 &	S3313279 &	Feeling hopeless (finding) &	SNOMEDCT\_US \\
+FNC0022107 &	S3313282 &	Feeling irritable (finding)	 & SNOMEDCT\_US \\
+FNC0424000 &	S3313310 &	Feeling suicidal (finding) &	SNOMEDCT\_US \\
+ETC0917801 &	S3373158 &	Insomnia (disorder) &	SNOMEDCT\_US \\
+PTC0015672 &	S3386372 &	Lack of energy (finding) &	SNOMEDCT\_US \\
+FNC2981158 &	S3386389 &	Lack of libido (finding) & SNOMEDCT\_US \\
+FNC1971624 &	S3397609 &	Loss of appetite (finding) & SNOMEDCT\_US \\
+FNC0178417 &	S3397620 &	\parbox[t]{5cm}{Loss of capacity for enjoyment (finding)} & SNOMEDCT\_US \\
+FNC0456814 &	S3397668 &	Loss of motivation (finding)  & SNOMEDCT\_US \\
+FNC0424219 &	S3397688 &	Loss of self-esteem (finding) & SNOMEDCT\_US \\
+FNC0679136 &	S3398077 &	Low self-esteem (finding) & SNOMEDCT\_US \\
+PTC5444612 &	S20749480 & mood (physical finding) & MTH \\
+FNC0424566 &	S3439673 &	\parbox[t]{5cm}{Not getting enough sleep (disorder)} &	SNOMEDCT\_US \\
+FNC2945580 &	S3485453 &	Poor self-esteem (finding) &	SNOMEDCT\_US \\
+FNC0235160 &	S3513783 &	Restless sleep (finding) & SNOMEDCT\_US \\
+FNC0424570 &	S3580589 &	\parbox[t]{5cm}{Symptoms interfere with sleep (disorder)} & SNOMEDCT\_US \\
+PTC0424570 &	S3580589 &	\parbox[t]{5cm}{Symptoms interfere with sleep (disorder)} & SNOMEDCT\_US \\
+PTC0233481 &	S3620195 &	Worried (finding) & SNOMEDCT\_US \\
+\hline
+\end{tabular}
+\end{center}
+
+In der Tabelle finden sich drei Kategorien, `disease', `disorder' und `finding' (Die \emph{postings}-Datei enthält noch viele andere). Hier bietet sich an, die Begriffe und Kategorien dieser Datenbasis für das Trainieren des EntityRecognizers von spaCy zu verwenden. Die Zuordnung `finding' ist hier stets als Symptom zu verstehen. `disorder', also Störung, kennzeichnet in den meisten Fällen ebenfalls eine Krankheit. Der Begriff `insomnia' findet sich nicht im zu analysierenden Text, dort ist stattdessen von `disturbed sleep' die Rede ist. Hier muss versucht werden, über Synonyme eine richtige Kategorisierung zu erreichen. Die meisten Einträge stammen von der Datenbank SNOMED CT (Systematized Nomenclature of Medicine Clinical Terms), die seit 2003 Teil des UMLS Metathesaurus ist. 
+
+Der Inhalt der Datei \emph{postings} muss aufbereitet (und ggf. auch gekürzt) werden, so dass die Daten für das Training des EntityRecognizers verwendet werden können. Es muss untersucht werden, wie basierend auf der Wörterliste geeignete Trainingsdaten erzeugt werden können, etwa durch automatisch erzeugte Beispielsätze.
+
+Der zu analysierende Text muss durch ein Python-Programm aufbereitet werden, mit dem Ziel, dass die NLP-Komponenten der Prozesspipeline des NLP-Frameworks, möglichst erfolgreich arbeiten. Ein Vorgehen könnte sein, Aufzählungen in mehrere vollständige Sätze zu zerlegen, so dass möglichst sinnvolle vollständige Sätze entstehen, die eine Krankheit und ein Symptom enthalten, so dass die automatische Textanalyse nicht überfordert wird, Krankheit und Symptome zusammenzubringen. Hierbei werden die von spaCy zur Verfügung gestellten Pipeline-Komponenten wie der Lemmatizer und Parser genutzt.
+
+Idealerweise entsteht so ein Text mit Aussagesätzen, die jeweils eine Krankheit und ein oder mehrere Symptome enthalten. Für die Wissensrepräsentation soll der EntityLinker eingesetzt werden. Normalerweise wird der EntityLinker verwendet, um (mehrdeutige) Entitäten, die vom EntityRecognizer oder EntityRuler gefunden werden, einer eindeutigen Entität zuzuordnen (z.B. einem Wikipedia-Eintrag). Der EntityLinker wird trainiert, so dass die Zuordnung Kontext-basiert erfolgt.
+
+Für die Erstellung der Wissensrepräsentation wird der EntityLinker auf unorthodoxe Weise verwendt und mit dieser Komponente die Wissensrepräsentation aufgebaut. Dafür ist die Wissensbasis des EntityLinkers von zentraler Bedeutung. In dieser werden durch das Python-Programm als zusammengehörend erkannte Krankheiten und Symptome gespeichert. Dabei können Symptome mehreren Krankheiten zugeordnet werden. Der EntityLinker wird mit Sätzen aus den zu analysierenden Texten trainiert, die es ihm erlauben, auch bei anderen Texten Kontext-basiert einem Symptom die richtige Krankheit zuzuordnen. Analysiert man viele Text hintereinander, kann der EntityLinker so mit der Zeit eine umfangreiche Wissensbasis aufbauen. Analysiert man einen Text dann mit dem Entity Recognizer und danach mit dem EntityLinker, dann entsteht automatisch die Wissensrepräsentation, wobei etwa die Entität `lack of energy' vom EntityRecognizer gefunden wird und als `Symptom' kategorisiert wird und anschließend vom EntityLinker der Krankheit `depression' zugeordnet wird, sofern sich dies auch dem Kontext ergibt.
+
+\vspace{1cm}
+
 Arbeitspakete:
 \begin{itemize}
-    \item Ein medizinisches Vokabular muss eingebunden werden um Named Entities identifizieren zu können (MEsH).
-    \item Eine Named Entity Recognition muss für den zu analysierenden Text ausgeführt werden.
-    \item (Eine Knowledge Base für das Entity Linking muss erstellt werden.) 
-    \item Eine manuelle Wissensrepräsentation basierend auf dem zu analysierenden Text muss erstellt werden.
-    \item Die automatisch erstellte Wissensrepräsentation muss mit der manuell erstellten Wissensrepräsentation verglichen werden.
+    \item Manuelle Erstellung einer Wissensrepräsentation basierend auf dem zu analysierenden Text
+    \item Identifizierung eines medizinischen Vokabulars, das zum Training der NER-Komponente verwendet werden kann
+    \item Untersuchung, auf welche Weise die Trainingsdaten für möglichst gute Ergebnisse der NER-Komponente aufbereitet werden müssen (z.B. durch automatisch erzeugte Beispielsätze)
+    \item Entwicklung einer Programm-Komponente, die die zu analysierenden Texte vorverarbeitet, so dass die NLP-Pipeline möglichst effizient arbeitet
+    \item Entwicklung ein Programm-Komponente, die basierend auf den vom NER gefundenen Entitäten zusammengehörende Entitäten (etwa Symptom und Krankheit) identifiziert und zusammen mit Beispielsätzen aus dem zu analysierenden Text die Wissensbasis des EntityLinkers aufbaut.
+    \item Entwicklung der Programm-Komponente, die die Wissensbasis des EntityLinkers ausgewertet, und in eine XML-Datei o.ä. exportiert. Anschließend Darstellung als RDF-Modell.
 \end{itemize}
 
-\lipsum[1-2]
+
+
