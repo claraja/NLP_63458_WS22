@@ -2188,10 +2188,8 @@
     <bcf:citekey order="4">mesh</bcf:citekey>
     <bcf:citekey order="5">metamaplite</bcf:citekey>
     <bcf:citekey order="6">nunamaker_systems_1990-1</bcf:citekey>
-    <bcf:citekey order="7">nunamaker_systems_1990-1</bcf:citekey>
-    <bcf:citekey order="8">nunamaker_systems_1990-1</bcf:citekey>
-    <bcf:citekey order="9">w3c_all_2022</bcf:citekey>
-    <bcf:citekey order="10">rdflib_team_rdflib_2022</bcf:citekey>
+    <bcf:citekey order="7">w3c_all_2022</bcf:citekey>
+    <bcf:citekey order="8">rdflib_team_rdflib_2022</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

@@ -10,26 +10,24 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}{Problembeschreibung}}{3}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}{Forschungsfragen}}{5}{chapter.4}%
+\contentsline {chapter}{\numberline {4}{Forschungsmethode}}{5}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}{Forschungsmethode}}{6}{chapter.5}%
+\contentsline {chapter}{\numberline {5}{Forschungsfragen und -ziele}}{6}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}{Forschungsziele}}{8}{chapter.6}%
+\contentsline {chapter}{\numberline {6}{Lösungsansatz}}{7}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}{Lösungsansatz}}{9}{chapter.7}%
+\contentsline {chapter}{\numberline {7}{Stand der Wissenschaft}}{11}{chapter.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}{Stand der Wissenschaft}}{13}{chapter.8}%
+\contentsline {section}{\numberline {7.1}{FZ 1.1. Aufbau und Struktur medizinischer Texte}}{11}{section.7.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}{FZ 1.1. Aufbau und Struktur medizinischer Texte}}{13}{section.8.1}%
+\contentsline {section}{\numberline {7.2}{FZ 2.1. Überblick über depressive Erkrankungen}}{11}{section.7.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}{FZ 2.1. Überblick über depressive Erkrankungen}}{13}{section.8.2}%
+\contentsline {section}{\numberline {7.3}{FZ 2.2. Automatisierung durch NLP}}{11}{section.7.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}{FZ 2.2. Automatisierung durch NLP}}{13}{section.8.3}%
+\contentsline {section}{\numberline {7.4}{FZ 3.1. Wissensrepräsentation mittels RDF}}{11}{section.7.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.4}{FZ 3.1. Wissensrepräsentation mittels RDF}}{13}{section.8.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}{Arbeits- und Zeitplan}}{14}{chapter.9}%
+\contentsline {chapter}{\numberline {8}{Arbeits- und Zeitplan}}{12}{chapter.8}%
 \defcounter {refsection}{0}\relax 
 \vspace {\beforebibskip }
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {}{Literatur}}{15}{section*.3}%
+\contentsline {chapter}{\numberline {}{Literatur}}{13}{section*.2}%

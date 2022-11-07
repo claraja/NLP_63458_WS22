@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  7 NOV 2022 17:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  7 NOV 2022 20:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2016,13 +2016,7 @@ Kapitel 2.
 
 
 
-]
-Overfull \hbox (2.59955pt too wide) in paragraph at lines 4--18
-\T1/pplj/m/n/10.95 te-gi-en bie-ten soll. Das For-schungs-pro-jekt ^^RSTop Obe-
-si-ty Plat-form^^Pbeschäftigt
- []
-
-) (./chapters/problembeschreibung.tex
+]) (./chapters/problembeschreibung.tex
 Kapitel 3.
 [2
 
@@ -2030,40 +2024,20 @@ Kapitel 3.
 ] [3
 
 
-]) (./chapters/forschungsfragen.tex
+]) (./chapters/forschungsmethode.tex
 Kapitel 4.
 [4]
-
-LaTeX Warning: Reference `ch:problembeschreibung' on page 5 undefined on input 
-line 4.
-
-) (./chapters/forschungsmethode.tex
-Kapitel 5.
-[5
-
-
-]
-<pictures/Nunamaker2.png, id=87, 1336.995pt x 917.4275pt>
-File: pictures/Nunamaker2.png Graphic file (type png)
-<use pictures/Nunamaker2.png>
-Package pdftex.def Info: pictures/Nunamaker2.png  used on input line 10.
-(pdftex.def)             Requested size: 370.0pt x 253.8822pt.
-
-Overfull \hbox (0.3739pt too wide) in paragraph at lines 17--18
+Overfull \hbox (0.3739pt too wide) in paragraph at lines 15--16
 \T1/pplj/m/n/10.95 un-be-kannt ist, wer-den Fall-stu-di-en, Feld-ver-su-che ode
 r Um-fra-gen durch-
  []
 
 
-Overfull \hbox (7.64853pt too wide) in paragraph at lines 17--18
-\T1/pplj/m/n/10.95 ge-führt, um ein "Ge-fühl"für den Auf-wand zu er-hal-ten. Au
-f die-ser Grund-
+Overfull \hbox (8.45415pt too wide) in paragraph at lines 15--16
+\T1/pplj/m/n/10.95 Grund-la-ge kön-nen dann kon-kre-te Hy-po-the-sen er-stellt 
+wer-den, die durch
  []
 
-[6
-
-
- <./pictures/Nunamaker2.png (PNG copy)>]
 LaTeX Font Info:    Trying to load font information for TS1+pplj on input line 
 23.
 
@@ -2071,16 +2045,19 @@ LaTeX Font Info:    Trying to load font information for TS1+pplj on input line
 .fd
 File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
 )) (./chapters/forschungsziele.tex
-Kapitel 6.
-[7]
-Overfull \hbox (2.3325pt too wide) in paragraph at lines 25--26
+Kapitel 5.
+[5
+
+
+]
+Overfull \hbox (2.3325pt too wide) in paragraph at lines 24--25
 []\T1/pplj/m/n/10.95 Evaluation zur Über-füh-rung me-di-zi-ni-schen Fach-vo-ka-
 bu-lars in ma-
  []
 
 ) (./chapters/loesungsansatz.tex
-Kapitel 7.
-[8
+Kapitel 6.
+[6
 
 
 ]
@@ -2118,29 +2095,23 @@ Overfull \hbox (25.7277pt too wide) in paragraph at lines 31--66
  [] 
  []
 
-[9
+[7
 
 
-] [10]
-Overfull \hbox (0.96426pt too wide) in paragraph at lines 74--75
-[]\T1/pplj/m/n/10.95 Idealerweise ent-steht so ein Text mit Aus-sa-ge-sät-zen, 
-die je-weils ei-ne Krank-
- []
-
-[11]) (./chapters/stand_der_wissenschaft.tex
+] [8] [9]) (./chapters/stand_der_wissenschaft.tex
+Kapitel 7.
+[10]) (./chapters/arbeits_und_zeitplan.tex
 Kapitel 8.
-[12]) (./chapters/arbeits_und_zeitplan.tex
-Kapitel 9.
-[13
+[11
 
 
 ]
-<pictures/zeitplan.png, id=150, 1658.195pt x 807.015pt>
+<pictures/zeitplan.png, id=131, 1658.195pt x 807.015pt>
 File: pictures/zeitplan.png Graphic file (type png)
 <use pictures/zeitplan.png>
 Package pdftex.def Info: pictures/zeitplan.png  used on input line 6.
 (pdftex.def)             Requested size: 370.0pt x 180.06822pt.
-) [14
+) [12
 
 
  <./pictures/zeitplan.png>]
@@ -2159,7 +2130,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvm' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-) [15
+) [13
 
 
 
@@ -2377,9 +2348,7 @@ frontbackmatter/Contents.tex
 chapters/einleitung.tex
 chapters/motivation.tex
 chapters/problembeschreibung.tex
-chapters/forschungsfragen.tex
 chapters/forschungsmethode.tex
-pictures/Nunamaker2.png
  ts1pplj.fd    2004/09/06 font definitions for TS1/pplj.
 chapters/forschungsziele.tex
 chapters/loesungsansatz.tex
@@ -2393,9 +2362,6 @@ frontbackmatter/Bibliography.tex
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 109.
 Package rerunfilecheck Info: File `expose.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-LaTeX Warning: There were undefined references.
-
 Package logreq Info: Writing requests to 'expose.run.xml'.
 \openout1 = `expose.run.xml'.
 
@@ -2405,13 +2371,13 @@ Package logreq Info: Writing requests to 'expose.run.xml'.
 ### simple group (level 1) entered at line 57 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38227 strings out of 480994
- 753087 string characters out of 5902830
- 1731230 words of memory out of 5000000
- 52861 multiletter control sequences out of 15000+600000
+ 38193 strings out of 480994
+ 752510 string characters out of 5902830
+ 1731195 words of memory out of 5000000
+ 52838 multiletter control sequences out of 15000+600000
  593383 words of font info for 114 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 72i,22n,103p,10101b,24133s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,22n,103p,10101b,24082s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/en
 c/dvips/base/8r.enc}<c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/font
 s/type1/public/amsfonts/euler/eurb10.pfb><c:/Programme/Textverarbeitung/TexLive
@@ -2422,10 +2388,10 @@ Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/upl
 b8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/urw/
 palatino/uplr8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/font
 s/type1/urw/palatino/uplri8a.pfb>
-Output written on expose.pdf (17 pages, 317340 bytes).
+Output written on expose.pdf (15 pages, 193669 bytes).
 PDF statistics:
- 264 PDF objects out of 1000 (max. 8388607)
- 231 compressed objects within 3 object streams
- 65 named destinations out of 1000 (max. 500000)
- 14487 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 242 PDF objects out of 1000 (max. 8388607)
+ 213 compressed objects within 3 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 14474 words of extra memory for PDF output out of 17280 (max. 10000000)
 
