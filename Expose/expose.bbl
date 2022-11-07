@@ -19,6 +19,75 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{mesh}{misc}{}
+      \list{publisher}{1}{%
+        {United States National Library of Medicine}%
+      }
+      \field{labelalpha}{22}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extraalpha}{1}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Medical Subject Headings}
+      \field{urlday}{6}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nlm.nih.gov/mesh/introduction.html
+      \endverb
+      \verb{url}
+      \verb https://www.nlm.nih.gov/mesh/introduction.html
+      \endverb
+    \endentry
+    \entry{menhir}{misc}{}
+      \list{publisher}{1}{%
+        {United States National Library of Medicine}%
+      }
+      \field{labelalpha}{22}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extraalpha}{2}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{MENHIR}
+      \field{urlday}{6}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://menhir-project.eu/
+      \endverb
+      \verb{url}
+      \verb https://menhir-project.eu/
+      \endverb
+    \endentry
+    \entry{metamaplite}{misc}{}
+      \list{publisher}{1}{%
+        {United States National Library of Medicine}%
+      }
+      \field{labelalpha}{22}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extraalpha}{3}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{MetaMapLite}
+      \field{urlday}{6}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://lhncbc.nlm.nih.gov/ii/tools/MetaMap/run-locally/MetaMapLite.html
+      \endverb
+      \verb{url}
+      \verb https://lhncbc.nlm.nih.gov/ii/tools/MetaMap/run-locally/MetaMapLite.html
+      \endverb
+    \endentry
     \entry{nunamaker_systems_1990-1}{article}{}
       \name{author}{3}{}{%
         {{hash=7d0f87dfa28107ef5e7ba5526f801451}{%
@@ -74,6 +143,119 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1080/07421222.1990.11517898
+      \endverb
+    \endentry
+    \entry{trends_in_ner}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=d6c866c337af8b147a3ac78d6d0f606f}{%
+           family={Roy},
+           familyi={R\bibinitperiod},
+           given={Arya},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d6c866c337af8b147a3ac78d6d0f606f}
+      \strng{fullhash}{d6c866c337af8b147a3ac78d6d0f606f}
+      \strng{bibnamehash}{d6c866c337af8b147a3ac78d6d0f606f}
+      \strng{authorbibnamehash}{d6c866c337af8b147a3ac78d6d0f606f}
+      \strng{authornamehash}{d6c866c337af8b147a3ac78d6d0f606f}
+      \strng{authorfullhash}{d6c866c337af8b147a3ac78d6d0f606f}
+      \field{labelalpha}{Roy21}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{URL-Aufruf: 2022-11-06}
+      \field{month}{1}
+      \field{note}{https://doi.org/10.48550/arXiv.2101.11420}
+      \field{title}{Recent Trends in Named Entity Recognition (NER)}
+      \field{year}{2021}
+    \endentry
+    \entry{stopobesity}{misc}{}
+      \field{labelalpha}{22}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extraalpha}{4}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{STop Obesity Platform}
+      \field{urlday}{6}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://stopproject.eu/
+      \endverb
+      \verb{url}
+      \verb http://stopproject.eu/
+      \endverb
+    \endentry
+    \entry{rdflib_team_rdflib_2022}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b7d2f1f03082bdbef10f998611f84a07}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={RDFLib},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7d2f1f03082bdbef10f998611f84a07}
+      \strng{fullhash}{b7d2f1f03082bdbef10f998611f84a07}
+      \strng{bibnamehash}{b7d2f1f03082bdbef10f998611f84a07}
+      \strng{authorbibnamehash}{b7d2f1f03082bdbef10f998611f84a07}
+      \strng{authornamehash}{b7d2f1f03082bdbef10f998611f84a07}
+      \strng{authorfullhash}{b7d2f1f03082bdbef10f998611f84a07}
+      \field{labelalpha}{Tea22}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{rdflib 6.2.0 — rdflib 6.2.0 documentation}
+      \field{urlday}{7}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb rdflib 6.2.0 — rdflib 6.2.0 documentation:C\:\\Users\\Anne\\Zotero\\storage\\XZGUK6LG\\index.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://rdflib.readthedocs.io/en/stable/index.html#
+      \endverb
+      \verb{url}
+      \verb https://rdflib.readthedocs.io/en/stable/index.html#
+      \endverb
+    \endentry
+    \entry{w3c_all_2022}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=446a1ae6601a5c59360c7d591c3992da}{%
+           family={W3C},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{fullhash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{bibnamehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{authorbibnamehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{authornamehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{authorfullhash}{446a1ae6601a5c59360c7d591c3992da}
+      \field{labelalpha}{W3C22}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{All {Standards} and {Drafts} - {W3C}}
+      \field{urlday}{7}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb All Standards and Drafts - W3C:C\:\\Users\\Anne\\Zotero\\storage\\2R3IX4GQ\\TR.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.w3.org/TR/?tag=data
+      \endverb
+      \verb{url}
+      \verb https://www.w3.org/TR/?tag=data
       \endverb
     \endentry
   \enddatalist

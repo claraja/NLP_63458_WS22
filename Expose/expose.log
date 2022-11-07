@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  6 NOV 2022 18:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  7 NOV 2022 17:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1707,7 +1707,7 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'american'.
  (./expose.aux (./frontbackmatter/Contents.aux)
-(./frontbackmatter/Acronyms.aux) (./frontbackmatter/Bibliography.aux))
+(./frontbackmatter/Bibliography.aux))
 \openout1 = `expose.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -1979,7 +1979,11 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 11.
 Package tocbasic Info: character protrusion at toc deactivated on input line 11
 .
- (./expose.toc)
+ (./expose.toc
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplj/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+)
 \tf@toc=\write6
 \openout6 = `expose.toc'.
 
@@ -2012,36 +2016,34 @@ Kapitel 2.
 
 
 
-]) (./chapters/problembeschreibung.tex
+]
+Overfull \hbox (2.59955pt too wide) in paragraph at lines 4--18
+\T1/pplj/m/n/10.95 te-gi-en bie-ten soll. Das For-schungs-pro-jekt ^^RSTop Obe-
+si-ty Plat-form^^Pbeschäftigt
+ []
+
+) (./chapters/problembeschreibung.tex
 Kapitel 3.
 [2
 
 
-]
-Overfull \hbox (18.78941pt too wide) in paragraph at lines 14--15
-[]\T1/pplj/m/n/10.95 Die auf dem Cam-pus des Na-tio-nal In-sti-tu-te of He-alth
- (NIH) im US-Bundestaat
- []
-
-[3
+] [3
 
 
-]
-LaTeX Font Info:    Trying to load font information for TS1+pplj on input line 
-19.
-
-(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/psnfss/ts1pplj
-.fd
-File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
-)) (./chapters/forschungsfragen.tex
+]) (./chapters/forschungsfragen.tex
 Kapitel 4.
-[4]) (./chapters/forschungsmethode.tex
+[4]
+
+LaTeX Warning: Reference `ch:problembeschreibung' on page 5 undefined on input 
+line 4.
+
+) (./chapters/forschungsmethode.tex
 Kapitel 5.
 [5
 
 
 ]
-<pictures/Nunamaker2.png, id=70, 1336.995pt x 917.4275pt>
+<pictures/Nunamaker2.png, id=87, 1336.995pt x 917.4275pt>
 File: pictures/Nunamaker2.png Graphic file (type png)
 <use pictures/Nunamaker2.png>
 Package pdftex.def Info: pictures/Nunamaker2.png  used on input line 10.
@@ -2061,7 +2063,14 @@ f die-ser Grund-
 [6
 
 
- <./pictures/Nunamaker2.png (PNG copy)>]) (./chapters/forschungsziele.tex
+ <./pictures/Nunamaker2.png (PNG copy)>]
+LaTeX Font Info:    Trying to load font information for TS1+pplj on input line 
+23.
+
+(c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/psnfss/ts1pplj
+.fd
+File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
+)) (./chapters/forschungsziele.tex
 Kapitel 6.
 [7]
 Overfull \hbox (2.3325pt too wide) in paragraph at lines 25--26
@@ -2074,32 +2083,70 @@ Kapitel 7.
 [8
 
 
-]) (./chapters/stand_der_wissenschaft.tex
-Kapitel 8.
+]
+Underfull \hbox (badness 4391) in paragraph at lines 35--35
+[]\T1/pplj/m/n/10.95 Abnormal mens-tru-al cy-cle
+ []
+
+
+Underfull \hbox (badness 1502) in paragraph at lines 38--38
+[]\T1/pplj/m/n/10.95 Depressed mood (e.g., fee-
+ []
+
+
+Underfull \hbox (badness 1152) in paragraph at lines 42--42
+[]\T1/pplj/m/n/10.95 Disorders of in-itia-ting and
+ []
+
+
+Underfull \hbox (badness 3439) in paragraph at lines 58--58
+[]\T1/pplj/m/n/10.95 Not get-ting enough sleep
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--61
+[]\T1/pplj/m/n/10.95 Symptoms in-ter-fe-re with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+[]\T1/pplj/m/n/10.95 Symptoms in-ter-fe-re with
+ []
+
+
+Overfull \hbox (25.7277pt too wide) in paragraph at lines 31--66
+ [] 
+ []
+
 [9
 
 
-]) (./chapters/arbeits_und_zeitplan.tex
+] [10]
+Overfull \hbox (0.96426pt too wide) in paragraph at lines 74--75
+[]\T1/pplj/m/n/10.95 Idealerweise ent-steht so ein Text mit Aus-sa-ge-sät-zen, 
+die je-weils ei-ne Krank-
+ []
+
+[11]) (./chapters/stand_der_wissenschaft.tex
+Kapitel 8.
+[12]) (./chapters/arbeits_und_zeitplan.tex
 Kapitel 9.
-[10
+[13
 
 
 ]
-<pictures/zeitplan.png, id=113, 1658.195pt x 807.015pt>
+<pictures/zeitplan.png, id=150, 1658.195pt x 807.015pt>
 File: pictures/zeitplan.png Graphic file (type png)
 <use pictures/zeitplan.png>
 Package pdftex.def Info: pictures/zeitplan.png  used on input line 6.
 (pdftex.def)             Requested size: 370.0pt x 180.06822pt.
-) [11
+) [14
 
 
  <./pictures/zeitplan.png>]
 \openout2 = `frontbackmatter/Bibliography.aux'.
 
  (./frontbackmatter/Bibliography.tex
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/pplj/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Trying to load font information for T1+fvm on input line 15
 .
 
@@ -2112,7 +2159,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvm' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-) [12
+) [15
 
 
 
@@ -2330,10 +2377,10 @@ frontbackmatter/Contents.tex
 chapters/einleitung.tex
 chapters/motivation.tex
 chapters/problembeschreibung.tex
- ts1pplj.fd    2004/09/06 font definitions for TS1/pplj.
 chapters/forschungsfragen.tex
 chapters/forschungsmethode.tex
 pictures/Nunamaker2.png
+ ts1pplj.fd    2004/09/06 font definitions for TS1/pplj.
 chapters/forschungsziele.tex
 chapters/loesungsansatz.tex
 chapters/stand_der_wissenschaft.tex
@@ -2346,6 +2393,9 @@ frontbackmatter/Bibliography.tex
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 109.
 Package rerunfilecheck Info: File `expose.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'expose.run.xml'.
 \openout1 = `expose.run.xml'.
 
@@ -2355,26 +2405,27 @@ Package logreq Info: Writing requests to 'expose.run.xml'.
 ### simple group (level 1) entered at line 57 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38183 strings out of 480994
- 752135 string characters out of 5902830
- 1728487 words of memory out of 5000000
- 52831 multiletter control sequences out of 15000+600000
- 591927 words of font info for 111 fonts, out of 8000000 for 9000
+ 38227 strings out of 480994
+ 753087 string characters out of 5902830
+ 1731230 words of memory out of 5000000
+ 52861 multiletter control sequences out of 15000+600000
+ 593383 words of font info for 114 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 72i,22n,103p,10101b,24084s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,22n,103p,10101b,24133s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/en
 c/dvips/base/8r.enc}<c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/font
 s/type1/public/amsfonts/euler/eurb10.pfb><c:/Programme/Textverarbeitung/TexLive
 /2019/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb><c:/Programme/Textverarbeit
-ung/TexLive/2019/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb><c:/Programme/Te
-xtverarbeitung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/
+ung/TexLive/2019/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb><c:/Programme/T
+extverarbeitung/TexLive/2019/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb><c:/
 Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/upl
-r8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/urw/
-palatino/uplri8a.pfb>
-Output written on expose.pdf (14 pages, 283873 bytes).
+b8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/urw/
+palatino/uplr8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/font
+s/type1/urw/palatino/uplri8a.pfb>
+Output written on expose.pdf (17 pages, 317340 bytes).
 PDF statistics:
- 203 PDF objects out of 1000 (max. 8388607)
- 175 compressed objects within 2 object streams
- 51 named destinations out of 1000 (max. 500000)
- 14455 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 264 PDF objects out of 1000 (max. 8388607)
+ 231 compressed objects within 3 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 14487 words of extra memory for PDF output out of 17280 (max. 10000000)
 
