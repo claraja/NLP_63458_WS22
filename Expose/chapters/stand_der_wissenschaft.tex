@@ -18,6 +18,34 @@ Charakterisiert sind diese Texte dadurch, dass sie durch Zwischenüberschriften 
 %
 \section{FZ 2.1. Überblick über depressive Erkrankungen}
 \label{sec:fz2.1.} 
+Als Quellen für diesen Abschnitt dienten \cite{mpg_depression}, \cite{who_depression} und \cite{psychrembel_depression}.
+\subsection{Allgemein}
+Depression ist eine psychische Krankheit, die geschätzt $3,8 \%$ der Weltbevölkerung und $5\%$ der Erwachsenen betrifft.
+Sie kann dazu führen, dass betroffene Menschen Schwierigkeiten haben im Arbeits- und Familienleben zurecht zu
+kommen, und sie führt im schlimmsten Fall zur Selbsttötung.
+
+\subsection{Symptome}
+Übliche Symptome eine Depression sind eine traurige Grundstimmung, Konzentrationsprobleme, Hoffnungslosigkeit, 
+Müdigkeit und Reizbarkeit. Auch Schlafstörungen, eine Libidostörung, verminderter oder gesteigerter Appetit und
+ein vermindertes Selbswertgefühl oder Selbstbewusstsein sind Symptome. Im schlimmsten Fall treten 
+Selbsttötungsgedanken auf.
+
+\subsection{Formen der Depression}
+Die Schwere einer typischen Depression wird durch leichte, mittelgradige und schwere Episoden unterschieden. Dabei 
+sind die Übergänge fließend.
+Besondere Formen der Depression sind die chronische Depression, bei der trotz therapeutischer Maßnahmen nur wenig 
+Besserung eintritt. Desweiteren gibt es die manisch-depressive Depression, bei der sich depressive und manische 
+Phasen abwechseln. Außerdem gibt es auch kurze, akute depressive Verstimmungen, die nur zwischen einem Tag und
+zwei Wochen dauern. 
+
+\subsection{Ursachen}
+Depressionen entstehen durch ein kompexes Zusammenspiel von sozialen, psychologischen und biologischen Faktoren.
+Dabei wird angenommen, dass für eine typische Depression die Genetik 50% der Ursachen ausmacht. 
+Konkret können Kindheitserfahrungen, Verluste und Arbeitslosigkeit eine Depression begünstigen.
+
+\subsection{Behandlung}
+Je nach Schweregrad der Krankheit werden zur Behandlung von Depressionen psychologische Behandlungen angewandt, 
+und/oder den betroffenen Personen Antidepressiva verschrieben.
 
 
 %
@@ -26,6 +54,33 @@ Charakterisiert sind diese Texte dadurch, dass sie durch Zwischenüberschriften 
 \section{FZ 2.2. Automatisierung durch NLP}
 \label{sec:fz2.2.} 
 
+\subsection{Natural Language Processing (NLP)}
+Natural Language Processing umfasst \dots{} [TODO]
+
+\subsection{Named Entity Recognition (NER)}
+Named Entity Recognition bezeichnet einen Teilbereich des Natural Language Processing, bei dem es darum geht 
+wichtige Entitäten, wie zum Beispiel Personen, Orte oder Institutionen, in einem Text zu erkennen. Methoden 
+zur Bewältigung dieser Aufgabe werden seit circa 30 Jahren entwickelt. Darunter fallen grammatikbasierte und 
+statistische Methoden, sowie auch Methoden des Machine Learning.
+
+\subsection{Entity Linking}
+Als Entity Linking wird im Bereich des NLP die Aufgabe beschrieben, die den Entitäten (z.B. Personen, Orte) 
+in einem Text das korrekte Äquivalent in einer Wissensbasis zuordnet.
+In \cite{shen_entity_2021} wird Entity Linking folgendermaßen definiert (übersetzt):
+\begin{defn}[Entity Linking]
+Gegeben sei ein Dokument $D$, welches die erkannten Entitäten $M=\{m_1, m_2, \dots, m_{|M|}\}$ enthält, sowie
+eine Ziel-Wissensbasis $KB$, welches die Entitäten $E=\{e_1, e_2, \dots, e_{|M|}\}$ enthält. Das Ziel ist es 
+jede Entität $m_i$ in $M$ seinem korrekten Äquivalent $e_i$ in $E$ zuzuordnen.
+\end{defn}
+
+\subsection{spaCy}
+spaCy \dots{} [TODO]
+
+\subsection{Weitere Python-Bibliotheken für Machine Learning (ML) und NER}
+Eine der wichtigsten Python-Bibliotheken für NLP ist NLTK (Natural Language Toolkit) \cite{bird2006nltk}.
+Weitere Python-Bibliotheken, die für NLP-Aufgaben genutzt werden können, sind unter Anderem
+Gensim \cite{vrehuuvrek2011gensim}, Pattern \cite{de2012pattern}\cite{github_pattern}, 
+scikit-learn und PyTorch.
 
 %
 % Section: FZ 1.1. Wissensrepräsentation mittels RDF
