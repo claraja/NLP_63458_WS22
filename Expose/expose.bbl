@@ -19,6 +19,43 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{the_economist_worlds_2017}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c67b3757f32daaf45967993f0c00cee8}{%
+           family={Economist},
+           familyi={E\bibinitperiod},
+           given={The},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{c67b3757f32daaf45967993f0c00cee8}
+      \strng{fullhash}{c67b3757f32daaf45967993f0c00cee8}
+      \strng{bibnamehash}{c67b3757f32daaf45967993f0c00cee8}
+      \strng{authorbibnamehash}{c67b3757f32daaf45967993f0c00cee8}
+      \strng{authornamehash}{c67b3757f32daaf45967993f0c00cee8}
+      \strng{authorfullhash}{c67b3757f32daaf45967993f0c00cee8}
+      \field{labelalpha}{Eco17}
+      \field{sortinit}{E}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0013-0613}
+      \field{journaltitle}{The Economist}
+      \field{title}{The world’s most valuable resource is no longer oil, but data}
+      \field{urlday}{8}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb The Economist Snapshot:C\:\\Users\\Anne\\Zotero\\storage\\5QICYYAZ\\the-worlds-most-valuable-resource-is-no-longer-oil-but-data.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.economist.com/leaders/2017/05/06/the-worlds-most-valuable-resource-is-no-longer-oil-but-data?fsrc=scn%2Ftw%2Fte%2Frfd%2Fpe
+      \endverb
+      \verb{url}
+      \verb https://www.economist.com/leaders/2017/05/06/the-worlds-most-valuable-resource-is-no-longer-oil-but-data?fsrc=scn%2Ftw%2Fte%2Frfd%2Fpe
+      \endverb
+    \endentry
     \entry{mesh}{misc}{}
       \list{publisher}{1}{%
         {United States National Library of Medicine}%

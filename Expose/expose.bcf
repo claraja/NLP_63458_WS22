@@ -2182,14 +2182,17 @@
     <bcf:datasource type="file" datatype="bibtex">NLP.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">menhir</bcf:citekey>
-    <bcf:citekey order="2">stopobesity</bcf:citekey>
-    <bcf:citekey order="3">trends_in_ner</bcf:citekey>
-    <bcf:citekey order="4">mesh</bcf:citekey>
-    <bcf:citekey order="5">metamaplite</bcf:citekey>
-    <bcf:citekey order="6">nunamaker_systems_1990-1</bcf:citekey>
-    <bcf:citekey order="7">w3c_all_2022</bcf:citekey>
-    <bcf:citekey order="8">rdflib_team_rdflib_2022</bcf:citekey>
+    <bcf:citekey order="1">the_economist_worlds_2017</bcf:citekey>
+    <bcf:citekey order="2">menhir</bcf:citekey>
+    <bcf:citekey order="3">stopobesity</bcf:citekey>
+    <bcf:citekey order="4">trends_in_ner</bcf:citekey>
+    <bcf:citekey order="5">mesh</bcf:citekey>
+    <bcf:citekey order="6">metamaplite</bcf:citekey>
+    <bcf:citekey order="7">nunamaker_systems_1990-1</bcf:citekey>
+    <bcf:citekey order="8">nunamaker_systems_1990-1</bcf:citekey>
+    <bcf:citekey order="9">nunamaker_systems_1990-1</bcf:citekey>
+    <bcf:citekey order="10">w3c_all_2022</bcf:citekey>
+    <bcf:citekey order="11">rdflib_team_rdflib_2022</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
