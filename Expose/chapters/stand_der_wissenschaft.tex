@@ -55,7 +55,19 @@ und/oder den betroffenen Personen Antidepressiva verschrieben.
 \label{sec:fz2.2.} 
 
 \subsection{Natural Language Processing (NLP)}
-Natural Language Processing umfasst \dots{} [TODO]
+Natural Language Processing ist ein Teil der Künstlichen Intelligenz. Er befasst sich mit der Aufgabe
+Maschinen den Umgang mit der menschlichen Sprache beizubringen, also das Verstehen der Sprache und dem
+richtigen Antworten darauf. Mithilfe von NLP-Methoden werden zum Beispiel Sätze analysiert, die Bedeutung 
+von Texten erfasst, Chatbots erstellt und sogar ganze Geschichten geschrieben.
+Die grundlegendsten Schritte, die beim Erarbeiten eines NLP-Modells (oder allgemeiner eines 
+Machine-Learning-Modells) ausgeführt werden, sind folgende:
+\begin{enumerate}
+	\item Aufbereitung von Daten
+	\item Wählen eines geeigneten Algorithmus
+	\item Trainieren des Modells mit Trainingsdaten
+	\item Testen des Modells mit Testdaten
+	\item Modell anwenden / Vorhersagen treffen
+\end{enumerate}
 
 \subsection{Named Entity Recognition (NER)}
 Named Entity Recognition bezeichnet einen Teilbereich des Natural Language Processing, bei dem es darum geht 
@@ -65,7 +77,7 @@ statistische Methoden, sowie auch Methoden des Machine Learning.
 
 \subsection{Entity Linking}
 Als Entity Linking wird im Bereich des NLP die Aufgabe beschrieben, die den Entitäten (z.B. Personen, Orte) 
-in einem Text das korrekte Äquivalent in einer Wissensbasis zuordnet.
+in einem Text das korrekte Äquivalent in einer Wissensbasis zuordnen soll.
 In \cite{shen_entity_2021} wird Entity Linking folgendermaßen definiert (übersetzt):
 \begin{defn}[Entity Linking]
 Gegeben sei ein Dokument $D$, welches die erkannten Entitäten $M=\{m_1, m_2, \dots, m_{|M|}\}$ enthält, sowie
@@ -74,7 +86,13 @@ jede Entität $m_i$ in $M$ seinem korrekten Äquivalent $e_i$ in $E$ zuzuordnen.
 \end{defn}
 
 \subsection{spaCy}
-spaCy \dots{} [TODO]
+spaCy ist eine Python-Bibliothek, die die erforderlichen Daten und Algorithmen enthält, die zum verarbeiten von
+Texten mit natürlicher Sprache benötigt werden. SpaCy enthält vortrainierte Modelle für über 70 verschiedene 
+Sprachen, unter anderem Spanisch, Englisch, Griechisch und Deutsch. Zudem ermöglicht spaCy das Einbinden von 
+Modellen, die mithilfe anderer Python-Bibliotheken (zum Beispiel PyTorch oder TensorFlow) trainiert wurden.
+Anders als einige andere NLP-Bibliotheken konzentriert sich spaCy darauf, Software für den Produktionseinsatz 
+zur Verfügung zu stellen. Erstmals wurde spaCy 2015 von Matthew Honnibal veröffentlicht. 
+\cite{vasiliev2020natural} \cite{github_spacy} \cite{spacy}
 
 \subsection{Weitere Python-Bibliotheken für Machine Learning (ML) und NER}
 Eine der wichtigsten Python-Bibliotheken für NLP ist NLTK (Natural Language Toolkit) \cite{bird2006nltk}.
