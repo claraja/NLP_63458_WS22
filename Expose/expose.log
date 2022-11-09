@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  8 NOV 2022 20:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  9 NOV 2022 18:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -943,9 +943,10 @@ File: lstlang3.sty 2019/09/10 1.8c listings language file
 sc.sty
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 )
+Package color Info: Redefining color cyan on input line 178.
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of KOMA-Script class, that doesn't
-(scrhack)             need that hack, on input line 190.
+(scrhack)             need that hack, on input line 214.
 
 (c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/hyperref/hyper
 ref.sty
@@ -1054,15 +1055,15 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip103
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 212.
-Package hyperref Info: Option `linktocpage' set `true' on input line 212.
-Package hyperref Info: Option `breaklinks' set `true' on input line 212.
-Package hyperref Info: Option `pageanchor' set `true' on input line 212.
-Package hyperref Info: Option `plainpages' set `false' on input line 212.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 212.
+Package hyperref Info: Option `colorlinks' set `true' on input line 236.
+Package hyperref Info: Option `linktocpage' set `true' on input line 236.
+Package hyperref Info: Option `breaklinks' set `true' on input line 236.
+Package hyperref Info: Option `pageanchor' set `true' on input line 236.
+Package hyperref Info: Option `plainpages' set `false' on input line 236.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 236.
 
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 212.
-Package hyperref Info: Option `hypertexnames' set `true' on input line 212.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 236.
+Package hyperref Info: Option `hypertexnames' set `true' on input line 236.
  (./classicthesis.sty
 Package: classicthesis 2017/10/13 v4.4 Typographic style for a classic-looking 
 thesis
@@ -1983,6 +1984,12 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 11
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
+
+Overfull \hbox (7.49306pt too wide) in paragraph at lines 47--47
+ [][] []\T1/pplj/m/n/10.95 Weitere Python-Bibliotheken für Ma-chi-ne Lear-ning 
+(ML) 
+ []
+
 )
 \tf@toc=\write6
 \openout6 = `expose.toc'.
@@ -1997,8 +2004,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 
 
 
-])
-(./chapters/einleitung.tex
+]) (./chapters/einleitung.tex
 1: section
 1: chapter
 1: chapter
@@ -2014,17 +2020,33 @@ Kapitel 1.
 
 
 
-]) (./chapters/problembeschreibung.tex [2])
-(./chapters/forschungsfragen.tex) (./chapters/forschungsmethode.tex
-<pictures/Nunamaker2.png, id=79, 1336.995pt x 917.4275pt>
+]) (./chapters/problembeschreibung.tex
+Overfull \hbox (3.74644pt too wide) in paragraph at lines 10--11
+[]\T1/pplj/m/n/10.95 Medizinische und wis-sen-
+ []
+
+
+Overfull \hbox (2.59181pt too wide) in paragraph at lines 12--13
+[]\T1/pplj/m/n/10.95 Neben der gram-ma-ti-ka-
+ []
+
+[2]
+Overfull \hbox (2.50906pt too wide) in paragraph at lines 18--19
+[]\T1/pplj/m/n/10.95 Basierend auf den ge-fun-de-nen
+ []
+
+
+Overfull \hbox (5.2606pt too wide) in paragraph at lines 18--19
+\T1/pplj/m/n/10.95 Krank-hei-ten und Sym-pto-me rich-tig zu-zu-ord-nen. Hier-zu
+ muss die Struk-
+ []
+
+) (./chapters/forschungsfragen.tex [3]) (./chapters/forschungsmethode.tex
+<pictures/Nunamaker2.png, id=113, 1336.995pt x 917.4275pt>
 File: pictures/Nunamaker2.png Graphic file (type png)
 <use pictures/Nunamaker2.png>
 Package pdftex.def Info: pictures/Nunamaker2.png  used on input line 8.
 (pdftex.def)             Requested size: 370.0pt x 253.8822pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 
 Overfull \hbox (0.3739pt too wide) in paragraph at lines 15--16
 \T1/pplj/m/n/10.95 un-be-kannt ist, wer-den Fall-stu-di-en, Feld-ver-su-che ode
@@ -2037,20 +2059,20 @@ Overfull \hbox (8.45415pt too wide) in paragraph at lines 15--16
 wer-den, die durch
  []
 
-[3]
+[4 <./pictures/Nunamaker2.png (PNG copy)>]
 LaTeX Font Info:    Trying to load font information for TS1+pplj on input line 
 23.
 
 (c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/psnfss/ts1pplj
 .fd
 File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
-)) (./chapters/forschungsziele.tex [4 <./pictures/Nunamaker2.png (PNG copy)>]
+)) (./chapters/forschungsziele.tex
 Overfull \hbox (2.3325pt too wide) in paragraph at lines 24--25
 []\T1/pplj/m/n/10.95 Evaluation zur Über-füh-rung me-di-zi-ni-schen Fach-vo-ka-
 bu-lars in ma-
  []
 
-) (./chapters/loesungsansatz.tex [5]
+[5]) (./chapters/loesungsansatz.tex [6]
 Underfull \hbox (badness 4391) in paragraph at lines 35--35
 []\T1/pplj/m/n/10.95 Abnormal mens-tru-al cy-cle
  []
@@ -2085,45 +2107,226 @@ Overfull \hbox (25.7277pt too wide) in paragraph at lines 31--66
  [] 
  []
 
-[6] [7] [8]) (./chapters/stand_der_wissenschaft.tex
+[7] [8] [9]) (./chapters/stand_der_wissenschaft.tex
 Kapitel 2.
-[9]) (./chapters/planung.tex
-Kapitel 3.
-[10
+[10]
+Overfull \hbox (0.80006pt too wide) in paragraph at lines 28--32
+\T1/pplj/m/n/10.95 Übliche Sym-pto-me ei-ne De-pres-si-on sind ei-ne trau-ri-ge
+ Grund-stim-mung, Kon-
+ []
+
+[11
 
 
-] [11
+]
+
+! LaTeX Error: Environment defn undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \begin{defn}
+                 [Entity Linking]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 
-]) (./chapters/arbeits_und_zeitplan.tex
-<pictures/zeitplan.png, id=170, 1658.195pt x 807.015pt>
-File: pictures/zeitplan.png Graphic file (type png)
-<use pictures/zeitplan.png>
-Package pdftex.def Info: pictures/zeitplan.png  used on input line 6.
-(pdftex.def)             Requested size: 370.0pt x 180.06822pt.
-) [12 <./pictures/zeitplan.png>]
-\openout2 = `frontbackmatter/Bibliography.aux'.
+! LaTeX Error: \begin{document} ended by \end{defn}.
 
-(./frontbackmatter/Bibliography.tex
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 15
-.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.74 \end{defn}
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (31.07907pt too wide) in paragraph at lines 80--84
+\T1/pplj/m/n/10.95 ge-nutzt wer-den kön-nen, sind un-ter An-de-rem Gen-sim [[][
+]RS+11[][]], Pat-tern [[][]DD12[][]][[][]22a[][]],
+ []
+
+[12]
+<pictures/rdf-graph.png, id=193, 774.895pt x 299.1175pt>
+File: pictures/rdf-graph.png Graphic file (type png)
+<use pictures/rdf-graph.png>
+Package pdftex.def Info: pictures/rdf-graph.png  used on input line 99.
+(pdftex.def)             Requested size: 370.0pt x 142.82623pt.
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 10
+0.
 
 (c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.30756pt on input line 15.
+(Font)              scaled to size 8.50006pt on input line 100.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvm' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-) [13
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+[][]|\T1/pplj/m/n/10 ein-fa-cher RDF-Graph (vi-sua-li-siert mit [][]$\T1/fvm/m/
+n/10 https : / / www . ldf . fi /
+ []
+
+
+Overfull \hbox (18.25352pt too wide) in paragraph at lines 113--114
+\T1/pplj/m/n/10.95 die-sem Prak-ti-kum er-folgt die Aus-ga-be der Wis-sens-re-p
+rä-sen-ta-ti-on im RDF/XML-
+ []
+
+[13 <./pictures/rdf-graph.png>]
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 9.30756pt on input line 118.
+
+
+Package xcolor Warning: Incompatible color definition on input line 120.
+
+
+Package xcolor Warning: Incompatible color definition on input line 120.
+
+
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+
+Package xcolor Warning: Incompatible color definition on input line 122.
+
+
+Package xcolor Warning: Incompatible color definition on input line 124.
+
+
+Package xcolor Warning: Incompatible color definition on input line 124.
+
+
+Package xcolor Warning: Incompatible color definition on input line 124.
+
+
+Package xcolor Warning: Incompatible color definition on input line 124.
+
+
+Package xcolor Warning: Incompatible color definition on input line 125.
+
+
+Package xcolor Warning: Incompatible color definition on input line 125.
+
+
+Package xcolor Warning: Incompatible color definition on input line 125.
+
+
+Package xcolor Warning: Incompatible color definition on input line 125.
+
+
+Package xcolor Warning: Incompatible color definition on input line 126.
+
+
+Package xcolor Warning: Incompatible color definition on input line 126.
+
+
+Package xcolor Warning: Incompatible color definition on input line 126.
+
+
+Package xcolor Warning: Incompatible color definition on input line 126.
+
+
+Package xcolor Warning: Incompatible color definition on input line 127.
+
+
+Package xcolor Warning: Incompatible color definition on input line 127.
+
+
+Package xcolor Warning: Incompatible color definition on input line 127.
+
+
+Package xcolor Warning: Incompatible color definition on input line 127.
+
+
+Package xcolor Warning: Incompatible color definition on input line 128.
+
+
+Package xcolor Warning: Incompatible color definition on input line 128.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+) (./chapters/planung.tex
+Kapitel 3.
+[14] [15
+
+
+]) (./chapters/arbeits_und_zeitplan.tex
+<pictures/zeitplan.png, id=253, 1658.195pt x 807.015pt>
+File: pictures/zeitplan.png Graphic file (type png)
+<use pictures/zeitplan.png>
+Package pdftex.def Info: pictures/zeitplan.png  used on input line 6.
+(pdftex.def)             Requested size: 370.0pt x 180.06822pt.
+) [16 <./pictures/zeitplan.png>]
+\openout2 = `frontbackmatter/Bibliography.aux'.
+
+(./frontbackmatter/Bibliography.tex
+Overfull \hbox (5.39558pt too wide) in paragraph at lines 15--15
+\T1/pplj/m/it/10.95 of the CO-LING/ACL 2006 In-ter-ac-ti-ve Pre-sen-ta-ti-on Se
+s-si-ons\T1/pplj/m/n/10.95 . 2006, S. 69^^U
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.15 \printbibliography[heading=bibintoc]
+                                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 15.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.15 \printbibliography[heading=bibintoc]
+                                         
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no ü in font pplr9t!
+
+Overfull \hbox (14.2241pt too wide) in paragraph at lines 15--15
+[]\T1/pplj/m/it/10.95 Max-Planck$[]\OML/zplm/m/it/10.95 nstitutfrPsychiatrie \O
+MS/zplm/m/n/10.95 ^^@ \OML/zplm/m/it/10.95 Depression$\T1/pplj/m/n/10.95 . Nov.
+ 2022. \T1/pplj/m/sc/10.95 url\T1/pplj/m/n/10.95 : [][]$\T1/fvm/m/n/10.95 https
+ :
+ []
+
+
+Overfull \hbox (5.32982pt too wide) in paragraph at lines 15--15
+\T1/fvm/m/n/10.95 / / www . psych . mpg . de / 840900 / depression$[][] \T1/ppl
+j/m/n/10.95 (be-sucht am 07.11.2022). 
+ []
+
+
+Overfull \hbox (5.88828pt too wide) in paragraph at lines 15--15
+\T1/fvm/m/n/10.95 pschyrembel . de / depression / K05PP / doc/$[][] \T1/pplj/m/
+n/10.95 (be-sucht am 07.11.2022). 
+ []
+
+[17
 
 
 
 
 
-]
+]) [18]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
  (./expose.aux (./frontbackmatter/Contents.aux)
@@ -2342,11 +2545,12 @@ pictures/Nunamaker2.png
 chapters/forschungsziele.tex
 chapters/loesungsansatz.tex
 chapters/stand_der_wissenschaft.tex
+pictures/rdf-graph.png
+   t1fvm.fd    2004/09/07 scalable font definitions for T1/fvm.
 chapters/planung.tex
 chapters/arbeits_und_zeitplan.tex
 pictures/zeitplan.png
 frontbackmatter/Bibliography.tex
-   t1fvm.fd    2004/09/07 scalable font definitions for T1/fvm.
  ***********
 
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
@@ -2361,27 +2565,29 @@ Package logreq Info: Writing requests to 'expose.run.xml'.
 ### simple group (level 1) entered at line 57 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38257 strings out of 480994
- 753463 string characters out of 5902830
- 1730481 words of memory out of 5000000
- 52860 multiletter control sequences out of 15000+600000
- 593383 words of font info for 114 fonts, out of 8000000 for 9000
+ 38655 strings out of 480994
+ 757864 string characters out of 5902830
+ 1753319 words of memory out of 5000000
+ 53208 multiletter control sequences out of 15000+600000
+ 596702 words of font info for 124 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 67i,23n,93p,10101b,24101s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,22n,93p,10101b,24268s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/en
 c/dvips/base/8r.enc}<c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/font
-s/type1/public/amsfonts/euler/eurb10.pfb><c:/Programme/Textverarbeitung/TexLive
-/2019/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb><c:/Programme/Textverarbeit
-ung/TexLive/2019/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb><c:/Programme/T
-extverarbeitung/TexLive/2019/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb><c:/
-Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/upl
-b8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/urw/
-palatino/uplr8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/font
-s/type1/urw/palatino/uplri8a.pfb>
-Output written on expose.pdf (15 pages, 318497 bytes).
+s/type1/public/amsfonts/cm/cmr10.pfb><c:/Programme/Textverarbeitung/TexLive/201
+9/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Programme/Textverarb
+eitung/TexLive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb><c:
+/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/public/fpl/fplr
+c8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/publ
+ic/fpl/fplrij8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/font
+s/type1/public/bera/fvmr8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texm
+f-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/Programme/Textverarbeitung/TexLi
+ve/2019/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/Programme/Textverarb
+eitung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on expose.pdf (20 pages, 376345 bytes).
 PDF statistics:
- 305 PDF objects out of 1000 (max. 8388607)
- 274 compressed objects within 3 object streams
- 93 named destinations out of 1000 (max. 500000)
- 14503 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 460 PDF objects out of 1000 (max. 8388607)
+ 418 compressed objects within 5 object streams
+ 133 named destinations out of 1000 (max. 500000)
+ 15132 words of extra memory for PDF output out of 17280 (max. 10000000)
 

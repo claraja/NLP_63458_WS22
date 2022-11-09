@@ -2191,8 +2191,16 @@
     <bcf:citekey order="7">nunamaker_systems_1990-1</bcf:citekey>
     <bcf:citekey order="8">nunamaker_systems_1990-1</bcf:citekey>
     <bcf:citekey order="9">nunamaker_systems_1990-1</bcf:citekey>
-    <bcf:citekey order="10">w3c_all_2022</bcf:citekey>
-    <bcf:citekey order="11">rdflib_team_rdflib_2022</bcf:citekey>
+    <bcf:citekey order="10">mpg_depression</bcf:citekey>
+    <bcf:citekey order="11">who_depression</bcf:citekey>
+    <bcf:citekey order="12">psychrembel_depression</bcf:citekey>
+    <bcf:citekey order="13">shen_entity_2021</bcf:citekey>
+    <bcf:citekey order="14">bird2006nltk</bcf:citekey>
+    <bcf:citekey order="15">vrehuuvrek2011gensim</bcf:citekey>
+    <bcf:citekey order="16">de2012pattern</bcf:citekey>
+    <bcf:citekey order="17">github_pattern</bcf:citekey>
+    <bcf:citekey order="18">w3c_all_2022</bcf:citekey>
+    <bcf:citekey order="19">rdflib_team_rdflib_2022</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
