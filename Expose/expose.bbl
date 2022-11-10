@@ -19,6 +19,66 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{bird2006nltk}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=a6ad72a87713a430f7335c5656da28f1}{%
+           family={Bird},
+           familyi={B\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a6ad72a87713a430f7335c5656da28f1}
+      \strng{fullhash}{a6ad72a87713a430f7335c5656da28f1}
+      \strng{bibnamehash}{a6ad72a87713a430f7335c5656da28f1}
+      \strng{authorbibnamehash}{a6ad72a87713a430f7335c5656da28f1}
+      \strng{authornamehash}{a6ad72a87713a430f7335c5656da28f1}
+      \strng{authorfullhash}{a6ad72a87713a430f7335c5656da28f1}
+      \field{labelalpha}{Bir06}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the COLING/ACL 2006 Interactive Presentation Sessions}
+      \field{title}{NLTK: the natural language toolkit}
+      \field{year}{2006}
+      \field{pages}{69\bibrangedash 72}
+      \range{pages}{4}
+    \endentry
+    \entry{de2012pattern}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b32cc41776652e84c634b71c1cd957e0}{%
+           family={De\bibnamedelima Smedt},
+           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=de80d83604a86dc9aff51ca1ce3069e6}{%
+           family={Daelemans},
+           familyi={D\bibinitperiod},
+           given={Walter},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JMLR. org}%
+      }
+      \strng{namehash}{cbc9291e3576aedc60b853c90b523a7c}
+      \strng{fullhash}{cbc9291e3576aedc60b853c90b523a7c}
+      \strng{bibnamehash}{cbc9291e3576aedc60b853c90b523a7c}
+      \strng{authorbibnamehash}{cbc9291e3576aedc60b853c90b523a7c}
+      \strng{authornamehash}{cbc9291e3576aedc60b853c90b523a7c}
+      \strng{authorfullhash}{cbc9291e3576aedc60b853c90b523a7c}
+      \field{labelalpha}{DD12}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of Machine Learning Research}
+      \field{number}{1}
+      \field{title}{Pattern for python}
+      \field{volume}{13}
+      \field{year}{2012}
+      \field{pages}{2063\bibrangedash 2067}
+      \range{pages}{5}
+    \endentry
     \entry{the_economist_worlds_2017}{article}{}
       \name{author}{1}{}{%
         {{hash=c67b3757f32daaf45967993f0c00cee8}{%
@@ -56,6 +116,52 @@
       \verb https://www.economist.com/leaders/2017/05/06/the-worlds-most-valuable-resource-is-no-longer-oil-but-data?fsrc=scn%2Ftw%2Fte%2Frfd%2Fpe
       \endverb
     \endentry
+    \entry{github_pattern}{misc}{}
+      \list{publisher}{1}{%
+        {University of Antwerp, Belgium}%
+      }
+      \field{labelalpha}{22}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extraalpha}{1}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{GitHub - Pattern}
+      \field{urlday}{8}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/clips/pattern
+      \endverb
+      \verb{url}
+      \verb https://github.com/clips/pattern
+      \endverb
+    \endentry
+    \entry{mpg_depression}{misc}{}
+      \list{publisher}{1}{%
+        {Max-Planck_Institut für Psychiatrie}%
+      }
+      \field{labelalpha}{22}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extraalpha}{2}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Max-Planck_Institut für Psychiatrie - Depression}
+      \field{urlday}{7}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.psych.mpg.de/840900/depression
+      \endverb
+      \verb{url}
+      \verb https://www.psych.mpg.de/840900/depression
+      \endverb
+    \endentry
     \entry{mesh}{misc}{}
       \list{publisher}{1}{%
         {United States National Library of Medicine}%
@@ -63,7 +169,7 @@
       \field{labelalpha}{22}
       \field{sortinit}{M}
       \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{extraalpha}{1}
+      \field{extraalpha}{3}
       \field{labeltitlesource}{title}
       \field{month}{11}
       \field{title}{Medical Subject Headings}
@@ -86,7 +192,7 @@
       \field{labelalpha}{22}
       \field{sortinit}{M}
       \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{extraalpha}{2}
+      \field{extraalpha}{4}
       \field{labeltitlesource}{title}
       \field{month}{11}
       \field{title}{MENHIR}
@@ -109,7 +215,7 @@
       \field{labelalpha}{22}
       \field{sortinit}{M}
       \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{extraalpha}{3}
+      \field{extraalpha}{5}
       \field{labeltitlesource}{title}
       \field{month}{11}
       \field{title}{MetaMapLite}
@@ -182,6 +288,59 @@
       \verb https://doi.org/10.1080/07421222.1990.11517898
       \endverb
     \endentry
+    \entry{psychrembel_depression}{misc}{}
+      \list{publisher}{1}{%
+        {Walter de Gruyter GmbH}%
+      }
+      \field{labelalpha}{22}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{extraalpha}{6}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Psychrembel Online - Depression}
+      \field{urlday}{7}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.pschyrembel.de/depression/K05PP/doc/
+      \endverb
+      \verb{url}
+      \verb https://www.pschyrembel.de/depression/K05PP/doc/
+      \endverb
+    \endentry
+    \entry{vrehuuvrek2011gensim}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{hash=d34e74524ffd551d0047dc195b0f95cf}{%
+           family={Rehurek},
+           familyi={R\bibinitperiod},
+           given={Radim},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6279e9bacedcff3b6605bcd9faaaf41c}{%
+           family={Sojka},
+           familyi={S\bibinitperiod},
+           given={Petr},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{fab19f1bc2847dab21e53ad32fea143a}
+      \strng{fullhash}{fab19f1bc2847dab21e53ad32fea143a}
+      \strng{bibnamehash}{fab19f1bc2847dab21e53ad32fea143a}
+      \strng{authorbibnamehash}{fab19f1bc2847dab21e53ad32fea143a}
+      \strng{authornamehash}{fab19f1bc2847dab21e53ad32fea143a}
+      \strng{authorfullhash}{fab19f1bc2847dab21e53ad32fea143a}
+      \field{labelalpha}{RS+11}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Retrieved from genism. org}
+      \field{title}{Gensim—statistical semantics in python}
+      \field{year}{2011}
+    \endentry
     \entry{trends_in_ner}{unpublished}{}
       \name{author}{1}{}{%
         {{hash=d6c866c337af8b147a3ac78d6d0f606f}{%
@@ -207,11 +366,83 @@
       \field{title}{Recent Trends in Named Entity Recognition (NER)}
       \field{year}{2021}
     \endentry
+    \entry{shen_entity_2021}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=6089d026596d8f080674537d085ff836}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=f50aab20cb3dd0fe34bd1c54ffca03d4}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yuhan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=dc9912633266eb03015e42d8c77d8b5a}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yinan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=7cacfe272c4d395c979d6aecd2f5ec9c}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Jiawei},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7086b1d5e2957cb0df860dad4985b9c9}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Jianyong},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3f04010e681fb8695d9d802cc2afb1bc}{%
+           family={Yuan},
+           familyi={Y\bibinitperiod},
+           given={Xiaojie},
+           giveni={X\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{c75d6db70e9a5c744748da8007c6f0cd}
+      \strng{fullhash}{8e031ae4d4bc3b61624b1c99de4778de}
+      \strng{bibnamehash}{8e031ae4d4bc3b61624b1c99de4778de}
+      \strng{authorbibnamehash}{8e031ae4d4bc3b61624b1c99de4778de}
+      \strng{authornamehash}{c75d6db70e9a5c744748da8007c6f0cd}
+      \strng{authorfullhash}{8e031ae4d4bc3b61624b1c99de4778de}
+      \field{labelalpha}{She+21}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Entity linking (EL) is the process of linking entity mentions appearing in web text with their corresponding entities in a knowledge base. EL plays an important role in the ﬁelds of knowledge engineering and data mining, underlying a variety of downstream applications such as knowledge base population, content analysis, relation extraction, and question answering. In recent years, deep learning (DL), which has achieved tremendous success in various domains, has also been leveraged in EL methods to surpass traditional machine learning based methods and yield the state-of-the-art performance. In this survey, we present a comprehensive review and analysis of existing DL based EL methods. First of all, we propose a new taxonomy, which organizes existing DL based EL methods using three axes: embedding, feature, and algorithm. Then we systematically survey the representative EL methods along the three axes of the taxonomy. Later, we introduce ten commonly used EL data sets and give a quantitative performance analysis of DL based EL methods over these data sets. Finally, we discuss the remaining limitations of existing methods and highlight some promising future directions.}
+      \field{annotation}{Comment: To appear in IEEE TKDE}
+      \field{month}{9}
+      \field{note}{arXiv:2109.12520 [cs]}
+      \field{shorttitle}{Entity {Linking} {Meets} {Deep} {Learning}}
+      \field{title}{Entity {Linking} {Meets} {Deep} {Learning}: {Techniques} and {Solutions}}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Shen et al. - 2021 - Entity Linking Meets Deep Learning Techniques and.pdf:C\:\\Users\\Anne\\Zotero\\storage\\6MPHWRBH\\Shen et al. - 2021 - Entity Linking Meets Deep Learning Techniques and.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2109.12520
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2109.12520
+      \endverb
+      \keyw{Computer Science - Artificial Intelligence,Computer Science - Computation and Language}
+    \endentry
     \entry{stopobesity}{misc}{}
       \field{labelalpha}{22}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
-      \field{extraalpha}{4}
+      \field{extraalpha}{7}
       \field{labeltitlesource}{title}
       \field{month}{11}
       \field{title}{STop Obesity Platform}
@@ -293,6 +524,29 @@
       \endverb
       \verb{url}
       \verb https://www.w3.org/TR/?tag=data
+      \endverb
+    \endentry
+    \entry{who_depression}{misc}{}
+      \list{publisher}{1}{%
+        {World Health Organization (WHO)}%
+      }
+      \field{labelalpha}{22}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{extraalpha}{8}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{World Health Organization - Depression}
+      \field{urlday}{7}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.who.int/health-topics/depression#tab=tab_1
+      \endverb
+      \verb{url}
+      \verb https://www.who.int/health-topics/depression#tab=tab_1
       \endverb
     \endentry
   \enddatalist
