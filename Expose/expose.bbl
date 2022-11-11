@@ -139,6 +139,52 @@
       \verb https://github.com/clips/pattern
       \endverb
     \endentry
+    \entry{github_spacy}{article}{}
+      \name{author}{4}{}{%
+        {{hash=31cf0cd70714219d39b46b0f8aae95f9}{%
+           family={Honnibal},
+           familyi={H\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=22ec3e1be0d721ed1c94e7caf62cc97c}{%
+           family={Van\bibnamedelima Landeghem},
+           familyi={V\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Sofie},
+           giveni={S\bibinitperiod}}}%
+        {{hash=47c9fa7dcc4eb3484a88f4bb42655895}{%
+           family={Montani},
+           familyi={M\bibinitperiod},
+           given={Ines},
+           giveni={I\bibinitperiod}}}%
+        {{hash=536eccdf07a1897181ba997c05a422d4}{%
+           family={Boyd},
+           familyi={B\bibinitperiod},
+           given={Adriane},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{bed6dea97e0930261a0f2a5da0281ca5}
+      \strng{fullhash}{5e8acbfafd11345cc782a236d27128d0}
+      \strng{bibnamehash}{5e8acbfafd11345cc782a236d27128d0}
+      \strng{authorbibnamehash}{5e8acbfafd11345cc782a236d27128d0}
+      \strng{authornamehash}{bed6dea97e0930261a0f2a5da0281ca5}
+      \strng{authorfullhash}{5e8acbfafd11345cc782a236d27128d0}
+      \field{labelalpha}{Hon+20}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{spaCy: Industrial-strength Natural Language Processing in Python}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.5281/zenodo.1212303
+      \endverb
+      \verb{urlraw}
+      \verb https://github.com/explosion/spaCy
+      \endverb
+      \verb{url}
+      \verb https://github.com/explosion/spaCy
+      \endverb
+    \endentry
     \entry{mpg_depression}{misc}{}
       \list{publisher}{1}{%
         {Max-Planck_Institut für Psychiatrie}%
@@ -162,7 +208,7 @@
       \verb https://www.psych.mpg.de/840900/depression
       \endverb
     \endentry
-    \entry{mesh}{misc}{}
+    \entry{noauthor_menhir_2022}{misc}{}
       \list{publisher}{1}{%
         {United States National Library of Medicine}%
       }
@@ -172,30 +218,7 @@
       \field{extraalpha}{3}
       \field{labeltitlesource}{title}
       \field{month}{11}
-      \field{title}{Medical Subject Headings}
-      \field{urlday}{6}
-      \field{urlmonth}{11}
-      \field{urlyear}{2022}
-      \field{year}{2022}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.nlm.nih.gov/mesh/introduction.html
-      \endverb
-      \verb{url}
-      \verb https://www.nlm.nih.gov/mesh/introduction.html
-      \endverb
-    \endentry
-    \entry{menhir}{misc}{}
-      \list{publisher}{1}{%
-        {United States National Library of Medicine}%
-      }
-      \field{labelalpha}{22}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{extraalpha}{4}
-      \field{labeltitlesource}{title}
-      \field{month}{11}
-      \field{title}{MENHIR}
+      \field{title}{{MENHIR}}
       \field{urlday}{6}
       \field{urlmonth}{11}
       \field{urlyear}{2022}
@@ -206,29 +229,6 @@
       \endverb
       \verb{url}
       \verb https://menhir-project.eu/
-      \endverb
-    \endentry
-    \entry{metamaplite}{misc}{}
-      \list{publisher}{1}{%
-        {United States National Library of Medicine}%
-      }
-      \field{labelalpha}{22}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{extraalpha}{5}
-      \field{labeltitlesource}{title}
-      \field{month}{11}
-      \field{title}{MetaMapLite}
-      \field{urlday}{6}
-      \field{urlmonth}{11}
-      \field{urlyear}{2022}
-      \field{year}{2022}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://lhncbc.nlm.nih.gov/ii/tools/MetaMap/run-locally/MetaMapLite.html
-      \endverb
-      \verb{url}
-      \verb https://lhncbc.nlm.nih.gov/ii/tools/MetaMap/run-locally/MetaMapLite.html
       \endverb
     \endentry
     \entry{nunamaker_systems_1990-1}{article}{}
@@ -295,7 +295,7 @@
       \field{labelalpha}{22}
       \field{sortinit}{P}
       \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
-      \field{extraalpha}{6}
+      \field{extraalpha}{4}
       \field{labeltitlesource}{title}
       \field{month}{11}
       \field{title}{Psychrembel Online - Depression}
@@ -340,31 +340,6 @@
       \field{journaltitle}{Retrieved from genism. org}
       \field{title}{Gensim—statistical semantics in python}
       \field{year}{2011}
-    \endentry
-    \entry{trends_in_ner}{unpublished}{}
-      \name{author}{1}{}{%
-        {{hash=d6c866c337af8b147a3ac78d6d0f606f}{%
-           family={Roy},
-           familyi={R\bibinitperiod},
-           given={Arya},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{d6c866c337af8b147a3ac78d6d0f606f}
-      \strng{fullhash}{d6c866c337af8b147a3ac78d6d0f606f}
-      \strng{bibnamehash}{d6c866c337af8b147a3ac78d6d0f606f}
-      \strng{authorbibnamehash}{d6c866c337af8b147a3ac78d6d0f606f}
-      \strng{authornamehash}{d6c866c337af8b147a3ac78d6d0f606f}
-      \strng{authorfullhash}{d6c866c337af8b147a3ac78d6d0f606f}
-      \field{labelalpha}{Roy21}
-      \field{sortinit}{R}
-      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{annotation}{URL-Aufruf: 2022-11-06}
-      \field{month}{1}
-      \field{note}{https://doi.org/10.48550/arXiv.2101.11420}
-      \field{title}{Recent Trends in Named Entity Recognition (NER)}
-      \field{year}{2021}
     \endentry
     \entry{shen_entity_2021}{misc}{}
       \name{author}{6}{}{%
@@ -438,14 +413,34 @@
       \endverb
       \keyw{Computer Science - Artificial Intelligence,Computer Science - Computation and Language}
     \endentry
-    \entry{stopobesity}{misc}{}
+    \entry{spacy}{misc}{}
+      \field{labelalpha}{22}
+      \field{sortinit}{s}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extraalpha}{5}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{spaCy.io}
+      \field{urlday}{9}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://spacy.io/usage/spacy-101
+      \endverb
+      \verb{url}
+      \verb https://spacy.io/usage/spacy-101
+      \endverb
+    \endentry
+    \entry{noauthor_stop_2022}{misc}{}
       \field{labelalpha}{22}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
-      \field{extraalpha}{7}
+      \field{extraalpha}{6}
       \field{labeltitlesource}{title}
       \field{month}{11}
-      \field{title}{STop Obesity Platform}
+      \field{title}{{STop} {Obesity} {Platform}}
       \field{urlday}{6}
       \field{urlmonth}{11}
       \field{urlyear}{2022}
@@ -493,6 +488,31 @@
       \verb https://rdflib.readthedocs.io/en/stable/index.html#
       \endverb
     \endentry
+    \entry{vasiliev2020natural}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d643c3dba9ef5135dd6a2b8cf501962a}{%
+           family={Vasiliev},
+           familyi={V\bibinitperiod},
+           given={Yuli},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {No Starch Press}%
+      }
+      \strng{namehash}{d643c3dba9ef5135dd6a2b8cf501962a}
+      \strng{fullhash}{d643c3dba9ef5135dd6a2b8cf501962a}
+      \strng{bibnamehash}{d643c3dba9ef5135dd6a2b8cf501962a}
+      \strng{authorbibnamehash}{d643c3dba9ef5135dd6a2b8cf501962a}
+      \strng{authornamehash}{d643c3dba9ef5135dd6a2b8cf501962a}
+      \strng{authorfullhash}{d643c3dba9ef5135dd6a2b8cf501962a}
+      \field{labelalpha}{Vas20}
+      \field{sortinit}{V}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Natural Language Processing with Python and SpaCy: A Practical Introduction}
+      \field{year}{2020}
+    \endentry
     \entry{w3c_all_2022}{misc}{}
       \name{author}{1}{}{%
         {{hash=446a1ae6601a5c59360c7d591c3992da}{%
@@ -533,7 +553,7 @@
       \field{labelalpha}{22}
       \field{sortinit}{W}
       \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
-      \field{extraalpha}{8}
+      \field{extraalpha}{7}
       \field{labeltitlesource}{title}
       \field{month}{11}
       \field{title}{World Health Organization - Depression}

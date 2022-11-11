@@ -1,0 +1,5 @@
+[0] Config.pm:304> INFO - This is Biber 2.14
+[0] Config.pm:307> INFO - Logfile is 'NLP.blg'
+[76] biber-MSWIN32:322> INFO - === 
+[617] Utils.pm:320> ERROR - Cannot find 'NLP.bcf'!
+[617] Biber.pm:132> INFO - ERRORS: 1
