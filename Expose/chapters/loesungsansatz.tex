@@ -38,10 +38,7 @@ YC0009806 & S3235964 & Constipation (finding) &	SNOMEDCT\_US \\
 LAC3845528 &	S14560529 &\parbox[t]{5cm}{Depressed mood (e.g., feeling sad, tearful)} & LNC \\
 SYC0344315 &	S3252744 &	Depressed mood (finding) &	SNOMEDCT\_US \\
 GTC0011570 &	S1431189 &	depression (disease) & AOD \\
-SYC0681028 &	S1431190 &	depression (economic) & AOD \\
-ETC0021603 &	S3263624 &	\parbox[t]{5cm}{Disorders of initiating and maintaining sleep (disorder)} & SNOMEDCT\_US \\
 FNC2939186 &	S3264511 &	Disturbance in mood (finding) & SNOMEDCT\_US \\
-SYC0349217 &	S20166983 & Episode of depression (finding) & SNOMEDCT\_US \\
 FNC1288289 &	S3312713 &	Fearful mood (finding) & SNOMEDCT\_US \\
 FNC0150041 &	S3313279 &	Feeling hopeless (finding) &	SNOMEDCT\_US \\
 FNC0022107 &	S3313282 &	Feeling irritable (finding)	 & SNOMEDCT\_US \\
@@ -52,14 +49,10 @@ FNC2981158 &	S3386389 &	Lack of libido (finding) & SNOMEDCT\_US \\
 FNC1971624 &	S3397609 &	Loss of appetite (finding) & SNOMEDCT\_US \\
 FNC0178417 &	S3397620 &	\parbox[t]{5cm}{Loss of capacity for enjoyment (finding)} & SNOMEDCT\_US \\
 FNC0456814 &	S3397668 &	Loss of motivation (finding)  & SNOMEDCT\_US \\
-FNC0424219 &	S3397688 &	Loss of self-esteem (finding) & SNOMEDCT\_US \\
 FNC0679136 &	S3398077 &	Low self-esteem (finding) & SNOMEDCT\_US \\
 PTC5444612 &	S20749480 & mood (physical finding) & MTH \\
-FNC0424566 &	S3439673 &	\parbox[t]{5cm}{Not getting enough sleep (disorder)} &	SNOMEDCT\_US \\
 FNC2945580 &	S3485453 &	Poor self-esteem (finding) &	SNOMEDCT\_US \\
 FNC0235160 &	S3513783 &	Restless sleep (finding) & SNOMEDCT\_US \\
-FNC0424570 &	S3580589 &	\parbox[t]{5cm}{Symptoms interfere with sleep (disorder)} & SNOMEDCT\_US \\
-PTC0424570 &	S3580589 &	\parbox[t]{5cm}{Symptoms interfere with sleep (disorder)} & SNOMEDCT\_US \\
 PTC0233481 &	S3620195 &	Worried (finding) & SNOMEDCT\_US \\
 \hline
 \end{tabular}
@@ -75,7 +68,9 @@ Es ist zu prüfen, inwieweit der \emph{Dependency Parser} von \emph{spaCy} genut
 
 Idealerweise entsteht jedoch bereits durch die NER ein Text mit Aussagesätzen, die jeweils eine Krankheit und ein oder mehrere Symptome enthalten. Für die Wissensrepräsentation soll der Entity-Linker eingesetzt werden. Normalerweise wird der Entity-Linker verwendet, um (mehrdeutige) Entitäten, die vom Entity-Recognizer oder Entity-Ruler gefunden werden, einer eindeutigen Entität zuzuordnen (z.B. einem Wikipedia-Eintrag). Der Entity-Linker wird trainiert, so dass die Zuordnung Kontext-basiert erfolgt.
 
-Für die Erstellung der Wissensrepräsentation wird der Entity-Linker auf unorthodoxe Weise verwendet und mit dieser Komponente die Wissensrepräsentation aufgebaut. Dafür ist die Wissensbasis des Entity-Linkers von zentraler Bedeutung. In dieser werden durch das Python-Programm als zusammengehörend erkannte Krankheiten und Symptome gespeichert. Dabei können Symptome mehreren Krankheiten zugeordnet werden. Der Entity-Linker wird mit Sätzen aus den zu analysierenden Texten trainiert, die es ihm erlauben, auch bei anderen Texten Kontext-basiert einem Symptom die richtige Krankheit zuzuordnen. Analysiert man viele Texte hintereinander, kann der Entity-Linker so mit der Zeit eine umfangreiche Wissensbasis aufbauen. Analysiert man einen Text dann mit dem Entity-Recognizer und danach mit dem Entity-Linker, dann entsteht automatisch die Wissensrepräsentation, wobei etwa die Entität `lack of energy' vom Entity-Recognizer gefunden wird und als `Symptom' kategorisiert wird und anschließend vom Entity-Linker der Krankheit `depression' zugeordnet wird, sofern sich dies aus dem Kontext ergibt.
+Für die Erstellung der Wissensrepräsentation kann der Entity-Linker auf unorthodoxe Weise verwendet und mit dieser Komponente die Wissensrepräsentation aufgebaut werden. Wesentlich ist hierbei die vorhandene Datenstruktur der Wissensbasis des Entity-Linkers. In dieser werden durch das Python-Programm als zusammengehörend erkannte Krankheiten und Symptome gespeichert. Dabei können Symptome mehreren Krankheiten zugeordnet werden. Die nach Analyse eines Textes in der Wissensbasis gespeicherten Daten, werden dann als XML-Datei oder RDF-Modell ausgegeben. Alternativ zum Entity-Linker kann eine eigene Datenstruktur zum Zwischenspeichern der Wissensrepräsentation genutzt werden.
+
+Ein Vorteil des Der Entity-Linkers ist, dass er mit Sätzen aus den zu analysierenden Texten trainiert werden kann. Eine kontinuierlich wachsende Wissensbasis (durch zahlreiche automatische Textanalysen) vorausgesetzt, erlaubt dies dem Entity-Linker, im Laufe der Zeit in beliebigen Texten Kontext-basiert einem Symptom die richtige Krankheit zuzuordnen. Analysiert man einen Text dann mit dem Entity-Recognizer und danach mit dem Entity-Linker, dann entsteht automatisch die Wissensrepräsentation, wobei etwa die Entität `lack of energy' vom Entity-Recognizer gefunden wird und als `Symptom' kategorisiert wird und anschließend vom Entity-Linker der Krankheit `depression' zugeordnet wird, sofern sich dies aus dem Kontext ergibt.
 
 \vspace{1cm}
 
@@ -85,7 +80,7 @@ Arbeitspakete:
     \item Identifizierung eines medizinischen Vokabulars, das zum Training der NER-Komponente verwendet werden kann.
     \item Untersuchung, auf welche Weise die Trainingsdaten für möglichst gute Ergebnisse der NER-Komponente aufbereitet werden müssen (z.B. durch automatisch erzeugte Beispielsätze). Alternativ Verwendung des Entity-Rulers.
     \item Entwicklung einer Programm-Komponente, die die zu analysierenden Texte vorverarbeitet, so dass die NLP-Pipeline möglichst effizient arbeitet.
-    \item Entwicklung einer Programm-Komponente, die basierend auf den vom NER gefundenen Entitäten zusammengehörende Entitäten (etwa Symptom und Krankheit) identifiziert und zusammen mit Beispielsätzen aus dem zu analysierenden Text die Wissensbasis aufbaut.
+    \item Entwicklung einer Programm-Komponente, die basierend auf den vom NER gefundenen Entitäten zusammengehörende Entitäten (etwa Symptom und Krankheit) identifiziert und eine Wissensbasis aufbaut, ggf. unter Ausnutzung der Wissensbasis des Entity-Linkers.
     \item Entwicklung einer Programm-Komponente, die die Wissensbasis als RDF/XML-Datei ausgibt.
 \end{itemize}
 
