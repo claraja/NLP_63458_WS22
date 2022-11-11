@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  10 NOV 2022 21:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  11 NOV 2022 11:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2095,31 +2095,17 @@ Underfull \hbox (badness 1502) in paragraph at lines 38--38
  []
 
 
-Underfull \hbox (badness 1152) in paragraph at lines 42--42
-[]\T1/pplj/m/n/10.95 Disorders of in-itia-ting and
- []
-
-
-Underfull \hbox (badness 3439) in paragraph at lines 58--58
-[]\T1/pplj/m/n/10.95 Not get-ting enough sleep
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--61
-[]\T1/pplj/m/n/10.95 Symptoms in-ter-fe-re with
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--62
-[]\T1/pplj/m/n/10.95 Symptoms in-ter-fe-re with
- []
-
-
-Overfull \hbox (25.7277pt too wide) in paragraph at lines 31--66
+Overfull \hbox (20.92072pt too wide) in paragraph at lines 31--59
  [] 
  []
 
-[6] [7] [8]) (./chapters/stand_der_wissenschaft.tex
+[6] [7]
+Overfull \hbox (3.47101pt too wide) in paragraph at lines 73--74
+\T1/pplj/m/n/10.95 `Sym-ptom' ka-te-go-ri-siert wird und an-schlie-ÿend vom Ent
+ity-Linker der Krank-
+ []
+
+[8]) (./chapters/stand_der_wissenschaft.tex
 Kapitel 2.
 [9]
 Overfull \hbox (0.80006pt too wide) in paragraph at lines 28--32
@@ -2241,11 +2227,11 @@ Kapitel 3.
 
 
 ]) (./chapters/arbeits_und_zeitplan.tex
-<pictures/zeitplan2.png, id=261, 1477.52pt x 869.2475pt>
+<pictures/zeitplan2.png, id=261, 1477.52pt x 867.24pt>
 File: pictures/zeitplan2.png Graphic file (type png)
 <use pictures/zeitplan2.png>
 Package pdftex.def Info: pictures/zeitplan2.png  used on input line 6.
-(pdftex.def)             Requested size: 370.0pt x 217.66945pt.
+(pdftex.def)             Requested size: 370.0pt x 217.16676pt.
 ) [16 <./pictures/zeitplan2.png>]
 \openout2 = `frontbackmatter/Bibliography.aux'.
 
@@ -2577,7 +2563,7 @@ e/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/Programme/Textverarbe
 itung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/Programme
 /Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 
-Output written on expose.pdf (20 pages, 394655 bytes).
+Output written on expose.pdf (20 pages, 394437 bytes).
 PDF statistics:
  470 PDF objects out of 1000 (max. 8388607)
  427 compressed objects within 5 object streams
