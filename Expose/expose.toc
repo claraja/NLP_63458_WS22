@@ -1,35 +1,67 @@
-\babel@toc {american}{}\relax 
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {american}{}
+\defcounter {refsection}{0}\relax 
 \vspace {-\cftbeforepartskip }
-\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}{Einleitung}}{1}{chapter.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}{Motivation}}{1}{section.1.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}{Problembeschreibung}}{2}{section.1.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.3}{Forschungsfragen}}{3}{section.1.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.4}{Forschungsmethode}}{3}{section.1.4}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.5}{Forschungsziele}}{5}{section.1.5}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.6}{Lösungsansatz}}{6}{section.1.6}%
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}{Stand der Wissenschaft}}{10}{chapter.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}{FZ 1.1. Aufbau und Struktur medizinischer Texte}}{10}{section.2.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}{FZ 2.1. Überblick über depressive Erkrankungen}}{10}{section.2.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.1}{Allgemein}}{10}{subsection.2.2.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.2}{Symptome}}{10}{subsection.2.2.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.3}{Formen der Depression}}{10}{subsection.2.2.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.4}{Ursachen}}{11}{subsection.2.2.4}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.5}{Behandlung}}{11}{subsection.2.2.5}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}{FZ 2.2. Automatisierung durch NLP}}{11}{section.2.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.1}{Natural Language Processing (NLP)}}{11}{subsection.2.3.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.2}{Named Entity Recognition (NER)}}{11}{subsection.2.3.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.3}{Entity Linking}}{12}{subsection.2.3.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.4}{spaCy}}{12}{subsection.2.3.4}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.5}{Weitere Python-Bibliotheken für Machine Learning (ML) und NER}}{12}{subsection.2.3.5}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.4}{FZ 3.1. Wissensrepräsentation mittels RDF}}{12}{section.2.4}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.1}{Resource Description Framework Schema}}{13}{subsection.2.4.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.2}{Dublin Core Metadata Initiative}}{13}{subsection.2.4.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.3}{Serialisierung von RDF-Graphen}}{13}{subsection.2.4.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.4}{SPARQL Protocol and RDF Query Language}}{14}{subsection.2.4.4}%
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}{Planung}}{15}{chapter.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}{Gliederung}}{15}{section.3.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}{Arbeits- und Zeitplan}}{16}{section.3.2}%
+\defcounter {refsection}{0}\relax 
 \vspace {\beforebibskip }
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {}{Literatur}}{17}{section*.4}%
-\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
