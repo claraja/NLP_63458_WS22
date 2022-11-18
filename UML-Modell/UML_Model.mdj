@@ -3462,7 +3462,7 @@
 								"$ref": "AAAAAAFF+qBtyKM79qY="
 							},
 							"font": "Arial;13;0",
-							"left": 464,
+							"left": 448,
 							"top": 32,
 							"width": 272,
 							"height": 48,
@@ -3482,7 +3482,7 @@
 								"$ref": "AAAAAAGEi1VFt77GlMM="
 							},
 							"lineStyle": 1,
-							"points": "596:119;598:80"
+							"points": "590:119;586:80"
 						}
 					]
 				},
