@@ -7,7 +7,7 @@ class RDFSerialiser(RDFSerialiserInterface):
     def serialise_knowledgebase(self):
         graph = GraphManager("fapra", "http://fapranlp.de/")
         graph.add_disease("depression")
-        graph.add_symptom("depression", "lack of motivation")
+        graph.add_symptom("depression", "lack_of_motivation")
         graph.add_symptom("depression", "sadness")
 
         return graph.get_serialised_graph()
