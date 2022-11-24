@@ -5,8 +5,9 @@ from preprocessor.preprocessor import RuleBasedPreprocessor
 # with (open("resources/TextToAnalyze.txt")) as file:
 #     data = file.read()
 
-text_to_analyze = "resources/TextToAnalyze.txt"
-text_to_analyze = "resources/Bulimia.txt"
+text_to_analyze = "D:/Git_Fachpraktikum/texts_to_analyze/TexttoAnalyze.txt"
+#text_to_analyze = "resources/TextToAnalyze.txt"
+#text_to_analyze = "resources/Bulimia.txt"
 # preprocessor = DummyPreprocessor(data)
 preprocessor = RuleBasedPreprocessor(text_to_analyze)
 preprocessed_text = preprocessor.get_preprocessed_text()
