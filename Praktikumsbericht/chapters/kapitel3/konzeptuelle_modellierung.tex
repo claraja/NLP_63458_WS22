@@ -1,37 +1,5 @@
 \chapter{Konzeptuelle Modellierung und Entwurf}
 \label{ch:modellierung}
-In diesem Kapitel wird der Anwendungskontext und konkrete Anwendungsfälle nach UCSD sowie Modelle der technischen Umsetzung einer Automatisierungsunterstützung (Informationsmodell, Komponenten-/Dienstemodelle, Architekturmodell) entsprechend RUP modelliert.
-
-\section{User Centered System Design }
-
-Der Anwendungskontext und die Anwendungsfälle werden mithilfe des Ansatzes des User Centered System Design nach (UCSD, (Norman & Draper 1986)) ermittelt. Auf der Grundlage der Anwendungsfälle wird das Informations- und Datenmodell entwickelt und daraus das Komponenten- und Architekturmodell.
-Gemäß Aufgabenstellung umfasst die Entwicklung keine graphische Benutzeroberfläche.
-
-\subsection{Anwendungskontext und Anwendungsfälle}
-
-Der Anwendungskontext ist eine Unterstützung bei der Behandlung und Betreuung psychisch erkrankter Personen durch Chatbots. Um den Chatbots den erforderlichen Kontext und das entsprechende Hintergrundwissen zu vermitteln, wird eine Wissensrepräsentation über die psychischen Erkrankungen benötigt. Die zu entwickelnde Konsolenapplikation ist dazu gedacht, aus einem Text-Input die Wissensrepräsentation zu erstellen.
-
-
-
-Entwurf und Implementierung eine Konsolenapplikation (Oberfläche ist nicht erforderlich),
-welches als Input einen Text erhält und diesen dann analysiert und ein RDF/XML mit einer
-Wissensrepräsentation erzeugt.
-
-Dazu soll Wissen über psychische Erkrankungen
-und Dialoge automatisiert in eine Wissensrepräsentation erfasst werden. Mithilfe dieser
-Wissensrepräsentation soll dann ein informationeller Chatbot gesteuert werden. Bestehende
-Frameworks sind bereits in der Lage, Named Entity Recognition auf Texte durchzuführen und somit
-wichtige Schlüsselbegriffe zu extrahieren aus einem Fließtext. Diese Begriffe müssen jedoch noch
-zueinander in Zusammenhang gebracht und repräsentiert werden. Für die Repräsentation für RDF
-verwendet. Das Ergebnis soll dann überprüft werden und mit einer manuell erzeugten Repräsentation
-verglichen
-
-RQ1: How can medical knowledge about diseases, therapies, and treatment methods be
-automatically represented in a machine-readable way?
-
-Entwurf und Implementierung eine Konsolenapplikation (Oberfläche ist nicht erforderlich),
-welches als Input einen Text erhält und diesen dann analysiert und ein RDF/XML mit einer
-Wissensrepräsentation erzeugt.
 
 
 \section{FZ 1.2 Theoriebildung zur Vorverarbeitung medizinischer Texte}
