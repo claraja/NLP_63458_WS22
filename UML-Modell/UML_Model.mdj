@@ -275,7 +275,7 @@
 									"font": "Arial;13;0",
 									"left": 443.5,
 									"top": 335.5,
-									"width": 210.0146484375,
+									"width": 210,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGEwgeQI40mDQI="
@@ -2540,11 +2540,30 @@
 									"model": {
 										"$ref": "AAAAAAGEi1QUfr5udYU="
 									},
+									"subViews": [
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGEydabxbGMbRE=",
+											"_parent": {
+												"$ref": "AAAAAAGEi1QUf752iPw="
+											},
+											"model": {
+												"$ref": "AAAAAAGEydabu7GJUig="
+											},
+											"font": "Arial;13;0",
+											"left": 45,
+											"top": 243,
+											"width": 318.31591796875,
+											"height": 13,
+											"text": "+lastSubject: String",
+											"horizontalAlignment": 0
+										}
+									],
 									"font": "Arial;13;0",
 									"left": 40,
 									"top": 238,
 									"width": 328.31591796875,
-									"height": 10
+									"height": 23
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -2567,7 +2586,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 45,
-											"top": 253,
+											"top": 266,
 											"width": 318.31591796875,
 											"height": 13,
 											"text": "+get_preprocessed_text(): String",
@@ -2584,7 +2603,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 45,
-											"top": 268,
+											"top": 281,
 											"width": 318.31591796875,
 											"height": 13,
 											"text": "+pysbd_sentence_boundaries(doc: Doc): Doc",
@@ -2601,7 +2620,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 45,
-											"top": 283,
+											"top": 296,
 											"width": 318.31591796875,
 											"height": 13,
 											"text": "+is_headline(text: Span): Boolean",
@@ -2618,18 +2637,35 @@
 											},
 											"font": "Arial;13;0",
 											"left": 45,
-											"top": 298,
+											"top": 311,
 											"width": 318.31591796875,
 											"height": 13,
-											"text": "+get_Context(): Entity[]",
+											"text": "+get_context(text: String): Entity[]",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGEydu+qLNXlFQ=",
+											"_parent": {
+												"$ref": "AAAAAAGEi1QUf753QwQ="
+											},
+											"model": {
+												"$ref": "AAAAAAGEydu+nbNUMeM="
+											},
+											"font": "Arial;13;0",
+											"left": 45,
+											"top": 326,
+											"width": 318.31591796875,
+											"height": 13,
+											"text": "+get_IndexedStructure(): anytree.Node",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 40,
-									"top": 248,
+									"top": 261,
 									"width": 328.31591796875,
-									"height": 68
+									"height": 83
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -2669,7 +2705,7 @@
 							"left": 40,
 							"top": 200,
 							"width": 328.31591796875,
-							"height": 128,
+							"height": 144,
 							"nameCompartment": {
 								"$ref": "AAAAAAGEi1QUfr5xWTM="
 							},
@@ -2707,8 +2743,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 193,
-									"top": 352,
+									"left": 191,
+									"top": 360,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -2728,8 +2764,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 208,
-									"top": 356,
+									"left": 206,
+									"top": 364,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -2749,8 +2785,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 164,
-									"top": 345,
+									"left": 162,
+									"top": 353,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -2768,7 +2804,7 @@
 								"$ref": "AAAAAAGEi1QUfr5w3rc="
 							},
 							"lineStyle": 1,
-							"points": "186:328;172:383",
+							"points": "183:344;172:383",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGEi1TJ3r61ST4="
@@ -2996,7 +3032,7 @@
 											"top": 246,
 											"width": 329.2529296875,
 											"height": 13,
-											"text": "+extract_relations(text: String)",
+											"text": "+extract_relations(text: String, context: Entity[])",
 											"horizontalAlignment": 0
 										},
 										{
@@ -5481,7 +5517,7 @@
 							"top": 384,
 							"width": 161,
 							"height": 57,
-							"text": "Was kann pysbd, wann der DependencyParser nicht kann?"
+							"text": "Was kann pysbd, was der DependencyParser nicht kann?"
 						},
 						{
 							"_type": "UMLNoteLinkView",
@@ -5853,6 +5889,17 @@
 						}
 					],
 					"stereotype": "Einzelstück",
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAGEydabu7GJUig=",
+							"_parent": {
+								"$ref": "AAAAAAGEi1QUfr5udYU="
+							},
+							"name": "lastSubject",
+							"type": "String"
+						}
+					],
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -5941,8 +5988,17 @@
 							"_parent": {
 								"$ref": "AAAAAAGEi1QUfr5udYU="
 							},
-							"name": "get_Context",
+							"name": "get_context",
 							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGEydV4LrA/FZ0=",
+									"_parent": {
+										"$ref": "AAAAAAGEw3P5T1/3t/A="
+									},
+									"name": "text",
+									"type": "String"
+								},
 								{
 									"_type": "UMLParameter",
 									"_id": "AAAAAAGEw3TbaGCyD3A=",
@@ -5951,6 +6007,26 @@
 									},
 									"name": "Parameter1",
 									"type": "Entity[]",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAGEydu+nbNUMeM=",
+							"_parent": {
+								"$ref": "AAAAAAGEi1QUfr5udYU="
+							},
+							"name": "get_IndexedStructure",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGEydwu8LPTlf0=",
+									"_parent": {
+										"$ref": "AAAAAAGEydu+nbNUMeM="
+									},
+									"name": "Parameter1",
+									"type": "anytree.Node",
 									"direction": "return"
 								}
 							]
@@ -6435,6 +6511,15 @@
 									},
 									"name": "text",
 									"type": "String"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGEydiB/rKa1Bc=",
+									"_parent": {
+										"$ref": "AAAAAAGEuIK2pKEHlf4="
+									},
+									"name": "context",
+									"type": "Entity[]"
 								}
 							]
 						},
