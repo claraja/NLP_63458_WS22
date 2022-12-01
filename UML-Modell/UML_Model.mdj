@@ -2005,8 +2005,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 112,
-											"top": 768,
+											"left": 96,
+											"top": 864,
 											"height": 13
 										},
 										{
@@ -2016,8 +2016,8 @@
 												"$ref": "AAAAAAGEi0wJXL22Rms="
 											},
 											"font": "Arial;13;1",
-											"left": 61,
-											"top": 391,
+											"left": 53,
+											"top": 439,
 											"width": 199.0751953125,
 											"height": 13,
 											"text": "PreprocessingInterface"
@@ -2030,8 +2030,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 112,
-											"top": 768,
+											"left": 96,
+											"top": 864,
 											"width": 114.130859375,
 											"height": 13,
 											"text": "(from Medextractor)"
@@ -2044,15 +2044,15 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 112,
-											"top": 768,
+											"left": 96,
+											"top": 864,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 56,
-									"top": 384,
+									"left": 48,
+									"top": 432,
 									"width": 209.0751953125,
 									"height": 25,
 									"stereotypeLabel": {
@@ -2088,8 +2088,8 @@
 												"$ref": "AAAAAAGEi1BWb75TcHY="
 											},
 											"font": "Arial;13;0",
-											"left": 61,
-											"top": 414,
+											"left": 53,
+											"top": 462,
 											"width": 199.0751953125,
 											"height": 13,
 											"text": "-doc_name: String",
@@ -2097,8 +2097,8 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 56,
-									"top": 409,
+									"left": 48,
+									"top": 457,
 									"width": 209.0751953125,
 									"height": 23
 								},
@@ -2122,8 +2122,8 @@
 												"$ref": "AAAAAAGEi2hyB8QejsY="
 											},
 											"font": "Arial;13;0",
-											"left": 61,
-											"top": 437,
+											"left": 53,
+											"top": 485,
 											"width": 199.0751953125,
 											"height": 13,
 											"text": "+__init__(doc_name: String)",
@@ -2139,8 +2139,8 @@
 												"$ref": "AAAAAAGEi02wpr45itk="
 											},
 											"font": "Arial;13;2",
-											"left": 61,
-											"top": 452,
+											"left": 53,
+											"top": 500,
 											"width": 199.0751953125,
 											"height": 13,
 											"text": "+get_preprocessed_text()",
@@ -2148,8 +2148,8 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 56,
-									"top": 432,
+									"left": 48,
+									"top": 480,
 									"width": 209.0751953125,
 									"height": 38
 								},
@@ -2164,8 +2164,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 56,
-									"top": 384,
+									"left": 48,
+									"top": 432,
 									"width": 10,
 									"height": 10
 								},
@@ -2180,16 +2180,16 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 56,
-									"top": 384,
+									"left": 48,
+									"top": 432,
 									"width": 10,
 									"height": 10
 								}
 							],
 							"font": "Arial;13;0",
 							"containerChangeable": true,
-							"left": 56,
-							"top": 384,
+							"left": 48,
+							"top": 432,
 							"width": 209.0751953125,
 							"height": 89,
 							"nameCompartment": {
@@ -2659,13 +2659,30 @@
 											"height": 13,
 											"text": "+get_IndexedStructure(): anytree.Node",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGEzFDHAddP+3A=",
+											"_parent": {
+												"$ref": "AAAAAAGEi1QUf753QwQ="
+											},
+											"model": {
+												"$ref": "AAAAAAGEzFDG6tdMg/A="
+											},
+											"font": "Arial;13;0",
+											"left": 45,
+											"top": 341,
+											"width": 318.31591796875,
+											"height": 13,
+											"text": "+replace_pronoun()",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 40,
 									"top": 261,
 									"width": 328.31591796875,
-									"height": 83
+									"height": 98
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -2705,7 +2722,7 @@
 							"left": 40,
 							"top": 200,
 							"width": 328.31591796875,
-							"height": 144,
+							"height": 159,
 							"nameCompartment": {
 								"$ref": "AAAAAAGEi1QUfr5xWTM="
 							},
@@ -2743,8 +2760,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 191,
-									"top": 360,
+									"left": 187,
+									"top": 392,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -2764,8 +2781,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 206,
-									"top": 364,
+									"left": 202,
+									"top": 396,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -2785,8 +2802,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 162,
-									"top": 353,
+									"left": 158,
+									"top": 385,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -2804,7 +2821,7 @@
 								"$ref": "AAAAAAGEi1QUfr5w3rc="
 							},
 							"lineStyle": 1,
-							"points": "183:344;172:383",
+							"points": "182:359;164:431",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGEi1TJ3r61ST4="
@@ -6030,6 +6047,14 @@
 									"direction": "return"
 								}
 							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAGEzFDG6tdMg/A=",
+							"_parent": {
+								"$ref": "AAAAAAGEi1QUfr5udYU="
+							},
+							"name": "replace_pronoun"
 						}
 					]
 				},
@@ -6894,7 +6919,7 @@
 											"top": 269,
 											"width": 332.515625,
 											"height": 13,
-											"text": "+extract_relations(text: String)",
+											"text": "+extract_relations(text: String, context: Entity[])",
 											"horizontalAlignment": 0
 										},
 										{
