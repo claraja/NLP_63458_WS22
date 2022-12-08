@@ -275,7 +275,7 @@
 									"font": "Arial;13;0",
 									"left": 427.5,
 									"top": 300.5,
-									"width": 210.0146484375,
+									"width": 210,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGEwgeQI40mDQI="
@@ -1226,7 +1226,7 @@
 									"font": "Arial;13;0",
 									"left": 495,
 									"top": 412.5,
-									"width": 110.40087890625,
+									"width": 110,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGEzvCxv+KiyrM="
@@ -1690,7 +1690,7 @@
 									"font": "Arial;13;0",
 									"left": 778.5,
 									"top": 279,
-									"width": 165.29541015625,
+									"width": 164,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGEzvJZQ+4N244="
@@ -4778,10 +4778,10 @@
 							},
 							"font": "Arial;13;0",
 							"left": 816,
-							"top": 528,
-							"width": 185,
-							"height": 38,
-							"text": "Diese Klasse für Ausgabe der Wissensbasis"
+							"top": 536,
+							"width": 193,
+							"height": 77,
+							"text": "Klasse für Ausgabe der Wissensrepräsentation, weitere Details in Klassendiagramm \"RDFSerialiser\""
 						},
 						{
 							"_type": "UMLNoteLinkView",
@@ -4797,7 +4797,7 @@
 								"$ref": "AAAAAAGE70fCvp4ZH4A="
 							},
 							"lineStyle": 1,
-							"points": "910:481;909:527"
+							"points": "913:481;912:535"
 						},
 						{
 							"_type": "UMLAssociationView",
@@ -15755,11 +15755,11 @@
 								"$ref": "AAAAAAGE7pDf8w5q0kw="
 							},
 							"font": "Arial;13;0",
-							"left": 784,
-							"top": 256,
-							"width": 193,
-							"height": 41,
-							"text": "Klasse für Ausgabe der Wissensbasis."
+							"left": 768,
+							"top": 224,
+							"width": 457,
+							"height": 144,
+							"text": "Klasse für die Ausgabe der Wissensbasis:\nDer RDFSerialiser arbeitet mit der Python-Bibliothek \"rdflib\". Zunächst soll ein Graph ohne Inhalt erstellt werden mit create_graph(), dies geschieht mit der Klasse GraphManager. Anschließend sollen die Inhalte der übergebenen Knowledgebase in den Graphen übertragen werden (knowledgebase_to_graph), dies geschieht mit den für GraphManager implementierten Methoden. Der so entstandene Graph wird dann mit der Methode serialise_graph in das in \"serialisation_format\" spezifizierte Format übertragen (in unserem Fall XML). Zum Schluss kann die so entstandene Wissensrepräsentation gespeichert werden (save_serialisation)."
 						},
 						{
 							"_type": "UMLNoteLinkView",
@@ -15775,7 +15775,7 @@
 								"$ref": "AAAAAAGE70ac25iOCRs="
 							},
 							"lineStyle": 1,
-							"points": "783:286;715:293"
+							"points": "767:300;715:301"
 						}
 					]
 				},
@@ -16018,7 +16018,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGE7rHO7lK9MkM="
 									},
-									"name": "knowledgebase"
+									"name": "knowledgebase",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -16026,7 +16027,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGE7rHO7lK9MkM="
 									},
-									"name": "namespace"
+									"name": "namespace",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -16034,7 +16036,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGE7rHO7lK9MkM="
 									},
-									"name": "namespace_prefix"
+									"name": "namespace_prefix",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -16042,7 +16045,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGE7rHO7lK9MkM="
 									},
-									"name": "serialisation_format"
+									"name": "serialisation_format",
+									"type": ""
 								}
 							]
 						},
@@ -16091,7 +16095,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGE7y5EexIPlSw="
 									},
-									"name": "serialisation_format"
+									"name": "serialisation_format",
+									"type": ""
 								}
 							],
 							"isAbstract": true
