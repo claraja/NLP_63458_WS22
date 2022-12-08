@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  7 DEC 2022 17:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  8 DEC 2022 16:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2318,19 +2318,19 @@ Package pdftex.def Info: pictures/KnowledgeExtractor.png  used on input line 10
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pictures/dummydiagram.png, id=321, 629.35126pt x 286.06876pt>
-File: pictures/dummydiagram.png Graphic file (type png)
-<use pictures/dummydiagram.png>
-Package pdftex.def Info: pictures/dummydiagram.png  used on input line 114.
-(pdftex.def)             Requested size: 370.0pt x 168.18109pt.
+<pictures/RDFSerialiser.png, id=321, 705.837pt x 260.172pt>
+File: pictures/RDFSerialiser.png Graphic file (type png)
+<use pictures/RDFSerialiser.png>
+Package pdftex.def Info: pictures/RDFSerialiser.png  used on input line 114.
+(pdftex.def)             Requested size: 370.0pt x 136.3859pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pictures/Main.png, id=323, 1296.845pt x 777.90625pt>
+<pictures/Main.png, id=323, 611.28375pt x 348.1005pt>
 File: pictures/Main.png Graphic file (type png)
 <use pictures/Main.png>
 Package pdftex.def Info: pictures/Main.png  used on input line 128.
-(pdftex.def)             Requested size: 370.0pt x 221.94298pt.
+(pdftex.def)             Requested size: 370.0pt x 210.6997pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -2338,7 +2338,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Kapitel 4.
 [18 <./pictures/ComponentDiagram.png>] [19 <./pictures/Architekturmodell.png> <
 ./pictures/RuleBasedPreprocessor.png>] [20 <./pictures/KnowledgeExtractor.png> 
-<./pictures/dummydiagram.png (PNG copy)>] [21 <./pictures/Main.png>]
+<./pictures/RDFSerialiser.png>] [21 <./pictures/Main.png>]
 Overfull \hbox (8.56755pt too wide) in paragraph at lines 5--5
 |[]\T1/pplj/m/sc/10.95/80ls fz 1.3 im-ple-men-tie-rung zur vor-ver-ar-bei-tung 
 me-di-zi-ni-scher
@@ -2626,7 +2626,7 @@ pictures/ComponentDiagram.png
 pictures/Architekturmodell.png
 pictures/RuleBasedPreprocessor.png
 pictures/KnowledgeExtractor.png
-pictures/dummydiagram.png
+pictures/RDFSerialiser.png
 pictures/Main.png
 chapters/kapitel4/implementierung.tex
 chapters/kapitel5/evaluierung.tex
@@ -2647,7 +2647,7 @@ Package logreq Info: Writing requests to 'praktikumsbericht.run.xml'.
 ### bottom level 
 Here is how much of TeX's memory you used:
  38807 strings out of 480994
- 761941 string characters out of 5902830
+ 761948 string characters out of 5902830
  1755616 words of memory out of 5000000
  53324 multiletter control sequences out of 15000+600000
  596702 words of font info for 124 fonts, out of 8000000 for 9000
@@ -2667,9 +2667,9 @@ e/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/Programme/Textverarbe
 itung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/Programme
 /Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 
-Output written on praktikumsbericht.pdf (29 pages, 836446 bytes).
+Output written on praktikumsbericht.pdf (29 pages, 912368 bytes).
 PDF statistics:
- 618 PDF objects out of 1000 (max. 8388607)
+ 619 PDF objects out of 1000 (max. 8388607)
  550 compressed objects within 6 object streams
  150 named destinations out of 1000 (max. 500000)
  15332 words of extra memory for PDF output out of 17280 (max. 10000000)
