@@ -2201,6 +2201,7 @@
     <bcf:citekey order="17">github_pattern</bcf:citekey>
     <bcf:citekey order="18">w3c_all_2022</bcf:citekey>
     <bcf:citekey order="19">rdflib_team_rdflib_2022</bcf:citekey>
+    <bcf:citekey order="20">norman1986user</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
