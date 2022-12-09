@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  8 DEC 2022 16:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  9 DEC 2022 19:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1991,6 +1991,12 @@ Overfull \hbox (7.49306pt too wide) in paragraph at lines 47--47
 (ML) 
  []
 
+
+Overfull \hbox (3.45345pt too wide) in paragraph at lines 83--83
+ [][] []\T1/pplj/m/n/10.95 FZ 2.4 Im-ple-men-tie-rung zur Über-füh-rung me-di-z
+i-ni-schen Fach- 
+ []
+
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 7.91925pt on input line 85.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
@@ -2001,13 +2007,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 
 
 
-]
-Overfull \hbox (3.45345pt too wide) in paragraph at lines 85--85
- [][] []\T1/pplj/m/n/10.95 FZ 2.4 Im-ple-men-tie-rung zur Über-füh-rung me-di-z
-i-ni-schen Fach- 
- []
-
-)
+])
 \tf@toc=\write6
 \openout6 = `praktikumsbericht.toc'.
 
@@ -2057,7 +2057,7 @@ Overfull \hbox (5.2606pt too wide) in paragraph at lines 18--19
 
 ) (./chapters/kapitel1/forschungsfragen.tex)
 (./chapters/kapitel1/forschungsmethode.tex
-<pictures/Nunamaker2.png, id=145, 1336.995pt x 917.4275pt>
+<pictures/Nunamaker2.png, id=141, 1336.995pt x 917.4275pt>
 File: pictures/Nunamaker2.png Graphic file (type png)
 <use pictures/Nunamaker2.png>
 Package pdftex.def Info: pictures/Nunamaker2.png  used on input line 8.
@@ -2125,7 +2125,7 @@ Overfull \hbox (0.80006pt too wide) in paragraph at lines 28--32
 
 
 ] [11]
-<pictures/rdf-graph.png, id=232, 774.895pt x 299.1175pt>
+<pictures/rdf-graph.png, id=228, 774.895pt x 299.1175pt>
 File: pictures/rdf-graph.png Graphic file (type png)
 <use pictures/rdf-graph.png>
 Package pdftex.def Info: pictures/rdf-graph.png  used on input line 117.
@@ -2243,102 +2243,106 @@ Overfull \hbox (5.34427pt too wide) in paragraph at lines 3--4
 enten-/Dienstemodelle,
  []
 
-<pictures/UseCases.png, id=281, 853.1875pt x 435.6275pt>
+<pictures/UseCases.png, id=277, 408.77719pt x 123.46124pt>
 File: pictures/UseCases.png Graphic file (type png)
 <use pictures/UseCases.png>
-Package pdftex.def Info: pictures/UseCases.png  used on input line 19.
-(pdftex.def)             Requested size: 370.0pt x 188.91812pt.
+Package pdftex.def Info: pictures/UseCases.png  used on input line 21.
+(pdftex.def)             Requested size: 370.0pt x 111.75647pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 28.
+               Default added (so using `tbp') on input line 30.
 
-<pictures/AktivitÃ¤tsdiagramm.png, id=284, 925.4575pt x 525.965pt>
+<pictures/AktivitÃ¤tsdiagramm.png, id=280, 671.50874pt x 369.63094pt>
 File: pictures/AktivitÃ¤tsdiagramm.png Graphic file (type png)
 <use pictures/AktivitÃ¤tsdiagramm.png>
 Package pdftex.def Info: pictures/AktivitÃ¤tsdiagramm.png  used on input line 3
-0.
-(pdftex.def)             Requested size: 370.0pt x 210.28595pt.
-<pictures/Informationsmodell.png, id=286, 580.1675pt x 362.35374pt>
-File: pictures/Informationsmodell.png Graphic file (type png)
-<use pictures/Informationsmodell.png>
-Package pdftex.def Info: pictures/Informationsmodell.png  used on input line 41
-.
-(pdftex.def)             Requested size: 370.0pt x 231.09283pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<pictures/ComponentDiagram.png, id=288, 564.1075pt x 427.5975pt>
-File: pictures/ComponentDiagram.png Graphic file (type png)
-<use pictures/ComponentDiagram.png>
-Package pdftex.def Info: pictures/ComponentDiagram.png  used on input line 52.
-(pdftex.def)             Requested size: 370.0pt x 280.46663pt.
+2.
+(pdftex.def)             Requested size: 370.0pt x 203.66425pt.
 [15
 
 
-] [16 <./pictures/UseCases.png> <./pictures/AktivitÃ¤tsdiagramm.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<pictures/Architekturmodell.png, id=306, 740.7675pt x 268.00125pt>
+ <./pictures/UseCases.png>]
+<pictures/Informationsmodell.png, id=290, 415.5525pt x 175.40532pt>
+File: pictures/Informationsmodell.png Graphic file (type png)
+<use pictures/Informationsmodell.png>
+Package pdftex.def Info: pictures/Informationsmodell.png  used on input line 43
+.
+(pdftex.def)             Requested size: 370.0pt x 156.1825pt.
+<pictures/Architekturmodell.png, id=292, 1273.75874pt x 608.2725pt>
 File: pictures/Architekturmodell.png Graphic file (type png)
 <use pictures/Architekturmodell.png>
-Package pdftex.def Info: pictures/Architekturmodell.png  used on input line 63.
+Package pdftex.def Info: pictures/Architekturmodell.png  used on input line 54.
 
-(pdftex.def)             Requested size: 370.0pt x 133.86124pt.
+(pdftex.def)             Requested size: 370.0pt x 176.68224pt.
+ [16 <./pictures/AktivitÃ¤tsdiagramm.png> <./pictures/Informationsmodell.png>]
+<pictures/ComponentDiagram.png, id=303, 585.68813pt x 314.67563pt>
+File: pictures/ComponentDiagram.png Graphic file (type png)
+<use pictures/ComponentDiagram.png>
+Package pdftex.def Info: pictures/ComponentDiagram.png  used on input line 63.
+(pdftex.def)             Requested size: 370.0pt x 198.79886pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (1.02286pt too wide) in paragraph at lines 75--76
+\T1/pplj/m/n/10.95 dem Präpro-zes-sor (Ab-bil-dung [][]3.6[][]) der Ori-gi-nal-
+text über-ge-ben. Die Um-wand-
+ []
 
-<pictures/RuleBasedPreprocessor.png, id=308, 885.3075pt x 440.64626pt>
+
+Overfull \hbox (11.62877pt too wide) in paragraph at lines 75--76
+\T1/pplj/m/n/10.95 lung und Aus-ga-be des Tex-tes er-folgt über die Me-tho-de g
+et_preprocessed_text().
+ []
+
+[17 <./pictures/Architekturmodell.png (PNG copy)> <./pictures/ComponentDiagram.
+png>]
+Overfull \hbox (15.7797pt too wide) in paragraph at lines 79--80
+[]\T1/pplj/m/n/10.95 Falls mög-lich, soll auch ei-ne In-dex-struk-tur (Kapitel-
+/Abschnittsüberschriften)
+ []
+
+<pictures/RuleBasedPreprocessor.png, id=313, 952.55875pt x 582.175pt>
 File: pictures/RuleBasedPreprocessor.png Graphic file (type png)
 <use pictures/RuleBasedPreprocessor.png>
 Package pdftex.def Info: pictures/RuleBasedPreprocessor.png  used on input line
- 82.
-(pdftex.def)             Requested size: 370.0pt x 184.16246pt.
+ 83.
+(pdftex.def)             Requested size: 370.0pt x 226.13235pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (9.20576pt too wide) in paragraph at lines 87--87
+Overfull \hbox (9.20576pt too wide) in paragraph at lines 88--88
 |[]\T1/pplj/m/sc/10.95/80ls fz 2.3 theo-rie-bil-dung zur über-füh-rung me-di-zi
 -ni-schen fach-
  []
 
-[17 <./pictures/Informationsmodell.png>]
-Overfull \hbox (2.46371pt too wide) in paragraph at lines 98--99
+
+Overfull \hbox (2.46371pt too wide) in paragraph at lines 99--100
 \T1/pplj/m/n/10.95 wer-den auf Ba-sis ei-nes wie-der-hol-ten Auf-rufs von is_re
 lated() mit un-ter-schied-
  []
 
-<pictures/KnowledgeExtractor.png, id=319, 1238.6275pt x 900.36375pt>
+<pictures/KnowledgeExtractor.png, id=315, 782.17218pt x 620.3175pt>
 File: pictures/KnowledgeExtractor.png Graphic file (type png)
 <use pictures/KnowledgeExtractor.png>
 Package pdftex.def Info: pictures/KnowledgeExtractor.png  used on input line 10
-2.
-(pdftex.def)             Requested size: 370.0pt x 268.95718pt.
+3.
+(pdftex.def)             Requested size: 370.0pt x 293.43286pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (397.55956pt too wide) has occurred while \output is active
+ []|[]|
+ []
 
-<pictures/RDFSerialiser.png, id=321, 705.837pt x 260.172pt>
+[18 <./pictures/RuleBasedPreprocessor.png (PNG copy)>]
+<pictures/RDFSerialiser.png, id=322, 705.837pt x 260.172pt>
 File: pictures/RDFSerialiser.png Graphic file (type png)
 <use pictures/RDFSerialiser.png>
-Package pdftex.def Info: pictures/RDFSerialiser.png  used on input line 114.
+Package pdftex.def Info: pictures/RDFSerialiser.png  used on input line 115.
 (pdftex.def)             Requested size: 370.0pt x 136.3859pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<pictures/Main.png, id=323, 611.28375pt x 348.1005pt>
+<pictures/Main.png, id=324, 611.28375pt x 348.1005pt>
 File: pictures/Main.png Graphic file (type png)
 <use pictures/Main.png>
-Package pdftex.def Info: pictures/Main.png  used on input line 128.
+Package pdftex.def Info: pictures/Main.png  used on input line 129.
 (pdftex.def)             Requested size: 370.0pt x 210.6997pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (./chapters/kapitel4/implementierung.tex
+ [19 <./pictures/KnowledgeExtractor.png> <./pictures/RDFSerialiser.png>])
+(./chapters/kapitel4/implementierung.tex
 Kapitel 4.
-[18 <./pictures/ComponentDiagram.png>] [19 <./pictures/Architekturmodell.png> <
-./pictures/RuleBasedPreprocessor.png>] [20 <./pictures/KnowledgeExtractor.png> 
-<./pictures/RDFSerialiser.png>] [21 <./pictures/Main.png>]
+[20 <./pictures/Main.png>]
 Overfull \hbox (8.56755pt too wide) in paragraph at lines 5--5
 |[]\T1/pplj/m/sc/10.95/80ls fz 1.3 im-ple-men-tie-rung zur vor-ver-ar-bei-tung 
 me-di-zi-ni-scher
@@ -2346,7 +2350,7 @@ me-di-zi-ni-scher
 
 ) (./chapters/kapitel5/evaluierung.tex
 Kapitel 5.
-[22
+[21
 
 
 ]
@@ -2357,10 +2361,10 @@ Overfull \hbox (3.54457pt too wide) in paragraph at lines 5--5
 
 ) (./chapters/kapitel6/zusammenfassung.tex
 Kapitel 6.
-[23
+[22
 
 
-]) [24
+]) [23
 
 
 ]
@@ -2391,17 +2395,22 @@ Overfull \hbox (9.79741pt too wide) in paragraph at lines 15--15
 n/10.95 (be-sucht am 07.11.2022). 
  []
 
-[25
+[24
 
 
 
 
 
-]) [26]
+]) [25]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 113.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 113.
  (./praktikumsbericht.aux (./frontbackmatter/Contents.aux)
-(./frontbackmatter/Bibliography.aux))
+(./frontbackmatter/Bibliography.aux)
+
+Package mparhack Warning: Marginpars may have changed.
+(mparhack)                Rerun to get them right.
+
+)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 113.
 
 
@@ -2622,8 +2631,8 @@ chapters/kapitel3/konzeptuelle_modellierung.tex
 pictures/UseCases.png
 pictures/AktivitÃ¤tsdiagramm.png
 pictures/Informationsmodell.png
-pictures/ComponentDiagram.png
 pictures/Architekturmodell.png
+pictures/ComponentDiagram.png
 pictures/RuleBasedPreprocessor.png
 pictures/KnowledgeExtractor.png
 pictures/RDFSerialiser.png
@@ -2637,6 +2646,12 @@ frontbackmatter/Bibliography.tex
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 113.
 Package rerunfilecheck Info: File `praktikumsbericht.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+
 Package logreq Info: Writing requests to 'praktikumsbericht.run.xml'.
 \openout1 = `praktikumsbericht.run.xml'.
 
@@ -2646,9 +2661,9 @@ Package logreq Info: Writing requests to 'praktikumsbericht.run.xml'.
 ### simple group (level 1) entered at line 57 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38807 strings out of 480994
- 761948 string characters out of 5902830
- 1755616 words of memory out of 5000000
+ 38805 strings out of 480994
+ 761949 string characters out of 5902830
+ 1755118 words of memory out of 5000000
  53324 multiletter control sequences out of 15000+600000
  596702 words of font info for 124 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -2667,10 +2682,10 @@ e/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/Programme/Textverarbe
 itung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/Programme
 /Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 
-Output written on praktikumsbericht.pdf (29 pages, 912368 bytes).
+Output written on praktikumsbericht.pdf (28 pages, 756453 bytes).
 PDF statistics:
- 619 PDF objects out of 1000 (max. 8388607)
- 550 compressed objects within 6 object streams
- 150 named destinations out of 1000 (max. 500000)
- 15332 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 607 PDF objects out of 1000 (max. 8388607)
+ 541 compressed objects within 6 object streams
+ 148 named destinations out of 1000 (max. 500000)
+ 15324 words of extra memory for PDF output out of 17280 (max. 10000000)
 

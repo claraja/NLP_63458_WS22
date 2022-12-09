@@ -5,9 +5,11 @@ In diesem Kapitel wird der Anwendungskontext und konkrete Anwendungsfälle nach 
 \section{User Centered System Design }
 
 Der Anwendungskontext und die Anwendungsfälle werden mithilfe des Ansatzes des User Centered System Design nach \cite{norman1986user} ermittelt. Auf der Grundlage der Anwendungsfälle wird das Informations- und Datenmodell entwickelt und daraus das Komponenten- und Architekturmodell.
+
+
 Gemäß Aufgabenstellung umfasst die Entwicklung keine graphische Benutzeroberfläche.
 
-\subsection{Anwendungskontext und Anwendungsfälle}
+\subsection{Anwendungskontext und Anwendungsfall}
 
 Der Anwendungskontext ist eine Unterstützung bei der Behandlung und Betreuung psychisch erkrankter Personen durch Chatbots. Um den Chatbots den erforderlichen Kontext und das entsprechende Hintergrundwissen zu vermitteln, wird eine Wissensrepräsentation über die psychischen Erkrankungen benötigt. Die zu entwickelnde Konsolenapplikation \emph{MedExtractor} ist dazu gedacht, Forschenden und später auch Chatbots zu ermöglichen, aus einem Input in Form einer reinen Textdatei die Wissensrepräsentation zu erstellen, siehe Abbildung \ref{fig:anwendungsfaelle}. Dazu soll die Applikation mit dem Namen des Textes als Parameter aufgerufen werden. Das Ergebnis der Applikationsausführung ist eine RDF-Datei. 
 
@@ -17,13 +19,13 @@ Als zusätzliche Funktionalität ist denkbar, die Wissensbasis in Form der train
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{pictures/UseCases.png}
-    \caption{Anwendungsfälle der Konsolenapplikation}
+    \caption{Anwendungsfall der Konsolenapplikation}
     \label{fig:anwendungsfaelle}
 \end{figure}
 
 \subsection{Aktivitätsmodell}
 
-Abbildung \ref{fig:Aktivitätsmodell} stellt das Aktivitätsmodell der Applikation dar.
+Für die Modellierung des Anwendungsfalls sind die in Abbildung \ref{fig:Aktivitätsmodell} dargestellten Aktivitäten erforderlich.
 
 \begin{figure}[]
     \centering
@@ -34,7 +36,7 @@ Abbildung \ref{fig:Aktivitätsmodell} stellt das Aktivitätsmodell der Applikati
 
 \subsection{Informationsmodell}
 
-Abbildung \ref{fig:informationsmodell} stellt das Informationsmodell der Applikation dar.
+Für den Aufbau der Wissensbasis sind erstens die gefundenen Entitäten und zweitens die Beziehungen zwischen diesen von Bedeutung. Diese werden in Form von semantischen Beziehungen in der Wissensbasis gespeichert, wie dies in  Abbildung \ref{fig:informationsmodell} des Informationsmodells der Applikation dargestellt ist.
 
 \begin{figure}[h]
     \centering
@@ -43,7 +45,16 @@ Abbildung \ref{fig:informationsmodell} stellt das Informationsmodell der Applika
     \label{fig:informationsmodell}
 \end{figure}
 
-\subsection{Komponentenmodell}
+\subsection{Architektur- und Komponentenmodell}
+
+Aus dem Anwendungsfall und dem Aktivitätsmodell ergibt sich die grobe Gesamtarchitektur der Applikation wie in Abbildung \ref{fig:architekturmodell} dargestellt.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{pictures/Architekturmodell.png}
+    \caption{Architekturmodell der Konsolenapplikation}
+    \label{fig:architekturmodell}
+\end{figure}
 
 Abbildung \ref{fig:komponentendiagramm} stellt das Komponentenmodell der Applikation dar.
 
@@ -54,27 +65,17 @@ Abbildung \ref{fig:komponentendiagramm} stellt das Komponentenmodell der Applika
     \label{fig:komponentendiagramm}
 \end{figure}
 
-\subsection{Architekturmodell}
 
-Abbildung \ref{fig:architekturmodell} stellt das Architekturmodell der Applikation dar.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{pictures/Architekturmodell.png}
-    \caption{Architekturmodell der Konsolenapplikation}
-    \label{fig:architekturmodell}
-\end{figure}
 
-Kommandozeileninterface
-        |
-Geschäftslogik
-        |
-Gespeicherte Pipeline
 
 \section{FZ 1.2 Theoriebildung zur Vorverarbeitung medizinischer Texte}
 \label{sec:FZ1.2} 
 
-Um die Vorverarbeitung medizinischer Texte durchführen zu können, wird dem Präprozessor \ref{fig:preprocessor} der Originaltext übergeben. Umwandlung und Ausgabe des Textes erfolgt über die Methode get\_preprocessed\_text(). Der Text wird in vollständige Sätze umgewandelt, die für sich alleine stehen können. D.h. Aufzählungen werden in Sätze umgewandelt und Pronomen durch konkrete Substantive ersetzt. 
+Um die Vorverarbeitung medizinischer Texte durchführen zu können, wird dem Präprozessor (Abbildung \ref{fig:preprocessor}) der Originaltext übergeben. Die Umwandlung und Ausgabe des Textes erfolgt über die Methode get\_preprocessed\_text(). Der Text wird in vollständige Sätze umgewandelt, die für sich alleine stehen können. D.h. Aufzählungen werden in Sätze umgewandelt und Pronomen durch konkrete Substantive ersetzt. 
+
+Für die Erkennung der Satzeinheiten kann die Bibliothek \emph{pySBD - python Sentence Boundary Disambiguation} verwendet werden, die regelbasiert auf Grundlage von 100 \glqq Goldenen Regeln\grqq{} arbeitet.
+
 Falls möglich, soll auch eine Indexstruktur (Kapitel-/Abschnittsüberschriften) ermittelt werden.
 
 \begin{figure}[h]
