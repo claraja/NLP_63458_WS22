@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  9 DEC 2022 19:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  9 DEC 2022 19:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2057,7 +2057,7 @@ Overfull \hbox (5.2606pt too wide) in paragraph at lines 18--19
 
 ) (./chapters/kapitel1/forschungsfragen.tex)
 (./chapters/kapitel1/forschungsmethode.tex
-<pictures/Nunamaker2.png, id=141, 1336.995pt x 917.4275pt>
+<pictures/Nunamaker2.png, id=143, 1336.995pt x 917.4275pt>
 File: pictures/Nunamaker2.png Graphic file (type png)
 <use pictures/Nunamaker2.png>
 Package pdftex.def Info: pictures/Nunamaker2.png  used on input line 8.
@@ -2125,7 +2125,7 @@ Overfull \hbox (0.80006pt too wide) in paragraph at lines 28--32
 
 
 ] [11]
-<pictures/rdf-graph.png, id=228, 774.895pt x 299.1175pt>
+<pictures/rdf-graph.png, id=230, 774.895pt x 299.1175pt>
 File: pictures/rdf-graph.png Graphic file (type png)
 <use pictures/rdf-graph.png>
 Package pdftex.def Info: pictures/rdf-graph.png  used on input line 117.
@@ -2243,7 +2243,7 @@ Overfull \hbox (5.34427pt too wide) in paragraph at lines 3--4
 enten-/Dienstemodelle,
  []
 
-<pictures/UseCases.png, id=277, 408.77719pt x 123.46124pt>
+<pictures/UseCases.png, id=279, 408.77719pt x 123.46124pt>
 File: pictures/UseCases.png Graphic file (type png)
 <use pictures/UseCases.png>
 Package pdftex.def Info: pictures/UseCases.png  used on input line 21.
@@ -2252,7 +2252,7 @@ Package pdftex.def Info: pictures/UseCases.png  used on input line 21.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 30.
 
-<pictures/Aktivitätsdiagramm.png, id=280, 671.50874pt x 369.63094pt>
+<pictures/Aktivitätsdiagramm.png, id=282, 671.50874pt x 369.63094pt>
 File: pictures/Aktivitätsdiagramm.png Graphic file (type png)
 <use pictures/Aktivitätsdiagramm.png>
 Package pdftex.def Info: pictures/Aktivitätsdiagramm.png  used on input line 3
@@ -2262,20 +2262,20 @@ Package pdftex.def Info: pictures/Aktivitätsdiagramm.png  used on input line 3
 
 
  <./pictures/UseCases.png>]
-<pictures/Informationsmodell.png, id=290, 415.5525pt x 175.40532pt>
+<pictures/Informationsmodell.png, id=292, 415.5525pt x 175.40532pt>
 File: pictures/Informationsmodell.png Graphic file (type png)
 <use pictures/Informationsmodell.png>
 Package pdftex.def Info: pictures/Informationsmodell.png  used on input line 43
 .
 (pdftex.def)             Requested size: 370.0pt x 156.1825pt.
-<pictures/Architekturmodell.png, id=292, 1273.75874pt x 608.2725pt>
+<pictures/Architekturmodell.png, id=294, 1273.75874pt x 608.2725pt>
 File: pictures/Architekturmodell.png Graphic file (type png)
 <use pictures/Architekturmodell.png>
 Package pdftex.def Info: pictures/Architekturmodell.png  used on input line 54.
 
 (pdftex.def)             Requested size: 370.0pt x 176.68224pt.
  [16 <./pictures/Aktivitätsdiagramm.png> <./pictures/Informationsmodell.png>]
-<pictures/ComponentDiagram.png, id=303, 585.68813pt x 314.67563pt>
+<pictures/ComponentDiagram.png, id=305, 585.68813pt x 314.67563pt>
 File: pictures/ComponentDiagram.png Graphic file (type png)
 <use pictures/ComponentDiagram.png>
 Package pdftex.def Info: pictures/ComponentDiagram.png  used on input line 63.
@@ -2299,7 +2299,7 @@ Overfull \hbox (15.7797pt too wide) in paragraph at lines 79--80
 /Abschnitts�berschriften)
  []
 
-<pictures/RuleBasedPreprocessor.png, id=313, 952.55875pt x 582.175pt>
+<pictures/RuleBasedPreprocessor.png, id=315, 952.55875pt x 582.175pt>
 File: pictures/RuleBasedPreprocessor.png Graphic file (type png)
 <use pictures/RuleBasedPreprocessor.png>
 Package pdftex.def Info: pictures/RuleBasedPreprocessor.png  used on input line
@@ -2317,32 +2317,39 @@ Overfull \hbox (2.46371pt too wide) in paragraph at lines 99--100
 lated() mit un-ter-schied-
  []
 
-<pictures/KnowledgeExtractor.png, id=315, 782.17218pt x 620.3175pt>
+<pictures/KnowledgeExtractor.png, id=317, 581.17125pt x 659.46375pt>
 File: pictures/KnowledgeExtractor.png Graphic file (type png)
 <use pictures/KnowledgeExtractor.png>
 Package pdftex.def Info: pictures/KnowledgeExtractor.png  used on input line 10
 3.
-(pdftex.def)             Requested size: 370.0pt x 293.43286pt.
+(pdftex.def)             Requested size: 370.0pt x 419.85164pt.
 
 Overfull \hbox (397.55956pt too wide) has occurred while \output is active
  []|[]|
  []
 
 [18 <./pictures/RuleBasedPreprocessor.png (PNG copy)>]
-<pictures/RDFSerialiser.png, id=322, 705.837pt x 260.172pt>
+<pictures/RDFSerialiser.png, id=324, 578.16pt x 526.21594pt>
 File: pictures/RDFSerialiser.png Graphic file (type png)
 <use pictures/RDFSerialiser.png>
 Package pdftex.def Info: pictures/RDFSerialiser.png  used on input line 115.
-(pdftex.def)             Requested size: 370.0pt x 136.3859pt.
-<pictures/Main.png, id=324, 611.28375pt x 348.1005pt>
+(pdftex.def)             Requested size: 370.0pt x 336.75296pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pictures/Main.png, id=326, 841.64438pt x 415.5525pt>
 File: pictures/Main.png Graphic file (type png)
 <use pictures/Main.png>
 Package pdftex.def Info: pictures/Main.png  used on input line 129.
-(pdftex.def)             Requested size: 370.0pt x 210.6997pt.
- [19 <./pictures/KnowledgeExtractor.png> <./pictures/RDFSerialiser.png>])
-(./chapters/kapitel4/implementierung.tex
+(pdftex.def)             Requested size: 370.0pt x 182.68513pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./chapters/kapitel4/implementierung.tex
 Kapitel 4.
-[20 <./pictures/Main.png>]
+[19 <./pictures/KnowledgeExtractor.png>] [20 <./pictures/RDFSerialiser.png> <./
+pictures/Main.png>]
 Overfull \hbox (8.56755pt too wide) in paragraph at lines 5--5
 |[]\T1/pplj/m/sc/10.95/80ls fz 1.3 im-ple-men-tie-rung zur vor-ver-ar-bei-tung 
 me-di-zi-ni-scher
@@ -2646,12 +2653,6 @@ frontbackmatter/Bibliography.tex
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 113.
 Package rerunfilecheck Info: File `praktikumsbericht.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please rerun LaTeX.
-
 Package logreq Info: Writing requests to 'praktikumsbericht.run.xml'.
 \openout1 = `praktikumsbericht.run.xml'.
 
@@ -2661,10 +2662,10 @@ Package logreq Info: Writing requests to 'praktikumsbericht.run.xml'.
 ### simple group (level 1) entered at line 57 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38805 strings out of 480994
- 761949 string characters out of 5902830
- 1755118 words of memory out of 5000000
- 53324 multiletter control sequences out of 15000+600000
+ 38804 strings out of 480994
+ 761927 string characters out of 5902830
+ 1755608 words of memory out of 5000000
+ 53323 multiletter control sequences out of 15000+600000
  596702 words of font info for 124 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  74i,23n,97p,10112b,25656s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2682,10 +2683,10 @@ e/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/Programme/Textverarbe
 itung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/Programme
 /Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 
-Output written on praktikumsbericht.pdf (28 pages, 756453 bytes).
+Output written on praktikumsbericht.pdf (28 pages, 618011 bytes).
 PDF statistics:
- 607 PDF objects out of 1000 (max. 8388607)
- 541 compressed objects within 6 object streams
+ 608 PDF objects out of 1000 (max. 8388607)
+ 542 compressed objects within 6 object streams
  148 named destinations out of 1000 (max. 500000)
  15324 words of extra memory for PDF output out of 17280 (max. 10000000)
 
