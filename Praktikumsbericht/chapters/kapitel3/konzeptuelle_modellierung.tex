@@ -108,13 +108,14 @@ is\_related() ist eine private Methode, die vom KnowledgeExtractor-Objekt verwen
 \section{FZ 3.2 Theoriebildung zur Wissensrepräsentation}
 \label{sec:FZ3.2} 
 
-Der RdfSerialiser (Abbildung \ref{fig:rdfSerialiser}) serialisiert die Wissensrepräsentation in eine RDF/XML-Datei.
+Der RDFSerialiser (Abbildung \ref{fig:RDFSerialiser}) serialisiert die Wissensrepräsentation in eine RDF/XML-Datei.
+Dabei arbeitet der RDFSerialiser mit der Python-Bibliothek rdflib. Zunächst soll ein Graph ohne Inhalt erstellt werden mit der Funktion create\_graph, dies geschieht mit der Klasse GraphManager. Anschließend sollen die Inhalte der übergebenen KnowledgeBase in den Graphen übertragen werden (knowledgebase\_to\_graph), dies geschieht mit den für GraphManager implementierten Methoden. Der so entstandene Graph wird dann mit der Methode serialise\_graph in das in serialisation\_format spezifizierte Format übertragen und anschließend die so entstandene Wissensrepräsentation gespeichert.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{pictures/RDFSerialiser.png}
-    \caption{rdfSerialiser der Konsolenapplikation}
-    \label{fig:rdfSerialiser}
+    \caption{RDFSerialiser der Konsolenapplikation}
+    \label{fig:RDFSerialiser}
 \end{figure}
 
 
