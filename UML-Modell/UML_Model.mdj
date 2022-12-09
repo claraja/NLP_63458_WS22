@@ -6975,24 +6975,8 @@
 							"left": 840,
 							"top": 40,
 							"width": 441,
-							"height": 249,
+							"height": 281,
 							"text": "Beim Starten des Medextractors wird eine KnowledgeExtractor-Instanz erzeugt. Zur Instanziierung wird der Dateiname der persistent gespeicherten Wissensbasis übergeben. Der EntityRuler wird der spaCy-Pipeline hinzugefügt.\n\nDieser Instanz kann durch den Aufruf KnowledgeExtractor(text:String) ein vom Preprocessor vorbereiteter ###Satz### zur Analyse übergeben werden. Daher muss KnowledgeExtractor die Methode __call__(text:String) implementieren.\n\nDas KnowledgeExtractor-Objekt verwaltet das KnowledgeBase-Objekt.\n\nÜber die Methode set_context() kann dem KnowledgeExtractor eine Liste von Entitäten übergeben werden (z.B. aus einer Überschrift).\n\nis_related() ist eine private Methode, die vom KnowledgeExtractor-Objekt verwendet wird, um zu prüfen, ob zwei beliebige vom EntityRuler gefundene Entitäten in Beziehung zueinander stehen. Die SemanticRelation-Objekte werden auf Basis eines wiederholten Aufrufs von is_related() mit unterschiedlichen Kombinationen gefundener Entitäten erzeugt. "
-						},
-						{
-							"_type": "UMLNoteLinkView",
-							"_id": "AAAAAAGEuIsCOqWyPSQ=",
-							"_parent": {
-								"$ref": "AAAAAAGEuF23v49of/o="
-							},
-							"font": "Arial;13;0",
-							"head": {
-								"$ref": "AAAAAAGEuF4ipY+yGOI="
-							},
-							"tail": {
-								"$ref": "AAAAAAGEuImRM6Q1N3U="
-							},
-							"lineStyle": 1,
-							"points": "839:189;791:194"
 						},
 						{
 							"_type": "UMLClassView",

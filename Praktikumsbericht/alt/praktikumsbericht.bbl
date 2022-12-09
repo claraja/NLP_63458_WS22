@@ -231,6 +231,43 @@
       \verb https://menhir-project.eu/
       \endverb
     \endentry
+    \entry{norman1986user}{book}{}
+      \name{author}{2}{}{%
+        {{hash=52a99041490c5d72e932ceb3fcbddccc}{%
+           family={Norman},
+           familyi={N\bibinitperiod},
+           given={D.A.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=322bd5c093fbdd0da31b0261b006fdd2}{%
+           family={Draper},
+           familyi={D\bibinitperiod},
+           given={S.W.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{269fcf647c2033ff489f04c4ebc2b13c}
+      \strng{fullhash}{269fcf647c2033ff489f04c4ebc2b13c}
+      \strng{bibnamehash}{269fcf647c2033ff489f04c4ebc2b13c}
+      \strng{authorbibnamehash}{269fcf647c2033ff489f04c4ebc2b13c}
+      \strng{authornamehash}{269fcf647c2033ff489f04c4ebc2b13c}
+      \strng{authorfullhash}{269fcf647c2033ff489f04c4ebc2b13c}
+      \field{labelalpha}{ND86}
+      \field{sortinit}{N}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780898598728}
+      \field{title}{User Centered System Design: New Perspectives on Human-computer Interaction}
+      \field{year}{1986}
+      \verb{urlraw}
+      \verb https://books.google.de/books?id=Qz5jQgAACAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.de/books?id=Qz5jQgAACAAJ
+      \endverb
+    \endentry
     \entry{nunamaker_systems_1990-1}{article}{}
       \name{author}{3}{}{%
         {{hash=7d0f87dfa28107ef5e7ba5526f801451}{%
