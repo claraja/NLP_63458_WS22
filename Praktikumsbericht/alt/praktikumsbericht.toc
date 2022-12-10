@@ -60,23 +60,21 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}{User Centered System Design }}{15}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.1}{Anwendungskontext und Anwendungsfälle}}{15}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.1}{Anwendungskontext und Anwendungsfall}}{15}{subsection.3.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.2}{Aktivitätsmodell}}{15}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.2}{Aktivitätsmodell}}{16}{subsection.3.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.3}{Informationsmodell}}{15}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.3}{Informationsmodell}}{16}{subsection.3.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.4}{Komponentenmodell}}{17}{subsection.3.1.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.5}{Architekturmodell}}{17}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.4}{Architektur- und Komponentenmodell}}{17}{subsection.3.1.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}{FZ 1.2 Theoriebildung zur Vorverarbeitung medizinischer Texte}}{17}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}{FZ 2.3 Theoriebildung zur Überführung medizinischen Fachvokabulars in maschinenlesbare Form zur weiteren Verarbeitung durch NLP}}{17}{section.3.3}%
+\contentsline {section}{\numberline {3.3}{FZ 2.3 Theoriebildung zur Überführung medizinischen Fachvokabulars in maschinenlesbare Form zur weiteren Verarbeitung durch NLP}}{18}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}{FZ 3.2 Theoriebildung zur Wissensrepräsentation}}{18}{section.3.4}%
+\contentsline {section}{\numberline {3.4}{FZ 3.2 Theoriebildung zur Wissensrepräsentation}}{19}{section.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}{Zusammenfassung}}{18}{section.3.5}%
+\contentsline {section}{\numberline {3.5}{Zusammenfassung}}{20}{section.3.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}{Proof-Of-Concept Implementierung}}{22}{chapter.4}%
 \defcounter {refsection}{0}\relax 
