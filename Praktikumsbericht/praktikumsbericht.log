@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  9 DEC 2022 19:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  10 DEC 2022 13:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2329,27 +2329,29 @@ Overfull \hbox (397.55956pt too wide) has occurred while \output is active
  []
 
 [18 <./pictures/RuleBasedPreprocessor.png (PNG copy)>]
-<pictures/RDFSerialiser.png, id=324, 578.16pt x 526.21594pt>
+Overfull \hbox (23.2842pt too wide) in paragraph at lines 111--113
+\T1/pplj/m/n/10.95 ei-ne RDF/XML-Datei. Da-bei ar-bei-tet der RDFSe-ria-li-ser 
+mit der Python-Bibliothek
+ []
+
+<pictures/RDFSerialiser.png, id=324, 837.1275pt x 701.62125pt>
 File: pictures/RDFSerialiser.png Graphic file (type png)
 <use pictures/RDFSerialiser.png>
-Package pdftex.def Info: pictures/RDFSerialiser.png  used on input line 115.
-(pdftex.def)             Requested size: 370.0pt x 336.75296pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<pictures/Main.png, id=326, 841.64438pt x 415.5525pt>
+Package pdftex.def Info: pictures/RDFSerialiser.png  used on input line 116.
+(pdftex.def)             Requested size: 370.0pt x 310.10606pt.
+[19 <./pictures/KnowledgeExtractor.png>]
+<pictures/Main.png, id=332, 841.64438pt x 415.5525pt>
 File: pictures/Main.png Graphic file (type png)
 <use pictures/Main.png>
-Package pdftex.def Info: pictures/Main.png  used on input line 129.
+Package pdftex.def Info: pictures/Main.png  used on input line 130.
 (pdftex.def)             Requested size: 370.0pt x 182.68513pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./chapters/kapitel4/implementierung.tex
 Kapitel 4.
-[19 <./pictures/KnowledgeExtractor.png>] [20 <./pictures/RDFSerialiser.png> <./
-pictures/Main.png>]
+[20 <./pictures/RDFSerialiser.png (PNG copy)>] [21 <./pictures/Main.png>]
 Overfull \hbox (8.56755pt too wide) in paragraph at lines 5--5
 |[]\T1/pplj/m/sc/10.95/80ls fz 1.3 im-ple-men-tie-rung zur vor-ver-ar-bei-tung 
 me-di-zi-ni-scher
@@ -2357,7 +2359,7 @@ me-di-zi-ni-scher
 
 ) (./chapters/kapitel5/evaluierung.tex
 Kapitel 5.
-[21
+[22
 
 
 ]
@@ -2368,10 +2370,10 @@ Overfull \hbox (3.54457pt too wide) in paragraph at lines 5--5
 
 ) (./chapters/kapitel6/zusammenfassung.tex
 Kapitel 6.
-[22
+[23
 
 
-]) [23
+]) [24
 
 
 ]
@@ -2402,22 +2404,17 @@ Overfull \hbox (9.79741pt too wide) in paragraph at lines 15--15
 n/10.95 (be-sucht am 07.11.2022). 
  []
 
-[24
+[25
 
 
 
 
 
-]) [25]
+]) [26]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 113.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 113.
  (./praktikumsbericht.aux (./frontbackmatter/Contents.aux)
-(./frontbackmatter/Bibliography.aux)
-
-Package mparhack Warning: Marginpars may have changed.
-(mparhack)                Rerun to get them right.
-
-)
+(./frontbackmatter/Bibliography.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 113.
 
 
@@ -2662,9 +2659,9 @@ Package logreq Info: Writing requests to 'praktikumsbericht.run.xml'.
 ### simple group (level 1) entered at line 57 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38804 strings out of 480994
- 761927 string characters out of 5902830
- 1755608 words of memory out of 5000000
+ 38805 strings out of 480994
+ 761926 string characters out of 5902830
+ 1755614 words of memory out of 5000000
  53323 multiletter control sequences out of 15000+600000
  596702 words of font info for 124 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -2683,10 +2680,10 @@ e/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/Programme/Textverarbe
 itung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/Programme
 /Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 
-Output written on praktikumsbericht.pdf (28 pages, 618011 bytes).
+Output written on praktikumsbericht.pdf (29 pages, 655158 bytes).
 PDF statistics:
- 608 PDF objects out of 1000 (max. 8388607)
- 542 compressed objects within 6 object streams
- 148 named destinations out of 1000 (max. 500000)
+ 611 PDF objects out of 1000 (max. 8388607)
+ 545 compressed objects within 6 object streams
+ 149 named destinations out of 1000 (max. 500000)
  15324 words of extra memory for PDF output out of 17280 (max. 10000000)
 

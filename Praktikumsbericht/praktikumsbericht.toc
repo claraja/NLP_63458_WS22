@@ -74,32 +74,32 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.4}{FZ 3.2 Theoriebildung zur Wissensrepräsentation}}{19}{section.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}{Zusammenfassung}}{19}{section.3.5}%
+\contentsline {section}{\numberline {3.5}{Zusammenfassung}}{20}{section.3.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}{Proof-Of-Concept Implementierung}}{21}{chapter.4}%
+\contentsline {chapter}{\numberline {4}{Proof-Of-Concept Implementierung}}{22}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}{FZ 1.3 Implementierung zur Vorverarbeitung medizinischer Texte}}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.1}{FZ 1.3 Implementierung zur Vorverarbeitung medizinischer Texte}}{22}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}{FZ 2.4 Implementierung zur Überführung medizinischen Fachvokabulars in maschinenlesbare Form zur weiteren Verarbeitung durch NLP}}{21}{section.4.2}%
+\contentsline {section}{\numberline {4.2}{FZ 2.4 Implementierung zur Überführung medizinischen Fachvokabulars in maschinenlesbare Form zur weiteren Verarbeitung durch NLP}}{22}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}{FZ 3.3 Implementierung zur Wissensrepräsentation}}{21}{section.4.3}%
+\contentsline {section}{\numberline {4.3}{FZ 3.3 Implementierung zur Wissensrepräsentation}}{22}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}{Evaluierung}}{22}{chapter.5}%
+\contentsline {chapter}{\numberline {5}{Evaluierung}}{23}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}{FZ 1.4 Evaluierung zur Vorverarbeitung medizinischer Texte}}{22}{section.5.1}%
+\contentsline {section}{\numberline {5.1}{FZ 1.4 Evaluierung zur Vorverarbeitung medizinischer Texte}}{23}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}{FZ 2.5 Evaluierung zur Überführung medizinischen Fachvokabulars in maschinenlesbare Form zur weiteren Verarbeitung durch NLP}}{22}{section.5.2}%
+\contentsline {section}{\numberline {5.2}{FZ 2.5 Evaluierung zur Überführung medizinischen Fachvokabulars in maschinenlesbare Form zur weiteren Verarbeitung durch NLP}}{23}{section.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}{FZ 3.4 Evaluierung zur Wissensrepräsentation}}{22}{section.5.3}%
+\contentsline {section}{\numberline {5.3}{FZ 3.4 Evaluierung zur Wissensrepräsentation}}{23}{section.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}{Zusammenfassung}}{22}{section.5.4}%
+\contentsline {section}{\numberline {5.4}{Zusammenfassung}}{23}{section.5.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}{Zusammenfassung und Ausblick}}{23}{chapter.6}%
+\contentsline {chapter}{\numberline {6}{Zusammenfassung und Ausblick}}{24}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}{Zusammenfassung}}{23}{section.6.1}%
+\contentsline {section}{\numberline {6.1}{Zusammenfassung}}{24}{section.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}{Ausblick}}{23}{section.6.2}%
+\contentsline {section}{\numberline {6.2}{Ausblick}}{24}{section.6.2}%
 \defcounter {refsection}{0}\relax 
 \vspace {\beforebibskip }
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {}{Literatur}}{24}{section*.12}%
+\contentsline {chapter}{\numberline {}{Literatur}}{25}{section*.12}%
