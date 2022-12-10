@@ -36,7 +36,7 @@ Für die Modellierung des Anwendungsfalls sind die in Abbildung \ref{fig:Aktivit
 
 \subsection{Informationsmodell}
 
-Für den Aufbau der Wissensbasis sind erstens die gefundenen Entitäten und zweitens die Beziehungen zwischen diesen von Bedeutung. Diese werden in Form von semantischen Beziehungen in der Wissensbasis gespeichert, wie dies in  Abbildung \ref{fig:informationsmodell} des Informationsmodells der Applikation dargestellt ist.
+Für den Aufbau der Wissensbasis sind erstens die gefundenen Entitäten und zweitens die Beziehungen zwischen diesen von Bedeutung. Diese werden in Form von semantischen Beziehungen in der Wissensbasis gespeichert, wie dies in  Abbildung \ref{fig:informationsmodell} des Informationsmodells (ER-Diagramm) der Applikation dargestellt ist.
 
 \begin{figure}[h]
     \centering
@@ -73,7 +73,7 @@ Um die Vorverarbeitung medizinischer Texte durchführen zu können, wird dem Pr�
 
 Für die Erkennung der Satzeinheiten kann die Bibliothek \emph{pySBD - python Sentence Boundary Disambiguation} verwendet werden, die regelbasiert auf Grundlage von 100 \glqq Goldenen Regeln\grqq{} arbeitet.
 
-Falls möglich, soll auch eine Indexstruktur (Kapitel-/Abschnittsüberschriften) ermittelt werden.
+Falls möglich, soll auch eine Indexstruktur (Kapitel-/Abschnittsüberschrif\-ten) ermittelt werden.
 
 \begin{figure}[h]
     \centering
@@ -85,13 +85,9 @@ Falls möglich, soll auch eine Indexstruktur (Kapitel-/Abschnittsüberschriften)
 \section{FZ 2.3 Theoriebildung zur Überführung medizinischen Fachvokabulars in maschinenlesbare Form zur weiteren Verarbeitung durch NLP}
 \label{sec:FZ2.3} 
 
-Beim Starten des MedExtractors wird eine KnowledgeExtractor-Instanz erzeugt (Abbildung \ref{fig:KnowledgeExtractor}). Zur Instanziierung wird der Dateiname der persistent gespeicherten Wissensbasis übergeben. Der EntityRuler wird der spaCy-Pipeline hinzugefügt.
+Beim Starten des MedExtractors wird eine KnowledgeExtractor-Instanz erzeugt (Abbildung \ref{fig:KnowledgeExtractor}). Zur Instanziierung wird der Dateiname der persistent gespeicherten Wissensbasis übergeben. Das KnowledgeExtractor-Objekt verwaltet das KnowledgeBase-Objekt. Der EntityRuler wird der spaCy-Pipeline hinzugefügt.
 
-Dieser Instanz kann durch den Aufruf KnowledgeExtractor(text:String) ein vom Preprocessor vorbereiteter \#\#\#Satz\#\#\# zur Analyse übergeben werden. Daher muss KnowledgeExtractor die Methode \_\_call\_\_(text:String) implementieren.
-
-Das KnowledgeExtractor-Objekt verwaltet das KnowledgeBase-Objekt.
-
-Über die Methode set\_context() kann dem KnowledgeExtractor eine Liste von Entitäten übergeben werden (z.B. aus einer Überschrift).
+Dieser Instanz kann durch den Aufruf KnowledgeExtractor(text:String) ein vom Preprocessor vorbereiteter Abschnitt oder Satz zur Analyse übergeben werden. Daher muss KnowledgeExtractor die Methode \_\_call\_\_(text:String) implementieren. Zusätzlich kann über die Methode set\_context(Entity[]) dem KnowledgeExtractor mitgeteilt werden, um welches Thema es in dem Abschnitt oder Satz geht. Das Thema ergibt sich aus Entitäten, die in Kapitel- oder Abschnittsüberschriften gefunden werden.
 
 is\_related() ist eine private Methode, die vom KnowledgeExtractor-Objekt verwendet wird, um zu prüfen, ob zwei beliebige vom EntityRuler gefundene Entitäten in Beziehung zueinander stehen. Die SemanticRelation-Objekte werden auf Basis eines wiederholten Aufrufs von is\_related() mit unterschiedlichen Kombinationen gefundener Entitäten erzeugt. 
 
@@ -106,7 +102,7 @@ is\_related() ist eine private Methode, die vom KnowledgeExtractor-Objekt verwen
 \label{sec:FZ3.2} 
 
 Der RDFSerialiser (Abbildung \ref{fig:RDFSerialiser}) serialisiert die Wissensrepräsentation in eine RDF/XML-Datei.
-Dabei arbeitet der RDFSerialiser mit der Python-Bibliothek rdflib. Zunächst soll ein Graph ohne Inhalt erstellt werden mit der Funktion create\_graph, dies geschieht mit der Klasse GraphManager. Anschließend sollen die Inhalte der übergebenen KnowledgeBase in den Graphen übertragen werden (knowledgebase\_to\_graph), dies geschieht mit den für GraphManager implementierten Methoden. Der so entstandene Graph wird dann mit der Methode serialise\_graph in das in serialisation\_format spezifizierte Format übertragen und anschließend die so entstandene Wissensrepräsentation gespeichert.
+Dabei arbeitet der RDFSerialiser mit der Python-Biblio\-thek rdflib. Zunächst soll ein Graph ohne Inhalt erstellt werden mit der Funktion create\_graph, dies geschieht mit der Klasse GraphManager. Anschließend sollen die Inhalte der übergebenen KnowledgeBase in den Graphen übertragen werden (knowledgebase\_to\_graph), dies geschieht mit den für GraphManager implementierten Methoden. Der so entstandene Graph wird dann mit der Methode serialise\_graph in das in serialisation\_format spezifizierte Format übertragen und anschließend die so entstandene Wissensrepräsentation gespeichert.
 
 \begin{figure}[h]
     \centering
@@ -114,7 +110,6 @@ Dabei arbeitet der RDFSerialiser mit der Python-Bibliothek rdflib. Zunächst sol
     \caption{RDFSerialiser der Konsolenapplikation}
     \label{fig:RDFSerialiser}
 \end{figure}
-
 
 
 \section{Zusammenfassung}
