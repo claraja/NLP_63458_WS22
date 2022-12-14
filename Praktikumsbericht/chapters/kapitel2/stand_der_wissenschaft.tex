@@ -21,22 +21,14 @@ Charakterisiert sind diese Texte dadurch, dass sie durch Zwischenüberschriften 
 Als Quellen für diesen Abschnitt dienten \cite{mpg_depression}, \cite{who_depression} und \cite{psychrembel_depression}.
 \subsection{Allgemein}
 Depression ist eine psychische Krankheit, die geschätzt $3,8 \%$ der Weltbevölkerung und $5\%$ der Erwachsenen betrifft.
-Sie kann dazu führen, dass betroffene Menschen Schwierigkeiten haben im Arbeits- und Familienleben zurecht zu
-kommen.
+Sie kann dazu führen, dass betroffene Menschen Schwierigkeiten haben im Arbeits- und Familienleben zurecht zu kommen.
 
 \subsection{Symptome}
-Übliche Symptome eine Depression sind eine traurige Grundstimmung, Konzentrationsprobleme, Hoffnungslosigkeit, 
-Müdigkeit und Reizbarkeit. Auch Schlafstörungen, eine Libidostörung, verminderter oder gesteigerter Appetit und
-ein vermindertes Selbswertgefühl oder Selbstbewusstsein sind Symptome. Im schlimmsten Fall treten 
-Selbsttötungsgedanken auf.
+Übliche Symptome eine Depression sind eine traurige Grundstimmung, Konzentrationsprobleme, Hoffnungslosigkeit, Müdigkeit und Reizbarkeit. Auch Schlafstörungen, eine Libidostörung, verminderter oder gesteigerter Appetit und ein vermindertes Selbstwertgefühl oder Selbstbewusstsein sind Symptome. Im schlimmsten Fall treten Selbsttötungsgedanken auf.
 
 \subsection{Formen der Depression}
-Die Schwere einer typischen Depression wird durch leichte, mittelgradige und schwere Episoden unterschieden. Dabei 
-sind die Übergänge fließend.
-Besondere Formen der Depression sind die chronische Depression, bei der trotz therapeutischer Maßnahmen nur wenig 
-Besserung eintritt. Des Weiteren gibt es die manisch-depressive Depression, bei der sich depressive und manische 
-Phasen abwechseln. Außerdem gibt es auch kurze, akute depressive Verstimmungen, die nur zwischen einem Tag und
-zwei Wochen dauern. 
+Die Schwere einer typischen Depression wird durch leichte, mittelgradige und schwere Episoden unterschieden. Dabei sind die Übergänge fließend.
+Besondere Formen der Depression sind die chronische Depression, bei der trotz therapeutischer Maßnahmen nur wenig Besserung eintritt. Des Weiteren gibt es die manisch-depressive Depression, bei der sich depressive und manische Phasen abwechseln. Außerdem gibt es auch kurze, akute depressive Verstimmungen, die nur zwischen einem Tag und zwei Wochen dauern. 
 
 \subsection{Ursachen}
 Depressionen entstehen durch ein komplexes Zusammenspiel von sozialen, psychologischen und biologischen Faktoren.
@@ -54,11 +46,9 @@ und/oder den betroffenen Personen Antidepressiva verschrieben.
 \section{FZ 2.2. Automatisierung durch NLP}
 \label{sec:fz2.2.} 
 
-\subsection{Natural Language Processing (NLP)}
-Natural Language Processing ist ein Teil der Künstlichen Intelligenz. Er befasst sich mit der Aufgabe
-Maschinen den Umgang mit der menschlichen Sprache beizubringen, also das Verstehen der Sprache und dem
-richtigen Antworten darauf. Mithilfe von NLP-Methoden werden zum Beispiel Sätze analysiert, die Bedeutung 
-von Texten erfasst, Chatbots erstellt und sogar ganze Geschichten geschrieben.
+\subsection{Natural Language Processing}
+
+\emph{Natural Language Processing (\ac{NLP})} ist ein Teil der Künstlichen Intelligenz. Er befasst sich mit der Aufgabe Maschinen den Umgang mit der menschlichen Sprache beizubringen, also das Verstehen der Sprache und dem richtigen Antworten darauf. Mithilfe von NLP-Methoden werden zum Beispiel Sätze analysiert, die Bedeutung von Texten erfasst, Chatbots erstellt und sogar ganze Geschichten geschrieben.
 Die grundlegendsten Schritte, die beim Erarbeiten eines NLP-Modells (oder allgemeiner eines 
 Machine-Learning-Modells) ausgeführt werden, sind folgende:
 \begin{enumerate}
@@ -69,15 +59,12 @@ Machine-Learning-Modells) ausgeführt werden, sind folgende:
 	\item Modell anwenden / Vorhersagen treffen
 \end{enumerate}
 
-\subsection{Named Entity Recognition (NER)}
-Named Entity Recognition bezeichnet einen Teilbereich des Natural Language Processing, bei dem es darum geht 
-wichtige Entitäten, wie zum Beispiel Personen, Orte oder Institutionen, in einem Text zu erkennen. Methoden 
-zur Bewältigung dieser Aufgabe werden seit circa 30 Jahren entwickelt. Darunter fallen grammatikbasierte und 
-statistische Methoden, sowie auch Methoden des Machine Learning.
+\subsection{Named Entity Recognition}
+
+\emph{Named Entity Recognition (\ac{NER})} bezeichnet einen Teilbereich des Natural Language Processing, bei dem es darum geht wichtige Entitäten, wie zum Beispiel Personen, Orte oder Institutionen, in einem Text zu erkennen. Methoden zur Bewältigung dieser Aufgabe werden seit circa 30 Jahren entwickelt. Darunter fallen grammatikbasierte und statistische Methoden, sowie auch Methoden des Machine Learning.
 
 \subsection{Entity Linking}
-Als Entity Linking wird im Bereich des NLP die Aufgabe beschrieben, die den Entitäten (z.B. Personen, Orte) 
-in einem Text das korrekte Äquivalent in einer Wissensbasis zuordnen soll.
+Als Entity Linking wird im Bereich des NLP die Aufgabe beschrieben, die den Entitäten (z.B. Personen, Orte) in einem Text das korrekte Äquivalent in einer Wissensbasis zuordnen soll.
 In \cite{shen_entity_2021} wird Entity Linking folgendermaßen definiert (übersetzt):
 \begin{defn}[Entity Linking]
 Gegeben sei ein Dokument $D$, welches die erkannten Entitäten $M=\{m_1, m_2, \dots, m_{|M|}\}$ enthält, sowie
@@ -106,7 +93,7 @@ scikit-learn und PyTorch.
 \section{FZ 3.1. Wissensrepräsentation mittels RDF}
 \label{sec:fz3.1.} 
 
-Das \emph{Resource Description Framework} (RDF) \cite{w3c_all_2022} ist ein Framework zur Darstellung von Informationen im Semantischen Web, das von der \emph{RDF Working Group} des  \emph{World Wide Web Consortium} (W3C) erstellt wurde. Das RDF-Modell besteht aus einem Datenmodell, mit dem Aussagen über Ressourcen in Form eines Graphen dargestellt werden. Die Informationen werden als Tripel von Subjekt, Prädikat und Objekt gespeichert und ermöglichen auf diese Weise eine maschinenlesbare Bereitstellung semantischer Informationen.
+Das \emph{\ac{RDF}} \cite{w3c_all_2022} ist ein Framework zur Darstellung von Informationen im Semantischen Web, das von der \emph{RDF Working Group} des \emph{\ac{W3C}} erstellt wurde. Das RDF-Modell besteht aus einem Datenmodell, mit dem Aussagen über Ressourcen in Form eines Graphen dargestellt werden. Die Informationen werden als Tripel von Subjekt, Prädikat und Objekt gespeichert und ermöglichen auf diese Weise eine maschinenlesbare Bereitstellung semantischer Informationen.
 
 Die Subjekte und Objekte sind dabei die Knoten des Graphen und die Prädikate die Kanten zwischen diesen Knoten.
 
@@ -152,5 +139,5 @@ Ein Beispiel für die Serialisierung des in Abbildung \ref{fig:rdfgraph} dargest
 
 Für Python steht mit RDFLib \cite{rdflib_team_rdflib_2022} eine Bibliothek zur Arbeit mit RDF-Graphen bereit.
 
-\subsection{SPARQL Protocol and RDF Query Language}
+\subsection{\ac{SPARQL}}
 SPARQL \dots{} [TODO]
