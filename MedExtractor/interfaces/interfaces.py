@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+import spacy
 
 class PreprocessingInterface(ABC):
 
@@ -12,8 +13,9 @@ class PreprocessingInterface(ABC):
 
 class KnowledgeExtractorInterface(ABC):
 
-    def __init__(self, text):
-        self.text = text
+    def __init__(self, kb_name, nlp):
+        self.kb_name = kb_name
+        self.nlp = nlp
         super().__init__()
 
     @abstractmethod
