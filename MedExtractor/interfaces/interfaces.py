@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-#import spacy
+from spacy import Language
 
 class PreprocessingInterface(ABC):
 
@@ -13,9 +13,20 @@ class PreprocessingInterface(ABC):
 
 class KnowledgeExtractorInterface(ABC):
 
-    def __init__(self, kb_name, nlp):
-        self.kb_name = kb_name
-        self.nlp = nlp
+    def __init__(self, *args):
+        error = True
+        if len(args) == 1:
+            if isinstance(args[0],Language):
+                self._kb_name = ""
+                self._nlp = args[0]
+                error = False
+        elif len(args) == 2:
+            if isinstance(args[0],str) and isinstance(args[1],Language):
+                self._kb_name = args[0]
+                self._nlp = args[1]
+                error = False
+        if error == True:
+            print("Fehlerhafte Argumente bei Erzeugung des KnowledgeExtractors")  # Fehlerhandling muss noch implementiert werden
 
     @abstractmethod
     def get_knowledge_base(self) -> str:
