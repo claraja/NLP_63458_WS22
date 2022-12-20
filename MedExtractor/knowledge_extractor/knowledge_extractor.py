@@ -19,6 +19,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         super().__init__(*args)
         self._doc = self._nlp("")
         self._kb = KnowledgeBase()
+        self._context = []
 
         if (self._kb_name != ""):
             self._kb.load(self._kb_name)
@@ -57,14 +58,17 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
 
         for sent in self._doc.sents:
             entities = set()
+
             for ent in sent.ents:
                 entities.add(ent)
+            entities = list(entities)
+            entities += self._context
 
             for ent1 in entities:
                 for ent2 in entities:
-                    res = self._is_related(ent1, ent2)
+                    res = self._is_related(ent1, ent2, sent)
                     if res != RelationType.NO_RELATION:
-                        print(ent1.text + " " + str(self._is_related(ent1, ent2)) + " " + ent2.text)
+                        print(ent1.text + " " + str(res) + " " + ent2.text)
                         if (ent1.label_ == "DISEASE"):
                             entity1 = Entity(ent1.text,EntityType.DISEASE)
                         elif (ent1.label_ == "SYMPTOM"):
@@ -82,24 +86,21 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                         relation = SemanticRelation(entity1,entity2,res)
                         self._kb.add_relation(relation)
 
-    def set_context(self):
-        pass
+    def set_context(self, context):
+        self._context = context
     
     def get_knowledge_base(self):
         pass
     
-    def _is_related(self,entity1,entity2):
+    def _is_related(self,entity1,entity2,sent):
 
         relation = RelationType.NO_RELATION
-        
+ 
         if entity1.label_ == "DISEASE" and entity2.label_ == "SYMPTOM":
             relation = RelationType.HAS_SYMPTOM
         
         if entity1.label_ == "SYMPTOM" and entity2.label_ == "DISEASE":
             relation = RelationType.IS_SYMPTOM_OF
 
-        if entity1 not in self._doc.ents or entity2 not in self._doc.ents:
-            relation = RelationType.NO_RELATION
-        
         return(relation)
         
