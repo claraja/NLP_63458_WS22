@@ -17,4 +17,7 @@ class Entity:
         self.entity_name = entity_name
         self.entity_type = entity_type
 
+    def __str__(self) -> str:
+        s = str(self.entity_name) + " (" + str(self.entity_type) + ")"
+        return s
 

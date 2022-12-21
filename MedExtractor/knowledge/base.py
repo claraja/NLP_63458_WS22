@@ -33,10 +33,10 @@ class KnowledgeBase(object):
         pass
 
     def safe(self, file_name: str) -> None:
-        with open(file_name, 'w') as file:
+        with open(file_name, 'wb') as file:
             pickle.dump(self._instance, file)
 
     def load(self, file_name: str):
-        with open(file_name, 'r') as file:
+        with open(file_name, 'rb') as file:
             self._instance = pickle.load(file)
             return self._instance
