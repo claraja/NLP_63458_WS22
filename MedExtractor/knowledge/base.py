@@ -32,7 +32,7 @@ class KnowledgeBase(object):
     def export_for_entity_linker(self, file_name: str):
         pass
 
-    def safe(self, file_name: str) -> None:
+    def save(self, file_name: str) -> None:
         with open(file_name, 'wb') as file:
             pickle.dump(self._instance, file)
 

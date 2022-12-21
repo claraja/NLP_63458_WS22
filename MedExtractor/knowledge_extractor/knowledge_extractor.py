@@ -88,9 +88,10 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
 
     def set_context(self, context):
         self._context = context
-    
+        return
+
     def get_knowledge_base(self):
-        pass
+        return self._kb
     
     def _is_related(self,entity1,entity2,sent):
 
@@ -102,5 +103,18 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         if entity1.label_ == "SYMPTOM" and entity2.label_ == "DISEASE":
             relation = RelationType.IS_SYMPTOM_OF
 
-        return(relation)
-        
+        return relation
+    
+    def saveKB(self,*args):
+        error = True
+        if len(args) == 0:
+            self._kb.save(self._kb_name)    
+            error = False 
+        elif len(args) == 1:
+            if isinstance(args[0],str):
+                self._kb_name = args[0]
+                self._kb.save(self._kb_name)    
+                error = False
+        if error == True:
+            print("Fehlerhafte Argumente beim Speichern der Wissensbasis")  # Fehlerhandling muss noch implementiert werden
+        return

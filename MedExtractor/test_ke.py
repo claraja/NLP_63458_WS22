@@ -9,7 +9,7 @@ from entity import Entity
 from entity import EntityType
 
 nlp = spacy.load('en_core_web_sm')
-ke = KnowledgeExtractor(nlp)
+ke = KnowledgeExtractor('Medextractor\\test.kb',nlp)
 
 text_file = open('resources\\TextToAnalyzePreprocessed.txt','r')
 
@@ -22,3 +22,4 @@ ke.set_context(context)
 
 text = text_file.read()
 ke(text)
+ke.saveKB('Medextractor\\test.kb')
