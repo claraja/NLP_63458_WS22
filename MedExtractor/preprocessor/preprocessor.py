@@ -37,7 +37,7 @@ class RuleBasedPreprocessor(PreprocessingInterface):
 
             # replace all occurrences of multiple spaces with a single space
             result = re.sub(' +', ' ', stripped_line)
-            new_raw_text = new_raw_text + result + "\n"
+            new_raw_text = new_raw_text + result + ".\n"
 
         return new_raw_text
 

@@ -9,10 +9,10 @@ sys.path.append('MedExtractor\\knowledge_extractor')
 
 from interfaces.interfaces import KnowledgeExtractorInterface
 from knowledge.base import KnowledgeBase
-from entity import Entity
-from entity import EntityType
-from semantics import SemanticRelation
-from relations import RelationType
+from knowledge.entity import Entity
+from knowledge.entity import EntityType
+from knowledge.semantics import SemanticRelation
+from knowledge.relations import RelationType
 
 class KnowledgeExtractor(KnowledgeExtractorInterface):
     def __init__(self,*args):
