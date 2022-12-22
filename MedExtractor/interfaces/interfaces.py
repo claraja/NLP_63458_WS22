@@ -17,12 +17,12 @@ class KnowledgeExtractorInterface(ABC):
         error = True
         if len(args) == 1:
             if isinstance(args[0],Language):
-                self._kb_name = ""
+                self._kb_filename = ""
                 self._nlp = args[0]
                 error = False
         elif len(args) == 2:
             if isinstance(args[0],str) and isinstance(args[1],Language):
-                self._kb_name = args[0]
+                self._kb_filename = args[0]
                 self._nlp = args[1]
                 error = False
         if error == True:

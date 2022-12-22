@@ -10,7 +10,7 @@ from entity import EntityType
 
 nlp = spacy.load('en_core_web_sm')
 ke = KnowledgeExtractor('Medextractor\\test.kb',nlp)
-
+print('Anfang: ' + str(len(ke._kb._semantic_relations)))
 text_file = open('resources\\TextToAnalyzePreprocessed.txt','r')
 
 span = nlp("the blues")[0:2]
