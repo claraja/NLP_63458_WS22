@@ -1,12 +1,12 @@
 import sys
 import spacy
 
-sys.path.append('MedExtractor')
-sys.path.append('MedExtractor\\knowledge_extractor')
+#sys.path.append('MedExtractor')
+#sys.path.append('MedExtractor\\knowledge_extractor')
 
 from knowledge_extractor.knowledge_extractor import KnowledgeExtractor
-from entity import Entity
-from entity import EntityType
+from knowledge.entity import Entity
+from knowledge.entity import EntityType
 
 nlp = spacy.load('en_core_web_sm')
 ke = KnowledgeExtractor('Medextractor\\test.kb',nlp)
