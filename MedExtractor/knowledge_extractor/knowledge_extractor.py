@@ -21,8 +21,8 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         self._kb = KnowledgeBase()
         self._context = []
 
-        if (self._kb_name != ""):
-            self._kb.load(self._kb_name)
+        if (self._kb_filename != ""):
+            self._kb.load(self._kb_filename)
 
         pipe_exceptions = ['tok2vec','tagger','parser']
         not_required_pipes = [pipe for pipe in self._nlp.pipe_names if pipe not in pipe_exceptions]
@@ -86,6 +86,8 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                         relation = SemanticRelation(entity1,entity2,res)
                         self._kb.add_relation(relation)
 
+        print(len(self._kb._semantic_relations))
+
     def set_context(self, context):
         self._context = context
         return
@@ -108,12 +110,12 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
     def saveKB(self,*args):
         error = True
         if len(args) == 0:
-            self._kb.save(self._kb_name)    
+            self._kb.save(self._kb_filename)    
             error = False 
         elif len(args) == 1:
             if isinstance(args[0],str):
-                self._kb_name = args[0]
-                self._kb.save(self._kb_name)    
+                self._kb_filename = args[0]
+                self._kb.save(self._kb_filename)    
                 error = False
         if error == True:
             print("Fehlerhafte Argumente beim Speichern der Wissensbasis")  # Fehlerhandling muss noch implementiert werden
