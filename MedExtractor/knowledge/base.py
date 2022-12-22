@@ -20,7 +20,7 @@ class KnowledgeBase(object):
             cls._instance = super(KnowledgeBase, cls).__new__(cls)
             # Put any initialization here.
             cls._semantic_relations = []
-            cls._entities: []
+            cls._entities = []
         return cls._instance
 
     def add_relation(self, relation: SemanticRelation):
