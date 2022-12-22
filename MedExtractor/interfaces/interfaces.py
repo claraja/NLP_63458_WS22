@@ -34,8 +34,8 @@ class KnowledgeExtractorInterface(ABC):
 
 class RDFSerialiserInterface(ABC):
 
-    def __init__(self, knowledgebase, namespace, namespace_prefix):
-        self.knowledgebase = knowledgebase
+    def __init__(self, namespace, namespace_prefix):
+        #self.knowledgebase = knowledgebase
         self.namespace = namespace
         self.namespace_prefix = namespace_prefix
         #self.serialisation_format = 'pretty-xml'

@@ -4,7 +4,13 @@
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
   <rdf:Description rdf:about="http://fapranlp.de/depression">
-    <nlp:hasSymptom rdf:resource="http://fapranlp.de/lack_of_motivation"/>
-    <nlp:hasSymptom rdf:resource="http://fapranlp.de/sadness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/low_mood"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/feeling_hopeless"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/low_self-esteem"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/tearful"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/feeling_guilt"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/feeling_irritable"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/low_sex_drive"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/loss_of_libido"/>
   </rdf:Description>
 </rdf:RDF>

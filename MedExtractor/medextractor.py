@@ -12,21 +12,19 @@ text_to_analyze = "resources/TextToAnalyze.txt"
 #preprocessor = DummyPreprocessor(data)
 preprocessor = RuleBasedPreprocessor(text_to_analyze)
 preprocessed_text = preprocessor.get_preprocessed_text()
-print(preprocessed_text)
+#print(preprocessed_text)
 nlp = spacy.load('en_core_web_sm')
-knowledgeExtractor = KnowledgeExtractor('Medextractor\\test.kb',nlp)
+knowledgeExtractor = KnowledgeExtractor('test.kb',nlp)
+rdfSerialiser = RDFSerialiser('http://fapranlp.de/', 'nlp')
+graph = rdfSerialiser.create_graph()
 for sent in nlp(preprocessed_text).sents:
     print(sent.text)
     knowledgeExtractor(sent.text)
-
+    
 knowledgebase = knowledgeExtractor.get_knowledge_base()
-# print(knowledgebase)
-# rdfSerialiser = DummyRDFSerialiser(knowledgebase)
-# print(rdfSerialiser.serialise_knowledgebase())
-rdfSerialiser = RDFSerialiser(knowledgebase, 'http://fapranlp.de/', 'nlp')
-graph = rdfSerialiser.create_graph()
+print(f"knowledgebase: {knowledgebase._semantic_relations[0].entity_1.entity_type}")
 graph = rdfSerialiser.knowledgebase_to_graph(knowledgebase, graph)
-#rdfSerialiser.set_serialisation_format('...')
+
 rdfSerialiser.serialize_graph(graph, 'test.xml')
 
 print("hi")
