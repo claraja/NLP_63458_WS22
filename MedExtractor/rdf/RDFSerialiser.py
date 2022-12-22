@@ -1,17 +1,9 @@
 from interfaces.interfaces import RDFSerialiserInterface
-from rdflib import Graph, Literal, Namespace
-from rdflib.term import URIRef
 from graphmanager import GraphManager
 from knowledge.entity import EntityType
 from knowledge.relations import RelationType
 
 class RDFSerialiser(RDFSerialiserInterface):
-    #def serialise_knowledgebase(self):
-    #    graph = GraphManager("fapra", "http://fapranlp.de/")
-    #    graph.add_disease("depression")
-    #    graph.add_symptom("depression", "lack_of_motivation")
-    #    graph.add_symptom("depression", "sadness")
-    #    return graph.get_serialised_graph()
 
     def knowledgebase_to_graph(self, knowledgebase, graph):
         for semantic_relation in knowledgebase._semantic_relations:
@@ -29,11 +21,6 @@ class RDFSerialiser(RDFSerialiserInterface):
                 if entity_2_type==EntityType.DISEASE and relation_type==RelationType.IS_SYMPTOM_OF:
                     graph.add_symptom(entity_2_name, entity_1_name)
         
-        """
-        graph.add_disease("depression")
-        graph.add_symptom("depression", "lack_of_motivation")
-        graph.add_symptom("depression", "sadness")
-        """
         return  graph
 
     def create_graph(self):
