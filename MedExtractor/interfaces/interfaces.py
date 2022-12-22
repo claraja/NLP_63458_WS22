@@ -34,10 +34,24 @@ class KnowledgeExtractorInterface(ABC):
 
 class RDFSerialiserInterface(ABC):
 
-    def __init__(self, knowledgebase):
+    def __init__(self, knowledgebase, namespace, namespace_prefix):
         self.knowledgebase = knowledgebase
+        self.namespace = namespace
+        self.namespace_prefix = namespace_prefix
+        #self.serialisation_format = 'pretty-xml'
         super().__init__()
 
-    @abstractmethod
-    def serialise_knowledgebase(self) -> str:
-        raise NotImplementedError
+    #@abstractmethod
+    #def serialise_knowledgebase(self) -> str:
+    #    raise NotImplementedError
+
+    #@abstractmethod
+    def serialize_graph(self, graph, output_path):
+        #graph.serialize(format='pretty-xml', destination=output_path)
+        #output = graph.get_serialised_graph()
+        #raise NotImplementedError
+        graph.get_serialized_graph(output_path)
+
+    #@abstractmethod
+    def set_serialisation_format(self, serialisation_format):
+        self.serialisation_format = serialisation_format
