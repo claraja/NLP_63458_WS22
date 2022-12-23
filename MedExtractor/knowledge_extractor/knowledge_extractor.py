@@ -3,10 +3,6 @@ import csv
 from spacy.pipeline import EntityRuler
 from spacy.training import Example
 
-sys.path.append('MedExtractor')
-sys.path.append('MedExtractor\\knowledge')
-sys.path.append('MedExtractor\\knowledge_extractor')
-
 from interfaces.interfaces import KnowledgeExtractorInterface
 from knowledge.base import KnowledgeBase
 from knowledge.entity import Entity
@@ -68,7 +64,6 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                 for ent2 in entities:
                     res = self._is_related(ent1, ent2, sent)
                     if res != RelationType.NO_RELATION:
-                        print(ent1.text + " " + str(res) + " " + ent2.text)
                         if (ent1.label_ == "DISEASE"):
                             entity1 = Entity(ent1.text,EntityType.DISEASE)
                         elif (ent1.label_ == "SYMPTOM"):
@@ -85,8 +80,6 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                         
                         relation = SemanticRelation(entity1,entity2,res)
                         self._kb.add_relation(relation)
-
-        print(len(self._kb._semantic_relations))
 
     def set_context(self, context):
         self._context = context
