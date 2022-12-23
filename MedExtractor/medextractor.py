@@ -23,7 +23,8 @@ graph = rdfSerialiser.create_graph()
 
 for sent in nlp(preprocessed_text).sents:
     knowledgeExtractor(sent.text)
-    
+
+knowledgeExtractor.saveKB()
 knowledgebase = knowledgeExtractor.get_knowledge_base()
 
 for semantic_relation in knowledgebase._semantic_relations:
