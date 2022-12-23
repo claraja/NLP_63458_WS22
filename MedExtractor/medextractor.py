@@ -26,6 +26,8 @@ knowledgeExtractor.set_context(context)
 for sent in nlp(preprocessed_text).sents:
     knowledgeExtractor(sent.text)
 
+knowledgeExtractor.saveKB()
+
 knowledgebase = knowledgeExtractor.get_knowledge_base()
 
 for semantic_relation in knowledgebase._semantic_relations:
@@ -34,6 +36,7 @@ for semantic_relation in knowledgebase._semantic_relations:
 # print(knowledgebase)
 # rdfSerialiser = DummyRDFSerialiser(knowledgebase)
 # print(rdfSerialiser.serialise_knowledgebase())
+
 rdfSerialiser = RDFSerialiser(knowledgebase, 'http://fapranlp.de/', 'nlp')
 graph = rdfSerialiser.create_graph()
 graph = rdfSerialiser.knowledgebase_to_graph(knowledgebase, graph)
