@@ -30,5 +30,5 @@ class GraphManager:
             self.diseases[disease] = disease_URI
         self.graph.add((disease_URI, self.hasSymptom, symptom_URI))
 
-    def get_serialized_graph(self, output_path):
-        return self.graph.serialize(format='pretty-xml', destination=output_path)
+    def get_serialized_graph(self, output_path, serialization_format='pretty-xml'):
+        return self.graph.serialize(format=serialization_format, destination=output_path)
