@@ -21,3 +21,5 @@ class Entity:
         s = str(self.entity_name) + " (" + str(self.entity_type) + ")"
         return s
 
+    def __eq__(self, other):
+        return (self.entity_name, self.entity_type) == (other.entity_name, other.entity_type)

@@ -6,7 +6,7 @@ from knowledge.relations import RelationType
 class RDFSerialiser(RDFSerialiserInterface):
 
     def knowledgebase_to_graph(self, knowledgebase, graph):
-        for semantic_relation in knowledgebase._semantic_relations:
+        for semantic_relation in knowledgebase.semantic_relations:
             entity_1_name = semantic_relation.entity_1.entity_name.replace(' ', '_')
             entity_1_type = semantic_relation.entity_1.entity_type
             entity_2_name = semantic_relation.entity_2.entity_name.replace(' ', '_')

@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:nlp_fapra="/"
+  xmlns:nlp="http://fapranlp.de/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
-  <rdf:Description rdf:about="/depression">
-    <nlp_fapra:hasSymptom rdf:resource="/low_mood"/>
-    <nlp_fapra:hasSymptom rdf:resource="/feeling_hopeless"/>
-    <nlp_fapra:hasSymptom rdf:resource="/low_self-esteem"/>
-    <nlp_fapra:hasSymptom rdf:resource="/tearful"/>
-    <nlp_fapra:hasSymptom rdf:resource="/feeling_guilt"/>
-    <nlp_fapra:hasSymptom rdf:resource="/feeling_irritable"/>
-    <nlp_fapra:hasSymptom rdf:resource="/low_sex_drive"/>
-    <nlp_fapra:hasSymptom rdf:resource="/loss_of_libido"/>
+  <rdf:Description rdf:about="http://fapranlp.de/depression">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/depression"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/the_blues">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/depression"/>
   </rdf:Description>
 </rdf:RDF>

@@ -2,7 +2,7 @@ from knowledge.semantics import SemanticRelation
 import pickle
 
 
-class KnowledgeBase(object):
+class KnowledgeBase:
     '''
         The KnowledgeBase Singleton manages entities and relations.
 
@@ -13,30 +13,36 @@ class KnowledgeBase(object):
         safe(str) -> None
         load(str) -> KnowledgeBase
     '''
-    _instance = None
+    # _instance = None
 
-    def __new__(cls):
-        if cls._instance is None:
-            cls._instance = super(KnowledgeBase, cls).__new__(cls)
-            # Put any initialization here.
-            cls._semantic_relations = []
-            cls._entities = []
-        return cls._instance
+    def __init__(self):
+        # if cls._instance is None:
+        # self._instance = super(KnowledgeBase, self).__new__(self)
+        # Put any initialization here.
+        self.semantic_relations = []
+        # self._entities = []
+        # return cls._instance
+
+    def __len__(self):
+        return len(self.semantic_relations)
 
     def add_relation(self, relation: SemanticRelation):
-        self._semantic_relations.append(relation)
+        self.semantic_relations.append(relation)
 
     def has_relation(self, relation: SemanticRelation) -> bool:
-        return relation in self._semantic_relations
+        for other in self.semantic_relations:
+            if other == relation:
+                return True
+        return False
 
     def export_for_entity_linker(self, file_name: str):
         pass
 
     def save(self, file_name: str) -> None:
         with open(file_name, 'wb') as file:
-            pickle.dump(self._instance, file)
+            pickle.dump(self.semantic_relations, file)
 
     def load(self, file_name: str):
         with open(file_name, 'rb') as file:
-            self._instance = pickle.load(file)
-            return self._instance
+            self.semantic_relations = pickle.load(file)
+            return self
