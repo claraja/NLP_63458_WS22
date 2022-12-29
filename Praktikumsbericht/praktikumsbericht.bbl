@@ -44,6 +44,43 @@
       \field{pages}{69\bibrangedash 72}
       \range{pages}{4}
     \endentry
+    \entry{DCMI_dcmi_2022}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=18ec26168fc8e5ae33bea44769fab571}{%
+           family={DCMI},
+           familyi={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{18ec26168fc8e5ae33bea44769fab571}
+      \strng{fullhash}{18ec26168fc8e5ae33bea44769fab571}
+      \strng{bibnamehash}{18ec26168fc8e5ae33bea44769fab571}
+      \strng{authorbibnamehash}{18ec26168fc8e5ae33bea44769fab571}
+      \strng{authornamehash}{18ec26168fc8e5ae33bea44769fab571}
+      \strng{authorfullhash}{18ec26168fc8e5ae33bea44769fab571}
+      \field{labelalpha}{DCM22}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This document is an up-to-date specification of all metadata terms maintained by the Dublin Core Metadata Initiative, including properties, vocabulary encoding schemes, syntax encoding schemes, and classes.}
+      \field{title}{{DCMI} {Metadata} {Terms}}
+      \field{urlday}{4}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Anne\\Zotero\\storage\\X75ZBQX5\\dcmi-terms.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.dublincore.org/specifications/dublin-core/dcmi-terms/
+      \endverb
+      \verb{url}
+      \verb https://www.dublincore.org/specifications/dublin-core/dcmi-terms/
+      \endverb
+    \endentry
     \entry{de2012pattern}{article}{}
       \name{author}{2}{}{%
         {{hash=b32cc41776652e84c634b71c1cd957e0}{%

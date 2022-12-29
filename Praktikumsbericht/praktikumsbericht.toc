@@ -52,9 +52,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.2}{Dublin Core Metadata Initiative}}{13}{subsection.2.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.3}{Serialisierung von RDF-Graphen}}{13}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.3}{Serialisierung von RDF-Graphen}}{14}{subsection.2.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.4}{\ac {SPARQL}}}{14}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.4}{SPARQL}}{14}{subsection.2.4.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}{Konzeptuelle Modellierung und Entwurf}}{15}{chapter.3}%
 \defcounter {refsection}{0}\relax 
@@ -102,4 +102,4 @@
 \defcounter {refsection}{0}\relax 
 \vspace {\beforebibskip }
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {}{Literatur}}{25}{section*.22}%
+\contentsline {chapter}{\numberline {}{Literatur}}{25}{section*.23}%
