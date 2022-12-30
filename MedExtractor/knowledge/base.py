@@ -20,6 +20,7 @@ class KnowledgeBase:
         # self._instance = super(KnowledgeBase, self).__new__(self)
         # Put any initialization here.
         self.semantic_relations = []
+        self.allow_duplicates = False
         # self._entities = []
         # return cls._instance
 
@@ -27,7 +28,12 @@ class KnowledgeBase:
         return len(self.semantic_relations)
 
     def add_relation(self, relation: SemanticRelation):
-        self.semantic_relations.append(relation)
+        if self.allow_duplicates:
+            self.semantic_relations.append(relation)
+        else:
+            if not self.has_relation(relation):
+                self.semantic_relations.append(relation)
+
 
     def has_relation(self, relation: SemanticRelation) -> bool:
         for other in self.semantic_relations:
