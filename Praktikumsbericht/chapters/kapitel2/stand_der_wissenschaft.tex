@@ -108,10 +108,18 @@ Abbildung \ref{fig:rdfgraph} zeigt einen einfachen RDF-Graphen, in dem das Subje
 
 \subsection{Resource Description Framework Schema}
 
-Zusätzlich zu RDF stellt das W3C auch eine Empfehlung für ein Datenmodellierungsvokabular für RDF-Daten bereit: das RDF-Schema. Dies stellt eine Erweiterung des grundlegenden RDF-Vokabulars dar. \dots{} [TODO]
+Zusätzlich zu RDF stellt das W3C auch eine Empfehlung für ein standardisiertes Datenmodellierungsvokabular für RDF-Daten bereit: das RDF-Schema. Dies stellt eine Erweiterung des grundlegenden RDF-Vokabulars dar und bietet eine Reihe von vordefinierten Klassen (\emph{rdfs:Class}), Ressourcen (\emph{rdfs:Class}) und Eigenschaften (\emph{rdf:Property}), die zur Definition von Klassen und Eigenschaften eines RDF-Modells verwendet werden.
+
+Klassen können in einer Hierarchie organisiert werden, wobei Unterklassen Merkmale von ihren Oberklassen erben. Eigenschaften können als zu einer bestimmten Domäne (\emph{rdfs:domain}) und einem bestimmten Bereich (\emph{rdfs:range}) gehörend definiert werden, womit sich präzise Beziehungen zwischen Ressourcen erstellen lassen.
+
+
 
 \subsection{Dublin Core Metadata Initiative}
-DCMI \dots{} [TODO]
+Die \ac{DCMI}\cite{DCMI_dcmi_2022} ist ein Konsortium von Organisationen, die Standards für die Beschreibung von Online-Ressourcen entwickeln und pflegen. Die Metadatenelemente des \emph{Dublin Core} umfassen 15 standardisierte Kernfelder, die zur Beschreibung der Merkmale von Online-Ressourcen dienen.
+
+Die Dublin-Core-Metadatenelemente sind leicht zu verwenden, aber dennoch flexibel genug, um zahlreiche Ressourcentypen und -kontexte beschreiben zu können. Die Elemente umfassen grundlegende beschreibende Informationen wie Titel, Ersteller und Thema sowie speziellere Elemente zur Identifizierung der Art der Ressource, ihrer Sprache und ihrer Beziehung zu anderen Ressourcen. Außerdem umfasst das \ac{DCMI} auch mehrere Codierschemata für Wortschätze bestimmter Anwendungsgebiete, unter anderem für \ac{MeSH}.
+
+
 
 \subsection{Serialisierung von RDF-Graphen}
 
@@ -139,5 +147,5 @@ Ein Beispiel für die Serialisierung des in Abbildung \ref{fig:rdfgraph} dargest
 
 Für Python steht mit RDFLib \cite{rdflib_team_rdflib_2022} eine Bibliothek zur Arbeit mit RDF-Graphen bereit.
 
-\subsection{\ac{SPARQL}}
-SPARQL \dots{} [TODO]
+\subsection{SPARQL}
+\ac{SPARQL} ist eine Abfragesprache für das semantische Web, mit der Daten, die im RDF-Format vorliegen, abgerufen und bearbeitet werden können. Sie ermöglicht die Abfrage mehrerer Datenquellen und -typen und enthält integrierte Funktionen und Operatoren zur Datentransformation. SPARQL kann auch zum Aktualisieren und Erstellen von RDF-Daten verwendet werden und enthält Befehle für Datenänderungen und Integritätsbedingungen. 

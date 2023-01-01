@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  14 DEC 2022 18:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  29 DEC 2022 21:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1991,9 +1991,6 @@ Overfull \hbox (7.49306pt too wide) in paragraph at lines 47--47
 (ML) 
  []
 
-Package acronym Info: Label `acro:SPARQL' newly defined as it shall be overridd
-en
-although it is yet undefined on input line 57.
 
 Overfull \hbox (3.45345pt too wide) in paragraph at lines 83--83
  [][] []\T1/pplj/m/n/10.95 FZ 2.4 Im-ple-men-tie-rung zur Über-füh-rung me-di-z
@@ -2102,7 +2099,7 @@ Overfull \hbox (5.2606pt too wide) in paragraph at lines 18--19
 
 ) (./chapters/kapitel1/forschungsfragen.tex)
 (./chapters/kapitel1/forschungsmethode.tex
-<pictures/Nunamaker2.png, id=173, 1336.995pt x 917.4275pt>
+<pictures/Nunamaker2.png, id=171, 1336.995pt x 917.4275pt>
 File: pictures/Nunamaker2.png Graphic file (type png)
 <use pictures/Nunamaker2.png>
 Package pdftex.def Info: pictures/Nunamaker2.png  used on input line 8.
@@ -2198,90 +2195,119 @@ n/10 https : / / www . ldf . fi /
  []
 
 [12]
-Overfull \hbox (18.25352pt too wide) in paragraph at lines 118--119
+Overfull \hbox (4.21797pt too wide) in paragraph at lines 111--112
+\T1/pplj/m/n/10.95 sier-tes Da-ten-mo-del-lie-rungs-vo-ka-bu-lar für RDF-Daten 
+be-reit: das RDF-Schema.
+ []
+
+
+Overfull \hbox (6.3954pt too wide) in paragraph at lines 111--112
+\T1/pplj/m/n/10.95 bie-tet ei-ne Rei-he von vor-de-fi-nier-ten Klas-sen (\T1/pp
+lj/m/it/10.95 rdfs:Class\T1/pplj/m/n/10.95 ), Res-sour-cen (\T1/pplj/m/it/10.95
+ rdfs:Class\T1/pplj/m/n/10.95 )
+ []
+
+
+Overfull \hbox (17.06pt too wide) in paragraph at lines 113--114
+\T1/pplj/m/n/10.95 ner be-stimm-ten Do-mä-ne (\T1/pplj/m/it/10.95 rdfs:domain\T
+1/pplj/m/n/10.95 ) und ei-nem be-stimm-ten Be-reich (\T1/pplj/m/it/10.95 rdfs:r
+ange\T1/pplj/m/n/10.95 )
+ []
+
+Package acronym Info: Label `acro:DCMI' newly defined as it shall be overridden
+
+although it is yet undefined on input line 118.
+
+Overfull \hbox (4.92822pt too wide) in paragraph at lines 118--119
+\T1/pplj/m/n/10.95 15 stan-dar-di-sier-te Kern-fel-der, die zur Be-schrei-bung 
+der Merk-ma-le von Online-
+ []
+
+
+Overfull \hbox (18.25352pt too wide) in paragraph at lines 126--127
 \T1/pplj/m/n/10.95 die-sem Prak-ti-kum er-folgt die Aus-ga-be der Wis-sens-re-p
 rä-sen-ta-ti-on im RDF/XML-
  []
 
-LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.30756pt on input line 123.
-
-Package xcolor Warning: Incompatible color definition on input line 125.
-
-
-Package xcolor Warning: Incompatible color definition on input line 125.
-
-
-Package xcolor Warning: Incompatible color definition on input line 126.
-
-
-Package xcolor Warning: Incompatible color definition on input line 127.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 130.
-
-
-Package xcolor Warning: Incompatible color definition on input line 130.
-
-
-Package xcolor Warning: Incompatible color definition on input line 130.
-
-
-Package xcolor Warning: Incompatible color definition on input line 130.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 132.
-
-
-Package xcolor Warning: Incompatible color definition on input line 132.
-
-
-Package xcolor Warning: Incompatible color definition on input line 132.
-
-
-Package xcolor Warning: Incompatible color definition on input line 132.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
 [13 <./pictures/rdf-graph.png>]
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 9.30756pt on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
 
 Package xcolor Warning: Incompatible color definition on input line 134.
 
 
-Package xcolor Warning: Incompatible color definition on input line 134.
+Package xcolor Warning: Incompatible color definition on input line 135.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ac' on input line 142.
+Package xcolor Warning: Incompatible color definition on input line 137.
 
+
+Package xcolor Warning: Incompatible color definition on input line 137.
+
+
+Package xcolor Warning: Incompatible color definition on input line 137.
+
+
+Package xcolor Warning: Incompatible color definition on input line 137.
+
+
+Package xcolor Warning: Incompatible color definition on input line 138.
+
+
+Package xcolor Warning: Incompatible color definition on input line 138.
+
+
+Package xcolor Warning: Incompatible color definition on input line 138.
+
+
+Package xcolor Warning: Incompatible color definition on input line 138.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 140.
+
+
+Package xcolor Warning: Incompatible color definition on input line 140.
+
+
+Package xcolor Warning: Incompatible color definition on input line 140.
+
+
+Package xcolor Warning: Incompatible color definition on input line 140.
+
+
+Package xcolor Warning: Incompatible color definition on input line 141.
+
+
+Package xcolor Warning: Incompatible color definition on input line 141.
+
+
+Package xcolor Warning: Incompatible color definition on input line 142.
+
+
+Package xcolor Warning: Incompatible color definition on input line 142.
+
+Package acronym Info: Label `acro:SPARQL' newly defined as it shall be overridd
+en
+although it is yet undefined on input line 151.
 ) (./chapters/kapitel3/konzeptuelle_modellierung.tex
 Kapitel 3.
 [14]
@@ -2296,7 +2322,7 @@ Overfull \hbox (5.34427pt too wide) in paragraph at lines 3--4
 enten-/Dienstemodelle,
  []
 
-<pictures/UseCases.png, id=319, 408.77719pt x 123.46124pt>
+<pictures/UseCases.png, id=327, 408.77719pt x 123.46124pt>
 File: pictures/UseCases.png Graphic file (type png)
 <use pictures/UseCases.png>
 Package pdftex.def Info: pictures/UseCases.png  used on input line 21.
@@ -2305,7 +2331,7 @@ Package pdftex.def Info: pictures/UseCases.png  used on input line 21.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 30.
 
-<pictures/AktivitÃ¤tsdiagramm.png, id=322, 671.50874pt x 369.63094pt>
+<pictures/AktivitÃ¤tsdiagramm.png, id=330, 671.50874pt x 369.63094pt>
 File: pictures/AktivitÃ¤tsdiagramm.png Graphic file (type png)
 <use pictures/AktivitÃ¤tsdiagramm.png>
 Package pdftex.def Info: pictures/AktivitÃ¤tsdiagramm.png  used on input line 3
@@ -2315,20 +2341,20 @@ Package pdftex.def Info: pictures/AktivitÃ¤tsdiagramm.png  used on input line 3
 
 
  <./pictures/UseCases.png>]
-<pictures/Informationsmodell.png, id=332, 415.5525pt x 175.40532pt>
+<pictures/Informationsmodell.png, id=340, 415.5525pt x 175.40532pt>
 File: pictures/Informationsmodell.png Graphic file (type png)
 <use pictures/Informationsmodell.png>
 Package pdftex.def Info: pictures/Informationsmodell.png  used on input line 43
 .
 (pdftex.def)             Requested size: 370.0pt x 156.1825pt.
-<pictures/Architekturmodell.png, id=334, 1273.75874pt x 608.2725pt>
+<pictures/Architekturmodell.png, id=342, 1273.75874pt x 608.2725pt>
 File: pictures/Architekturmodell.png Graphic file (type png)
 <use pictures/Architekturmodell.png>
 Package pdftex.def Info: pictures/Architekturmodell.png  used on input line 54.
 
 (pdftex.def)             Requested size: 370.0pt x 176.68224pt.
  [16 <./pictures/AktivitÃ¤tsdiagramm.png> <./pictures/Informationsmodell.png>]
-<pictures/ComponentDiagram.png, id=344, 585.68813pt x 314.67563pt>
+<pictures/ComponentDiagram.png, id=352, 585.68813pt x 314.67563pt>
 File: pictures/ComponentDiagram.png Graphic file (type png)
 <use pictures/ComponentDiagram.png>
 Package pdftex.def Info: pictures/ComponentDiagram.png  used on input line 63.
@@ -2347,7 +2373,7 @@ et_preprocessed_text().
 
 [17 <./pictures/Architekturmodell.png (PNG copy)> <./pictures/ComponentDiagram.
 png>]
-<pictures/RuleBasedPreprocessor.png, id=354, 952.55875pt x 582.175pt>
+<pictures/RuleBasedPreprocessor.png, id=362, 952.55875pt x 582.175pt>
 File: pictures/RuleBasedPreprocessor.png Graphic file (type png)
 <use pictures/RuleBasedPreprocessor.png>
 Package pdftex.def Info: pictures/RuleBasedPreprocessor.png  used on input line
@@ -2377,7 +2403,7 @@ Overfull \hbox (2.46371pt too wide) in paragraph at lines 92--93
 lated() mit un-ter-schied-
  []
 
-<pictures/KnowledgeExtractor.png, id=356, 581.17125pt x 659.46375pt>
+<pictures/KnowledgeExtractor.png, id=364, 581.17125pt x 659.46375pt>
 File: pictures/KnowledgeExtractor.png Graphic file (type png)
 <use pictures/KnowledgeExtractor.png>
 Package pdftex.def Info: pictures/KnowledgeExtractor.png  used on input line 96
@@ -2394,13 +2420,13 @@ Overfull \hbox (4.14363pt too wide) in paragraph at lines 104--106
 mit der Python-Biblio-
  []
 
-<pictures/RDFSerialiser.png, id=363, 837.1275pt x 701.62125pt>
+<pictures/RDFSerialiser.png, id=371, 837.1275pt x 701.62125pt>
 File: pictures/RDFSerialiser.png Graphic file (type png)
 <use pictures/RDFSerialiser.png>
 Package pdftex.def Info: pictures/RDFSerialiser.png  used on input line 109.
 (pdftex.def)             Requested size: 370.0pt x 310.10606pt.
 [19 <./pictures/KnowledgeExtractor.png>]
-<pictures/Main.png, id=371, 870.8535pt x 401.0985pt>
+<pictures/Main.png, id=379, 870.8535pt x 401.0985pt>
 File: pictures/Main.png Graphic file (type png)
 <use pictures/Main.png>
 Package pdftex.def Info: pictures/Main.png  used on input line 122.
@@ -2440,6 +2466,13 @@ Kapitel 6.
 \openout2 = `frontbackmatter/Bibliography.aux'.
 
  (./frontbackmatter/Bibliography.tex
+Overfull \hbox (23.26164pt too wide) in paragraph at lines 15--15
+[]\T1/pplj/m/n/10.95 DCMI. \T1/pplj/m/it/10.95 DC-MI Me-ta-da-ta Terms\T1/pplj/
+m/n/10.95 . en. 2022. \T1/pplj/m/sc/10.95 url\T1/pplj/m/n/10.95 : [][]$\T1/fvm/
+m/n/10.95 https : / / www . dublincore .
+ []
+
+
 Overfull \hbox (3.36992pt too wide) in paragraph at lines 15--15
 \T1/pplj/m/n/10.95 Adria-ne Boyd. ^^P  spa-Cy: Industrial-strength Na-tu-ral La
 n-gua-ge Pro-
@@ -2711,6 +2744,9 @@ frontbackmatter/Bibliography.tex
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 113.
 Package rerunfilecheck Info: File `praktikumsbericht.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'praktikumsbericht.run.xml'.
 \openout1 = `praktikumsbericht.run.xml'.
 
@@ -2720,31 +2756,36 @@ Package logreq Info: Writing requests to 'praktikumsbericht.run.xml'.
 ### simple group (level 1) entered at line 57 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38910 strings out of 480994
- 763122 string characters out of 5902830
- 1759387 words of memory out of 5000000
- 53392 multiletter control sequences out of 15000+600000
+ 38918 strings out of 480994
+ 763271 string characters out of 5902830
+ 1760525 words of memory out of 5000000
+ 53395 multiletter control sequences out of 15000+600000
  602915 words of font info for 132 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 74i,23n,97p,10112b,25656s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/en
-c/dvips/base/8r.enc}<c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb><c:/Programme/Textverarbeitung/TexLive/201
-9/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Programme/Textverarb
-eitung/TexLive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb><c:
-/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/public/fpl/fplb
-j8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/publ
-ic/fpl/fplrc8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts
-/type1/public/fpl/fplrij8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texm
-f-dist/fonts/type1/public/bera/fvmr8a.pfb><c:/Programme/Textverarbeitung/TexLiv
-e/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/Programme/Textverarbe
-itung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/Programme
-/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+ 74i,23n,97p,10112b,24241s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{figure.caption.12} has been referen
+ced but does not exist, replaced by a fixed one
 
-Output written on praktikumsbericht.pdf (30 pages, 749369 bytes).
+pdfTeX warning (dest): name{figure.caption.9} has been referenced but does not 
+exist, replaced by a fixed one
+
+{c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/enc/dvips/base/8r.
+enc}<c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr10.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Programme/Textverarbeitung/TexLive/2
+019/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb><c:/Programme/Textv
+erarbeitung/TexLive/2019/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb><c:/Prog
+ramme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/public/fpl/fplrc8a.p
+fb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/public/fp
+l/fplrij8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/typ
+e1/public/bera/fvmr8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dis
+t/fonts/type1/urw/palatino/uplb8a.pfb><c:/Programme/Textverarbeitung/TexLive/20
+19/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/Programme/Textverarbeitun
+g/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on praktikumsbericht.pdf (30 pages, 751629 bytes).
 PDF statistics:
- 657 PDF objects out of 1000 (max. 8388607)
- 590 compressed objects within 6 object streams
- 172 named destinations out of 1000 (max. 500000)
+ 669 PDF objects out of 1000 (max. 8388607)
+ 601 compressed objects within 7 object streams
+ 177 named destinations out of 1000 (max. 500000)
  16356 words of extra memory for PDF output out of 17280 (max. 10000000)
 
