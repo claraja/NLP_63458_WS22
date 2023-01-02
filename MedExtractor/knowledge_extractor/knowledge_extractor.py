@@ -1,8 +1,11 @@
+import os
 import sys
 import csv
 import os
 from spacy.pipeline import EntityRuler
 from spacy.training import Example
+import spacy
+from negspacy.negation import Negex
 
 from interfaces.interfaces import KnowledgeExtractorInterface
 from knowledge.base import KnowledgeBase
@@ -26,8 +29,9 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         self._nlp.disable_pipes(*not_required_pipes)
         
         self._ruler = self._nlp.add_pipe("entity_ruler")
-        
-        input_data_file = open('MedExtractor\\knowledge_extractor\\training_diseases_klein.txt','r',encoding="unicode_escape")
+        # input_diseases_path = os.path.join('knowledge_extractor','training_diseases_klein.txt')
+        input_diseases_path = os.path.join('MedExtractor', 'knowledge_extractor','training_diseases_klein.txt')
+        input_data_file = open(input_diseases_path,'r',encoding="unicode_escape")
         reader = csv.reader(input_data_file, delimiter='\t')
         
         training_data = []
@@ -38,8 +42,9 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         input_data_file.close()
 
         self._ruler.add_patterns(training_data)
-
-        input_data_file = open('MedExtractor\\knowledge_extractor\\training_symptoms_klein.txt','r',encoding="unicode_escape")
+        # input_symptoms_path = os.path.join('knowledge_extractor', 'training_diseases_klein.txt')
+        input_symptoms_path = os.path.join('MedExtractor', 'knowledge_extractor', 'training_diseases_klein.txt')
+        input_data_file = open(input_symptoms_path,'r',encoding="unicode_escape")
         reader = csv.reader(input_data_file, delimiter='\t')
 
         for row in reader:
@@ -47,11 +52,15 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
             training_data.append(to_train)
         input_data_file.close()
         self._ruler.add_patterns(training_data)
+        self._nlp.add_pipe("negex")
 
 
     def __call__(self,text):
-        
+
         self._doc = self._nlp(text)
+
+        for e in self._doc.ents:
+            print(e.text, e._.negex)
 
         for sent in self._doc.sents:
             entities = set()
@@ -78,7 +87,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                             entity2 = Entity(ent2.text,EntityType.SYMPTOM)
                         else:
                             entity2 = Entity(ent2.text,EntityType.UNDEFINED)
-                        
+
                         relation = SemanticRelation(entity1,entity2,res)
                         if not self._kb.has_relation(relation):
                             self._kb.add_relation(relation)
@@ -93,7 +102,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
     def _is_related(self,entity1,entity2,sent):
 
         relation = RelationType.NO_RELATION
- 
+
         if entity1.label_ == "DISEASE" and entity2.label_ == "SYMPTOM":
             relation = RelationType.HAS_SYMPTOM
         
