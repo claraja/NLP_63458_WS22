@@ -1,5 +1,6 @@
 import sys
 import csv
+import os
 from spacy.pipeline import EntityRuler
 from spacy.training import Example
 
@@ -17,7 +18,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         self._kb = KnowledgeBase()
         self._context = []
 
-        if (self._kb_filename != ""):
+        if (self._kb_filename != "") and os.path.exists(self._kb_filename):
             self._kb.load(self._kb_filename)
 
         pipe_exceptions = ['tok2vec','tagger','parser']
@@ -79,7 +80,8 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                             entity2 = Entity(ent2.text,EntityType.UNDEFINED)
                         
                         relation = SemanticRelation(entity1,entity2,res)
-                        self._kb.add_relation(relation)
+                        if not self._kb.has_relation(relation):
+                            self._kb.add_relation(relation)
 
     def set_context(self, context):
         self._context = context

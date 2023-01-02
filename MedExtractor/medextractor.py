@@ -11,9 +11,13 @@ nlp = spacy.load('en_core_web_sm')
 
 knowledgeExtractor = KnowledgeExtractor('MedExtractor\\test.kb',nlp)
 
+knowledgebase = knowledgeExtractor.get_knowledge_base()
+print('\nBereits in der Wissensbasis (' + str(len(knowledgebase.semantic_relations)) + '):')
+for semantic_relation in knowledgeExtractor.get_knowledge_base().semantic_relations:
+    print(semantic_relation.__str__())
+
 span = nlp("the blues")[0:2]
 span.label_ = "DISEASE"
-
 context = set()
 context.add(span)
 knowledgeExtractor.set_context(context)
@@ -27,7 +31,8 @@ for sent in nlp(preprocessed_text).sents:
 knowledgeExtractor.saveKB()
 knowledgebase = knowledgeExtractor.get_knowledge_base()
 
-for semantic_relation in knowledgebase._semantic_relations:
+print('\nNach neuer Analyse in der Wissensbasis (' + str(len(knowledgebase.semantic_relations)) + '):')
+for semantic_relation in knowledgebase.semantic_relations:
     print(semantic_relation.__str__())
 
 # print(knowledgebase)
