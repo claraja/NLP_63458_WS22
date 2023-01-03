@@ -53963,7 +53963,6 @@ C0262380	symptomless bacteriuria	FINDING
 C0403722	symptomless proteinuria	FINDING
 C0037088	symptoms and signs	FINDING
 C0476270	symptoms cardiovascular	FINDING
-C0086132	symptoms depression	FINDING
 C0011991	symptoms diarrhea	FINDING
 C0586406	symptoms eye	FINDING
 C0015726	symptoms fear	FINDING
@@ -53974,7 +53973,6 @@ C0476270	symptoms heart	FINDING
 C0231217	symptoms multiple	FINDING
 C0231918	symptoms nasal	FINDING
 C0027497	symptoms nausea	FINDING
-C0086132	symptoms of depression	FINDING
 C0521991	symptoms of stress	FINDING
 C0233401	symptoms psychiatric	FINDING
 C0231217	symptoms several	FINDING
@@ -53987,7 +53985,6 @@ C0426481	symptoms tooth	FINDING
 C0426359	symptoms urinary	FINDING
 C0042963	symptoms vomiting	FINDING
 C0424512	symptoms yellow	FINDING
-C0086132	symptoms, depressive	FINDING
 C0236075	symptoms, menopausal	FINDING
 C0235031	symptoms, neurologic	FINDING
 C3839861	symptoms, somatic	FINDING

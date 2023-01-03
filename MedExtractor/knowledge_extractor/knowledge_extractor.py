@@ -47,10 +47,13 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         input_data_file = open(input_symptoms_path,'r',encoding="unicode_escape")
         reader = csv.reader(input_data_file, delimiter='\t')
 
+        training_data = []
+
         for row in reader:
             to_train = {"label": "SYMPTOM", "pattern": row[1]}
             training_data.append(to_train)
         input_data_file.close()
+        
         self._ruler.add_patterns(training_data)
         self._nlp.add_pipe("negex")
 
