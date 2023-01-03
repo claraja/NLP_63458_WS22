@@ -42,8 +42,8 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         input_data_file.close()
 
         self._ruler.add_patterns(training_data)
-        # input_symptoms_path = os.path.join('knowledge_extractor', 'training_diseases_klein.txt')
-        input_symptoms_path = os.path.join('MedExtractor', 'knowledge_extractor', 'training_diseases_klein.txt')
+        # input_symptoms_path = os.path.join('knowledge_extractor', 'training_symptoms_klein.txt')
+        input_symptoms_path = os.path.join('MedExtractor', 'knowledge_extractor', 'training_symptoms_klein.txt')
         input_data_file = open(input_symptoms_path,'r',encoding="unicode_escape")
         reader = csv.reader(input_data_file, delimiter='\t')
 
@@ -62,9 +62,6 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
 
         self._doc = self._nlp(text)
 
-        for e in self._doc.ents:
-            print(e.text, e._.negex)
-
         for sent in self._doc.sents:
             entities = set()
 
@@ -80,14 +77,21 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                         if (ent1.label_ == "DISEASE"):
                             entity1 = Entity(ent1.text,EntityType.DISEASE)
                         elif (ent1.label_ == "SYMPTOM"):
-                            entity1 = Entity(ent1.text,EntityType.SYMPTOM)
+                            if ent1._.negex == False:
+                                entity1 = Entity(ent1.text,EntityType.SYMPTOM)
+                            else:
+                                entity1 = Entity('no ' + ent1.text,EntityType.SYMPTOM)
+
                         else:
                             entity1 = Entity(ent1.text,EntityType.UNDEFINED)
 
                         if (ent2.label_ == "DISEASE"):
                             entity2 = Entity(ent2.text,EntityType.DISEASE)
                         elif (ent2.label_ == "SYMPTOM"):
-                            entity2 = Entity(ent2.text,EntityType.SYMPTOM)
+                            if ent2._.negex == False:
+                                entity2 = Entity(ent2.text,EntityType.SYMPTOM)
+                            else:
+                                entity2 = Entity('no ' + ent2.text,EntityType.SYMPTOM)
                         else:
                             entity2 = Entity(ent2.text,EntityType.UNDEFINED)
 

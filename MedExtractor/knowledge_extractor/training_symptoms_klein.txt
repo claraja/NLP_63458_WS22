@@ -100,6 +100,7 @@ C0424226	feelings of omnipotence	FINDING
 C0424225	feelings of superiority	FINDING
 C1443060	feelings strange	FINDING
 C0233754	feelings unreality	FINDING
+C0543488	interest	FINDING
 C0455770	loss (of) feeling	FINDING
 C0233465	loss affect	FINDING
 C0241981	loss balance	FINDING
