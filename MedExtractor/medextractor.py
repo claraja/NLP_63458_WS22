@@ -4,6 +4,7 @@ from knowledge_extractor.knowledge_extractor import KnowledgeExtractor
 import spacy
 
 text_to_analyze = "resources/TextToAnalyze.txt"
+
 preprocessor = RuleBasedPreprocessor(text_to_analyze)
 preprocessed_text = preprocessor.get_preprocessed_text()
 
@@ -16,11 +17,11 @@ print('\nBereits in der Wissensbasis (' + str(len(knowledgebase.semantic_relatio
 for semantic_relation in knowledgeExtractor.get_knowledge_base().semantic_relations:
     print(semantic_relation.__str__())
 
-span = nlp("the blues")[0:2]
-span.label_ = "DISEASE"
-context = set()
-context.add(span)
-knowledgeExtractor.set_context(context)
+#span = nlp("the blues")[0:2]
+#span.label_ = "DISEASE"
+#context = set()
+#context.add(span)
+#knowledgeExtractor.set_context(context)
 
 rdfSerialiser = RDFSerialiser('/', 'nlp_fapra')
 graph = rdfSerialiser.create_graph()

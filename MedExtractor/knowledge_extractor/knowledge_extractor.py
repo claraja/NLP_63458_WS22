@@ -38,14 +38,17 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         input_data_file.close()
 
         self._ruler.add_patterns(training_data)
-
+        
         input_data_file = open('MedExtractor\\knowledge_extractor\\training_symptoms_klein.txt','r',encoding="unicode_escape")
         reader = csv.reader(input_data_file, delimiter='\t')
+
+        training_data = []
 
         for row in reader:
             to_train = {"label": "SYMPTOM", "pattern": row[1]}
             training_data.append(to_train)
         input_data_file.close()
+        
         self._ruler.add_patterns(training_data)
 
 
