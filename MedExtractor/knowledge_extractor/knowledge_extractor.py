@@ -80,7 +80,6 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                             if ent1._.negex == False:
                                 entity1 = Entity(ent1.text,EntityType.SYMPTOM)
                             else:
-                                print(sent.text, ent1.text)
                                 entity1 = Entity('no ' + ent1.text,EntityType.SYMPTOM)
 
                         else:
@@ -92,7 +91,6 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                             if ent2._.negex == False:
                                 entity2 = Entity(ent2.text,EntityType.SYMPTOM)
                             else:
-                                print(sent.text, ent2.text)
                                 entity2 = Entity('no ' + ent2.text,EntityType.SYMPTOM)
                         else:
                             entity2 = Entity(ent2.text,EntityType.UNDEFINED)
