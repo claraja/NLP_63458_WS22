@@ -40,7 +40,7 @@ for semantic_relation in knowledgebase.semantic_relations:
 # rdfSerialiser = DummyRDFSerialiser(knowledgebase)
 # print(rdfSerialiser.serialise_knowledgebase())
 
-rdfSerialiser = RDFSerialiser(knowledgebase, 'http://fapranlp.de/', 'nlp')
+rdfSerialiser = RDFSerialiser('/', 'nlp')
 graph = rdfSerialiser.create_graph()
 graph = rdfSerialiser.knowledgebase_to_graph(knowledgebase, graph)
 
