@@ -10,7 +10,7 @@ class RuleBasedPreprocessor(PreprocessingInterface):
         nlp = spacy.blank('en')
         # add as a spacy pipeline component
         nlp.add_pipe("sbd", first=True)
-        with open(self.doc_name, "r") as file:
+        with open(self.doc_name, "r",encoding="unicode_escape") as file:
             raw_text = file.read().replace("\n\n", "\n")
 
         enumeration = ""

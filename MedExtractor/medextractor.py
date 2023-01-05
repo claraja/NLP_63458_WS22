@@ -3,7 +3,10 @@ from preprocessor.preprocessor import RuleBasedPreprocessor
 from knowledge_extractor.knowledge_extractor import KnowledgeExtractor
 import spacy
 
-text_to_analyze = "resources/TextToAnalyze.txt"
+#text_to_analyze = "resources/TextToAnalyze.txt"
+#text_to_analyze = "resources/PanicAttacks.txt"
+#text_to_analyze = "resources/Schizophrenia.txt"
+text_to_analyze = "resources/bipolarDisorder.txt"
 
 preprocessor = RuleBasedPreprocessor(text_to_analyze)
 preprocessed_text = preprocessor.get_preprocessed_text()

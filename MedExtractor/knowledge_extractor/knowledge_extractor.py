@@ -30,7 +30,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         
         self._ruler = self._nlp.add_pipe("entity_ruler")
         # input_diseases_path = os.path.join('knowledge_extractor','training_diseases_klein.txt')
-        input_diseases_path = os.path.join('MedExtractor', 'knowledge_extractor','training_diseases_klein.txt')
+        input_diseases_path = os.path.join('MedExtractor', 'knowledge_extractor','training_diseases.txt')
         input_data_file = open(input_diseases_path,'r',encoding="unicode_escape")
         reader = csv.reader(input_data_file, delimiter='\t')
         
@@ -43,7 +43,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
 
         self._ruler.add_patterns(training_data)
         # input_symptoms_path = os.path.join('knowledge_extractor', 'training_symptoms_klein.txt')
-        input_symptoms_path = os.path.join('MedExtractor', 'knowledge_extractor', 'training_symptoms_klein.txt')
+        input_symptoms_path = os.path.join('MedExtractor', 'knowledge_extractor', 'training_symptoms.txt')
         input_data_file = open(input_symptoms_path,'r',encoding="unicode_escape")
         reader = csv.reader(input_data_file, delimiter='\t')
 
@@ -80,6 +80,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                             if ent1._.negex == False:
                                 entity1 = Entity(ent1.text,EntityType.SYMPTOM)
                             else:
+                                print(sent.text, ent1.text)
                                 entity1 = Entity('no ' + ent1.text,EntityType.SYMPTOM)
 
                         else:
@@ -91,6 +92,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                             if ent2._.negex == False:
                                 entity2 = Entity(ent2.text,EntityType.SYMPTOM)
                             else:
+                                print(sent.text, ent2.text)
                                 entity2 = Entity('no ' + ent2.text,EntityType.SYMPTOM)
                         else:
                             entity2 = Entity(ent2.text,EntityType.UNDEFINED)
