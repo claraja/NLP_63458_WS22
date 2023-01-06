@@ -2,6 +2,7 @@ import os
 import sys
 import csv
 import os
+import time
 from spacy.pipeline import EntityRuler
 from spacy.training import Example
 import spacy
@@ -31,6 +32,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         self._ruler = self._nlp.add_pipe("entity_ruler")
         # input_diseases_path = os.path.join('knowledge_extractor','training_diseases_klein.txt')
         #input_diseases_path = os.path.join('MedExtractor', 'knowledge_extractor','training_diseases_klein.txt')
+        time_tmp = time.time()
         input_diseases_path = os.path.join('knowledge_extractor','training_diseases.txt')
         input_data_file = open(input_diseases_path,'r',encoding="unicode_escape")
         reader = csv.reader(input_data_file, delimiter='\t')
@@ -41,10 +43,15 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
             to_train = {"label": "DISEASE", "pattern": row[1]}
             training_data.append(to_train)
         input_data_file.close()
+        print(f'time read diseases: {time.time()-time_tmp}s')
 
+        time_tmp = time.time()
         self._ruler.add_patterns(training_data)
+        print(f'time add diseases to ruler: {time.time()-time_tmp}s')
+
         #input_symptoms_path = os.path.join('knowledge_extractor', 'training_symptoms_klein.txt')
         #input_symptoms_path = os.path.join('MedExtractor', 'knowledge_extractor', 'training_symptoms_klein.txt')
+        time_tmp = time.time()
         input_symptoms_path = os.path.join('knowledge_extractor', 'training_symptoms.txt')
         input_data_file = open(input_symptoms_path,'r',encoding="unicode_escape")
         reader = csv.reader(input_data_file, delimiter='\t')
@@ -55,9 +62,12 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
             to_train = {"label": "SYMPTOM", "pattern": row[1]}
             training_data.append(to_train)
         input_data_file.close()
+        print(f'time read symptoms: {time.time()-time_tmp}s')
         
+        time_tmp = time.time()
         self._ruler.add_patterns(training_data)
         self._nlp.add_pipe("negex")
+        print(f'time add symptoms to ruler: {time.time()-time_tmp}s')
 
 
     def __call__(self,text):
