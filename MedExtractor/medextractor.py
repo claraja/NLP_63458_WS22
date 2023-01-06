@@ -1,43 +1,38 @@
 from rdf.RDFSerialiser import RDFSerialiser
 from preprocessor.preprocessor import RuleBasedPreprocessor
 from knowledge_extractor.knowledge_extractor import KnowledgeExtractor
+import os, glob
 import spacy
 
-text_to_analyze = "resources/TextToAnalyze.txt"
-#text_to_analyze = "resources/PanicAttacks.txt"
-#text_to_analyze = "resources/Schizophrenia.txt"
-#text_to_analyze = "resources/bipolarDisorder.txt"
-
-preprocessor = RuleBasedPreprocessor(text_to_analyze)
-preprocessed_text = preprocessor.get_preprocessed_text()
-
 nlp = spacy.load('en_core_web_sm')
-
-knowledgeExtractor = KnowledgeExtractor('MedExtractor\\test.kb',nlp)
-
+knowledgeExtractor = KnowledgeExtractor('test.kb',nlp)
 knowledgebase = knowledgeExtractor.get_knowledge_base()
-print('\nBereits in der Wissensbasis (' + str(len(knowledgebase.semantic_relations)) + '):')
-for semantic_relation in knowledgeExtractor.get_knowledge_base().semantic_relations:
-    print(semantic_relation.__str__())
 
-#span = nlp("the blues")[0:2]
-#span.label_ = "DISEASE"
-#context = set()
-#context.add(span)
-#knowledgeExtractor.set_context(context)
+for filename in glob.glob('to_analyze/*.txt'):
+    preprocessor = RuleBasedPreprocessor(filename)
+    preprocessed_text = preprocessor.get_preprocessed_text()
 
-rdfSerialiser = RDFSerialiser('/', 'nlp_fapra')
-graph = rdfSerialiser.create_graph()
+    #print('\nBereits in der Wissensbasis (' + str(len(knowledgebase.semantic_relations)) + '):')
+    #for semantic_relation in knowledgeExtractor.get_knowledge_base().semantic_relations:
+    #    print(semantic_relation.__str__())
 
-for sent in nlp(preprocessed_text).sents:
-    knowledgeExtractor(sent.text)
+    #span = nlp("the blues")[0:2]
+    #span.label_ = "DISEASE"
+    #context = set()
+    #context.add(span)
+    #knowledgeExtractor.set_context(context)
 
-knowledgeExtractor.saveKB()
-#knowledgebase = knowledgeExtractor.get_knowledge_base()
+    rdfSerialiser = RDFSerialiser('/', 'nlp_fapra')
+    graph = rdfSerialiser.create_graph()
 
-print('\nNach neuer Analyse in der Wissensbasis (' + str(len(knowledgebase.semantic_relations)) + '):')
-for semantic_relation in knowledgebase.semantic_relations:
-    print(semantic_relation.__str__())
+    for sent in nlp(preprocessed_text).sents:
+        knowledgeExtractor(sent.text)
+
+    knowledgeExtractor.saveKB()
+
+    #print('\nNach neuer Analyse in der Wissensbasis (' + str(len(knowledgebase.semantic_relations)) + '):')
+    #for semantic_relation in knowledgebase.semantic_relations:
+    #    print(semantic_relation.__str__())
 
 # print(knowledgebase)
 # rdfSerialiser = DummyRDFSerialiser(knowledgebase)

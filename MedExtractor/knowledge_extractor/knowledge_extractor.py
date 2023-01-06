@@ -30,7 +30,8 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         
         self._ruler = self._nlp.add_pipe("entity_ruler")
         # input_diseases_path = os.path.join('knowledge_extractor','training_diseases_klein.txt')
-        input_diseases_path = os.path.join('MedExtractor', 'knowledge_extractor','training_diseases.txt')
+        #input_diseases_path = os.path.join('MedExtractor', 'knowledge_extractor','training_diseases_klein.txt')
+        input_diseases_path = os.path.join('knowledge_extractor','training_diseases.txt')
         input_data_file = open(input_diseases_path,'r',encoding="unicode_escape")
         reader = csv.reader(input_data_file, delimiter='\t')
         
@@ -42,8 +43,9 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         input_data_file.close()
 
         self._ruler.add_patterns(training_data)
-        # input_symptoms_path = os.path.join('knowledge_extractor', 'training_symptoms_klein.txt')
-        input_symptoms_path = os.path.join('MedExtractor', 'knowledge_extractor', 'training_symptoms.txt')
+        #input_symptoms_path = os.path.join('knowledge_extractor', 'training_symptoms_klein.txt')
+        #input_symptoms_path = os.path.join('MedExtractor', 'knowledge_extractor', 'training_symptoms_klein.txt')
+        input_symptoms_path = os.path.join('knowledge_extractor', 'training_symptoms.txt')
         input_data_file = open(input_symptoms_path,'r',encoding="unicode_escape")
         reader = csv.reader(input_data_file, delimiter='\t')
 
