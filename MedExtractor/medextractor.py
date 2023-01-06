@@ -33,7 +33,7 @@ for sent in nlp(preprocessed_text).sents:
     knowledgeExtractor(sent.text)
 
 knowledgeExtractor.saveKB()
-knowledgebase = knowledgeExtractor.get_knowledge_base()
+#knowledgebase = knowledgeExtractor.get_knowledge_base()
 
 print('\nNach neuer Analyse in der Wissensbasis (' + str(len(knowledgebase.semantic_relations)) + '):')
 for semantic_relation in knowledgebase.semantic_relations:
