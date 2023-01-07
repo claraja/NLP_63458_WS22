@@ -1,73 +1,43 @@
 import os
-import sys
-import csv
-import os
+import pickle
 import time
-from spacy.pipeline import EntityRuler
-from spacy.training import Example
+
+import _pickle as cPickle
+from pathlib import Path
+
 import spacy
-from negspacy.negation import Negex
 
 from interfaces.interfaces import KnowledgeExtractorInterface
 from knowledge.base import KnowledgeBase
 from knowledge.entity import Entity
 from knowledge.entity import EntityType
-from knowledge.semantics import SemanticRelation
 from knowledge.relations import RelationType
+from knowledge.semantics import SemanticRelation
+import spacy_transformers
+from negspacy.negation import Negex
 
 class KnowledgeExtractor(KnowledgeExtractorInterface):
     def __init__(self,*args):
         super().__init__(*args)
+        time_tmp = time.time()
+        p = os.path.join('knowledge_extractor', 'config.cfg')
+        with open(p, 'rb') as f:
+            config = pickle.load(f)
+        lang_cls = spacy.util.get_lang_class(config["nlp"]["lang"])
+        self._nlp = lang_cls.from_config(config)
+        print(f'time load config: {time.time() - time_tmp}s')
+        time_tmp = time.time()
+        p = os.path.join('knowledge_extractor', 'pipeline.bin')
+        with open(p, 'rb') as f:
+            bytes_data = f.read()
+        self._nlp.from_bytes(bytes_data)
+        print(f'time load pipeline: {time.time() - time_tmp}s')
         self._doc = self._nlp("")
         self._kb = KnowledgeBase()
         self._context = []
 
         if (self._kb_filename != "") and os.path.exists(self._kb_filename):
             self._kb.load(self._kb_filename)
-
-        pipe_exceptions = ['tok2vec','tagger','parser']
-        not_required_pipes = [pipe for pipe in self._nlp.pipe_names if pipe not in pipe_exceptions]
-        self._nlp.disable_pipes(*not_required_pipes)
-        
-        self._ruler = self._nlp.add_pipe("entity_ruler")
-        # input_diseases_path = os.path.join('knowledge_extractor','training_diseases_klein.txt')
-        #input_diseases_path = os.path.join('MedExtractor', 'knowledge_extractor','training_diseases_klein.txt')
-        time_tmp = time.time()
-        input_diseases_path = os.path.join('knowledge_extractor','training_diseases.txt')
-        input_data_file = open(input_diseases_path,'r',encoding="unicode_escape")
-        reader = csv.reader(input_data_file, delimiter='\t')
-        
-        training_data = []
-        
-        for row in reader:
-            to_train = {"label": "DISEASE", "pattern": row[1]}
-            training_data.append(to_train)
-        input_data_file.close()
-        print(f'time read diseases: {time.time()-time_tmp}s')
-
-        time_tmp = time.time()
-        self._ruler.add_patterns(training_data)
-        print(f'time add diseases to ruler: {time.time()-time_tmp}s')
-
-        #input_symptoms_path = os.path.join('knowledge_extractor', 'training_symptoms_klein.txt')
-        #input_symptoms_path = os.path.join('MedExtractor', 'knowledge_extractor', 'training_symptoms_klein.txt')
-        time_tmp = time.time()
-        input_symptoms_path = os.path.join('knowledge_extractor', 'training_symptoms.txt')
-        input_data_file = open(input_symptoms_path,'r',encoding="unicode_escape")
-        reader = csv.reader(input_data_file, delimiter='\t')
-
-        training_data = []
-
-        for row in reader:
-            to_train = {"label": "SYMPTOM", "pattern": row[1]}
-            training_data.append(to_train)
-        input_data_file.close()
-        print(f'time read symptoms: {time.time()-time_tmp}s')
-        
-        time_tmp = time.time()
-        self._ruler.add_patterns(training_data)
-        self._nlp.add_pipe("negex")
-        print(f'time add symptoms to ruler: {time.time()-time_tmp}s')
 
 
     def __call__(self,text):
@@ -143,3 +113,26 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         if error == True:
             print("Fehlerhafte Argumente beim Speichern der Wissensbasis")  # Fehlerhandling muss noch implementiert werden
         return
+
+    def call2(self,text):
+
+        self._doc = self._nlp(text)
+
+        for sent in self._doc.sents:
+            entities = set()
+
+            for ent in sent.ents:
+                entities.add(ent)
+            entities = list(entities)
+            entities += self._context
+
+            # for ent1 in entities:
+                # dependency parser
+                # get subject
+                # get object
+                # get predicate
+
+
+                # relation = SemanticRelation(entity1,entity2,res)
+                # if not self._kb.has_relation(relation):
+                #     self._kb.add_relation(relation)
