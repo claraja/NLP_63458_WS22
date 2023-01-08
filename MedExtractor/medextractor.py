@@ -1,20 +1,22 @@
-from rdf.RDFSerialiser import RDFSerialiser
-from preprocessor.preprocessor import RuleBasedPreprocessor
-from knowledge_extractor.knowledge_extractor import KnowledgeExtractor
+from src.rdf.RDFSerialiser import RDFSerialiser
+from src.preprocessor.preprocessor import RuleBasedPreprocessor
+from src.knowledge_extractor.knowledge_extractor import KnowledgeExtractor
 import os, glob
 import spacy
 import time
 
+print("cwd: " + os.getcwd())
 nlp = spacy.load('en_core_web_sm')
 time_tmp = time.time()
-knowledgeExtractor = KnowledgeExtractor('test.kb',nlp)
+knowledgebase_path = os.path.join('resources', 'test.kb')
+knowledgeExtractor = KnowledgeExtractor(knowledgebase_path, nlp)
 print(f'time create knowledgeExtractor: {time.time()-time_tmp}s')
 time_tmp = time.time()
 knowledgebase = knowledgeExtractor.get_knowledge_base()
 print(f'time get knowledgebase: {time.time()-time_tmp}s')
 
 time_tmp = time.time()
-for filename in glob.glob('to_analyze/*.txt'):
+for filename in glob.glob('resources/to_analyze_small/*.txt'):
     preprocessor = RuleBasedPreprocessor(filename)
     preprocessed_text = preprocessor.get_preprocessed_text()
 
@@ -54,9 +56,10 @@ graph = rdfSerialiser.knowledgebase_to_graph(knowledgebase, graph)
 print(f'time convert kb to rdf-graph: {time.time()-time_tmp}s')
 
 time_tmp = time.time()
+output_path = os.path.join('resources', 'extracted_relations.xml')
 rdfSerialiser.serialize_graph(
-    graph=graph, 
-    output_path='extracted_relations.xml', 
+    graph=graph,
+    output_path=output_path,
     serialization_format='pretty-xml' # default='pretty-xml'; möglich auch 'xml' und weitere, siehe: https://rdflib.readthedocs.io/en/stable/plugin_serializers.html
     )
 print(f'time serialize graph and generate output-xml: {time.time()-time_tmp}s')

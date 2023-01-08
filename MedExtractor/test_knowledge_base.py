@@ -1,11 +1,13 @@
-import pickle
+import os
 
-from knowledge.base import KnowledgeBase
-from knowledge.entity import EntityType, Entity
-from knowledge.relations import RelationType
-from knowledge.semantics import SemanticRelation
+from src.knowledge.base import KnowledgeBase
+from src.knowledge.entity import EntityType, Entity
+from src.knowledge.relations import RelationType
+from src.knowledge.semantics import SemanticRelation
 
+print("cwd: " + os.getcwd())
 file_name = "knowledgebase.pickle"
+knowledge_base_path = os.path.join('resources', "knowledgebase.pickle")
 
 depression = Entity("depression", EntityType.DISEASE)
 lack_of_energy = Entity("lack of energy", EntityType.SYMPTOM)
@@ -21,12 +23,12 @@ knowledge_base = KnowledgeBase()
 if save:
     knowledge_base.add_relation(semantic_relation)
 
-    knowledge_base.save("knowledgebase.pickle")
+    knowledge_base.save(knowledge_base_path)
     # with open(file_name, 'wb') as file:
     #     pickle.dump(knowledge_base, file)
 
 else:
-    knowledge_base.load("knowledgebase.pickle")
+    knowledge_base.load(knowledge_base_path)
     # with open(file_name, 'rb') as file:
     #     knowledge_base = pickle.load(file)
 
