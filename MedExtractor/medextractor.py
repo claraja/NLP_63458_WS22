@@ -38,7 +38,10 @@ for filename in glob.glob('to_analyze/*.txt'):
 
     #print('\nNach neuer Analyse in der Wissensbasis (' + str(len(knowledgebase.semantic_relations)) + '):')
     #for semantic_relation in knowledgebase.semantic_relations:
-    #    print(semantic_relation.__str__())
+    #    print(semantic_relation.__str__())    
+
+    knowledgebase.export_for_entity_linker("entity_linker_export.txt")
+
 print(f'time complete loop over files: {time.time()-time_tmp}s')
 # print(knowledgebase)
 # rdfSerialiser = DummyRDFSerialiser(knowledgebase)

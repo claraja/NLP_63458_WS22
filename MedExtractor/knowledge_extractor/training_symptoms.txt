@@ -9566,7 +9566,6 @@ C0425099	business worries	FINDING
 C0570831	buspirone allergy	FINDING
 C0570665	busulfan allergy	FINDING
 C0570665	busulphan allergy	FINDING
-C0233535	but	FINDING
 C0570801	butobarbital allergy	FINDING
 C0570801	butobarbitone allergy	FINDING
 C0570743	butriptyline allergy	FINDING

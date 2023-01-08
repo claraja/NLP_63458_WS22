@@ -13,7 +13,7 @@ class SemanticRelation:
         self.entity_1 = entity_1
         self.entity_2 = entity_2
         self.relation_type = relation_type
-        self.training_sample = None
+        self.training_samples = []
 
     def __str__(self) -> str:
         s = str(self.entity_1) + " - " + str(self.relation_type) + " - " + str(self.entity_2)
