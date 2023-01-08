@@ -79,7 +79,16 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
 
                         relation = SemanticRelation(entity1,entity2,res)
                         if not self._kb.has_relation(relation):
+                            relation.training_samples.append(sent.text.strip('\n'))
                             self._kb.add_relation(relation)
+                            if ent1.text not in self._kb._entities:
+                                self._kb._entities.append(ent1.text)
+                            if ent2.text not in self._kb._aliases:
+                                self._kb._aliases.append(ent2.text)
+                        else:
+                            relation = self._kb.give_relation(relation)
+                            if sent.text.strip('\n') not in relation.training_samples:
+                                relation.training_samples.append(sent.text.strip('\n'))
 
     def set_context(self, context):
         self._context = context
@@ -95,8 +104,8 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         if entity1.label_ == "DISEASE" and entity2.label_ == "SYMPTOM":
             relation = RelationType.HAS_SYMPTOM
         
-        if entity1.label_ == "SYMPTOM" and entity2.label_ == "DISEASE":
-            relation = RelationType.IS_SYMPTOM_OF
+        #if entity1.label_ == "SYMPTOM" and entity2.label_ == "DISEASE":
+        #    relation = RelationType.IS_SYMPTOM_OF
 
         return relation
     
