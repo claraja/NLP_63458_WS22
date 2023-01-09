@@ -14,6 +14,7 @@ print(f'time create knowledgeExtractor: {time.time()-time_tmp}s')
 time_tmp = time.time()
 knowledgebase = knowledgeExtractor.get_knowledge_base()
 print(f'time get knowledgebase: {time.time()-time_tmp}s')
+print(f"size of knowledgebase:  {len(knowledgebase)}")
 
 time_tmp = time.time()
 for filename in glob.glob('resources/to_analyze_small/*.txt'):
@@ -36,13 +37,14 @@ for filename in glob.glob('resources/to_analyze_small/*.txt'):
     for sent in nlp(preprocessed_text).sents:
         knowledgeExtractor(sent.text)
 
-    knowledgeExtractor.saveKB()
+knowledgeExtractor.saveKB()
 
-    #print('\nNach neuer Analyse in der Wissensbasis (' + str(len(knowledgebase.semantic_relations)) + '):')
-    #for semantic_relation in knowledgebase.semantic_relations:
-    #    print(semantic_relation.__str__())    
+#print('\nNach neuer Analyse in der Wissensbasis (' + str(len(knowledgebase.semantic_relations)) + '):')
+#for semantic_relation in knowledgebase.semantic_relations:
+#    print(semantic_relation.__str__())
 
-    knowledgebase.export_for_entity_linker("entity_linker_export.txt")
+knowledgebase.export_for_entity_linker("entity_linker_export.txt")
+print(f"size of knowledgebase:  {len(knowledgebase)}")
 
 print(f'time complete loop over files: {time.time()-time_tmp}s')
 # print(knowledgebase)

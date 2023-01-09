@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
+  xmlns:nlp="/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-/>
+>
+  <rdf:Description rdf:about="/depression">
+    <nlp:hasSymptom rdf:resource="/low_mood"/>
+    <nlp:hasSymptom rdf:resource="/feeling_hopeless"/>
+    <nlp:hasSymptom rdf:resource="/low_self-esteem"/>
+    <nlp:hasSymptom rdf:resource="/tearful"/>
+    <nlp:hasSymptom rdf:resource="/feeling_guilt"/>
+    <nlp:hasSymptom rdf:resource="/feeling_irritable"/>
+    <nlp:hasSymptom rdf:resource="/no_motivation"/>
+    <nlp:hasSymptom rdf:resource="/no_interest"/>
+    <nlp:hasSymptom rdf:resource="/low_sex_drive"/>
+    <nlp:hasSymptom rdf:resource="/loss_of_libido"/>
+  </rdf:Description>
+</rdf:RDF>
