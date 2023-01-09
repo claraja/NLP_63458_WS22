@@ -4,15 +4,422 @@
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
   <rdf:Description rdf:about="/depression">
+    <nlp:hasSymptom rdf:resource="/stress"/>
+    <nlp:hasSymptom rdf:resource="/anxiety"/>
+    <nlp:hasSymptom rdf:resource="/anorexia"/>
+    <nlp:hasSymptom rdf:resource="/lacking_energy"/>
+    <nlp:hasSymptom rdf:resource="/loss_of_interest"/>
+    <nlp:hasSymptom rdf:resource="/despair"/>
+    <nlp:hasSymptom rdf:resource="/feelings_of_guilt"/>
+    <nlp:hasSymptom rdf:resource="/pessimistic"/>
+    <nlp:hasSymptom rdf:resource="/self-doubt"/>
+    <nlp:hasSymptom rdf:resource="/illogical_thinking"/>
+    <nlp:hasSymptom rdf:resource="/hallucinations"/>
+    <nlp:hasSymptom rdf:resource="/difficulty_sleeping"/>
+    <nlp:hasSymptom rdf:resource="/suicidal_thoughts"/>
+    <nlp:hasSymptom rdf:resource="/no_depressed_mood"/>
+    <nlp:hasSymptom rdf:resource="/no_hallucinations"/>
+    <nlp:hasSymptom rdf:resource="/hearing"/>
+    <nlp:hasSymptom rdf:resource="/thoughts_of_suicide"/>
+    <nlp:hasSymptom rdf:resource="/sign"/>
+    <nlp:hasSymptom rdf:resource="/hoarding"/>
+    <nlp:hasSymptom rdf:resource="/severe_symptoms"/>
+    <nlp:hasSymptom rdf:resource="/severe_anxiety"/>
+    <nlp:hasSymptom rdf:resource="/signs"/>
+    <nlp:hasSymptom rdf:resource="/tearful"/>
     <nlp:hasSymptom rdf:resource="/low_mood"/>
+    <nlp:hasSymptom rdf:resource="/loss_of_appetite"/>
+    <nlp:hasSymptom rdf:resource="/withdrawn"/>
+    <nlp:hasSymptom rdf:resource="/every_day"/>
+    <nlp:hasSymptom rdf:resource="/no_interest"/>
+    <nlp:hasSymptom rdf:resource="/psychomotor_retardation"/>
+    <nlp:hasSymptom rdf:resource="/increased"/>
+    <nlp:hasSymptom rdf:resource="/childhood"/>
+    <nlp:hasSymptom rdf:resource="/lethargic"/>
+    <nlp:hasSymptom rdf:resource="/lacking_in_energy"/>
+    <nlp:hasSymptom rdf:resource="/sleepy"/>
+    <nlp:hasSymptom rdf:resource="/increased_appetite"/>
+    <nlp:hasSymptom rdf:resource="/social_anxiety"/>
+    <nlp:hasSymptom rdf:resource="/psychological_symptoms"/>
     <nlp:hasSymptom rdf:resource="/feeling_hopeless"/>
     <nlp:hasSymptom rdf:resource="/low_self-esteem"/>
-    <nlp:hasSymptom rdf:resource="/tearful"/>
     <nlp:hasSymptom rdf:resource="/feeling_guilt"/>
     <nlp:hasSymptom rdf:resource="/feeling_irritable"/>
     <nlp:hasSymptom rdf:resource="/no_motivation"/>
-    <nlp:hasSymptom rdf:resource="/no_interest"/>
-    <nlp:hasSymptom rdf:resource="/low_sex_drive"/>
+    <nlp:hasSymptom rdf:resource="/anxious"/>
+    <nlp:hasSymptom rdf:resource="/worried"/>
+    <nlp:hasSymptom rdf:resource="/changes_in_appetite"/>
+    <nlp:hasSymptom rdf:resource="/constipation"/>
+    <nlp:hasSymptom rdf:resource="/pains"/>
+    <nlp:hasSymptom rdf:resource="/aches"/>
+    <nlp:hasSymptom rdf:resource="/lack_of_energy"/>
     <nlp:hasSymptom rdf:resource="/loss_of_libido"/>
+    <nlp:hasSymptom rdf:resource="/low_sex_drive"/>
+    <nlp:hasSymptom rdf:resource="/asleep"/>
+    <nlp:hasSymptom rdf:resource="/fall"/>
+    <nlp:hasSymptom rdf:resource="/interests"/>
+    <nlp:hasSymptom rdf:resource="/neglecting"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/disorder">
+    <nlp:hasSymptom rdf:resource="/high"/>
+    <nlp:hasSymptom rdf:resource="/behaviour"/>
+    <nlp:hasSymptom rdf:resource="/imprisoned"/>
+    <nlp:hasSymptom rdf:resource="/mood_swings"/>
+    <nlp:hasSymptom rdf:resource="/depersonalisation"/>
+    <nlp:hasSymptom rdf:resource="/derealisation"/>
+    <nlp:hasSymptom rdf:resource="/hoarding"/>
+    <nlp:hasSymptom rdf:resource="/clutter"/>
+    <nlp:hasSymptom rdf:resource="/amounts"/>
+    <nlp:hasSymptom rdf:resource="/difficulty_making_decisions"/>
+    <nlp:hasSymptom rdf:resource="/hoard"/>
+    <nlp:hasSymptom rdf:resource="/problem"/>
+    <nlp:hasSymptom rdf:resource="/panic_attacks"/>
+    <nlp:hasSymptom rdf:resource="/attacks"/>
+    <nlp:hasSymptom rdf:resource="/panic"/>
+    <nlp:hasSymptom rdf:resource="/fear"/>
+    <nlp:hasSymptom rdf:resource="/stress"/>
+    <nlp:hasSymptom rdf:resource="/mutism"/>
+    <nlp:hasSymptom rdf:resource="/severe_anxiety"/>
+    <nlp:hasSymptom rdf:resource="/unable_to_speak"/>
+    <nlp:hasSymptom rdf:resource="/bleeding"/>
+    <nlp:hasSymptom rdf:resource="/no_asleep"/>
+    <nlp:hasSymptom rdf:resource="/stressed"/>
+    <nlp:hasSymptom rdf:resource="/anxious"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/abuse">
+    <nlp:hasSymptom rdf:resource="/childhood"/>
+    <nlp:hasSymptom rdf:resource="/illness"/>
+    <nlp:hasSymptom rdf:resource="/signs"/>
+    <nlp:hasSymptom rdf:resource="/neglect"/>
+    <nlp:hasSymptom rdf:resource="/distressing"/>
+    <nlp:hasSymptom rdf:resource="/no_children"/>
+    <nlp:hasSymptom rdf:resource="/no_mutism"/>
+    <nlp:hasSymptom rdf:resource="/no_child"/>
+    <nlp:hasSymptom rdf:resource="/no_neglect"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/eating_disorders">
+    <nlp:hasSymptom rdf:resource="/sick"/>
+    <nlp:hasSymptom rdf:resource="/habits"/>
+    <nlp:hasSymptom rdf:resource="/anxious"/>
+    <nlp:hasSymptom rdf:resource="/withdrawn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/agoraphobia">
+    <nlp:hasSymptom rdf:resource="/agoraphobia"/>
+    <nlp:hasSymptom rdf:resource="/able"/>
+    <nlp:hasSymptom rdf:resource="/anxious"/>
+    <nlp:hasSymptom rdf:resource="/panic_attack"/>
+    <nlp:hasSymptom rdf:resource="/rapid_heartbeat"/>
+    <nlp:hasSymptom rdf:resource="/hyperventilating"/>
+    <nlp:hasSymptom rdf:resource="/rapid_breathing"/>
+    <nlp:hasSymptom rdf:resource="/hot_and_sweaty"/>
+    <nlp:hasSymptom rdf:resource="/sick"/>
+    <nlp:hasSymptom rdf:resource="/chest_pain"/>
+    <nlp:hasSymptom rdf:resource="/difficulty_swallowing"/>
+    <nlp:hasSymptom rdf:resource="/diarrhoea"/>
+    <nlp:hasSymptom rdf:resource="/trembling"/>
+    <nlp:hasSymptom rdf:resource="/dizziness"/>
+    <nlp:hasSymptom rdf:resource="/tinnitus"/>
+    <nlp:hasSymptom rdf:resource="/ringing_in_the_ears"/>
+    <nlp:hasSymptom rdf:resource="/feeling_faint"/>
+    <nlp:hasSymptom rdf:resource="/panic_attacks"/>
+    <nlp:hasSymptom rdf:resource="/behaviour"/>
+    <nlp:hasSymptom rdf:resource="/housebound"/>
+    <nlp:hasSymptom rdf:resource="/no_able"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/antisocial_personality_disorder">
+    <nlp:hasSymptom rdf:resource="/signs"/>
+    <nlp:hasSymptom rdf:resource="/distress"/>
+    <nlp:hasSymptom rdf:resource="/normal_social_behaviour"/>
+    <nlp:hasSymptom rdf:resource="/anger"/>
+    <nlp:hasSymptom rdf:resource="/guilt"/>
+    <nlp:hasSymptom rdf:resource="/no_aggressive_behaviours"/>
+    <nlp:hasSymptom rdf:resource="/truancy"/>
+    <nlp:hasSymptom rdf:resource="/no_delinquency"/>
+    <nlp:hasSymptom rdf:resource="/childhood"/>
+    <nlp:hasSymptom rdf:resource="/neglect"/>
+    <nlp:hasSymptom rdf:resource="/play"/>
+    <nlp:hasSymptom rdf:resource="/child_abuse"/>
+    <nlp:hasSymptom rdf:resource="/high"/>
+    <nlp:hasSymptom rdf:resource="/behaviour"/>
+    <nlp:hasSymptom rdf:resource="/imprisoned"/>
+    <nlp:hasSymptom rdf:resource="/homeless"/>
+    <nlp:hasSymptom rdf:resource="/relationship_problems"/>
+    <nlp:hasSymptom rdf:resource="/unemployed"/>
+    <nlp:hasSymptom rdf:resource="/conduct"/>
+    <nlp:hasSymptom rdf:resource="/one"/>
+    <nlp:hasSymptom rdf:resource="/frustrated"/>
+    <nlp:hasSymptom rdf:resource="/severe_symptoms"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/schizophrenia">
+    <nlp:hasSymptom rdf:resource="/hoarding"/>
+    <nlp:hasSymptom rdf:resource="/no_symptoms"/>
+    <nlp:hasSymptom rdf:resource="/hallucinations"/>
+    <nlp:hasSymptom rdf:resource="/change_in_behaviour"/>
+    <nlp:hasSymptom rdf:resource="/delusions"/>
+    <nlp:hasSymptom rdf:resource="/no_interest"/>
+    <nlp:hasSymptom rdf:resource="/hear_voices"/>
+    <nlp:hasSymptom rdf:resource="/interest"/>
+    <nlp:hasSymptom rdf:resource="/motivation"/>
+    <nlp:hasSymptom rdf:resource="/lack_of_concentration"/>
+    <nlp:hasSymptom rdf:resource="/relationship_problems"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/panic_disorder">
+    <nlp:hasSymptom rdf:resource="/attacks"/>
+    <nlp:hasSymptom rdf:resource="/change_in_behavior"/>
+    <nlp:hasSymptom rdf:resource="/panic_attacks"/>
+    <nlp:hasSymptom rdf:resource="/panic"/>
+    <nlp:hasSymptom rdf:resource="/panics"/>
+    <nlp:hasSymptom rdf:resource="/anxiety"/>
+    <nlp:hasSymptom rdf:resource="/no_panic_attacks"/>
+    <nlp:hasSymptom rdf:resource="/behavioral_change"/>
+    <nlp:hasSymptom rdf:resource="/stress"/>
+    <nlp:hasSymptom rdf:resource="/social_anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/mania">
+    <nlp:hasSymptom rdf:resource="/no_depressed_mood"/>
+    <nlp:hasSymptom rdf:resource="/no_hallucinations"/>
+    <nlp:hasSymptom rdf:resource="/hearing"/>
+    <nlp:hasSymptom rdf:resource="/high"/>
+    <nlp:hasSymptom rdf:resource="/elated"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/conduct_disorder">
+    <nlp:hasSymptom rdf:resource="/no_aggressive_behaviours"/>
+    <nlp:hasSymptom rdf:resource="/truancy"/>
+    <nlp:hasSymptom rdf:resource="/no_delinquency"/>
+    <nlp:hasSymptom rdf:resource="/childhood"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/postnatal_psychosis">
+    <nlp:hasSymptom rdf:resource="/birth"/>
+    <nlp:hasSymptom rdf:resource="/high"/>
+    <nlp:hasSymptom rdf:resource="/elated"/>
+    <nlp:hasSymptom rdf:resource="/low_mood"/>
+    <nlp:hasSymptom rdf:resource="/lack_of_energy"/>
+    <nlp:hasSymptom rdf:resource="/loss_of_appetite"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/dementia">
+    <nlp:hasSymptom rdf:resource="/clutter"/>
+    <nlp:hasSymptom rdf:resource="/amounts"/>
+    <nlp:hasSymptom rdf:resource="/disabilities"/>
+    <nlp:hasSymptom rdf:resource="/sign"/>
+    <nlp:hasSymptom rdf:resource="/anxiety"/>
+    <nlp:hasSymptom rdf:resource="/hoarding"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/autism">
+    <nlp:hasSymptom rdf:resource="/child"/>
+    <nlp:hasSymptom rdf:resource="/mutism"/>
+    <nlp:hasSymptom rdf:resource="/no_mutism"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/social_phobia">
+    <nlp:hasSymptom rdf:resource="/anxious"/>
+    <nlp:hasSymptom rdf:resource="/frightened"/>
+    <nlp:hasSymptom rdf:resource="/sign"/>
+    <nlp:hasSymptom rdf:resource="/agoraphobia"/>
+    <nlp:hasSymptom rdf:resource="/afraid"/>
+    <nlp:hasSymptom rdf:resource="/anxiety"/>
+    <nlp:hasSymptom rdf:resource="/fear_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/baby_blues">
+    <nlp:hasSymptom rdf:resource="/birth"/>
+    <nlp:hasSymptom rdf:resource="/mood_changes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/postnatal_depression">
+    <nlp:hasSymptom rdf:resource="/giving_birth"/>
+    <nlp:hasSymptom rdf:resource="/pregnancy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/cuts">
+    <nlp:hasSymptom rdf:resource="/bleeding"/>
+    <nlp:hasSymptom rdf:resource="/no_heal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/mood_disorders">
+    <nlp:hasSymptom rdf:resource="/panic_attacks"/>
+    <nlp:hasSymptom rdf:resource="/anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/eating_disorder">
+    <nlp:hasSymptom rdf:resource="/weight_loss"/>
+    <nlp:hasSymptom rdf:resource="/signs"/>
+    <nlp:hasSymptom rdf:resource="/lying"/>
+    <nlp:hasSymptom rdf:resource="/short_period"/>
+    <nlp:hasSymptom rdf:resource="/worried"/>
+    <nlp:hasSymptom rdf:resource="/loved"/>
+    <nlp:hasSymptom rdf:resource="/one"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/anxiety_disorder">
+    <nlp:hasSymptom rdf:resource="/attacks"/>
+    <nlp:hasSymptom rdf:resource="/panic"/>
+    <nlp:hasSymptom rdf:resource="/fear"/>
+    <nlp:hasSymptom rdf:resource="/fear_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/bulimia">
+    <nlp:hasSymptom rdf:resource="/signs"/>
+    <nlp:hasSymptom rdf:resource="/amount"/>
+    <nlp:hasSymptom rdf:resource="/binge_eating"/>
+    <nlp:hasSymptom rdf:resource="/fear_of"/>
+    <nlp:hasSymptom rdf:resource="/mood_changes"/>
+    <nlp:hasSymptom rdf:resource="/anxious"/>
+    <nlp:hasSymptom rdf:resource="/tense"/>
+    <nlp:hasSymptom rdf:resource="/feeling_guilty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/psychoses">
+    <nlp:hasSymptom rdf:resource="/panic_attacks"/>
+    <nlp:hasSymptom rdf:resource="/anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/bipolar_disorder">
+    <nlp:hasSymptom rdf:resource="/happy"/>
+    <nlp:hasSymptom rdf:resource="/manic"/>
+    <nlp:hasSymptom rdf:resource="/elated"/>
+    <nlp:hasSymptom rdf:resource="/easily_distracted"/>
+    <nlp:hasSymptom rdf:resource="/agitated"/>
+    <nlp:hasSymptom rdf:resource="/hallucinations"/>
+    <nlp:hasSymptom rdf:resource="/illogical_thinking"/>
+    <nlp:hasSymptom rdf:resource="/no_high"/>
+    <nlp:hasSymptom rdf:resource="/no_depressed_mood"/>
+    <nlp:hasSymptom rdf:resource="/mood_swings"/>
+    <nlp:hasSymptom rdf:resource="/no_cyclothymia"/>
+    <nlp:hasSymptom rdf:resource="/no_hallucinations"/>
+    <nlp:hasSymptom rdf:resource="/hearing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/severe_depression">
+    <nlp:hasSymptom rdf:resource="/hoarding"/>
+    <nlp:hasSymptom rdf:resource="/exhaustion"/>
+    <nlp:hasSymptom rdf:resource="/fatigue"/>
+    <nlp:hasSymptom rdf:resource="/loss_of_pleasure"/>
+    <nlp:hasSymptom rdf:resource="/changes_in_appetite"/>
+    <nlp:hasSymptom rdf:resource="/indecisive"/>
+    <nlp:hasSymptom rdf:resource="/unable_to_concentrate"/>
+    <nlp:hasSymptom rdf:resource="/death"/>
+    <nlp:hasSymptom rdf:resource="/play"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/fainting">
+    <nlp:hasSymptom rdf:resource="/heart_racing"/>
+    <nlp:hasSymptom rdf:resource="/physical_signs"/>
+    <nlp:hasSymptom rdf:resource="/feeling_faint"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/anxiety_disorders">
+    <nlp:hasSymptom rdf:resource="/panic"/>
+    <nlp:hasSymptom rdf:resource="/anxiety"/>
+    <nlp:hasSymptom rdf:resource="/social_anxiety"/>
+    <nlp:hasSymptom rdf:resource="/difficulty_learning"/>
+    <nlp:hasSymptom rdf:resource="/distress"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/personality_disorders">
+    <nlp:hasSymptom rdf:resource="/one"/>
+    <nlp:hasSymptom rdf:resource="/panic_attacks"/>
+    <nlp:hasSymptom rdf:resource="/anxiety"/>
+    <nlp:hasSymptom rdf:resource="/neglect"/>
+    <nlp:hasSymptom rdf:resource="/distressing"/>
+    <nlp:hasSymptom rdf:resource="/childhood"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/dissociative_disorder">
+    <nlp:hasSymptom rdf:resource="/no_pain"/>
+    <nlp:hasSymptom rdf:resource="/childhood"/>
+    <nlp:hasSymptom rdf:resource="/medically_unexplained_symptoms"/>
+    <nlp:hasSymptom rdf:resource="/mood_swings"/>
+    <nlp:hasSymptom rdf:resource="/panic_attacks"/>
+    <nlp:hasSymptom rdf:resource="/anxiety"/>
+    <nlp:hasSymptom rdf:resource="/suicidal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/postpartum_psychosis">
+    <nlp:hasSymptom rdf:resource="/hallucinations"/>
+    <nlp:hasSymptom rdf:resource="/high"/>
+    <nlp:hasSymptom rdf:resource="/delusions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/disease">
+    <nlp:hasSymptom rdf:resource="/fear_of"/>
+    <nlp:hasSymptom rdf:resource="/obsessions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/personality_disorder">
+    <nlp:hasSymptom rdf:resource="/impulsive"/>
+    <nlp:hasSymptom rdf:resource="/criminal_behaviour"/>
+    <nlp:hasSymptom rdf:resource="/behaviour"/>
+    <nlp:hasSymptom rdf:resource="/conduct"/>
+    <nlp:hasSymptom rdf:resource="/anger"/>
+    <nlp:hasSymptom rdf:resource="/one"/>
+    <nlp:hasSymptom rdf:resource="/anxiety"/>
+    <nlp:hasSymptom rdf:resource="/severe_symptoms"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/poisoning">
+    <nlp:hasSymptom rdf:resource="/child"/>
+    <nlp:hasSymptom rdf:resource="/illnesses"/>
+    <nlp:hasSymptom rdf:resource="/bacteria"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/phobias">
+    <nlp:hasSymptom rdf:resource="/fear_and_anxiety"/>
+    <nlp:hasSymptom rdf:resource="/panic_attacks"/>
+    <nlp:hasSymptom rdf:resource="/anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/cold">
+    <nlp:hasSymptom rdf:resource="/signs_and_symptoms"/>
+    <nlp:hasSymptom rdf:resource="/dizzy"/>
+    <nlp:hasSymptom rdf:resource="/tired"/>
+    <nlp:hasSymptom rdf:resource="/physical_signs"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/wounds">
+    <nlp:hasSymptom rdf:resource="/child"/>
+    <nlp:hasSymptom rdf:resource="/aggravating"/>
+    <nlp:hasSymptom rdf:resource="/illnesses"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/disorders">
+    <nlp:hasSymptom rdf:resource="/no_problem"/>
+    <nlp:hasSymptom rdf:resource="/hoard"/>
+    <nlp:hasSymptom rdf:resource="/hoarding"/>
+    <nlp:hasSymptom rdf:resource="/problem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/shocked">
+    <nlp:hasSymptom rdf:resource="/behaviour"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/personality_disorder,_antisocial">
+    <nlp:hasSymptom rdf:resource="/behaviour"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/piles">
+    <nlp:hasSymptom rdf:resource="/fall"/>
+    <nlp:hasSymptom rdf:resource="/collapse"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/binge_eating_disorder">
+    <nlp:hasSymptom rdf:resource="/no_able"/>
+    <nlp:hasSymptom rdf:resource="/signs"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/psychotic_disorders">
+    <nlp:hasSymptom rdf:resource="/hoarding"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/post-traumatic_stress_disorder">
+    <nlp:hasSymptom rdf:resource="/social_anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/obsessive_compulsive_disorder">
+    <nlp:hasSymptom rdf:resource="/related"/>
+    <nlp:hasSymptom rdf:resource="/hoarding"/>
+    <nlp:hasSymptom rdf:resource="/anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/blood">
+    <nlp:hasSymptom rdf:resource="/signs"/>
+    <nlp:hasSymptom rdf:resource="/child"/>
+    <nlp:hasSymptom rdf:resource="/no_child"/>
+    <nlp:hasSymptom rdf:resource="/illness"/>
+    <nlp:hasSymptom rdf:resource="/illnesses"/>
+    <nlp:hasSymptom rdf:resource="/fever"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/cystic_fibrosis">
+    <nlp:hasSymptom rdf:resource="/illness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/dysphagia">
+    <nlp:hasSymptom rdf:resource="/difficulty_swallowing"/>
+    <nlp:hasSymptom rdf:resource="/panic_attack"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/social_anxiety_disorder">
+    <nlp:hasSymptom rdf:resource="/panic_attack"/>
+    <nlp:hasSymptom rdf:resource="/low_self-esteem"/>
+    <nlp:hasSymptom rdf:resource="/mutism"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/leukaemia">
+    <nlp:hasSymptom rdf:resource="/illness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/generalised_anxiety_disorder">
+    <nlp:hasSymptom rdf:resource="/social_anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/insomnia">
+    <nlp:hasSymptom rdf:resource="/asleep"/>
+    <nlp:hasSymptom rdf:resource="/falling"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="/generalized_anxiety_disorder">
+    <nlp:hasSymptom rdf:resource="/panic"/>
   </rdf:Description>
 </rdf:RDF>

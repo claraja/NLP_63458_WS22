@@ -28021,8 +28021,6 @@ C1827438	housing structurally unsound	FINDING
 C0587170	housing unsatisfactory	FINDING
 C0578892	housing unsuited to needs	FINDING
 C0020056	housings	FINDING
-C1265611	how many	FINDING
-C1265611	how much	FINDING
 C0020058	howell jolly bodies	FINDING
 C0020058	howell jolly body	FINDING
 C0020058	howell-jolly body	FINDING

@@ -43,7 +43,7 @@ knowledgeExtractor.saveKB()
 #for semantic_relation in knowledgebase.semantic_relations:
 #    print(semantic_relation.__str__())
 
-knowledgebase.export_for_entity_linker("entity_linker_export.txt")
+knowledgebase.export_for_entity_linker("resources/entity_linker_export.txt")
 print(f"size of knowledgebase:  {len(knowledgebase)}")
 
 print(f'time complete loop over files: {time.time()-time_tmp}s')
