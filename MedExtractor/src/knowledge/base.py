@@ -66,10 +66,26 @@ class KnowledgeBase:
         
         if (file_name != ""):
             fobj = open(file_name,'w', encoding="utf-8")
-            fobj.write("### TRAINING DATA ###" + "\n")
+            fobj.write("### ENTITIES ###" + "\n")
             fobj.close
             fobj = open(file_name,'a', encoding="utf-8")
 
+        for entity in self._entities:
+            fobj.write(entity + "\n")
+
+        fobj.write("### ALIASES ###" + "\n")
+        for alias in self._aliases:
+            fobj.write("alias = '" + alias + "', entities = [")
+            first = True;
+            for relation in self.semantic_relations:
+                if relation.entity_2.entity_name == alias:
+                    if first == False:
+                        fobj.write(",")
+                    fobj.write("'" + relation.entity_1.entity_name + "'")
+                    first = False
+            fobj.write("]\n")
+
+        fobj.write("### TRAINING DATA ###" + "\n")
         for relation in self.semantic_relations:
             for sample in relation.training_samples:
                 output = "('" + sample + "'"
