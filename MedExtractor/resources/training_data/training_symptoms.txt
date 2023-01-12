@@ -40637,7 +40637,6 @@ C0557444	on unpaid leave	FINDING
 C0422753	on urgent housing list	FINDING
 C0557355	on work experience	FINDING
 C0009254	onanism	FINDING
-C5201140	one	FINDING
 C0419388	one male and one female baby	FINDING
 C0419391	one male and two female babies	FINDING
 C0419439	one of triplets	FINDING

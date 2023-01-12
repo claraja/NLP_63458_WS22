@@ -46,7 +46,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         self._ruler = self._nlp.add_pipe("entity_ruler")
 
         input_diseases_path = os.path.join('resources', 'training_data', 'training_diseases.txt')
-        input_data_file = open(input_diseases_path, 'r', encoding="unicode_escape")
+        input_data_file = open(input_diseases_path, 'r', encoding = "utf-8", errors = 'ignore')
         reader = csv.reader(input_data_file, delimiter='\t')
 
         training_data = []
@@ -59,7 +59,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         self._ruler.add_patterns(training_data)
 
         input_symptoms_path = os.path.join('resources', 'training_data', 'training_symptoms.txt')
-        input_data_file = open(input_symptoms_path, 'r', encoding="unicode_escape")
+        input_data_file = open(input_symptoms_path, 'r', encoding = "utf-8", errors = 'ignore')
         reader = csv.reader(input_data_file, delimiter='\t')
 
         for row in reader:
@@ -75,6 +75,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         self._doc = self._nlp(text)
 
         for sent in self._doc.sents:
+            sent_text = sent.text
             entities = set()
 
             for ent in sent.ents:
@@ -104,6 +105,9 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                                 entity2 = Entity(ent2.text,EntityType.SYMPTOM)
                             else:
                                 entity2 = Entity('no ' + ent2.text,EntityType.SYMPTOM)
+                                if 'no ' + ent2.text not in sent_text:
+                                    index = sent_text.find(ent2.text)
+                                    sent_text = sent_text[:index] + 'no ' + sent_text[index:]
                         else:
                             entity2 = Entity(ent2.text,EntityType.UNDEFINED)
 
@@ -112,13 +116,13 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                             relation.training_samples.append(sent.text.strip('\n'))
                             self._kb.add_relation(relation)
                             if ent1.text not in self._kb._entities:
-                                self._kb._entities.append(ent1.text)
+                                self._kb._entities.append(entity1.entity_name)
                             if ent2.text not in self._kb._aliases:
-                                self._kb._aliases.append(ent2.text)
+                                self._kb._aliases.append(entity2.entity_name)
                         else:
                             relation = self._kb.give_relation(relation)
-                            if sent.text.strip('\n') not in relation.training_samples:
-                                relation.training_samples.append(sent.text.strip('\n'))
+                            if sent_text.strip('\n') not in relation.training_samples:
+                                relation.training_samples.append(sent_text.strip('\n'))
 
     def set_context(self, context):
         self._context = context
