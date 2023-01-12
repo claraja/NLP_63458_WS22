@@ -7,6 +7,7 @@ import time
 
 print("cwd: " + os.getcwd())
 nlp = spacy.load('en_core_web_sm')
+time_tmp = time.time()
 knowledgebase_path = os.path.join('resources', 'test.kb')
 knowledgeExtractor = KnowledgeExtractor(knowledgebase_path, nlp)
 print(f'time create knowledgeExtractor: {time.time()-time_tmp}s')
