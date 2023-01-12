@@ -3,6 +3,7 @@ import os
 import pickle
 import time
 import spacy
+from spacy import displacy
 
 from src.interfaces.interfaces import KnowledgeExtractorInterface
 from src.knowledge.base import KnowledgeBase
@@ -161,21 +162,25 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
 
         self._doc = self._nlp(text)
 
+        # displacy.serve(self._doc, style="ent")
         for sent in self._doc.sents:
-            entities = set()
+            entities = []
 
             for ent in sent.ents:
-                entities.add(ent)
-            entities = list(entities)
-            entities += self._context
+                entities.append(ent.text)
+            for token in sent:
+                if token.text in entities:
+                    print(token.text,  token.tag_, token.dep_)
+            # for ent in sent.ents:
+
 
             # for ent1 in entities:
-                # dependency parser
-                # get subject
-                # get object
-                # get predicate
+            # dependency parser
+            # get subject
+            # get object
+            # get predicate
 
 
-                # relation = SemanticRelation(entity1,entity2,res)
-                # if not self._kb.has_relation(relation):
-                #     self._kb.add_relation(relation)
+            # relation = SemanticRelation(entity1,entity2,res)
+            # if not self._kb.has_relation(relation):
+            #     self._kb.add_relation(relation)

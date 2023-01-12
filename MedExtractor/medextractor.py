@@ -52,16 +52,13 @@ print(f'time complete loop over files: {time.time()-time_tmp}s')
 # print(rdfSerialiser.serialise_knowledgebase())
 
 time_tmp = time.time()
-rdfSerialiser = RDFSerialiser('/', 'nlp')
-graph = rdfSerialiser.create_graph()
-graph = rdfSerialiser.knowledgebase_to_graph(knowledgebase, graph)
+rdfSerialiser = RDFSerialiser(knowledgebase, 'http://fapranlp.de/', 'nlp')
+# graph = rdfSerialiser.create_graph()
+# graph = rdfSerialiser.knowledgebase_to_graph(knowledgebase, graph)
 print(f'time convert kb to rdf-graph: {time.time()-time_tmp}s')
 
 time_tmp = time.time()
 output_path = os.path.join('resources', 'extracted_relations.xml')
-rdfSerialiser.serialize_graph(
-    graph=graph,
-    output_path=output_path,
-    serialization_format='pretty-xml' # default='pretty-xml'; möglich auch 'xml' und weitere, siehe: https://rdflib.readthedocs.io/en/stable/plugin_serializers.html
-    )
+rdfSerialiser.serialise_knowledgebase( output_path=output_path) # default='pretty-xml'; möglich auch 'xml' und weitere, siehe: https://rdflib.readthedocs.io/en/stable/plugin_serializers.html
+
 print(f'time serialize graph and generate output-xml: {time.time()-time_tmp}s')
