@@ -7,7 +7,8 @@ class RuleBasedPreprocessor(PreprocessingInterface):
         #nlp = spacy.blank('en')
         # add as a spacy pipeline component
         #nlp.add_pipe('sbd', first=True)  # diese Variable nlp wird noch nicht weiter genutzt 
-        with open(self.doc_name, 'r',encoding='unicode_escape') as file:
+        #with open(self.doc_name, 'r', encoding='unicode_escape') as file:
+        with open(self.doc_name, 'r', encoding='utf-8') as file:
             raw_text = file.read()
 
         enumeration = ''
@@ -59,7 +60,8 @@ class RuleBasedPreprocessor(PreprocessingInterface):
                 .replace('..', '.')\
                 .replace('?.', '?')\
                 .replace('!.', '!')\
-                .replace('\n ', '\n')
+                .replace('\n ', '\n')\
+                .replace('_', '')
             # replace all occurrences of multiple spaces with a single space
             result = re.sub(' +', ' ', stripped_line)
 

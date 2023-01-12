@@ -11,7 +11,6 @@ time_tmp = time.time()
 knowledgebase_path = os.path.join('resources', 'test.kb')
 knowledgeExtractor = KnowledgeExtractor(knowledgebase_path, nlp)
 print(f'time create knowledgeExtractor: {time.time()-time_tmp}s')
-time_tmp = time.time()
 knowledgebase = knowledgeExtractor.get_knowledge_base()
 print(f"size of knowledgebase:  {len(knowledgebase)}")
 
