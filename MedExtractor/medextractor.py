@@ -30,9 +30,6 @@ for filename in glob.glob('resources/to_analyze_small/*.txt'):
     #context = set()
     #context.add(span)
     #knowledgeExtractor.set_context(context)
-
-    #rdfSerialiser = RDFSerialiser('/', 'nlp_fapra')
-    #graph = rdfSerialiser.create_graph()
     
     for sent in nlp(preprocessed_text).sents:
         knowledgeExtractor(sent.text)
@@ -47,14 +44,9 @@ knowledgebase.export_for_entity_linker("resources/entity_linker_export.txt")
 print(f"size of knowledgebase:  {len(knowledgebase)}")
 
 print(f'time complete loop over files: {time.time()-time_tmp}s')
-# print(knowledgebase)
-# rdfSerialiser = DummyRDFSerialiser(knowledgebase)
-# print(rdfSerialiser.serialise_knowledgebase())
 
 time_tmp = time.time()
 rdfSerialiser = RDFSerialiser(knowledgebase, 'http://fapranlp.de/', 'nlp')
-# graph = rdfSerialiser.create_graph()
-# graph = rdfSerialiser.knowledgebase_to_graph(knowledgebase, graph)
 print(f'time convert kb to rdf-graph: {time.time()-time_tmp}s')
 
 time_tmp = time.time()
