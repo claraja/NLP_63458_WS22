@@ -122,8 +122,6 @@ class KnowledgeBase:
 
                     if alias in doc_entities:
                         for ent in doc.ents:
-                            if ent.text == "fear and anxiety":
-                                print(ent.text, sample)
                             if ent.text == alias:
                                 start = sample.find(alias)
                                 end = sample.find(alias) + len(alias)
