@@ -6,6 +6,7 @@ from src.knowledge.entity import Entity
 from src.knowledge.entity import EntityType
 import string
 import pickle
+import spacy
 
 
 class KnowledgeBase:
@@ -63,27 +64,43 @@ class KnowledgeBase:
         return result
 
 
-    def export_for_entity_linker(self, file_name: str):
+    def export_for_entity_linker(self, file_name: str, nlp):
         
+        pipe_exceptions = ['tok2vec','tagger','parser']
+        not_required_pipes = [pipe for pipe in nlp.pipe_names if pipe not in pipe_exceptions]
+        nlp.disable_pipes(*not_required_pipes)
+        nlp.remove_pipe("entity_ruler")
+        ruler = nlp.add_pipe("entity_ruler")
+        nlp.enable_pipe("entity_ruler")
+        ruler_training_data = []
+
         entity_linker_export = ElementTree.Element("entity_linker_export")
         entity_node = ElementTree.SubElement(entity_linker_export, "entities")
         
         for entity in sorted(self._entities):
             entity_xml = ElementTree.SubElement(entity_node, "entity", {"typ":"str"})
             entity_xml.text = entity
+            to_train = {"label": "DISEASE", "pattern": entity}
+            ruler_training_data.append(to_train)
+
+        ruler.add_patterns(ruler_training_data)
 
         alias_node = ElementTree.SubElement(entity_linker_export, "aliases")
-
+        ruler_training_data = []
         for alias in sorted(self._aliases):
+            to_train = {"label": "SYMPTOM", "pattern": alias}
+            ruler_training_data.append(to_train)
             alias_xml = ElementTree.SubElement(alias_node, "alias", {"typ":"str"})
             alias_xml.text = alias
 
             alias_entity_node = ElementTree.SubElement(alias_xml, "entities")
             for relation in self.semantic_relations:
                 if relation.entity_2.entity_name == alias:
-                    alias_entity_xml = ElementTree.SubElement(alias_entity_node, "alias")
+                    alias_entity_xml = ElementTree.SubElement(alias_entity_node, "entity")
                     alias_entity_xml.text = relation.entity_1.entity_name
-                    
+        
+        ruler.add_patterns(ruler_training_data)            
+        
         training_node = ElementTree.SubElement(entity_linker_export, "training")
         
         for relation in self.semantic_relations:
@@ -97,44 +114,53 @@ class KnowledgeBase:
                 training_aliases_node = ElementTree.SubElement(sample_xml, "aliases")
                 training_links_node = ElementTree.SubElement(sample_xml, "links")
 
+                doc = nlp(sample)
+
                 for alias in self._aliases:
-                    if alias in sample:
-                        start = sample.find(alias)
-                        end = sample.find(alias) + len(alias)
-                        should_add = True
-                        for i in indices:
-                            if not ((end < i[0]) or (start > i[1])):
-                                should_add = False
-                                break
-                        if should_add == True:
-                            indices.append((start,end))
 
-                            training_alias_xml = ElementTree.SubElement(training_aliases_node, "alias", {"typ":"str"})
-                            training_alias_xml.text = "(" + str(start) + "," + str(end) + ",'SYMPTOM')"
+                    doc_entities = [ent.text for ent in doc.ents]
 
-                            training_links_xml = ElementTree.SubElement(training_links_node, "position", {"typ":"tuple"})
-                            training_links_xml.text = "(" + str(start) + "," + str(end) + ")"
+                    if alias in doc_entities:
+                        for ent in doc.ents:
+                            if ent.text == "fear and anxiety":
+                                print(ent.text, sample)
+                            if ent.text == alias:
+                                start = sample.find(alias)
+                                end = sample.find(alias) + len(alias)
+                                should_add = True
+                                for i in indices:
+                                    if not ((end < i[0]) or (start > i[1])):
+                                        should_add = False
+                                        break
+                                if should_add == True:
+                                    indices.append((start,end))
 
-                            entity_list = self.give_entities(alias)
-                            entity_count = 0
-    
-                            for ent in entity_list:
-                                if ent.entity_name in sample:
-                                    entity_count += 1
+                                    training_alias_xml = ElementTree.SubElement(training_aliases_node, "alias", {"typ":"str"})
+                                    training_alias_xml.text = "(" + str(start) + "," + str(end) + ",'SYMPTOM')"
 
-                            training_entities_node = ElementTree.SubElement(training_links_xml, "entities")
-                            for ent in entity_list:
+                                    training_links_xml = ElementTree.SubElement(training_links_node, "position", {"typ":"tuple"})
+                                    training_links_xml.text = "(" + str(start) + "," + str(end) + ")"
 
-                                training_entities_xml = ElementTree.SubElement(training_entities_node, "entity", {"typ":"str"})
-                                training_entities_xml.text = ent.entity_name
+                                    entity_list = self.give_entities(alias)
+                                    entity_count = 0
+            
+                                    for ent in entity_list:
+                                        if ent.entity_name in sample:
+                                            entity_count += 1
 
-                                training_probability_node = ElementTree.SubElement(training_entities_xml, "probability")
-                                training_probability_xml = ElementTree.SubElement(training_probability_node, "prob", {"typ":"float"})
+                                    training_entities_node = ElementTree.SubElement(training_links_xml, "entities")
+                                    for ent in entity_list:
 
-                                if ent.entity_name in sample:
-                                    training_probability_xml.text = str(round(1.0/entity_count,1))
-                                else:
-                                    training_probability_xml.text = "0.0"
+                                        training_entities_xml = ElementTree.SubElement(training_entities_node, "entity", {"typ":"str"})
+                                        training_entities_xml.text = ent.entity_name
+
+                                        training_probability_node = ElementTree.SubElement(training_entities_xml, "probability")
+                                        training_probability_xml = ElementTree.SubElement(training_probability_node, "prob", {"typ":"float"})
+
+                                        if ent.entity_name in sample:
+                                            training_probability_xml.text = str(round(1.0/entity_count,1))
+                                        else:
+                                            training_probability_xml.text = "0.0"
                 
                 #for word in sample.translate(str.maketrans('', '', string.punctuation)).split():
                 #    if word.isalpha():
