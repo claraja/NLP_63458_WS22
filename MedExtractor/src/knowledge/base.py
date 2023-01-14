@@ -1,6 +1,6 @@
 import os
 import string
-
+import xml.etree.ElementTree as ElementTree
 from src.knowledge.semantics import SemanticRelation
 from src.knowledge.entity import Entity
 from src.knowledge.entity import EntityType
@@ -65,58 +65,56 @@ class KnowledgeBase:
 
     def export_for_entity_linker(self, file_name: str):
         
-        if (file_name != ""):
-            fobj = open(file_name,'w', encoding="utf-8")
-            fobj.write("### ENTITIES ###" + "\n")
-            fobj.close
-            fobj = open(file_name,'a', encoding="utf-8")
-
+        entity_linker_export = ElementTree.Element("entity_linker_export")
+        entity_node = ElementTree.SubElement(entity_linker_export, "entities")
+        
         for entity in sorted(self._entities):
-            fobj.write(entity + "\n")
+            entity_xml = ElementTree.SubElement(entity_node, "entity", {"typ":"str"})
+            entity_xml.text = entity
 
-        fobj.write("### ALIASES ###" + "\n")
+        alias_node = ElementTree.SubElement(entity_linker_export, "aliases")
+
         for alias in sorted(self._aliases):
-            #fobj.write("alias = '" + alias + "', entities = [")
-            fobj.write(alias + '\n')
-            first = True;
-            fobj.write("Entities:")
+            alias_xml = ElementTree.SubElement(alias_node, "alias", {"typ":"str"})
+            alias_xml.text = alias
+
+            alias_entity_node = ElementTree.SubElement(alias_xml, "entities")
             for relation in self.semantic_relations:
                 if relation.entity_2.entity_name == alias:
-                    if first == False:
-                        fobj.write("<sep>")
-                    #fobj.write("'" + relation.entity_1.entity_name + "'")
-                    fobj.write(relation.entity_1.entity_name)
-                    first = False
-            #fobj.write("]\n")
-            fobj.write("\n")
-
-        fobj.write("### TRAINING DATA ###" + "\n")
+                    alias_entity_xml = ElementTree.SubElement(alias_entity_node, "alias")
+                    alias_entity_xml.text = relation.entity_1.entity_name
+                    
+        training_node = ElementTree.SubElement(entity_linker_export, "training")
+        
         for relation in self.semantic_relations:
+            
             for sample in relation.training_samples:
-                sample = sample.replace("\"","")
-                sample = sample.replace("\n"," ")
-                output = "(\"" + sample + "\", ["
-                output_aux = ",{"
-                first1 = True
-                indexes = []
+                sample_xml = ElementTree.SubElement(training_node, "text", {"typ":"str"})
+                sample_xml.text = sample
+                
+                indices = []
+                
+                training_aliases_node = ElementTree.SubElement(sample_xml, "aliases")
+                training_links_node = ElementTree.SubElement(sample_xml, "links")
+
                 for alias in self._aliases:
                     if alias in sample:
                         start = sample.find(alias)
                         end = sample.find(alias) + len(alias)
                         should_add = True
-                        for i in indexes:
+                        for i in indices:
                             if not ((end < i[0]) or (start > i[1])):
                                 should_add = False
                                 break
                         if should_add == True:
-                            indexes.append((start,end))
-                            if first1 != True:
-                                output += ","
-                                output_aux += ","
-                            output += "(" + str(start) + "," + str(end) + ",'SYMPTOM')"
-                            output_aux += "(" + str(start) + "," + str(end) + "):"
-                            output_aux += "{"
-                            first2 = True
+                            indices.append((start,end))
+
+                            training_alias_xml = ElementTree.SubElement(training_aliases_node, "alias", {"typ":"str"})
+                            training_alias_xml.text = "(" + str(start) + "," + str(end) + ",'SYMPTOM')"
+
+                            training_links_xml = ElementTree.SubElement(training_links_node, "position", {"typ":"tuple"})
+                            training_links_xml.text = "(" + str(start) + "," + str(end) + ")"
+
                             entity_list = self.give_entities(alias)
                             entity_count = 0
     
@@ -124,29 +122,28 @@ class KnowledgeBase:
                                 if ent.entity_name in sample:
                                     entity_count += 1
 
+                            training_entities_node = ElementTree.SubElement(training_links_xml, "entities")
                             for ent in entity_list:
-                                if first2 != True:
-                                    output_aux += ","
-                                if ent.entity_name in sample:
-                                    output_aux += "'" + ent.entity_name + "': {:.1f}".format(1.0/entity_count)
-                                else:
-                                    output_aux += "'" + ent.entity_name + "': 0.0"
-                                first2 = False
-                            first1 = False
-                            output_aux += "}"
-                output += ']' + output_aux + "}"
-                output += ",[1"
-                
-                for word in sample.translate(str.maketrans('', '', string.punctuation)).split():
-                    if word.isalpha():
-                        output += ",-1"
 
-                output += "])"
-                if fobj != None:
-                    fobj.write(output + "\n")
-        if fobj != None:
-            fobj.write("### END ###\n")
-            fobj.close()
+                                training_entities_xml = ElementTree.SubElement(training_entities_node, "entity", {"typ":"str"})
+                                training_entities_xml.text = ent.entity_name
+
+                                training_probability_node = ElementTree.SubElement(training_entities_xml, "probability")
+                                training_probability_xml = ElementTree.SubElement(training_probability_node, "prob", {"typ":"float"})
+
+                                if ent.entity_name in sample:
+                                    training_probability_xml.text = str(round(1.0/entity_count,1))
+                                else:
+                                    training_probability_xml.text = "0.0"
+                
+                #for word in sample.translate(str.maketrans('', '', string.punctuation)).split():
+                #    if word.isalpha():
+                #        output += ",-1"
+                #output += "])"
+        
+        if file_name != "":
+            et = ElementTree.ElementTree(entity_linker_export)
+            et.write(file_name, encoding = 'utf-8')
 
     def save(self, file_name: str) -> None:
         # TODO: improve filehandling if knowledge base doesn't exist, yet
