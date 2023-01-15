@@ -64,14 +64,13 @@ class KnowledgeBase:
         return result
 
 
-    def export_for_entity_linker(self, file_name: str, nlp):
-        
+    def export_for_entity_linker(self, file_name: str):
+
+        nlp = spacy.load('en_core_web_sm')
         pipe_exceptions = ['tok2vec','tagger','parser']
         not_required_pipes = [pipe for pipe in nlp.pipe_names if pipe not in pipe_exceptions]
         nlp.disable_pipes(*not_required_pipes)
-        nlp.remove_pipe("entity_ruler")
         ruler = nlp.add_pipe("entity_ruler")
-        nlp.enable_pipe("entity_ruler")
         ruler_training_data = []
 
         entity_linker_export = ElementTree.Element("entity_linker_export")
@@ -106,7 +105,11 @@ class KnowledgeBase:
         for relation in self.semantic_relations:
             
             for sample in relation.training_samples:
-                sample_xml = ElementTree.SubElement(training_node, "text", {"typ":"str"})
+                
+                if sample in [string.text for string in list(entity_linker_export.iter("sample"))]:
+                    break
+
+                sample_xml = ElementTree.SubElement(training_node, "sample", {"typ":"str"})
                 sample_xml.text = sample
                 
                 indices = []
