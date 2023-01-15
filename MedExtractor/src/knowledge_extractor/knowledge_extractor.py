@@ -46,7 +46,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
 
         self._ruler = self._nlp.add_pipe("entity_ruler")
 
-        input_diseases_path = os.path.join('resources', 'training_data', 'training_diseases_klein.txt')
+        input_diseases_path = os.path.join('resources', 'training_data', 'training_diseases.txt')
         input_data_file = open(input_diseases_path, 'r', encoding = "utf-8", errors = 'ignore')
         reader = csv.reader(input_data_file, delimiter='\t')
 
@@ -59,7 +59,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
 
         self._ruler.add_patterns(training_data)
 
-        input_symptoms_path = os.path.join('resources', 'training_data', 'training_symptoms_klein.txt')
+        input_symptoms_path = os.path.join('resources', 'training_data', 'training_symptoms.txt')
         input_data_file = open(input_symptoms_path, 'r', encoding = "utf-8", errors = 'ignore')
         reader = csv.reader(input_data_file, delimiter='\t')
 
@@ -88,20 +88,9 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                 for ent2 in entities:
                     res = self._is_related(ent1, ent2, sent)
                     if res != RelationType.NO_RELATION:
-                        if (ent1.label_ == "DISEASE"):
+                        if (ent1.label_ == "DISEASE" and ent2.label_ == "SYMPTOM"):
                             entity1 = Entity(ent1.text,EntityType.DISEASE)
-                        elif (ent1.label_ == "SYMPTOM"):
-                            if ent1._.negex == False:
-                                entity1 = Entity(ent1.text,EntityType.SYMPTOM)
-                            else:
-                                entity1 = Entity('no ' + ent1.text,EntityType.SYMPTOM)
-
-                        else:
-                            entity1 = Entity(ent1.text,EntityType.UNDEFINED)
-
-                        if (ent2.label_ == "DISEASE"):
-                            entity2 = Entity(ent2.text,EntityType.DISEASE)
-                        elif (ent2.label_ == "SYMPTOM"):
+                            
                             if ent2._.negex == False:
                                 entity2 = Entity(ent2.text,EntityType.SYMPTOM)
                             else:
@@ -109,16 +98,31 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                                 if 'no ' + ent2.text not in sent_text:
                                     index = sent_text.find(ent2.text)
                                     sent_text = sent_text[:index] + 'no ' + sent_text[index:]
-                        else:
-                            entity2 = Entity(ent2.text,EntityType.UNDEFINED)
+
+                        #else:
+                        #    entity1 = Entity(ent1.text,EntityType.UNDEFINED)
+
+                        #if (ent2.label_ == "DISEASE"):
+                        #    entity2 = Entity(ent2.text,EntityType.DISEASE)
+                        #elif (ent2.label_ == "SYMPTOM"):
+                        #    if ent2._.negex == False:
+                        #        entity2 = Entity(ent2.text,EntityType.SYMPTOM)
+                        #    else:
+                        #        print(sent_text)
+                        #        entity2 = Entity('no ' + ent2.text,EntityType.SYMPTOM)
+                        #        if 'no ' + ent2.text not in sent_text:
+                        #            index = sent_text.find(ent2.text)
+                        #            sent_text = sent_text[:index] + 'no ' + sent_text[index:]
+                        #else:
+                        #    entity2 = Entity(ent2.text,EntityType.UNDEFINED)
 
                         relation = SemanticRelation(entity1,entity2,res)
                         if not self._kb.has_relation(relation):
-                            relation.training_samples.append(sent.text.strip('\n'))
+                            relation.training_samples.append(sent_text.strip('\n'))
                             self._kb.add_relation(relation)
-                            if ent1.text not in self._kb._entities:
+                            if entity1.entity_name not in self._kb._entities:
                                 self._kb._entities.append(entity1.entity_name)
-                            if ent2.text not in self._kb._aliases:
+                            if entity2.entity_name not in self._kb._aliases:
                                 self._kb._aliases.append(entity2.entity_name)
                         else:
                             relation = self._kb.give_relation(relation)
