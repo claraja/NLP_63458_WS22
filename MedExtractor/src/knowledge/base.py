@@ -92,10 +92,10 @@ class KnowledgeBase:
             alias_xml = ElementTree.SubElement(alias_node, "alias", {"typ":"str"})
             alias_xml.text = alias
 
-            alias_entity_node = ElementTree.SubElement(alias_xml, "entities")
+            alias_entity_node = ElementTree.SubElement(alias_xml, "alias_entities")
             for relation in self.semantic_relations:
                 if relation.entity_2.entity_name == alias:
-                    alias_entity_xml = ElementTree.SubElement(alias_entity_node, "entity")
+                    alias_entity_xml = ElementTree.SubElement(alias_entity_node, "alias_entity")
                     alias_entity_xml.text = relation.entity_1.entity_name
         
         ruler.add_patterns(ruler_training_data)            
@@ -114,7 +114,7 @@ class KnowledgeBase:
                 
                 indices = []
                 
-                training_aliases_node = ElementTree.SubElement(sample_xml, "aliases")
+                #training_aliases_node = ElementTree.SubElement(sample_xml, "aliases_training")
                 training_links_node = ElementTree.SubElement(sample_xml, "links")
 
                 doc = nlp(sample)
@@ -126,8 +126,10 @@ class KnowledgeBase:
                     if alias in doc_entities:
                         for ent in doc.ents:
                             if ent.text == alias:
-                                start = sample.find(alias)
-                                end = sample.find(alias) + len(alias)
+                                #start = sample.find(alias)
+                                start = ent.start_char
+                                #end = sample.find(alias) + len(alias)
+                                end = start + len(alias)
                                 should_add = True
                                 for i in indices:
                                     if not ((end < i[0]) or (start > i[1])):
@@ -136,8 +138,8 @@ class KnowledgeBase:
                                 if should_add == True:
                                     indices.append((start,end))
 
-                                    training_alias_xml = ElementTree.SubElement(training_aliases_node, "alias", {"typ":"str"})
-                                    training_alias_xml.text = "(" + str(start) + "," + str(end) + ",'SYMPTOM')"
+                                    training_alias_xml = ElementTree.SubElement(training_links_node, "alias_type", {"typ":"str"})
+                                    training_alias_xml.text = "SYMPTOM"
 
                                     training_links_xml = ElementTree.SubElement(training_links_node, "position", {"typ":"tuple"})
                                     training_links_xml.text = "(" + str(start) + "," + str(end) + ")"
@@ -149,10 +151,10 @@ class KnowledgeBase:
                                         if ent.entity_name in sample:
                                             entity_count += 1
 
-                                    training_entities_node = ElementTree.SubElement(training_links_xml, "entities")
+                                    training_entities_node = ElementTree.SubElement(training_links_xml, "entities_training")
                                     for ent in entity_list:
 
-                                        training_entities_xml = ElementTree.SubElement(training_entities_node, "entity", {"typ":"str"})
+                                        training_entities_xml = ElementTree.SubElement(training_entities_node, "training_entity", {"typ":"str"})
                                         training_entities_xml.text = ent.entity_name
 
                                         training_probability_node = ElementTree.SubElement(training_entities_xml, "probability")
