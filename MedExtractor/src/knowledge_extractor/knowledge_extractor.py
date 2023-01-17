@@ -176,20 +176,11 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
             entities = []
 
             for ent in sent.ents:
-                entities.append(ent.text)
-            for token in sent:
-                if token.text in entities:
-                    print(token.text,  token.tag_, token.dep_)
-            # for ent in sent.ents:
+                print(ent.text, ent.start_char, ent.end_char, ent.label_)
+                # print(self._doc.text[ent.start_char:ent.end_char])
+                for token in self._nlp(self._doc.text[ent.start_char:ent.end_char]):
+                    print(token.text, token.tag_, token.dep_)
+                print()
 
+            print("------")
 
-            # for ent1 in entities:
-            # dependency parser
-            # get subject
-            # get object
-            # get predicate
-
-
-            # relation = SemanticRelation(entity1,entity2,res)
-            # if not self._kb.has_relation(relation):
-            #     self._kb.add_relation(relation)
