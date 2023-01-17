@@ -1,75 +1,13 @@
 from src.interfaces.interfaces import PreprocessingInterface
-from string import punctuation
 import re
+import pysbd
+import spacy
+from spacy import Language
+from string import punctuation
 
 class RuleBasedPreprocessor(PreprocessingInterface):
-    def get_preprocessed_text(self) -> str:
-        #nlp = spacy.blank('en')
-        # add as a spacy pipeline component
-        #nlp.add_pipe('sbd', first=True)  # diese Variable nlp wird noch nicht weiter genutzt 
-        #with open(self.doc_name, 'r', encoding='unicode_escape') as file:
-        with open(self.doc_name, 'r', encoding='utf-8') as file:
-            raw_text = file.read()
-
-        enumeration = ''
-        new_raw_text = ''
-        for line in raw_text.split('\n'):
-            # delete trailing whitespace
-            stripped_line = line.rstrip()
-            # ignore empty lines
-            if stripped_line == '':
-                if (enumeration!='') and (enumeration[-1]!='_'): # siehe z.B. text_10, enumeration_with_space_and_no_punctuation
-                    enumeration = f'{enumeration}_'
-                elif (enumeration!='') and (enumeration[-1]=='_'):
-                    enumeration = ''
-                continue
-            # ignore normal sentences
-            elif stripped_line[-1] == '.':
-                pass
-            # remember start of enumeration
-            elif stripped_line[-1] == ':':
-                enumeration = stripped_line[0:-1]
-                continue
-            # combine start of enumeration with enumerated text
-            elif enumeration != '':  
-                if (' â€“ ' in stripped_line) & (enumeration!=' '):  # ' â€“ ' entspricht verlängertem Bindestrich, siehe z.B. TextToAnalyze
-                    while (stripped_line[0] in punctuation) | (stripped_line[0] == ' '):
-                        stripped_line = stripped_line[1:]
-                    stripped_line = f"{enumeration}.\n{stripped_line.replace(' â€“ ', ' ')}"
-                    enumeration = ' '
-                elif (' â€“ ' in stripped_line) & (enumeration==' '):
-                    while (stripped_line[0] in punctuation) | (stripped_line[0] == ' '):
-                        stripped_line = stripped_line[1:]
-                    stripped_line = f"{stripped_line.replace(' â€“ ', ' ')}"
-                elif (stripped_line[0] in punctuation) | (stripped_line[0] == ' '):
-                    while (stripped_line[0] in punctuation) | (stripped_line[0] == ' '):
-                        stripped_line = stripped_line[1:]
-                    stripped_line = enumeration + ' ' + stripped_line.replace(' â€“ ', ' ')
-                elif (enumeration[-1]=='_'): # siehe z.B. text_10, enumeration_with_space_and_no_punctuation
-                    stripped_line = enumeration[:-1] + ' ' + stripped_line.replace(' â€“ ', ' ')
-                else:
-                    enumeration = ''
-
-            # replace all occurrences of multiple spaces with a single space
-            result = re.sub(' +', ' ', stripped_line)
-            new_raw_text += f'{result}.\n'
-            # further replacements
-            new_raw_text = new_raw_text\
-                .replace('â€“', ' ')\
-                .replace('â€”', ' ')\
-                .replace('..', '.')\
-                .replace('?.', '?')\
-                .replace('!.', '!')\
-                .replace('\n ', '\n')\
-                .replace('_', '')
-            # replace all occurrences of multiple spaces with a single space
-            result = re.sub(' +', ' ', stripped_line)
-
-        return new_raw_text
-
-    """
     @Language.component('sbd')
-    def pysbd_sentence_boundaries(self, doc):
+    def pysbd_sentence_boundaries(doc):
         seg = pysbd.Segmenter(language='en', clean=False, char_span=True)
         sents_char_spans = seg.segment(doc.text)
         char_spans = [doc.char_span(sent_span.start, sent_span.end, alignment_mode='contract') for sent_span in sents_char_spans]
@@ -77,4 +15,88 @@ class RuleBasedPreprocessor(PreprocessingInterface):
         for token in doc:
             token.is_sent_start = True if token.idx in start_token_ids else False
         return doc
-    """
+
+
+    def get_preprocessed_text(self) -> str:
+        # TODO: funktioniert noch nicht gut z.B. für DrugDependence.txt
+        nlp = spacy.blank('en')
+        nlp.add_pipe('sbd', first=True) 
+        
+        our_punctuation = punctuation+' •–'
+
+        with open(self.doc_name, 'r', encoding='utf-8') as file:  
+            raw_text = file.read()
+
+        doc = nlp(raw_text)
+
+        enumeration = ''
+        new_raw_text = ''
+        bullet_point = ''
+        for sent_id, sent in enumerate(doc.sents, start=1):
+            sentence = sent.text
+            # delete trailing whitespace
+            stripped_line = sentence.rstrip()
+            #print(sent_id, stripped_line, sep='\t|\t')
+            # ignore empty lines
+            if (stripped_line==''):
+                #print(1)
+                pass
+            # remember start of enumeration
+            elif stripped_line[-1] == ':':
+                #print(2)
+                enumeration = stripped_line[0:-1]
+                continue
+            elif ((stripped_line[-1] not in ['.', '!', '?', ':']) 
+                    and (enumeration=='')):
+                #print(3)
+                enumeration = stripped_line
+                continue
+            elif ((stripped_line[-1] not in ['.', '!', '?', ':']) 
+                    and (enumeration!='')):
+                #print(4)
+                stripped_line = stripped_line.lstrip()
+                # wenn bullet_point exists sollte er bei allen Teilen 
+                # der Aufzählung gleich sein
+                if bullet_point!='':
+                    if stripped_line.startswith(bullet_point):
+                        stripped_line = enumeration + ' ' + stripped_line
+                    else:
+                        enumeration, bullet_point = '', ''
+                else:
+                    if stripped_line[0] in our_punctuation:
+                        # stripped_line_tmp wird eingeführt um 
+                        # Aufzählungszeichen herauszubekommen
+                        stripped_line_tmp = stripped_line
+                        while (stripped_line_tmp[0] in our_punctuation) | (stripped_line_tmp[0] == ' '):
+                            stripped_line_tmp = stripped_line_tmp[1:]
+                        # speichere Aufzählungszeichen falls vorhanden
+                        if len(stripped_line)!=len(stripped_line_tmp):
+                            bullet_point = stripped_line[:stripped_line.index(stripped_line_tmp)]  
+                        stripped_line = stripped_line_tmp
+
+                    # String 'symptom' sollte nicht in Symptom vorhanden sein
+                    if 'symptom' in stripped_line:
+                        enumeration, bullet_point = '', ''
+                    else:
+                        stripped_line = enumeration + ' ' + stripped_line
+            else:
+                #print(6)
+                enumeration, bullet_point = '', ''
+
+            # replace all occurrences of multiple spaces with a single space
+            result = re.sub(' +', ' ', stripped_line)
+            new_raw_text += f'{result}.\n'
+            # further replacements
+            new_raw_text = new_raw_text\
+                .replace('..', '.')\
+                .replace('?.', '?')\
+                .replace('!.', '!')\
+                .replace('\n ', '\n')\
+                .replace('_', '')\
+                .replace(' - ', ' ')\
+                .replace(' – ', ' ')
+            # replace all occurrences of multiple spaces with a single space
+            new_raw_text = re.sub(' +', ' ', new_raw_text)
+        
+        return new_raw_text
+        #return None
