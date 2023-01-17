@@ -91,13 +91,18 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                         if (ent1.label_ == "DISEASE" and ent2.label_ == "SYMPTOM"):
                             entity1 = Entity(ent1.text,EntityType.DISEASE)
                             
-                            if ent2._.negex == False:
+                            if 'no ' + ent2.text not in sent_text:
                                 entity2 = Entity(ent2.text,EntityType.SYMPTOM)
                             else:
                                 entity2 = Entity('no ' + ent2.text,EntityType.SYMPTOM)
-                                if 'no ' + ent2.text not in sent_text:
-                                    index = sent_text.find(ent2.text)
-                                    sent_text = sent_text[:index] + 'no ' + sent_text[index:]
+
+                            #if ent2._.negex == False:
+                            #    entity2 = Entity(ent2.text,EntityType.SYMPTOM)
+                            #else:
+                            #    entity2 = Entity('no ' + ent2.text,EntityType.SYMPTOM)
+                            #    if 'no ' + ent2.text not in sent_text:
+                            #        index = sent_text.find(ent2.text)
+                            #        sent_text = sent_text[:index] + 'no ' + sent_text[index:]
 
                         #else:
                         #    entity1 = Entity(ent1.text,EntityType.UNDEFINED)
