@@ -176,10 +176,11 @@ class KnowledgeBase:
 
     def save(self, file_name: str) -> None:
         # TODO: improve filehandling if knowledge base doesn't exist, yet
-        if file_name == '':
-            file_name = os.path.join('resources', 'test.kb')
-        with open(file_name, 'wb') as file:
-            pickle.dump([self.semantic_relations, self._entities, self._aliases], file)
+        if file_name != '':
+            with open(file_name, 'wb') as file:
+                pickle.dump([self.semantic_relations, self._entities, self._aliases], file)
+        else:
+            raise NameError
 
     def load(self, file_name: str):
         if file_name == '':
