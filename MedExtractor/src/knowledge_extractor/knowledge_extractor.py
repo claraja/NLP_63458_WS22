@@ -16,8 +16,8 @@ from negspacy.negation import Negex
 
 
 class KnowledgeExtractor(KnowledgeExtractorInterface):
-    def __init__(self,*args):
-        super().__init__(*args)
+    def __init__(self,kb_filename, nlp, filename_entities, filename_aliases,overwrite):
+        super().__init__(kb_filename, nlp)
         # time_tmp = time.time()
         # print("knowledge extractor cwd: " + os.getcwd())
         # pipeline_path = os.path.join('resources', 'pipeline')
@@ -38,7 +38,8 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         self._context = []
 
         if (self._kb_filename != "") and os.path.exists(self._kb_filename):
-            self._kb.load(self._kb_filename)
+            if overwrite == False:
+                self._kb.load(self._kb_filename)
 
         pipe_exceptions = ['tok2vec','tagger','parser']
         not_required_pipes = [pipe for pipe in self._nlp.pipe_names if pipe not in pipe_exceptions]
@@ -46,8 +47,9 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
 
         self._ruler = self._nlp.add_pipe("entity_ruler")
 
-        input_diseases_path = os.path.join('resources', 'training_data', 'training_diseases.txt')
-        input_data_file = open(input_diseases_path, 'r', encoding = "utf-8", errors = 'ignore')
+        #input_diseases_path = os.path.join('resources', 'training_data', 'training_diseases_klein.txt')
+        #input_data_file = open(input_diseases_path, 'r', encoding = "utf-8", errors = 'ignore')
+        input_data_file = open(filename_entities, 'r', encoding = "utf-8", errors = 'ignore')
         reader = csv.reader(input_data_file, delimiter='\t')
 
         training_data = []
@@ -59,8 +61,9 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
 
         self._ruler.add_patterns(training_data)
 
-        input_symptoms_path = os.path.join('resources', 'training_data', 'training_symptoms.txt')
-        input_data_file = open(input_symptoms_path, 'r', encoding = "utf-8", errors = 'ignore')
+        #input_symptoms_path = os.path.join('resources', 'training_data', 'training_symptoms_klein.txt')
+        #input_data_file = open(input_symptoms_path, 'r', encoding = "utf-8", errors = 'ignore')
+        input_data_file = open(filename_aliases, 'r', encoding = "utf-8", errors = 'ignore')
         reader = csv.reader(input_data_file, delimiter='\t')
 
         for row in reader:
