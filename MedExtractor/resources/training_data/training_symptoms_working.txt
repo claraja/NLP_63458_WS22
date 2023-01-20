@@ -1,115 +1,3 @@
-C0024528	(non-specific) malaise and fatigue	FINDING
-C1287119	(schooling) or (education)	FINDING
-C0020505	:: polyphagia	FINDING
-C0036572	[d]seizure nos	FINDING
-C0040822	[d]tremor	FINDING
-C0277786	{chief complaint}	FINDING
-C1298184	< 4 mitoses/high power field	FINDING
-C1630645	??-gal allergy	FINDING
-C1630645	??-gal syndrome	FINDING
-C0419388	1 male + 1 female baby	FINDING
-C0419391	1 male + 2 female babies	FINDING
-C1319805	1 to 12 seizures a year	FINDING
-C1319807	1 to 7 seizures a week	FINDING
-C0475806	1/3 meter	FINDING
-C0475806	1/3 metre	FINDING
-C1720243	1+ pitting edema	FINDING
-C1720243	1+ pitting oedema	FINDING
-C0421130	10 year examination normal	FINDING
-C0001578	12-20 years old	FINDING
-C0421139	15 year examination normal	FINDING
-C0311141	150 milligram calcium diet	FINDING
-C0421067	18 month examination normal	FINDING
-C0425618	1st heart sound split	FINDING
-C0032979	1st pregnancy trimester	FINDING
-C0032979	1st trimester	FINDING
-C0032979	1st trimester pregnancy	FINDING
-C0429482	2 dips type	FINDING
-C0419387	2 female babies	FINDING
-C0419387	2 female infants	FINDING
-C0419390	2 male + 1 female babies	FINDING
-C0419386	2 male babies	FINDING
-C0419386	2 male infants	FINDING
-C0233071	2 para	FINDING
-C0444356	2 point kneeling	FINDING
-C1319806	2 to 4 seizures a month	FINDING
-C0421085	2.5 year examination normal	FINDING
-C1720371	2+ pitting edema	FINDING
-C1720371	2+ pitting oedema	FINDING
-C0456965	20 feet	FINDING
-C0442755	20/120	FINDING
-C0442768	20/1200	FINDING
-C1631070	20/15	FINDING
-C1627364	20/150	FINDING
-C0442750	20/20	FINDING
-C0442756	20/200	FINDING
-C1690939	20/25	FINDING
-C0442751	20/30	FINDING
-C0442752	20/40	FINDING
-C0442765	20/400	FINDING
-C0442753	20/60	FINDING
-C0311140	200 milligram calcium diet	FINDING
-C0730522	24 completed weeks gestation	FINDING
-C0730522	24 completed weeks of gestation	FINDING
-C1320305	24 hour support available	FINDING
-C0580569	24 hour urine volume abnormal	FINDING
-C0427845	24 hour urine volume excessive	FINDING
-C0427844	24 hour urine volume normal	FINDING
-C0427846	24 hour urine volume reduced	FINDING
-C0233034	27 gestation periods weeks	FINDING
-C0233034	27 weeks gestation period	FINDING
-C0425619	2nd heart sound split	FINDING
-C0032980	2nd trimester	FINDING
-C0032980	2nd trimester pregnancy	FINDING
-C0442757	3 4	FINDING
-C0442759	3 6	FINDING
-C0419392	3 female babies	FINDING
-C0419392	3 female infants	FINDING
-C0419389	3 male babies	FINDING
-C0427137	3 point swing through gait	FINDING
-C0427138	3 point swing to gait	FINDING
-C0421112	3.5 year examination normal	FINDING
-C5394865	3/60 visual acuity of left eye	FINDING
-C1720001	3+ pitting edema	FINDING
-C1720001	3+ pitting oedema	FINDING
-C0311167	30 gram fat diet	FINDING
-C0026377	3d molecular structure	FINDING
-C0026377	3d molecular structures	FINDING
-C0032981	3rd pregnancy trimester	FINDING
-C0032981	3rd pregnancy trimesters	FINDING
-C0032981	3rd trimester	FINDING
-C0032981	3rd trimester pregnancy	FINDING
-C0231702	4 point gait	FINDING
-C0421121	4.5 year examination normal	FINDING
-C0232123	4+	FINDING
-C1720667	4+ pitting edema	FINDING
-C1720667	4+ pitting oedema	FINDING
-C0232123	4+ pulse	FINDING
-C0442749	5 6	FINDING
-C0311168	50 gram fat diet	FINDING
-C0570585	5-aminosalicylic acid allergy	FINDING
-C0442751	6 9	FINDING
-C0456965	6 meters	FINDING
-C0456965	6 metres	FINDING
-C5394936	6/12 visual acuity of left eye	FINDING
-C1828212	6/120	FINDING
-C5394911	6/15 visual acuity of left eye	FINDING
-C5394897	6/18 visual acuity of left eye	FINDING
-C5394909	6/24 visual acuity of left eye	FINDING
-C5394888	6/36 visual acuity of left eye	FINDING
-C5394894	6/4 visual acuity of left eye	FINDING
-C5394895	6/4 visual acuity of right eye	FINDING
-C5394913	6/48 visual acuity of left eye	FINDING
-C5394893	6/5 visual acuity of left eye	FINDING
-C5394892	6/5 visual acuity of right eye	FINDING
-C5394938	6/6 visual acuity of left eye	FINDING
-C5394937	6/6 visual acuity of right eye	FINDING
-C5396101	6/60 visual acuity of left eye	FINDING
-C5394887	6/9 visual acuity of left eye	FINDING
-C5394886	6/9 visual acuity of right eye	FINDING
-C5401126	64kd	FINDING
-C0311169	70 gram fat diet	FINDING
-C0421050	8-9 month exam normal	FINDING
 C0456357	a and b waves reduced	FINDING
 C0577559	a mass	FINDING
 C0423023	a pattern vergence	FINDING
@@ -296,7 +184,6 @@ C2712084	ability to smell	FINDING
 C0581197	ability to tie shoe laces	FINDING
 C0559964	ability to walk	FINDING
 C0043084	ablactation	FINDING
-C1299581	able	FINDING
 C0566270	able breath	FINDING
 C4075564	able to abstain from drinking	FINDING
 C0578665	able to accept base of support	FINDING
@@ -1813,7 +1700,6 @@ C0270823	absence status epilepticus	FINDING
 C0231221	absence symptoms	FINDING
 C0595948	absence, atypical	FINDING
 C0014553	absence, typical	FINDING
-C0424530	absences	FINDING
 C0014553	absences epilepsy	FINDING
 C0424530	absences finding	FINDING
 C0014553	absences, typical	FINDING
@@ -2082,7 +1968,6 @@ C0234238	ach pain	FINDING
 C1321756	achalasia	FINDING
 C1321756	achalasia nos	FINDING
 C1321756	achalasia, nos	FINDING
-C0234238	ache	FINDING
 C0004604	ache back	FINDING
 C0015468	ache face	FINDING
 C0239739	ache gums	FINDING
@@ -2457,7 +2342,6 @@ C0032968	adolescents pregnancy	FINDING
 C0425382	adopt	FINDING
 C0425382	adopted	FINDING
 C0425382	adopting	FINDING
-C0001593	adoption	FINDING
 C0237459	adoption of child	FINDING
 C0001593	adoption, life event	FINDING
 C0001593	adoption, nos	FINDING
@@ -2568,7 +2452,6 @@ C0233465	affects loss	FINDING
 C0699759	affluent	FINDING
 C0428524	afp - alpha-fetoprotein raised	FINDING
 C0420960	afp - blood sent	FINDING
-C0015726	afraid	FINDING
 C0574767	african american hair	FINDING
 C0425356	african origin	FINDING
 C0452405	afro-caribbean diet	FINDING
@@ -2612,7 +2495,6 @@ C0231339	age problems	FINDING
 C0521995	age under 20 years	FINDING
 C0521996	age under 25 years	FINDING
 C0421554	age/sex details on computer	FINDING
-C1999167	aged	FINDING
 C0524331	aged parents	FINDING
 C0001811	ageing	FINDING
 C0265633	agenesis of tibia	FINDING
@@ -2702,7 +2584,6 @@ C0521992	agonising state	FINDING
 C0001817	agonistic behavior	FINDING
 C0001817	agonistic behaviour	FINDING
 C0521992	agonizing state	FINDING
-C0521992	agony	FINDING
 C0521992	agony, nos	FINDING
 C0001818	agoraphobia	FINDING
 C0001818	agoraphobia, nos	FINDING
@@ -2875,7 +2756,6 @@ C0152174	algopsychalia	FINDING
 C0557742	alien environment	FINDING
 C0571057	alimemazine allergy	FINDING
 C0427523	alius-grignaschi anomaly	FINDING
-C2584946	alive	FINDING
 C0231162	alive and well	FINDING
 C0151849	alk phos increased	FINDING
 C0151849	alkaline elevated phosphatase	FINDING
@@ -4643,10 +4523,8 @@ C0571260	amorolfine allergy	FINDING
 C0278179	amorphosynthesis	FINDING
 C0278179	amorphosynthesis syndrome	FINDING
 C0522135	amorphous urinary sediment	FINDING
-C1265611	amount	FINDING
 C0426204	amount of liquor	FINDING
 C1286954	amount of thought - finding	FINDING
-C1265611	amounts	FINDING
 C0570749	amoxapine allergy	FINDING
 C0571417	amoxicillin allergy	FINDING
 C0571417	amoxicillin hypersensitivity	FINDING
@@ -4887,7 +4765,6 @@ C1720436	anesthetized	FINDING
 C0002935	anestrus	FINDING
 C1298820	aneurysm aortic root	FINDING
 C1298820	aneurysm of aortic root	FINDING
-C0002957	anger	FINDING
 C0424329	anger outburst	FINDING
 C0424329	anger outbursts	FINDING
 C0424330	anger reaction	FINDING
@@ -4934,7 +4811,6 @@ C0429524	angle open	FINDING
 C1287554	angle patency - finding	FINDING
 C0429528	angle-closure	FINDING
 C0002962	angor pectoris	FINDING
-C0002957	angry	FINDING
 C0002957	angry mood	FINDING
 C0003467	angst	FINDING
 C0683278	anguish	FINDING
@@ -5334,7 +5210,6 @@ C0458631	anxiety, performance	FINDING
 C0424166	anxiety, social	FINDING
 C1279420	anxiety/neurosis	FINDING
 C0338909	anxiety-hysteria nos	FINDING
-C0003467	anxious	FINDING
 C0582761	anxious avoidant attachment	FINDING
 C0003467	anxious behavior	FINDING
 C0564525	anxious character	FINDING
@@ -5628,7 +5503,6 @@ C0680226	argumentative behavior	FINDING
 C0680226	argumentative behaviour	FINDING
 C0680226	argumentive behavior	FINDING
 C0680226	argumentive behaviour	FINDING
-C0680226	arguments	FINDING
 C0555026	arguments among spouses	FINDING
 C0234668	argyll pupils robertson	FINDING
 C0234668	argyll robertson pupil	FINDING
@@ -5870,7 +5744,6 @@ C0422329	asked to come in - research	FINDING
 C0422329	asked to come-research	FINDING
 C0421522	asked to sign med card - done	FINDING
 C0566217	asks questions	FINDING
-C0424522	asleep	FINDING
 C0233528	asocial behavior	FINDING
 C0233528	asocial behaviour	FINDING
 C0233856	asocial personality trait	FINDING
@@ -6842,7 +6715,6 @@ C0853716	basophilia	FINDING
 C0853716	basophilic leucocytosis	FINDING
 C0853716	basophilic leukocytosis	FINDING
 C0429986	bathes with help	FINDING
-C1290930	bathing	FINDING
 C1290930	bathing - activity of daily living	FINDING
 C1290930	bathing - adl	FINDING
 C0231370	bathing &or hygiene deficit	FINDING
@@ -6964,7 +6836,6 @@ C0233523	behavior, antisocial	FINDING
 C0178494	behavior, avoidance	FINDING
 C0474416	behavior, disruptive	FINDING
 C0004927	behavior, nos	FINDING
-C0004927	behavioral	FINDING
 C0233514	behavioral abnormalities	FINDING
 C0233514	behavioral abnormality	FINDING
 C0542299	behavioral change	FINDING
@@ -7005,7 +6876,6 @@ C0233523	behaviors, antisocial	FINDING
 C0178494	behaviors, avoidance	FINDING
 C0694536	behaviors, drug-seeking	FINDING
 C0233514	behaviors, problem	FINDING
-C0004927	behaviour	FINDING
 C0542299	behaviour change	FINDING
 C0542299	behaviour changes	FINDING
 C0424348	behaviour defiant	FINDING
@@ -7070,7 +6940,6 @@ C3714437	below normal growth rate	FINDING
 C1278237	bence jones protein detected	FINDING
 C0004968	bence jones proteinuria	FINDING
 C0004968	bence-jones proteinuria	FINDING
-C0700231	bend	FINDING
 C0459171	bend arm position	FINDING
 C0560854	bend down	FINDING
 C0560854	bending down	FINDING
@@ -7360,7 +7229,6 @@ C0424777	biphasic fever	FINDING
 C0424777	biphasic pyrexia	FINDING
 C0585348	biphasic stridor	FINDING
 C0571738	biphosphonates allergy	FINDING
-C0005615	birth	FINDING
 C0005612	birth body weight	FINDING
 C0005612	birth body weights	FINDING
 C0425847	birth canal size	FINDING
@@ -7675,7 +7543,6 @@ C0019080	bleeding, nos	FINDING
 C0019080	bleeding/hemorrhage nos	FINDING
 C0241558	bleeding-urethral	FINDING
 C2979982	bleeding-vaginal	FINDING
-C0019080	bleeds	FINDING
 C0424560	bleeds easily	FINDING
 C0014591	bleeds nose symptom	FINDING
 C0014591	bleeds nose symptoms	FINDING
@@ -8757,7 +8624,6 @@ C0426649	bowels spasm	FINDING
 C0429956	bowels: fully continent	FINDING
 C0015732	bowels: incontinent	FINDING
 C0429955	bowels: occasional accident	FINDING
-C0544755	bowing	FINDING
 C0575137	bowing deformity of bone	FINDING
 C3662308	bowing deformity of lower leg	FINDING
 C3662294	bowing deformity of lower limb	FINDING
@@ -9372,7 +9238,6 @@ C4551390	brown discharge from wound	FINDING
 C0241623	brown discharge vaginal	FINDING
 C4551390	brown drainage from wound	FINDING
 C0333248	brown edema	FINDING
-C0574766	brown hair	FINDING
 C0578627	brown iris	FINDING
 C0333248	brown oedema	FINDING
 C0457099	brown sputum	FINDING
@@ -9620,7 +9485,7 @@ C3164335	caecum in right sided position	FINDING
 C0475195	caesarean delivery - delivered	FINDING
 C1384674	caesarean delivery nos	FINDING
 C1384674	caesarean section	FINDING
-C1268574	caf?® coronary syndrome	FINDING
+C1268574	caf?½ coronary syndrome	FINDING
 C1268574	cafe coronary syndrome	FINDING
 C0741856	caffeine allergy	FINDING
 C0741856	caffeine hypersensitivity	FINDING
@@ -10091,7 +9956,6 @@ C0233589	carphology	FINDING
 C0231785	carpopedal spasm	FINDING
 C0231785	carpopedal spasms	FINDING
 C0231666	carpoptosis	FINDING
-C0699809	carried	FINDING
 C4510507	carrier of alpha thalassaemia	FINDING
 C4510507	carrier of alpha thalassemia	FINDING
 C3686528	carrier of avian tb	FINDING
@@ -10132,7 +9996,6 @@ C0472795	carriers hemophilia	FINDING
 C0699809	carries	FINDING
 C2733404	carries emergency treatment	FINDING
 C0564360	carries prepared food	FINDING
-C0699809	carry	FINDING
 C0565686	carrying - difficulty	FINDING
 C0007297	carsickness	FINDING
 C0570895	carteolol allergy	FINDING
@@ -10186,7 +10049,6 @@ C0233609	catatonic posturing	FINDING
 C0233608	catatonic rigidity	FINDING
 C0233607	catatonic stupor	FINDING
 C0233607	catatonic, withdrawn type	FINDING
-C0231617	catch	FINDING
 C0425491	catch breath	FINDING
 C0596011	catches	FINDING
 C0425491	catching breath	FINDING
@@ -10864,7 +10726,6 @@ C1269762	chicken pox immune	FINDING
 C3686549	chick's feet over head in egg	FINDING
 C0427669	chido-rogers antigen type	FINDING
 C0277786	chief complaint	FINDING
-C0680063	child	FINDING
 C0421076	child 21 month exam normal	FINDING
 C0421094	child 3 year exam normal	FINDING
 C0421103	child 39 month exam normal	FINDING
@@ -10991,7 +10852,6 @@ C1171158	childbirth risk	FINDING
 C1171158	childbirth risks	FINDING
 C0019857	childbirths at home	FINDING
 C0019857	childbirths, home	FINDING
-C0231335	childhood	FINDING
 C0231335	childhood - period	FINDING
 C4708624	childhood double incontinence	FINDING
 C3531737	childhood onset stammering	FINDING
@@ -11002,7 +10862,6 @@ C0344321	childhood truancy, socialized	FINDING
 C4038789	child-pugh score class a	FINDING
 C4041110	child-pugh score class b	FINDING
 C4039103	child-pugh score class c	FINDING
-C0680063	children	FINDING
 C0556321	children drink	FINDING
 C0556321	children drinking	FINDING
 C0556321	children drinks	FINDING
@@ -11081,7 +10940,6 @@ C0030353	choked disk	FINDING
 C0030353	choked disks	FINDING
 C0546947	choked feeling	FINDING
 C0558177	chokes when swallowing	FINDING
-C0008301	choking	FINDING
 C0426610	choking attacks	FINDING
 C0425455	choking during respiration	FINDING
 C0558177	choking during swallowing	FINDING
@@ -11683,7 +11541,6 @@ C0009088	cluster headaches	FINDING
 C3203523	cluster seizure	FINDING
 C3203523	cluster seizures	FINDING
 C0009088	clusters headache	FINDING
-C0009090	clutter	FINDING
 C0237147	cluttered living space	FINDING
 C0009090	cluttering	FINDING
 C0009090	cluttering - speech	FINDING
@@ -12091,9 +11948,7 @@ C0086035	competent	FINDING
 C0425273	competitive athlete	FINDING
 C0439055	"complaining of ""tired all the time"""	FINDING
 C0439033	complaining of overwork	FINDING
-C5441521	complaint	FINDING
 C5441521	complaint, nos	FINDING
-C5441521	complaints	FINDING
 C5441521	complaints present	FINDING
 C0234470	complete aphasia	FINDING
 C0234141	complete bilateral paresis	FINDING
@@ -12241,7 +12096,6 @@ C0233305	conditions of fetal membranes	FINDING
 C0233305	conditions of the fetal membranes	FINDING
 C0521987	conditions pre existing	FINDING
 C0556484	condom female use	FINDING
-C0004927	conduct	FINDING
 C0233514	conduct problem	FINDING
 C0004927	conduct, nos	FINDING
 C0004927	conducting	FINDING
@@ -13230,7 +13084,6 @@ C2162936	crusting on nose	FINDING
 C0423777	crusting skin	FINDING
 C3672021	crusty nasal planum	FINDING
 C3670757	crusty perineal skin	FINDING
-C0010399	cry	FINDING
 C0581876	cry babies	FINDING
 C0239154	cry high pitched	FINDING
 C0581876	cry infants	FINDING
@@ -13244,7 +13097,6 @@ C0522243	cryalgesia	FINDING
 C0576657	cryanaesthesia	FINDING
 C0576657	cryanesthesia	FINDING
 C0522240	cryesthesia	FINDING
-C0010399	crying	FINDING
 C0424109	crying associated with emotion	FINDING
 C0424109	crying associated with mood	FINDING
 C0581876	crying babies	FINDING
@@ -13488,12 +13340,12 @@ C0474496	d&v - diarrhoea and vomiting	FINDING
 C0421619	d.o.a.	FINDING
 C0474496	d+v - diarrhea and vomiting	FINDING
 C0474496	d+v - diarrhoea and vomiting	FINDING
-C0233801	d?®j?á entendu	FINDING
-C0233802	d?®j?á pens?®	FINDING
-C0011194	d?®j?á vu	FINDING
-C0233677	d?®lire de n?®gation	FINDING
-C0233677	d?®lire de negation	FINDING
-C3694184	d?Âhle body	FINDING
+C0233801	d?½j?? entendu	FINDING
+C0233802	d?½j?? pens?½	FINDING
+C0011194	d?½j?? vu	FINDING
+C0233677	d?½lire de n?½gation	FINDING
+C0233677	d?½lire de negation	FINDING
+C3694184	d??hle body	FINDING
 C0570680	dacarbazine allergy	FINDING
 C2945598	dacrocytosis	FINDING
 C2945598	dacryocytes	FINDING
@@ -13537,7 +13389,6 @@ C0570603	dantron allergy	FINDING
 C0571527	dapsone allergy	FINDING
 C0571527	dapsone hypersensitivity	FINDING
 C1292242	darc negative	FINDING
-C0332582	dark	FINDING
 C1274639	dark brown hair	FINDING
 C0332582	dark color	FINDING
 C0332582	dark colour	FINDING
@@ -13571,7 +13422,6 @@ C0683369	dazed state	FINDING
 C0278214	dazzling	FINDING
 C0011878	dd - diabetic diet	FINDING
 C0742969	d-dimer above reference range	FINDING
-C1546956	dead	FINDING
 C3839534	dead - death without witness	FINDING
 C1630407	dead - expected	FINDING
 C1636652	dead - sudden death	FINDING
@@ -13589,7 +13439,6 @@ C0557275	deaf telephone user	FINDING
 C0557276	deaf-blind telephone user	FINDING
 C0003537	deafness, word	FINDING
 C0556449	dealing with drugs	FINDING
-C1306577	death	FINDING
 C0522179	death anxiety	FINDING
 C5551353	death anxiety	FINDING
 C0585827	death certification status	FINDING
@@ -14830,7 +14679,6 @@ C0571713	desmopressin allergy	FINDING
 C0571594	desonide allergy	FINDING
 C0571595	desoximetasone allergy	FINDING
 C0571595	desoxymethasone allergy	FINDING
-C0233488	despair	FINDING
 C0557921	despair stage of grief	FINDING
 C0085602	desperate to drink	FINDING
 C0237849	desquamation	FINDING
@@ -15055,7 +14903,6 @@ C1446234	did not attend podiatry clinic	FINDING
 C0564331	did not prepare meals	FINDING
 C2733226	did not wait for treatment	FINDING
 C0571285	didanosine allergy	FINDING
-C1546956	died	FINDING
 C5437154	died at home	FINDING
 C5437158	died during operation	FINDING
 C0420302	died hospital	FINDING
@@ -16336,7 +16183,6 @@ C0426870	disproportionately large hands	FINDING
 C1849075	disproportionately large head	FINDING
 C0426415	disproportionately large nose	FINDING
 C0575802	disproportionately small hands	FINDING
-C0680226	dispute	FINDING
 C0680226	disputes	FINDING
 C0237187	disrupted spiritual rituals	FINDING
 C0237188	disrupted spiritual trust	FINDING
@@ -17909,7 +17755,6 @@ C0013604	dropsy, nos	FINDING
 C0231666	drop-wrist	FINDING
 C4750912	drostanolone allergy	FINDING
 C0013142	drown	FINDING
-C0013142	drowned	FINDING
 C0013142	drowning	FINDING
 C0013142	drowning findings	FINDING
 C0013142	drowning nos	FINDING
@@ -18212,7 +18057,7 @@ C0232120	duplicate pulse	FINDING
 C0332597	duplicated	FINDING
 C0332597	duplication	FINDING
 C0332597	duplications	FINDING
-C0025287	dupr?®s's syndrome	FINDING
+C0025287	dupr?½s's syndrome	FINDING
 C0025287	dupres syndrome	FINDING
 C0025287	dupre's syndrome	FINDING
 C0025287	dupres's syndrome	FINDING
@@ -18462,7 +18307,6 @@ C0241705	dysuria, spastic	FINDING
 C0452320	e2oh - alcohol-free diet	FINDING
 C0452318	e2oh - modified ethanol diet	FINDING
 C0452319	e2oh - restricted alcohol diet	FINDING
-C0558083	eager	FINDING
 C0013456	ear ache	FINDING
 C0013456	ear aches	FINDING
 C0455931	ear and auditory finding	FINDING
@@ -19494,7 +19338,6 @@ C0015672	energy reduced	FINDING
 C0015672	energy reducing	FINDING
 C0015672	energy reduction	FINDING
 C0570636	enflurane allergy	FINDING
-C0425152	engaged	FINDING
 C0425152	engaged to be married	FINDING
 C0426189	engagement of breech	FINDING
 C1286424	engagement of head - finding	FINDING
@@ -20045,7 +19888,6 @@ C5441552	ethnic group	FINDING
 C5441552	ethnic group finding	FINDING
 C0730236	ethnic group not recorded	FINDING
 C0015031	ethnic group, nos	FINDING
-C5441552	ethnic groups	FINDING
 C0015031	ethnic groups and populations	FINDING
 C0015031	ethnic groups: general terms	FINDING
 C0015031	ethnic origin	FINDING
@@ -20090,7 +19932,6 @@ C1853246	eversion of lower lip	FINDING
 C1853246	everted lower lip	FINDING
 C1853246	everted lower lip vermilion	FINDING
 C1853246	everted prominent lower lip	FINDING
-C3266136	every day	FINDING
 C3266136	every day smoker	FINDING
 C3266136	everyday smoker	FINDING
 C0425221	evicted forcibly from house	FINDING
@@ -20789,7 +20630,6 @@ C0560024	eyelid swelling	FINDING
 C0560024	eyelid swollen	FINDING
 C2239120	eyelid symptom	FINDING
 C0560024	eyelid tumefaction	FINDING
-C2239120	eyelids	FINDING
 C0423131	eyelids drooping	FINDING
 C0560024	eyelids edema	FINDING
 C0578590	eyelids lesions	FINDING
@@ -21113,7 +20953,6 @@ C0422298	failed encounter nos	FINDING
 C0476586	failed examinations	FINDING
 C0476586	failed exams	FINDING
 C0559294	failed to attend	FINDING
-C0231174	failure	FINDING
 C0231176	failure acute	FINDING
 C0278106	failure ejaculation	FINDING
 C0473465	failure labor progress	FINDING
@@ -21170,7 +21009,6 @@ C0024535	falciparum malaria	FINDING
 C0024535	falciparum malaria - malignant	FINDING
 C0024535	falciparum malaria [malignant tertian]	FINDING
 C0024535	falciparum malaria fever	FINDING
-C0085639	fall	FINDING
 C0085639	fall down	FINDING
 C0575122	fall elderly	FINDING
 C0877040	fall fear	FINDING
@@ -21180,8 +21018,6 @@ C1268740	fall risk	FINDING
 C1268740	fall risks	FINDING
 C0575122	fall senescence	FINDING
 C0085639	fall, nos	FINDING
-C0085639	falling	FINDING
-C0085639	falling down	FINDING
 C0002170	falling hair	FINDING
 C0002170	falling hairs	FINDING
 C0424764	falling phase of fever	FINDING
@@ -21253,7 +21089,6 @@ C0015582	family disruption nos	FINDING
 C2364309	family functions effectively	FINDING
 C0557130	family group living	FINDING
 C0241889	family health history	FINDING
-C0241889	family history	FINDING
 C0241889	family history of	FINDING
 C0241889	family history of clinical finding	FINDING
 C0241889	family history with explicit context	FINDING
@@ -21375,7 +21210,6 @@ C0427692	fbc - full blood count normal	FINDING
 C0423602	fbs - foreign body sensation	FINDING
 C0085684	fd - foot-drop	FINDING
 C0452345	fe - high iron diet	FINDING
-C0015726	fear	FINDING
 C0424139	fear and anxiety	FINDING
 C0424139	fear anxiety	FINDING
 C1299961	fear biter	FINDING
@@ -21386,7 +21220,6 @@ C0233701	fear heights	FINDING
 C0522182	fear illness	FINDING
 C0424187	fear needles	FINDING
 C0522192	fear night	FINDING
-C0015726	fear of	FINDING
 C3875022	fear of abandonment	FINDING
 C1827413	fear of abuse	FINDING
 C0424167	fear of activities in public	FINDING
@@ -22262,8 +22095,6 @@ C4082094	fifth cranial nerve abnormal	FINDING
 C0234274	fifth cranial nerve finding	FINDING
 C0233000	fifth gestation	FINDING
 C0233000	fifth pregnancy	FINDING
-C0424324	fight	FINDING
-C0424324	fighting	FINDING
 C0524367	fighting at school	FINDING
 C0424324	fights	FINDING
 C0570660	filgrastim allergy	FINDING
@@ -23527,12 +23358,10 @@ C0422035	fitness to drive rep - unpaid	FINDING
 C0422034	fitness to drive rep fee paid	FINDING
 C2004047	fitness to drive rep nos	FINDING
 C0422033	fitness to drive rep sent off	FINDING
-C0036572	fits	FINDING
 C0036572	fit's	FINDING
 C0036572	fits - convulsions	FINDING
 C0036572	fits nos	FINDING
 C0009952	fits, febrile	FINDING
-C0036572	fitted	FINDING
 C0427103	fix with unaffected side	FINDING
 C0562561	fixation behavior	FINDING
 C0562561	fixation behaviour	FINDING
@@ -23944,7 +23773,7 @@ C0427412	folic acid level	FINDING
 C0427412	folic acid level - finding	FINDING
 C0239623	folic acid reduction	FINDING
 C0452331	folic acid-rich diet	FINDING
-C0233425	folie ?á trois	FINDING
+C0233425	folie ?? trois	FINDING
 C0233425	folie a trois	FINDING
 C0571835	folinic acid allergy	FINDING
 C0860499	follicles conjunctivia	FINDING
@@ -24399,9 +24228,7 @@ C0032230	friction rub, pleural	FINDING
 C0557325	friend arrested	FINDING
 C0557743	friendly environment	FINDING
 C0563201	friends imaginary	FINDING
-C0015726	fright	FINDING
 C0522182	fright illness	FINDING
-C0015726	frightened	FINDING
 C0015726	frightening	FINDING
 C0522182	frightening disease	FINDING
 C0522182	frightening illness	FINDING
@@ -24855,10 +24682,8 @@ C0239709	gastroscopy normal	FINDING
 C0438295	gastrostomy bag changed	FINDING
 C1281551	gastrostomy present	FINDING
 C3839657	gastrostomy tube in situ	FINDING
-C0019900	gay	FINDING
 C0553544	gaze	FINDING
 C0553544	gazes	FINDING
-C0553544	gazing	FINDING
 C0423086	gazing fixedly	FINDING
 C0231519	gegenhalten	FINDING
 C0231519	gegenhaltens	FINDING
@@ -25434,7 +25259,6 @@ C3887688	glare	FINDING
 C3887688	glare - eye symptom	FINDING
 C1321306	glare disability	FINDING
 C3887688	glares	FINDING
-C3887688	glaring	FINDING
 C0578785	glasgow coma scale finding	FINDING
 C0578785	glasgow coma scale observations	FINDING
 C0278171	glasgow coma scale, 10	FINDING
@@ -25869,7 +25693,6 @@ C0566229	greetings	FINDING
 C0566229	greets	FINDING
 C0564536	gregarious	FINDING
 C0564536	gregarious character	FINDING
-C1269776	grey	FINDING
 C1269776	grey colour	FINDING
 C0574765	grey hair	FINDING
 C0574765	grey hairs	FINDING
@@ -25968,7 +25791,6 @@ C0423693	growing pains	FINDING
 C0423693	growing pains child	FINDING
 C0423693	growing pains in a child	FINDING
 C0423693	growing pains in limbs	FINDING
-C4731920	growling	FINDING
 C5441510	growth and development alteration	FINDING
 C0571731	growth hormone allergy	FINDING
 C0578019	growth normal	FINDING
@@ -25985,7 +25807,6 @@ C3670779	growth plate wide	FINDING
 C3714437	growth retardation rate	FINDING
 C3714437	growth suppression rate	FINDING
 C0520952	grubelsucht	FINDING
-C0241902	grunt	FINDING
 C0411024	grunting baby	FINDING
 C0241902	grunting respiration	FINDING
 C0241902	grunting respirations	FINDING
@@ -26013,7 +25834,6 @@ C0427198	guarding of muscle	FINDING
 C0577142	guarding of right iliac fossa	FINDING
 C0577141	guarding of umbilical region	FINDING
 C0582545	guided mourning	FINDING
-C0018379	guilt	FINDING
 C0018379	guilt feelings	FINDING
 C0557920	guilt stage of grief	FINDING
 C0018379	guilts	FINDING
@@ -26097,7 +25917,6 @@ C0423258	haab striae	FINDING
 C0423258	haab's striae	FINDING
 C0018464	habit	FINDING
 C0018464	habit, nos	FINDING
-C0018464	habits	FINDING
 C0404890	habitual aborter - delivered	FINDING
 C0404439	habitual aborter-not pregnant	FINDING
 C0556340	habitual drinker	FINDING
@@ -26429,7 +26248,6 @@ C2608086	hangover, susceptibility to	FINDING
 C0393756	hangovers	FINDING
 C0018592	happiness	FINDING
 C0018592	happinesses	FINDING
-C0018592	happy	FINDING
 C0557739	happy environment	FINDING
 C0018592	happy mood	FINDING
 C0233767	haptic hallucination	FINDING
@@ -26556,8 +26374,6 @@ C0436356	has the symptom weekly	FINDING
 C0436358	has the symptom yearly	FINDING
 C0426362	has to make self urinate	FINDING
 C0557111	has young parents	FINDING
-C0018616	hate	FINDING
-C0018616	hated	FINDING
 C0018616	hates	FINDING
 C0018616	hatred	FINDING
 C0028754	having too much body fat	FINDING
@@ -26607,7 +26423,6 @@ C0582540	head position finding	FINDING
 C0582542	head positioned on ring	FINDING
 C0582540	head positioning	FINDING
 C0582540	head positions	FINDING
-C1960601	head pressing	FINDING
 C0459185	head rest arm position	FINDING
 C0042571	head revolving around	FINDING
 C0476363	head scan abnormal	FINDING
@@ -26722,7 +26537,6 @@ C1562365	heaf test grade 3	FINDING
 C1562269	heaf test grade 4	FINDING
 C0580525	heaf: negative	FINDING
 C0580526	heaf: positive	FINDING
-C0043240	heal	FINDING
 C0425904	healed lateral tears of cervix	FINDING
 C5394766	healed ulcer of left foot	FINDING
 C5394765	healed ulcer of right foot	FINDING
@@ -26806,7 +26620,6 @@ C0686747	healthy teens	FINDING
 C0455902	healthy tonsils	FINDING
 C0229197	heaping of retina	FINDING
 C0424068	hear voices	FINDING
-C1455844	hearing	FINDING
 C0034880	hearing abnormally acute	FINDING
 C1272118	hearing aid problem	FINDING
 C0429199	hearing change	FINDING
@@ -27405,7 +27218,6 @@ C0232432	hidromeiosis	FINDING
 C0038990	hidropoiesis	FINDING
 C0038990	hidrosis	FINDING
 C0423686	hieralgia	FINDING
-C5200928	high	FINDING
 C1320796	high airway pressure	FINDING
 C0740469	high albumin	FINDING
 C0452292	high alpha-linolenic acid diet	FINDING
@@ -27753,7 +27565,6 @@ C0442770	hm - hand movements	FINDING
 C0424337	hoard	FINDING
 C0424337	hoarded	FINDING
 C0424337	hoarding	FINDING
-C0019825	hoarse	FINDING
 C0019825	hoarse voice	FINDING
 C0019825	hoarse voice quality	FINDING
 C0019825	hoarseness - throat symptom	FINDING
@@ -28728,7 +28539,6 @@ C0585010	iliac fossa abdominal mass	FINDING
 C0423647	iliac fossa pain	FINDING
 C1563115	iliac somatic dysfunction	FINDING
 C0423713	ilioinguinal nerve neuralgia	FINDING
-C0231218	ill	FINDING
 C0457728	ill fitting denture	FINDING
 C0425085	ill health retirement	FINDING
 C0152227	illacrimation	FINDING
@@ -28750,7 +28560,6 @@ C0281875	illicit substance use	FINDING
 C0020899	illiteracy	FINDING
 C0020899	illiterate	FINDING
 C3872870	illiterate literacy level	FINDING
-C0221423	illness	FINDING
 C1287488	illness behavior - finding	FINDING
 C1287488	illness behaviour - finding	FINDING
 C0033931	illness psychosomatic	FINDING
@@ -28760,7 +28569,6 @@ C0221423	illness, nos	FINDING
 C0221423	illness, unspecified	FINDING
 C0578018	illness: off feet	FINDING
 C0578018	illness: off feet finding	FINDING
-C0221423	illnesses	FINDING
 C0033931	illnesses psychosomatic	FINDING
 C0679247	illnesses terminal	FINDING
 C0282504	illnesses, environmental	FINDING
@@ -29069,7 +28877,6 @@ C0557352	in paid casual work	FINDING
 C1320371	in paid employment	FINDING
 C0557353	in paid seasonal work	FINDING
 C0557329	in police custody	FINDING
-C0392751	in prison	FINDING
 C0748064	in psychiatric patient	FINDING
 C0474505	in rectum stool	FINDING
 C0557364	in regular work	FINDING
@@ -29342,7 +29149,6 @@ C0301636	increase of specific gravity	FINDING
 C0015967	increase temperature	FINDING
 C0241379	increase thirst	FINDING
 C0043094	increase weight	FINDING
-C5236002	increased	FINDING
 C1291182	increased adenosine monophosphate	FINDING
 C1291182	increased adenylic acid	FINDING
 C1295618	increased adrenaline level	FINDING
@@ -30407,7 +30213,6 @@ C1299958	interdog aggression	FINDING
 C1299958	inter-dog aggression	FINDING
 C0543488	interest	FINDING
 C0543488	interested	FINDING
-C0543488	interesting	FINDING
 C0543488	interests	FINDING
 C0422966	interference with vision	FINDING
 C0571290	interferon-a-2a allergy	FINDING
@@ -30758,7 +30563,6 @@ C0235988	iron serum decreased	FINDING
 C0151900	iron serum increased	FINDING
 C0571800	iron sorbitol allergy	FINDING
 C0311152	iron supplement infant formula	FINDING
-C0740237	irons	FINDING
 C0311195	irradiated diet	FINDING
 C0235204	irrational thoughts	FINDING
 C0235204	irrationality	FINDING
@@ -31209,7 +31013,6 @@ C1562820	jones point	FINDING
 C5546669	jorissenne sign	FINDING
 C5546669	jorissenne's sign	FINDING
 C0018592	joy, festive	FINDING
-C0018592	joys	FINDING
 C1287392	judgement - finding	FINDING
 C0233818	judgement impaired	FINDING
 C4040737	judgement intact	FINDING
@@ -31226,7 +31029,6 @@ C0425687	jugular venous distention	FINDING
 C0425687	jugular venous ectasia	FINDING
 C0425687	jugular venous engorgement	FINDING
 C0234517	jumbled speech	FINDING
-C0560453	jumped	FINDING
 C0560455	jumping - difficulty	FINDING
 C0557938	jumping from bridge	FINDING
 C0557939	jumping from building	FINDING
@@ -31372,8 +31174,6 @@ C0184562	kinaesthetic alteration	FINDING
 C0184562	kinesthetic alteration	FINDING
 C0278161	kinetic ataxia	FINDING
 C0423875	kinked hairs	FINDING
-C0233926	kiss	FINDING
-C0233926	kissed	FINDING
 C0233926	kisses	FINDING
 C0233926	kissing	FINDING
 C1320607	k-k- phenotype	FINDING
@@ -31458,7 +31258,6 @@ C0240130	knee swollen	FINDING
 C0576134	knee tenderness	FINDING
 C0231749	knee(s) pain	FINDING
 C0277810	knee-chest position	FINDING
-C1260920	kneel	FINDING
 C1260920	kneeling	FINDING
 C0555092	kneeling - difficulty	FINDING
 C0456983	kneeling position	FINDING
@@ -31481,7 +31280,6 @@ C0576093	knees, knock	FINDING
 C0278145	knifelike pain	FINDING
 C0455731	knight move thinking	FINDING
 C0455731	knight's move in thought	FINDING
-C0232274	knock	FINDING
 C0576093	knock knee	FINDING
 C0576093	knock knees	FINDING
 C0576093	knock-knee	FINDING
@@ -31825,7 +31623,6 @@ C0455938	large adenoids	FINDING
 C0425539	large airway sounds	FINDING
 C0425806	large areola	FINDING
 C0425806	large areolae	FINDING
-C0426862	large arm	FINDING
 C0554972	large auricle	FINDING
 C0577178	large bladder	FINDING
 C0426913	large bone in foot	FINDING
@@ -31957,13 +31754,13 @@ C0426538	larynx observation	FINDING
 C0577892	larynx present	FINDING
 C0023066	larynx spasm	FINDING
 C0023066	larynx spasms	FINDING
-C0231605	las?¿gue arm sign	FINDING
-C0231620	las?¿gue sign	FINDING
-C1287969	las?¿gue test finding	FINDING
-C0575466	las?¿gue test negative	FINDING
-C0575465	las?¿gue test positive	FINDING
-C0231620	las?¿gue test response	FINDING
-C0231605	las?¿gue's arm sign	FINDING
+C0231605	las??gue arm sign	FINDING
+C0231620	las??gue sign	FINDING
+C1287969	las??gue test finding	FINDING
+C0575466	las??gue test negative	FINDING
+C0575465	las??gue test positive	FINDING
+C0231620	las??gue test response	FINDING
+C0231605	las??gue's arm sign	FINDING
 C0231605	lasegue arm sign	FINDING
 C0231620	lasegue sign	FINDING
 C1287969	lasegue test - finding	FINDING
@@ -32047,10 +31844,7 @@ C3697678	lateral tongue thrust	FINDING
 C3266106	lateral vertigo	FINDING
 C0444379	lateral-decubitus	FINDING
 C1286612	laterality finding	FINDING
-C0023133	laugh	FINDING
-C0023133	laughing	FINDING
 C0582116	laughs spontaneously	FINDING
-C0023133	laughter	FINDING
 C0426662	lax abdominal wall	FINDING
 C0426765	lax anal sphincter	FINDING
 C0567290	lax female perineum	FINDING
@@ -32315,7 +32109,7 @@ C0332606	leprechaun facies	FINDING
 C0333801	leptocyte	FINDING
 C0333801	leptocytosis	FINDING
 C0242659	lesbianism	FINDING
-C0686770	leser-tr?®lat sign	FINDING
+C0686770	leser-tr?½lat sign	FINDING
 C0686770	leser-trelat sign	FINDING
 C0577180	lesion bladder	FINDING
 C0238792	lesion bone	FINDING
@@ -32598,7 +32392,6 @@ C0562400	life value	FINDING
 C0562400	life, respect for	FINDING
 C0233789	lifelong psychologic disorder	FINDING
 C0233789	lifelong psychologic disorder, nos	FINDING
-C0023676	lifestyle	FINDING
 C0023676	lifestyles	FINDING
 C0565676	lifting - difficulty	FINDING
 C0427312	ligament finding	FINDING
@@ -32889,7 +32682,6 @@ C0578845	litigation pending	FINDING
 C0582548	litigation underway	FINDING
 C0564662	litigious character	FINDING
 C0577179	little bladder	FINDING
-C0576224	little feet	FINDING
 C0456133	little fontanelle	FINDING
 C0576224	little foot	FINDING
 C0156247	little kidneys	FINDING
@@ -33201,7 +32993,6 @@ C0547000	locking of joint	FINDING
 C0547000	locking of joints	FINDING
 C0429264	locomotor test finding	FINDING
 C0429264	locomotor test observation	FINDING
-C0020056	lodging	FINDING
 C0571062	lodoxamide allergy	FINDING
 C0570746	lofepramine allergy	FINDING
 C0570976	lofexidine allergy	FINDING
@@ -33219,7 +33010,6 @@ C0002622	lom - loss of memory	FINDING
 C0570678	lomustine allergy	FINDING
 C0556317	lone drinker	FINDING
 C0023974	loneliness	FINDING
-C0023974	lonely	FINDING
 C0575519	long arm	FINDING
 C0575519	long arm region	FINDING
 C0576320	long bone in foot	FINDING
@@ -33469,7 +33259,6 @@ C0080233	lost tooth	FINDING
 C0080233	lost tooth structure	FINDING
 C0080233	lost tooth tissue	FINDING
 C0426102	lot- left occipitotransverse position	FINDING
-C0178733	loud	FINDING
 C0456773	loud first heart sound	FINDING
 C0456773	loud s1	FINDING
 C0456773	loud s1 heart sound	FINDING
@@ -33479,11 +33268,8 @@ C0034880	loudness intolerance	FINDING
 C0034880	loudness recruitment	FINDING
 C0034880	loudness recruitments	FINDING
 C4305386	lovastatin allergy	FINDING
-C0024028	love	FINDING
-C0024028	loved	FINDING
 C0555036	lover taken	FINDING
 C0024028	loves	FINDING
-C0024028	loving	FINDING
 C0564532	loving character	FINDING
 C0860864	low albumin	FINDING
 C0452377	low allergen diet	FINDING
@@ -34017,7 +33803,6 @@ C0455817	lv wall akinetic	FINDING
 C1292204	lw(a-b-) phenotype	FINDING
 C0441916	lx phase	FINDING
 C0441916	lx stage	FINDING
-C0600261	lying	FINDING
 C0038846	lying flat on back	FINDING
 C0277816	lying in bed	FINDING
 C0444379	lying in lateral position	FINDING
@@ -34133,7 +33918,7 @@ C1320584	m+ phenotype	FINDING
 C1320590	m+n- phenotype	FINDING
 C1320591	m+n+ phenotype	FINDING
 C1292207	m<sup>k</sup>m<sup>k</sup> phenotype	FINDING
-C0337594	m?®nage ?á trois	FINDING
+C0337594	m?½nage ?? trois	FINDING
 C0445034	m0 cancer stage finding	FINDING
 C0445034	m0 category	FINDING
 C0445034	m0 distant metastasis finding	FINDING
@@ -34321,7 +34106,7 @@ C3697032	main spoken language lao	FINDING
 C3698158	main spoken language latvian	FINDING
 C1319455	main spoken language lingala	FINDING
 C1319456	main spoken language luganda	FINDING
-C3697700	main spoken language m?üori	FINDING
+C3697700	main spoken language m??ori	FINDING
 C3698033	main spoken language malagasy	FINDING
 C3698179	main spoken language malay	FINDING
 C1319458	main spoken language malayalam	FINDING
@@ -34455,7 +34240,6 @@ C0024530	malarial fever	FINDING
 C0024530	malarial pyrexia	FINDING
 C0024530	malarias	FINDING
 C0571537	malathion allergy	FINDING
-C0086582	male	FINDING
 C0419384	male baby	FINDING
 C0558250	male barrier method	FINDING
 C0232984	male climacteric	FINDING
@@ -35184,7 +34968,6 @@ C4075860	medically fit for surgery	FINDING
 C0425085	medically retired	FINDING
 C0425085	medically retired, life event	FINDING
 C3839861	medically unexplained symptom	FINDING
-C3839861	medically unexplained symptoms	FINDING
 C0555012	medically unfit for service	FINDING
 C2713369	medicare advantage	FINDING
 C2713369	medicare advantage coverage	FINDING
@@ -35278,7 +35061,6 @@ C0426240	membranes absent	FINDING
 C0426241	membranes complete	FINDING
 C0426242	membranes incomplete	FINDING
 C1562987	membranous articular strain	FINDING
-C0700327	memories	FINDING
 C0563127	memory aided by use of diary	FINDING
 C0563126	memory aided by use of labels	FINDING
 C0563125	memory aided by use of lists	FINDING
@@ -36326,7 +36108,6 @@ C0948521	mouth itch	FINDING
 C0948521	mouth itching	FINDING
 C0149744	mouth lesion	FINDING
 C0455788	mouth observations	FINDING
-C0240379	mouth open	FINDING
 C0553635	mouth opened	FINDING
 C0240379	mouth opening	FINDING
 C0221776	mouth pain	FINDING
@@ -38170,7 +37951,6 @@ C0582222	no subtalar movement	FINDING
 C0436332	no symptom aggravating factor	FINDING
 C0436319	no symptom pattern	FINDING
 C0436324	no symptom relieving factor	FINDING
-C0231221	no symptoms	FINDING
 C0460123	no test request given	FINDING
 C0426325	no testicle present in scrotum	FINDING
 C0426593	no thirst	FINDING
@@ -39402,7 +39182,6 @@ C1840077	nostrils anteverted	FINDING
 C0239233	not able to finish a normal-sized meal	FINDING
 C0233514	not acting normal	FINDING
 C0233514	not acting self	FINDING
-C0559294	not attended	FINDING
 C0424382	not aware of danger from fire	FINDING
 C0003578	not breathing	FINDING
 C3687553	not capable of ruminating	FINDING
@@ -40510,7 +40289,6 @@ C0475202	offensive stools	FINDING
 C0566981	offensive vaginal discharge	FINDING
 C2959838	offensive wound odor	FINDING
 C2959838	offensive wound odour	FINDING
-C0680063	offspring	FINDING
 C0425119	offspring at risk	FINDING
 C0581135	offspring birth	FINDING
 C0314650	offspring f<sub>1</sub>	FINDING
@@ -40651,7 +40429,6 @@ C0424767	ongoing fever	FINDING
 C0234371	ongoing tremors	FINDING
 C0277980	onion breath	FINDING
 C0029039	only child	FINDING
-C0029039	only children	FINDING
 C5394883	only hard palate visible	FINDING
 C0558062	onset confusion	FINDING
 C0022868	onset labor	FINDING
@@ -42131,7 +41908,6 @@ C3670508	panniculus response absent	FINDING
 C0232258	pansystolic heart murmur	FINDING
 C0232258	pansystolic murmur	FINDING
 C0232258	pansystolic/holosystolic	FINDING
-C0425488	panting	FINDING
 C0425488	panting respiration	FINDING
 C0476427	pap smear abnormal	FINDING
 C0476427	pap smear result abnormal	FINDING
@@ -42819,8 +42595,8 @@ C3532917	peer problems	FINDING
 C0423234	pek - punctate epithelial keratopathy	FINDING
 C0221101	pel ebstein fever	FINDING
 C0221101	pel-ebstein fever	FINDING
-C0333820	pelger-hu?½t cell	FINDING
-C0333820	pelger-hu?½t cell -- finding	FINDING
+C0333820	pelger-hu?ót cell	FINDING
+C0333820	pelger-hu?ót cell -- finding	FINDING
 C0333820	pelger-huet cell	FINDING
 C0333820	pelger-huet cell -- finding	FINDING
 C0034150	peliosis	FINDING
@@ -43647,7 +43423,6 @@ C0426433	pinched tip of nose	FINDING
 C0562593	pinching other person	FINDING
 C0562724	pinching self	FINDING
 C0570892	pindolol allergy	FINDING
-C0332585	pink	FINDING
 C0332585	pink color	FINDING
 C5397083	pink color of vocal cord	FINDING
 C0332585	pink colour	FINDING
@@ -43932,12 +43707,9 @@ C1302136	platycytes	FINDING
 C1302136	platycytes result	FINDING
 C0520825	platypnea	FINDING
 C0520825	platypnoea	FINDING
-C0600138	play	FINDING
 C1299960	play aggression	FINDING
 C0699820	play role	FINDING
 C0699820	play roles	FINDING
-C0600138	played	FINDING
-C0600138	playing	FINDING
 C0699820	playing role	FINDING
 C0600138	plays	FINDING
 C0562373	plays sick role	FINDING
@@ -45332,7 +45104,6 @@ C0151872	pro time increased	FINDING
 C0702111	proband	FINDING
 C0702111	probands	FINDING
 C0571133	probenecid allergy	FINDING
-C0033213	problem	FINDING
 C0233514	problem behavior	FINDING
 C3531789	problem behavior in adult	FINDING
 C0233514	problem behaviour	FINDING
@@ -46179,7 +45950,6 @@ C0332601	puffy face	FINDING
 C0332601	puffy facies	FINDING
 C0580846	pull	FINDING
 C0427106	pull forwards in flexion	FINDING
-C0580846	pulled	FINDING
 C0580848	pulling - difficulty	FINDING
 C0580846	pulling action	FINDING
 C3698066	pulling at own ear	FINDING
@@ -46481,8 +46251,6 @@ C0580916	puts on prosthesis	FINDING
 C0585697	puts on wig	FINDING
 C0424218	putting self down	FINDING
 C0231246	putting weight	FINDING
-C0423995	puzzled	FINDING
-C0423995	puzzling	FINDING
 C0231710	pygalgia	FINDING
 C0427481	pyknocytosis	FINDING
 C1110652	pyloric dilatation	FINDING
@@ -46580,20 +46348,16 @@ C0518214	quality of life satisfaction	FINDING
 C1287840	quality of orgasm - finding	FINDING
 C0518214	quality-of-life	FINDING
 C0544680	quandrantanopia	FINDING
-C1265611	quantities	FINDING
 C1265611	quantity	FINDING
 C1265611	quantity finding	FINDING
 C0426204	quantity of liquor	FINDING
 C1287822	quantity of lochia - finding	FINDING
 C0600457	quantity of pregnancy	FINDING
 C1287298	quantity of urine passed	FINDING
-C0680226	quarrel	FINDING
-C0680226	quarrelling	FINDING
 C0680226	quarrelsome behavior	FINDING
 C0680226	quarrelsome behaviour	FINDING
 C0424775	quartan fever	FINDING
 C0027497	queasy	FINDING
-C4722209	queer	FINDING
 C0425965	question of pregnancy	FINDING
 C0232584	quick gastric emptying	FINDING
 C0426034	quicken	FINDING
@@ -46621,7 +46385,6 @@ C0232122	quinke's sign	FINDING
 C3840139	quintuplet birth	FINDING
 C3839970	quintuplets, all live born	FINDING
 C3840026	quintuplets, some live born	FINDING
-C0040822	quiver	FINDING
 C0040822	quivers	FINDING
 C0424771	quotidien fever	FINDING
 C0034471	r determinant	FINDING
@@ -46737,7 +46500,6 @@ C0231867	rales, medium	FINDING
 C0034642	rales, nos	FINDING
 C0423982	rambling language	FINDING
 C0423982	rambling speech	FINDING
-C0425139	ran away	FINDING
 C0425139	ran away, life event	FINDING
 C2711012	random blood glucose abnormal	FINDING
 C0580401	random blood sugar low	FINDING
@@ -47667,7 +47429,6 @@ C0018129	rejection, graft	FINDING
 C0018129	rejections, graft	FINDING
 C0562376	rejects sick role	FINDING
 C0231674	relapsing grip	FINDING
-C0445223	related	FINDING
 C0445223	related personal status	FINDING
 C0236858	relation problem partners	FINDING
 C0015365	relation, extramarital	FINDING
@@ -47707,7 +47468,6 @@ C2314972	release ready	FINDING
 C0425147	released from prison	FINDING
 C0557327	released on bail	FINDING
 C0562175	releases grip	FINDING
-C0564405	relief	FINDING
 C0436323	relieving factor	FINDING
 C0425338	religion none	FINDING
 C0730239	religion not recorded	FINDING
@@ -48352,7 +48112,6 @@ C0597295	ribosomal protein formation	FINDING
 C0575512	ribs tender	FINDING
 C0443291	rice water	FINDING
 C0278009	rice water stool	FINDING
-C0699759	rich	FINDING
 C1274636	rich blonde hair	FINDING
 C1274636	rich golden blonde hair	FINDING
 C0343494	rictus grin	FINDING
@@ -48699,7 +48458,6 @@ C0423006	runny eye - discharging	FINDING
 C1260880	runny nose	FINDING
 C2129214	runny stool	FINDING
 C2129214	runny stools	FINDING
-C0600140	runs	FINDING
 C0560362	runs down a slope	FINDING
 C0580832	runs down hill	FINDING
 C0560386	runs down stairs	FINDING
@@ -49223,8 +48981,6 @@ C0424374	scratches self	FINDING
 C5554421	scratching at air	FINDING
 C0562594	scratching other person	FINDING
 C0560973	scratching throat	FINDING
-C0521008	scream	FINDING
-C0521008	screaming	FINDING
 C0562550	screaming attack	FINDING
 C3670531	screaming intermittently	FINDING
 C0521008	screams	FINDING
@@ -50551,7 +50307,6 @@ C1720510	shafer's sign	FINDING
 C0686721	shaken baby	FINDING
 C0686721	shaken baby syndrome	FINDING
 C0686721	shaken infant syndrome	FINDING
-C0040822	shaking	FINDING
 C0040822	shaking all over	FINDING
 C0085593	shaking chill	FINDING
 C0424790	shaking chills	FINDING
@@ -50615,7 +50370,6 @@ C1273533	shigella species not isolated	FINDING
 C5231165	shininess of skin over lesion	FINDING
 C2229939	shiny skin	FINDING
 C5231165	shiny skin over lesion	FINDING
-C0036973	shiver	FINDING
 C0036973	shivered	FINDING
 C0036973	shiverer	FINDING
 C0036973	shivering	FINDING
@@ -50848,8 +50602,6 @@ C0234051	side-to-side coital position	FINDING
 C0344314	sidetracked from flow of thought	FINDING
 C0459199	sideways lean trunk position	FINDING
 C0038644	sids - sudden infant death syndrome	FINDING
-C0425481	sigh	FINDING
-C0425481	sighing	FINDING
 C0425481	sighing breathing	FINDING
 C0425481	sighing respiration	FINDING
 C0425481	sighs	FINDING
@@ -50857,9 +50609,8 @@ C0558171	sight deteriorating	FINDING
 C0233728	sigmatism	FINDING
 C4706533	sigmoid colostomy present	FINDING
 C1261247	sigmoidoscopy normal	FINDING
-C0311392	sign	FINDING
 C0037088	sign and symptom	FINDING
-C0686770	sign of leser-tr?®lat	FINDING
+C0686770	sign of leser-tr?½lat	FINDING
 C0686770	sign of leser-trelat	FINDING
 C0231610	sign spurling	FINDING
 C0231610	sign spurlings	FINDING
@@ -50870,9 +50621,7 @@ C0311392	sign, nos	FINDING
 C0037088	sign/symptom	FINDING
 C0422928	signe de la corde de l'arc	FINDING
 C0231876	signe du sou	FINDING
-C0311392	signs	FINDING
 C0311392	signs - physical	FINDING
-C0037088	signs and symptoms	FINDING
 C0156323	signs and symptoms in breast	FINDING
 C0037090	signs and symptoms, respiratory	FINDING
 C5395261	signs of drug withdrawal	FINDING
@@ -50975,10 +50724,8 @@ C0037211	sister chromatid exchange	FINDING
 C0037211	sister chromatid exchange process	FINDING
 C0037211	sister chromatid exchanges	FINDING
 C0233912	sister-sister sex play	FINDING
-C0728713	sit	FINDING
 C0560801	sit stand	FINDING
 C0560801	sit to stand	FINDING
-C0560837	sit up	FINDING
 C0560837	sit ups	FINDING
 C0423646	site of abdominal pain	FINDING
 C0422262	site of encounter	FINDING
@@ -50987,7 +50734,6 @@ C0452186	site of encounter: street	FINDING
 C5231181	site of injection normal	FINDING
 C0422262	site of visit	FINDING
 C0444353	sit-kneeling	FINDING
-C0728713	sits	FINDING
 C0562772	sits bath	FINDING
 C0560831	sits down	FINDING
 C0578340	sits down on a chair	FINDING
@@ -51378,7 +51124,6 @@ C0150079	sleep-pattern disturbance	FINDING
 C0231382	sleep-rest pattern	FINDING
 C4075948	sleeps during day	FINDING
 C0542313	sleeptalking	FINDING
-C0013144	sleepy	FINDING
 C0576227	slender feet	FINDING
 C0426818	slender ribs	FINDING
 C0564313	slices food	FINDING
@@ -51604,10 +51349,8 @@ C0424801	smells unwashed	FINDING
 C0424802	smells urine	FINDING
 C0018520	smelly breath	FINDING
 C0576824	smelly ear	FINDING
-C0517048	smile	FINDING
 C0517048	smiles	FINDING
 C0582135	smiles spontaneously	FINDING
-C0037363	smiling	FINDING
 C0037363	smilings	FINDING
 C0337671	smoke cessation	FINDING
 C0425315	smoke start	FINDING
@@ -51648,9 +51391,6 @@ C3873634	smut allergy	FINDING
 C0562649	snapping own bones	FINDING
 C0231657	snapping scapula	FINDING
 C0584942	sneers	FINDING
-C0037383	sneeze	FINDING
-C0037383	sneezes	FINDING
-C0037383	sneezing	FINDING
 C0037383	sneezing symptom	FINDING
 C0037383	sneezing symptom nos	FINDING
 C0037383	sneezing symptoms	FINDING
@@ -51685,10 +51425,8 @@ C1260880	snuffles	FINDING
 C0456018	snuffles in newborn	FINDING
 C1260880	snuffling	FINDING
 C0574839	soa - seen on arrival	FINDING
-C0013404	sob	FINDING
 C0013404	sob - shortness of breath	FINDING
 C0743330	sobar - shortness of breath at rest	FINDING
-C0010399	sobbing	FINDING
 C0425482	sobbing respiration	FINDING
 C0231807	soboe - shortness of breath on exertion	FINDING
 C0564534	sociable character	FINDING
@@ -51970,7 +51708,6 @@ C0239739	soreness gum	FINDING
 C0017672	soreness of tongue	FINDING
 C0555976	sores vulva	FINDING
 C0242429	sorethroat	FINDING
-C0018235	sorrow	FINDING
 C0563906	sorts laundry	FINDING
 C0570902	sotalol allergy	FINDING
 C0233193	souffle, fetal	FINDING
@@ -52601,7 +52338,6 @@ C0600132	stand up	FINDING
 C0436503	standard chest x-ray abnormal	FINDING
 C0239026	standard chest x-ray normal	FINDING
 C0444664	standard meal	FINDING
-C0231472	standing	FINDING
 C0241237	standing difficulty	FINDING
 C0751186	standing headache	FINDING
 C0444345	standing in water	FINDING
@@ -52646,7 +52382,6 @@ C3687392	star gazing posture	FINDING
 C0423086	stare	FINDING
 C0423086	stared	FINDING
 C0423086	stares	FINDING
-C0423086	staring	FINDING
 C0240220	started lithium	FINDING
 C0425315	started smoking	FINDING
 C0234166	startle condition	FINDING
@@ -53001,7 +52736,6 @@ C0425082	stops working	FINDING
 C0564378	stores food hygienically	FINDING
 C0563940	stores laundry	FINDING
 C3672336	storm phobia	FINDING
-C1527360	straight	FINDING
 C1287968	straight leg raise - finding	FINDING
 C0575462	straight leg raising absent	FINDING
 C0575460	straight leg raising normal	FINDING
@@ -53274,9 +53008,7 @@ C0184567	sudden pain	FINDING
 C0232126	sudden pulse	FINDING
 C0426387	sudden stoppage of urine flow	FINDING
 C0003028	sudomotor dysfunction	FINDING
-C0683278	suffer	FINDING
 C0683278	suffered	FINDING
-C0683278	suffering	FINDING
 C0683278	suffers	FINDING
 C2364300	sufficient hydration	FINDING
 C1998726	sufficient knowledge	FINDING
@@ -54472,7 +54204,6 @@ C0240327	taste, metallic	FINDING
 C0039336	taste, nos	FINDING
 C1282895	taste, unpleasant, neurologic	FINDING
 C0278155	taste-blindness	FINDING
-C0039336	tastes	FINDING
 C0240327	tastes, metallic	FINDING
 C0039336	tasting	FINDING
 C0015672	tatt	FINDING
@@ -54520,8 +54251,6 @@ C0424132	tedium vitae	FINDING
 C0032968	teen age pregnancy	FINDING
 C0032968	teen pregnancies	FINDING
 C0032968	teen pregnancy	FINDING
-C0001578	teenage	FINDING
-C0001578	teen-age	FINDING
 C0557112	teenage parent	FINDING
 C0557112	teenage parents	FINDING
 C0032968	teenage pregnancies	FINDING
@@ -55321,7 +55050,7 @@ C0427299	tibio-femur crepitus	FINDING
 C0458233	tibiofibular joint pain	FINDING
 C0571664	tibolone allergy	FINDING
 C0040188	tic	FINDING
-C0233582	tic de pens?®e	FINDING
+C0233582	tic de pens?½e	FINDING
 C0233582	tic de pensee	FINDING
 C0040188	tic disease	FINDING
 C0040188	tic disorder	FINDING
@@ -55403,7 +55132,6 @@ C1291050	tipped teeth	FINDING
 C1291050	tipped tooth	FINDING
 C1291050	tipping of teeth	FINDING
 C1291050	tipping of tooth	FINDING
-C0560414	tiptoe	FINDING
 C0560414	tiptoeing	FINDING
 C0560414	tiptoes	FINDING
 C0474517	tire sign	FINDING
@@ -56030,7 +55758,6 @@ C1328962	tree pollenosis	FINDING
 C1328962	tree pollinosis	FINDING
 C1532417	trefoil wavefront aberration	FINDING
 C0234369	tremble	FINDING
-C0040822	trembled	FINDING
 C0234369	trembles	FINDING
 C0234369	trembling	FINDING
 C0423336	trembling eye lens	FINDING
@@ -56092,7 +55819,6 @@ C0750940	tremors, rubral	FINDING
 C0040827	tremors, saturnine	FINDING
 C0149840	tremors, senile	FINDING
 C0234378	tremors, static	FINDING
-C0234369	tremulous	FINDING
 C0234808	tremulous voice	FINDING
 C0233694	trend of thought	FINDING
 C0277812	trendelenburg position	FINDING
@@ -56462,16 +56188,13 @@ C0301635	turbidity, decreased	FINDING
 C0301634	turbidity, increased	FINDING
 C3672018	turbinate destruction	FINDING
 C0560902	turn head	FINDING
-C0541749	turned	FINDING
 C0560902	turned head	FINDING
 C0232799	turner's sign	FINDING
-C0541749	turning	FINDING
 C0541749	turning action	FINDING
 C0560902	turning head	FINDING
 C0565715	turning pages	FINDING
 C0085268	turnover, bone	FINDING
 C0085268	turnovers, bone	FINDING
-C0541749	turns	FINDING
 C0560902	turns head	FINDING
 C0563867	turns off mains gas supply	FINDING
 C0563861	turns on mains gas supply	FINDING
@@ -57355,7 +57078,6 @@ C0424470	undress	FINDING
 C0424470	undressed	FINDING
 C0562896	undresses	FINDING
 C0562559	undressing in public	FINDING
-C0424142	uneasy	FINDING
 C0457226	uneffaced cervix	FINDING
 C0564530	unemotional character	FINDING
 C0041674	unemployed	FINDING
@@ -57400,7 +57122,6 @@ C0582105	unfit to return to work	FINDING
 C0003467	unfocused anxiety	FINDING
 C0424071	unformed visual hallucinations	FINDING
 C0557744	unfriendly environment	FINDING
-C1688635	unhappy	FINDING
 C0578856	unhappy at work	FINDING
 C0425172	unhappy childhood	FINDING
 C0563040	unhappy environment	FINDING
@@ -57654,12 +57375,10 @@ C0231472	upright body posture	FINDING
 C1299942	upright pastern	FINDING
 C0231472	upright posture	FINDING
 C0231472	upright postures	FINDING
-C3887804	upset	FINDING
 C2697368	upset gastrointestinal	FINDING
 C0235309	upset stomach	FINDING
 C0235309	upset tummy	FINDING
 C3887804	upsets	FINDING
-C3887804	upsetting	FINDING
 C0474298	up-to-date with immunisations	FINDING
 C0474298	up-to-date with immunizations	FINDING
 C1840077	upturned nares	FINDING
@@ -58559,7 +58278,6 @@ C4750903	valproic acid allergy	FINDING
 C0751185	valsalva-maneuver headache	FINDING
 C1290988	value belief finding	FINDING
 C0562400	value of life	FINDING
-C1273875	values	FINDING
 C1273875	values (community)	FINDING
 C0571388	vancomycin allergy	FINDING
 C0571388	vancomycin hypersensitivity	FINDING
@@ -59518,9 +59236,6 @@ C1961026	walks with assistance	FINDING
 C0750377	walks with cane	FINDING
 C0444340	walk-standing	FINDING
 C0008035	wall chest pain	FINDING
-C0233569	wander	FINDING
-C0233569	wandered	FINDING
-C0233569	wandering	FINDING
 C1321523	wandering atrial pacemaker	FINDING
 C4736118	wandering due to dementia	FINDING
 C4736118	wandering in dementia	FINDING
@@ -59646,7 +59361,6 @@ C0232854	weak stream	FINDING
 C0426996	weak teeth clenching	FINDING
 C0455880	weak urinary stream	FINDING
 C0312953	weak v phenotype	FINDING
-C0241700	weak voice	FINDING
 C0424593	weakness attacks	FINDING
 C3853326	weakness due to disease	FINDING
 C0575810	weakness hands	FINDING
@@ -59921,7 +59635,6 @@ C0231871	whispered pectoriloquy	FINDING
 C0231871	whispering pectoriloquy	FINDING
 C0425484	whistling in nose	FINDING
 C0425483	whistling respiration	FINDING
-C0220938	white	FINDING
 C0220938	white - color	FINDING
 C0220938	white - colour	FINDING
 C0152009	white blood cell abnormalities	FINDING
@@ -60076,7 +59789,6 @@ C0087169	withdrawal symptom	FINDING
 C0087169	withdrawal symptoms	FINDING
 C0586323	withdrawal-induced seizure, alcohol	FINDING
 C0586323	withdrawal-induced seizures, alcohol	FINDING
-C0424092	withdrawn	FINDING
 C0475703	withdrawn behavior	FINDING
 C0475703	withdrawn behaviour	FINDING
 C0425084	withdrawn early	FINDING
@@ -60320,7 +60032,6 @@ C0085258	yangxu	FINDING
 C0459180	yard arm position	FINDING
 C0043387	yawn	FINDING
 C0338948	yawn - psychogenic	FINDING
-C0043387	yawning	FINDING
 C0577934	yawning absent	FINDING
 C0043387	yawning, function	FINDING
 C0043387	yawnings	FINDING
