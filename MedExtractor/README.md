@@ -27,7 +27,7 @@ medextractor.py. Im selben Order von medextractor.py muss sich die Konfiguration
 datei config.json befinden.
 
 Sollte es noch keine config.json Datei geben, wird beim Aufruf von medextractor.py
-ine Beispiel-Datei erzeugt, die anschließend vom Nutzer angepasst werden kann.
+eine Beispiel-Datei erzeugt, die anschließend vom Nutzer angepasst werden kann.
 
 Die Konfigurationsdatei enthält folgende Informationen:
 
@@ -42,7 +42,7 @@ Die Konfigurationsdatei enthält folgende Informationen:
 Die Pfade müssen relativ zu dem Order angegeben werden, in dem sich
 medextractor.py befindet. Alternativ können auch absolute Pfade angeben werden.
 
-Es werden alle Textdateien analysiert, die sich in dem in der config.json-Datei
+Es werden alle Textdateien (*.txt) analysiert, die sich in dem in der config.json-Datei
 angegebenen Ordner befinden. Die von Medextractor erzeugten xml- und Knowledgebase-
 Dateien enthalten ein über alle analysierten Texte akkumuliertes Ergebnis.
 
