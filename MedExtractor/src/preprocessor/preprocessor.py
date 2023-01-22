@@ -23,7 +23,6 @@ class RuleBasedPreprocessor(PreprocessingInterface):
         nlp.add_pipe('sbd', first=True) 
         
         our_punctuation = punctuation+' •–'
-
         with open(self.doc_name, 'r', encoding='utf-8') as file:  
             raw_text = file.read()
 
@@ -67,13 +66,17 @@ class RuleBasedPreprocessor(PreprocessingInterface):
                         # stripped_line_tmp wird eingeführt um 
                         # Aufzählungszeichen herauszubekommen
                         stripped_line_tmp = stripped_line
-                        while (stripped_line_tmp[0] in our_punctuation) | (stripped_line_tmp[0] == ' '):
+
+                        # Habe in der While-Schleife die Bedingung   stripped_line_tmp != ''   ergänzt. Grund: pyspd scheint Probleme mit den Literaturangaben
+                        # wie z.B. '[1]' zu haben. Es kommt vor, dass die schließende Klammer nicht mehr als Teil des Satzes gesehen wird. Dann wird aus ']' ein
+                        # einzelner Satz. Wird dann das Zeichen ']' entfernt, ist der verbleibende String leer. Alternativ könnte man alle Literaturangaben aus
+                        # dem Text entfernen, bevor spaCy zum Einsatz kommt.
+                        while (stripped_line_tmp != '') and ((stripped_line_tmp[0] in our_punctuation) | (stripped_line_tmp[0] == ' ')):
                             stripped_line_tmp = stripped_line_tmp[1:]
                         # speichere Aufzählungszeichen falls vorhanden
                         if len(stripped_line)!=len(stripped_line_tmp):
                             bullet_point = stripped_line[:stripped_line.index(stripped_line_tmp)]  
                         stripped_line = stripped_line_tmp
-
                     # String 'symptom' sollte nicht in Symptom vorhanden sein
                     if 'symptom' in stripped_line:
                         enumeration, bullet_point = '', ''
@@ -82,7 +85,6 @@ class RuleBasedPreprocessor(PreprocessingInterface):
             else:
                 #print(6)
                 enumeration, bullet_point = '', ''
-
             # replace all occurrences of multiple spaces with a single space
             result = re.sub(' +', ' ', stripped_line)
             new_raw_text += f'{result}.\n'
@@ -97,6 +99,5 @@ class RuleBasedPreprocessor(PreprocessingInterface):
                 .replace(' – ', ' ')
             # replace all occurrences of multiple spaces with a single space
             new_raw_text = re.sub(' +', ' ', new_raw_text)
-        
         return new_raw_text
         #return None
