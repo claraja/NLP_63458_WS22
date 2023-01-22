@@ -118,9 +118,10 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                             if entity2.entity_name not in self._kb._aliases:
                                 self._kb._aliases.append(entity2.entity_name)
                         else:
-                            relation = self._kb.give_relation(relation)
-                            if sent_text.strip('\n') not in relation.training_samples:
-                                relation.training_samples.append(sent_text.strip('\n'))
+                            self._kb.add_training_example_to_relation(relation, sent_text)
+                            # relation = self._kb.give_relation(relation)
+                            # if sent_text.strip('\n') not in relation.training_samples:
+                            #     relation.training_samples.append(sent_text.strip('\n'))
 
     def set_context(self, context):
         self._context = context
