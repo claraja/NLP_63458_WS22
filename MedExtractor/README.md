@@ -1,7 +1,7 @@
 
    Fachpraktikum WS 22/23
    Natural Language Processing (NLP) mit spaCy
-   
+
 
 Medextractor - Konsolenapplikation
 ==================================
@@ -63,13 +63,13 @@ Aufruf des Programms
 
 Voraussetzungen
 ---------------
-* Die Packages, die in requirements.txt aufgelistet sind, sind installiert. (Mit dem Befehl <pip install -r requirements.txt> werden alle Packages installiert.)
+* Packages, die in requirements.txt aufgelistet sind, sind installiert (Installation aller Packages möglich mit dem Befehl ```pip install -r requirements.txt```)
 
 Aufruf
 ------
 Das Programm wird gestartet, indem in die Windowseingabeaufforderung der Befehl
 
-   python medextractor.py
+   ```python medextractor.py```
 
 eingegeben wird.
 
