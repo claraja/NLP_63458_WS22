@@ -1,44 +1,32 @@
 import csv
+import glob
 import os
 import pickle
 import time
 import spacy
-#from spacy import displacy
-
+from src.config_manager import ConfigManager
 from src.interfaces.interfaces import KnowledgeExtractorInterface
 from src.knowledge.base import KnowledgeBase
 from src.knowledge.entity import Entity
 from src.knowledge.entity import EntityType
 from src.knowledge.relations import RelationType
 from src.knowledge.semantics import SemanticRelation
-import spacy_transformers
-from negspacy.negation import Negex
+
+from src.preprocessor.preprocessor import RuleBasedPreprocessor
 
 
 class KnowledgeExtractor(KnowledgeExtractorInterface):
-    def __init__(self,kb_filename, nlp, filename_entities, filename_aliases,overwrite):
-        super().__init__(kb_filename, nlp)
-        # time_tmp = time.time()
-        # print("knowledge extractor cwd: " + os.getcwd())
-        # pipeline_path = os.path.join('resources', 'pipeline')
-        # p = os.path.join(pipeline_path, 'config.cfg')
-        # with open(p, 'rb') as f:
-        #     config = pickle.load(f)
-        # lang_cls = spacy.util.get_lang_class(config["nlp"]["lang"])
-        # self._nlp = lang_cls.from_config(config)
-        # print(f'time load config: {time.time() - time_tmp}s')
-        # time_tmp = time.time()
-        # p = os.path.join(pipeline_path, 'pipeline.bin')
-        # with open(p, 'rb') as f:
-        #     bytes_data = f.read()
-        # self._nlp.from_bytes(bytes_data)
-        # print(f'time load pipeline: {time.time() - time_tmp}s')
+    def __init__(self, config: ConfigManager):
+        time_tmp = time.time()
+        self._kb_filename = config.knowledgebase_filename
+        self.text_folder_name = config.text_folder_name
+        self._nlp = spacy.load('en_core_web_sm')
         self._doc = self._nlp("")
         self._kb = KnowledgeBase()
         self._context = []
 
         if (self._kb_filename != "") and os.path.exists(self._kb_filename):
-            if overwrite == False:
+            if not config.overwrite:
                 self._kb.load(self._kb_filename)
 
         pipe_exceptions = ['tok2vec','tagger','parser']
@@ -47,9 +35,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
 
         self._ruler = self._nlp.add_pipe("entity_ruler")
 
-        #input_diseases_path = os.path.join('resources', 'training_data', 'training_diseases_klein.txt')
-        #input_data_file = open(input_diseases_path, 'r', encoding = "utf-8", errors = 'ignore')
-        input_data_file = open(filename_entities, 'r', encoding = "utf-8", errors = 'ignore')
+        input_data_file = open(config.diseases_filename, 'r', encoding = "utf-8", errors = 'ignore')
         reader = csv.reader(input_data_file, delimiter='\t')
 
         training_data = []
@@ -61,9 +47,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
 
         self._ruler.add_patterns(training_data)
 
-        #input_symptoms_path = os.path.join('resources', 'training_data', 'training_symptoms_klein.txt')
-        #input_data_file = open(input_symptoms_path, 'r', encoding = "utf-8", errors = 'ignore')
-        input_data_file = open(filename_aliases, 'r', encoding = "utf-8", errors = 'ignore')
+        input_data_file = open(config.symptoms_filename, 'r', encoding = "utf-8", errors = 'ignore')
         reader = csv.reader(input_data_file, delimiter='\t')
 
         for row in reader:
@@ -71,7 +55,8 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
             training_data.append(to_train)
         input_data_file.close()
         self._ruler.add_patterns(training_data)
-        self._nlp.add_pipe("negex")
+        # self._nlp.add_pipe("negex")
+        print(f'time create knowledgeExtractor: {time.time() - time_tmp}s')
 
 
     def __call__(self,text):
@@ -186,4 +171,18 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                 print()
 
             print("------")
+
+    def export_for_entity_linker(self, entity_linker_export_filename):
+        print(f"size of knowledgebase:  {len(self._kb)}")
+        self._kb.export_for_entity_linker(entity_linker_export_filename)
+
+    def process_texts(self):
+        time_tmp = time.time()
+        for filename in glob.glob(self.text_folder_name + "/*.txt"):
+            preprocessor = RuleBasedPreprocessor(filename)
+            preprocessed_text = preprocessor.get_preprocessed_text()
+
+            for sent in self._nlp(preprocessed_text).sents:
+                self(sent.text)
+        print(f'time complete loop over files: {time.time() - time_tmp}s')
 
