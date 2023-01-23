@@ -23,8 +23,8 @@ Wissensbasis in Binärcode abgespeichert wird.
 Konfigurationsdatei config.json
 ===============================
 Das Python-Modul, mit dem die Konsolenapplikation gestartet wird, ist die Datei:
-medextractor.py. Im selben Order von medextractor.py muss sich die Konfigurations-
-datei config.json befinden.
+medextractor.py. Im selben Order von medextractor.py muss sich die Konfigurationsdatei
+config.json befinden.
 
 Sollte es noch keine config.json Datei geben, wird beim Aufruf von medextractor.py
 eine Beispiel-Datei erzeugt, die anschließend vom Nutzer angepasst werden kann.

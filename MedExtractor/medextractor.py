@@ -71,7 +71,7 @@ except KeyError:
 nlp = spacy.load('en_core_web_sm')
 time_tmp = time.time()
 #knowledgebase_path = os.path.join('resources', 'test.kb')
-knowledgeExtractor = KnowledgeExtractor(knowledgebase_filename, nlp, diseases_filename, symptoms_filename,overwrite)
+knowledgeExtractor = KnowledgeExtractor(knowledgebase_filename, nlp, diseases_filename, symptoms_filename, overwrite)
 print(f'time create knowledgeExtractor: {time.time()-time_tmp}s')
 knowledgebase = knowledgeExtractor.get_knowledge_base()
 print(f"size of knowledgebase:  {len(knowledgebase)}")
