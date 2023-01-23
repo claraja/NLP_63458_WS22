@@ -1,11 +1,6 @@
-+ + + + + + + + + + + + + + + + + + + + + + + + 
-+ + + + + + + + + + + + + + + + + + + + + + + +
 
    Fachpraktikum WS 22/23
    Natural Language Processing (NLP) mit spaCy
-
-+ + + + + + + + + + + + + + + + + + + + + + + +
-+ + + + + + + + + + + + + + + + + + + + + + + +
 
 
 Medextractor - Konsolenapplikation
@@ -65,9 +60,16 @@ weiter vom Medextractor verwendet.
 
 Aufruf des Programms
 ====================
+
+Voraussetzungen
+---------------
+* Packages, die in requirements.txt aufgelistet sind, sind installiert (Installation aller Packages möglich mit dem Befehl ```pip install -r requirements.txt```)
+
+Aufruf
+------
 Das Programm wird gestartet, indem in die Windowseingabeaufforderung der Befehl
 
-   python medextractor.py
+   ```python medextractor.py```
 
 eingegeben wird.
 
