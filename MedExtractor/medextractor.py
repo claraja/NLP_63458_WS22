@@ -1,5 +1,5 @@
 from src.rdf.RDFSerialiser import RDFSerialiser
-from src.preprocessor.preprocessor import RuleBasedPreprocessor
+from src.config_manager import ConfigManager
 from src.knowledge_extractor.knowledge_extractor import KnowledgeExtractor
 import os, glob
 import spacy
@@ -76,37 +76,23 @@ print(f'time create knowledgeExtractor: {time.time()-time_tmp}s')
 knowledgebase = knowledgeExtractor.get_knowledge_base()
 print(f"size of knowledgebase:  {len(knowledgebase)}")
 
-time_tmp = time.time()
-for filename in glob.glob(text_folder_name + "/*.txt"):
-    preprocessor = RuleBasedPreprocessor(filename)
-    preprocessed_text = preprocessor.get_preprocessed_text()
+# Load configuration file
+config = ConfigManager()
 
-    #print('\nBereits in der Wissensbasis (' + str(len(knowledgebase.semantic_relations)) + '):')
-    #for semantic_relation in knowledgeExtractor.get_knowledge_base().semantic_relations:
-    #    print(semantic_relation.__str__())
+# Create main class for processing and extracting knowledge
+knowledgeExtractor = KnowledgeExtractor(config)
 
-    #span = nlp("the blues")[0:2]
-    #span.label_ = "DISEASE"
-    #context = set()
-    #context.add(span)
-    #knowledgeExtractor.set_context(context)
-    
-    for sent in nlp(preprocessed_text).sents:
-        knowledgeExtractor(sent.text)
+# Process texts about mental diseases
+knowledgeExtractor.process_texts()
 
+# Optional step: save knowledge base
 knowledgeExtractor.saveKB()
 
-#print('\nNach neuer Analyse in der Wissensbasis (' + str(len(knowledgebase.semantic_relations)) + '):')
-#for semantic_relation in knowledgebase.semantic_relations:
-#    print(semantic_relation.__str__())
+# Optional step: save data for future use with entity linker
+knowledgeExtractor.export_for_entity_linker(config.entity_linker_export_filename)
 
-knowledgebase.export_for_entity_linker(entity_linker_export_filename)
-print(f"size of knowledgebase:  {len(knowledgebase)}")
+# Create RDF serialisation class
+rdfSerialiser = RDFSerialiser(knowledgeExtractor.get_knowledge_base(), 'http://fapranlp.de/', 'nlp')
 
-print(f'time complete loop over files: {time.time()-time_tmp}s')
-
-rdfSerialiser = RDFSerialiser(knowledgebase, 'http://fapranlp.de/', 'nlp')
-
-#output_path = os.path.join('resources', 'extracted_relations.xml')
-#rdfSerialiser.serialise_knowledgebase( output_path=output_path) # default='pretty-xml'; möglich auch 'xml' und weitere, siehe: https://rdflib.readthedocs.io/en/stable/plugin_serializers.html
-rdfSerialiser.serialise_knowledgebase(relations_filename) # default='pretty-xml'; möglich auch 'xml' und weitere, siehe: https://rdflib.readthedocs.io/en/stable/plugin_serializers.html
+# Serialise knowledge base into RDF file
+rdfSerialiser.serialise_knowledgebase(config.relations_filename)

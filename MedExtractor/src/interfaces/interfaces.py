@@ -16,9 +16,9 @@ class PreprocessingInterface(ABC):
 
 class KnowledgeExtractorInterface(ABC):
 
-    def __init__(self, kb_filename, nlp):
-        self._kb_filename = kb_filename
-        self._nlp = nlp
+    # def __init__(self, kb_filename, nlp):
+    #     self._kb_filename = kb_filename
+    #     self._nlp = nlp
 
     @abstractmethod
     def get_knowledge_base(self) -> str:
