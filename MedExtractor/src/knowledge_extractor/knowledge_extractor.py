@@ -36,6 +36,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         self._ruler = self._nlp.add_pipe("entity_ruler")
 
         input_data_file = open(config.diseases_filename, 'r', encoding = "utf-8", errors = 'ignore')
+
         reader = csv.reader(input_data_file, delimiter='\t')
 
         training_data = []
@@ -48,6 +49,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         self._ruler.add_patterns(training_data)
 
         input_data_file = open(config.symptoms_filename, 'r', encoding = "utf-8", errors = 'ignore')
+
         reader = csv.reader(input_data_file, delimiter='\t')
 
         for row in reader:
@@ -84,31 +86,6 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                             else:
                                 entity2 = Entity('no ' + ent2.text,EntityType.SYMPTOM)
 
-                            #if ent2._.negex == False:
-                            #    entity2 = Entity(ent2.text,EntityType.SYMPTOM)
-                            #else:
-                            #    entity2 = Entity('no ' + ent2.text,EntityType.SYMPTOM)
-                            #    if 'no ' + ent2.text not in sent_text:
-                            #        index = sent_text.find(ent2.text)
-                            #        sent_text = sent_text[:index] + 'no ' + sent_text[index:]
-
-                        #else:
-                        #    entity1 = Entity(ent1.text,EntityType.UNDEFINED)
-
-                        #if (ent2.label_ == "DISEASE"):
-                        #    entity2 = Entity(ent2.text,EntityType.DISEASE)
-                        #elif (ent2.label_ == "SYMPTOM"):
-                        #    if ent2._.negex == False:
-                        #        entity2 = Entity(ent2.text,EntityType.SYMPTOM)
-                        #    else:
-                        #        print(sent_text)
-                        #        entity2 = Entity('no ' + ent2.text,EntityType.SYMPTOM)
-                        #        if 'no ' + ent2.text not in sent_text:
-                        #            index = sent_text.find(ent2.text)
-                        #            sent_text = sent_text[:index] + 'no ' + sent_text[index:]
-                        #else:
-                        #    entity2 = Entity(ent2.text,EntityType.UNDEFINED)
-
                         relation = SemanticRelation(entity1,entity2,res)
                         if not self._kb.has_relation(relation):
                             relation.training_samples.append(sent_text.strip('\n'))
@@ -137,9 +114,6 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         if entity1.label_ == "DISEASE" and entity2.label_ == "SYMPTOM":
             relation = RelationType.HAS_SYMPTOM
         
-        #if entity1.label_ == "SYMPTOM" and entity2.label_ == "DISEASE":
-        #    relation = RelationType.IS_SYMPTOM_OF
-
         return relation
     
     def saveKB(self,*args):
