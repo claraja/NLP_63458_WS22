@@ -73,7 +73,7 @@ class KnowledgeBase:
 
     def give_entities(self, alias: str) -> []:
         """
-        Return a list of entities that are symptoms in SemanticRelations stored in the KnowledgeBase
+        Return a list of entities that are related to symptoms in SemanticRelations stored in the KnowledgeBase
 
         @param alias: the name of a symptom
         """

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  29 DEC 2022 21:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  23 JAN 2023 21:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2171,7 +2171,7 @@ Package acronym Info: Label `acro:RDF' newly defined as it shall be overridden
 although it is yet undefined on input line 96.
 Package acronym Info: Label `acro:W3C' newly defined as it shall be overridden
 although it is yet undefined on input line 96.
-<pictures/rdf-graph.png, id=266, 774.895pt x 299.1175pt>
+<pictures/rdf-graph.png, id=265, 774.895pt x 299.1175pt>
 File: pictures/rdf-graph.png Graphic file (type png)
 <use pictures/rdf-graph.png>
 Package pdftex.def Info: pictures/rdf-graph.png  used on input line 104.
@@ -2322,7 +2322,7 @@ Overfull \hbox (5.34427pt too wide) in paragraph at lines 3--4
 enten-/Dienstemodelle,
  []
 
-<pictures/UseCases.png, id=327, 408.77719pt x 123.46124pt>
+<pictures/UseCases.png, id=325, 408.77719pt x 123.46124pt>
 File: pictures/UseCases.png Graphic file (type png)
 <use pictures/UseCases.png>
 Package pdftex.def Info: pictures/UseCases.png  used on input line 21.
@@ -2331,7 +2331,7 @@ Package pdftex.def Info: pictures/UseCases.png  used on input line 21.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 30.
 
-<pictures/Aktivitätsdiagramm.png, id=330, 671.50874pt x 369.63094pt>
+<pictures/Aktivitätsdiagramm.png, id=328, 671.50874pt x 369.63094pt>
 File: pictures/Aktivitätsdiagramm.png Graphic file (type png)
 <use pictures/Aktivitätsdiagramm.png>
 Package pdftex.def Info: pictures/Aktivitätsdiagramm.png  used on input line 3
@@ -2341,20 +2341,20 @@ Package pdftex.def Info: pictures/Aktivitätsdiagramm.png  used on input line 3
 
 
  <./pictures/UseCases.png>]
-<pictures/Informationsmodell.png, id=340, 415.5525pt x 175.40532pt>
+<pictures/Informationsmodell.png, id=338, 415.5525pt x 175.40532pt>
 File: pictures/Informationsmodell.png Graphic file (type png)
 <use pictures/Informationsmodell.png>
 Package pdftex.def Info: pictures/Informationsmodell.png  used on input line 43
 .
 (pdftex.def)             Requested size: 370.0pt x 156.1825pt.
-<pictures/Architekturmodell.png, id=342, 1273.75874pt x 608.2725pt>
+<pictures/Architekturmodell.png, id=340, 1273.75874pt x 608.2725pt>
 File: pictures/Architekturmodell.png Graphic file (type png)
 <use pictures/Architekturmodell.png>
 Package pdftex.def Info: pictures/Architekturmodell.png  used on input line 54.
 
 (pdftex.def)             Requested size: 370.0pt x 176.68224pt.
  [16 <./pictures/Aktivitätsdiagramm.png> <./pictures/Informationsmodell.png>]
-<pictures/ComponentDiagram.png, id=352, 585.68813pt x 314.67563pt>
+<pictures/ComponentDiagram.png, id=350, 585.68813pt x 314.67563pt>
 File: pictures/ComponentDiagram.png Graphic file (type png)
 <use pictures/ComponentDiagram.png>
 Package pdftex.def Info: pictures/ComponentDiagram.png  used on input line 63.
@@ -2373,7 +2373,7 @@ et_preprocessed_text().
 
 [17 <./pictures/Architekturmodell.png (PNG copy)> <./pictures/ComponentDiagram.
 png>]
-<pictures/RuleBasedPreprocessor.png, id=362, 952.55875pt x 582.175pt>
+<pictures/RuleBasedPreprocessor.png, id=360, 952.55875pt x 582.175pt>
 File: pictures/RuleBasedPreprocessor.png Graphic file (type png)
 <use pictures/RuleBasedPreprocessor.png>
 Package pdftex.def Info: pictures/RuleBasedPreprocessor.png  used on input line
@@ -2403,7 +2403,7 @@ Overfull \hbox (2.46371pt too wide) in paragraph at lines 92--93
 lated() mit un-ter-schied-
  []
 
-<pictures/KnowledgeExtractor.png, id=364, 581.17125pt x 659.46375pt>
+<pictures/KnowledgeExtractor.png, id=362, 581.17125pt x 659.46375pt>
 File: pictures/KnowledgeExtractor.png Graphic file (type png)
 <use pictures/KnowledgeExtractor.png>
 Package pdftex.def Info: pictures/KnowledgeExtractor.png  used on input line 96
@@ -2420,13 +2420,13 @@ Overfull \hbox (4.14363pt too wide) in paragraph at lines 104--106
 mit der Python-Biblio-
  []
 
-<pictures/RDFSerialiser.png, id=371, 837.1275pt x 701.62125pt>
+<pictures/RDFSerialiser.png, id=369, 837.1275pt x 701.62125pt>
 File: pictures/RDFSerialiser.png Graphic file (type png)
 <use pictures/RDFSerialiser.png>
 Package pdftex.def Info: pictures/RDFSerialiser.png  used on input line 109.
 (pdftex.def)             Requested size: 370.0pt x 310.10606pt.
 [19 <./pictures/KnowledgeExtractor.png>]
-<pictures/Main.png, id=379, 870.8535pt x 401.0985pt>
+<pictures/Main.png, id=377, 870.8535pt x 401.0985pt>
 File: pictures/Main.png Graphic file (type png)
 <use pictures/Main.png>
 Package pdftex.def Info: pictures/Main.png  used on input line 122.
@@ -2507,7 +2507,12 @@ n/10.95 (be-sucht am 07.11.2022).
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 113.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 113.
  (./praktikumsbericht.aux (./frontbackmatter/Contents.aux)
-(./frontbackmatter/Acronyms.aux) (./frontbackmatter/Bibliography.aux))
+(./frontbackmatter/Acronyms.aux) (./frontbackmatter/Bibliography.aux)
+
+Package mparhack Warning: Marginpars may have changed.
+(mparhack)                Rerun to get them right.
+
+)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 113.
 
 
@@ -2756,36 +2761,31 @@ Package logreq Info: Writing requests to 'praktikumsbericht.run.xml'.
 ### simple group (level 1) entered at line 57 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38918 strings out of 480994
- 763271 string characters out of 5902830
- 1760525 words of memory out of 5000000
- 53395 multiletter control sequences out of 15000+600000
+ 38921 strings out of 480994
+ 763409 string characters out of 5902830
+ 1760601 words of memory out of 5000000
+ 53399 multiletter control sequences out of 15000+600000
  602915 words of font info for 132 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  74i,23n,97p,10112b,24241s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{figure.caption.12} has been referen
-ced but does not exist, replaced by a fixed one
+{c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/en
+c/dvips/base/8r.enc}<c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr10.pfb><c:/Programme/Textverarbeitung/TexLive/201
+9/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Programme/Textverarb
+eitung/TexLive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb><c:
+/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/public/fpl/fplb
+j8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/publ
+ic/fpl/fplrc8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts
+/type1/public/fpl/fplrij8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texm
+f-dist/fonts/type1/public/bera/fvmr8a.pfb><c:/Programme/Textverarbeitung/TexLiv
+e/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/Programme/Textverarbe
+itung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/Programme
+/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 
-pdfTeX warning (dest): name{figure.caption.9} has been referenced but does not 
-exist, replaced by a fixed one
-
-{c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/enc/dvips/base/8r.
-enc}<c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr10.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Programme/Textverarbeitung/TexLive/2
-019/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb><c:/Programme/Textv
-erarbeitung/TexLive/2019/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb><c:/Prog
-ramme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/public/fpl/fplrc8a.p
-fb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/public/fp
-l/fplrij8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/typ
-e1/public/bera/fvmr8a.pfb><c:/Programme/Textverarbeitung/TexLive/2019/texmf-dis
-t/fonts/type1/urw/palatino/uplb8a.pfb><c:/Programme/Textverarbeitung/TexLive/20
-19/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/Programme/Textverarbeitun
-g/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on praktikumsbericht.pdf (30 pages, 751629 bytes).
+Output written on praktikumsbericht.pdf (30 pages, 752757 bytes).
 PDF statistics:
- 669 PDF objects out of 1000 (max. 8388607)
- 601 compressed objects within 7 object streams
- 177 named destinations out of 1000 (max. 500000)
+ 672 PDF objects out of 1000 (max. 8388607)
+ 604 compressed objects within 7 object streams
+ 176 named destinations out of 1000 (max. 500000)
  16356 words of extra memory for PDF output out of 17280 (max. 10000000)
 
