@@ -2195,15 +2195,16 @@
     <bcf:citekey order="11">vasiliev2020natural</bcf:citekey>
     <bcf:citekey order="12">github_spacy</bcf:citekey>
     <bcf:citekey order="13">spacy</bcf:citekey>
-    <bcf:citekey order="14">bird2006nltk</bcf:citekey>
-    <bcf:citekey order="15">vrehuuvrek2011gensim</bcf:citekey>
-    <bcf:citekey order="16">de2012pattern</bcf:citekey>
-    <bcf:citekey order="17">github_pattern</bcf:citekey>
-    <bcf:citekey order="18">w3c_all_2022</bcf:citekey>
-    <bcf:citekey order="19">DCMI_dcmi_2022</bcf:citekey>
-    <bcf:citekey order="20">rdflib_team_rdflib_2022</bcf:citekey>
-    <bcf:citekey order="21">norman1986user</bcf:citekey>
-    <bcf:citekey order="22">sadvilkar_pysbd_2020</bcf:citekey>
+    <bcf:citekey order="14">sadvilkar_pysbd_2020</bcf:citekey>
+    <bcf:citekey order="15">bird2006nltk</bcf:citekey>
+    <bcf:citekey order="16">vrehuuvrek2011gensim</bcf:citekey>
+    <bcf:citekey order="17">de2012pattern</bcf:citekey>
+    <bcf:citekey order="18">github_pattern</bcf:citekey>
+    <bcf:citekey order="19">w3c_all_2022</bcf:citekey>
+    <bcf:citekey order="20">DCMI_dcmi_2022</bcf:citekey>
+    <bcf:citekey order="21">rdflib_team_rdflib_2022</bcf:citekey>
+    <bcf:citekey order="22">norman1986user</bcf:citekey>
+    <bcf:citekey order="23">sadvilkar_pysbd_2020</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

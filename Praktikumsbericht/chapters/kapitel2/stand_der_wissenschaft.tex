@@ -73,13 +73,11 @@ jede Entität $m_i$ in $M$ seinem korrekten Äquivalent $e_i$ in $E$ zuzuordnen.
 \end{defn}
 
 \subsection{spaCy}
-spaCy ist eine Python-Bibliothek, die die erforderlichen Daten und Algorithmen enthält, die zum verarbeiten von
-Texten mit natürlicher Sprache benötigt werden. SpaCy enthält vortrainierte Modelle für über 70 verschiedene 
-Sprachen, unter anderem Spanisch, Englisch, Griechisch und Deutsch. Zudem ermöglicht spaCy das Einbinden von 
-Modellen, die mithilfe anderer Python-Bibliotheken (zum Beispiel PyTorch oder TensorFlow) trainiert wurden.
-Anders als einige andere NLP-Bibliotheken konzentriert sich spaCy darauf, Software für den Produktionseinsatz 
-zur Verfügung zu stellen. Erstmals wurde spaCy 2015 von Matthew Honnibal veröffentlicht. 
-(\cite{vasiliev2020natural}, \cite{github_spacy}, \cite{spacy})
+spaCy ist eine Python-Bibliothek, die die erforderlichen Daten und Algorithmen enthält, die zum verarbeiten von Texten mit natürlicher Sprache benötigt werden. SpaCy enthält vortrainierte Modelle für über 70 verschiedene Sprachen, unter anderem Spanisch, Englisch, Griechisch und Deutsch. Zudem ermöglicht spaCy das Einbinden von Modellen, die mithilfe anderer Python-Bibliotheken (zum Beispiel PyTorch oder TensorFlow) trainiert wurden.
+Anders als einige andere NLP-Bibliotheken konzentriert sich spaCy darauf, Software für den Produktionseinsatz zur Verfügung zu stellen. Erstmals wurde spaCy 2015 von Matthew Honnibal veröffentlicht. (\cite{vasiliev2020natural}, \cite{github_spacy}, \cite{spacy})
+
+\subsection{pySBD}
+ \cite{sadvilkar_pysbd_2020} stellen die Python-Bibliothek \emph{pySBD} vor, die Satzgrenzen in Texten ermittelt. Dieser Schritt der Datenaufbereitung ist wichtig, da viele weiterführende NLP-Schritte auf Satzebene durchgeführt werden und daher die korrekte Bestimmung der Satzgrenzen Auswirkungen auf den Erfolg der weiteren Verarbeitung hat. Die Autoren der Studie vergleichen die Genauigkeit ihrer Bibliothek mit anderen Bibliotheken anhand der sogenannten \emph{Golden Rules}, die zahlreiche Beispiele für Sonderfälle von Satzgrenzen in mehreren Sprachen enthalten. Laut ihren Angaben übertrifft die Genauigkeit der Satzgrenzenerkennung von pySBD die Genauigkeit der Satzgrenzenerkennung von spaCy und anderen Bibliotheken.
 
 \subsection{Weitere Python-Bibliotheken für Machine Learning (ML) und NER}
 Eine der wichtigsten Python-Bibliotheken für NLP ist NLTK (Natural Language Toolkit) (\cite{bird2006nltk}).

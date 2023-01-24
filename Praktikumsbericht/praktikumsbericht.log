@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  23 JAN 2023 21:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  24 JAN 2023 20:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1986,15 +1986,9 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 
-Overfull \hbox (7.49306pt too wide) in paragraph at lines 47--47
+Overfull \hbox (7.49306pt too wide) in paragraph at lines 49--49
  [][] []\T1/pplj/m/n/10.95 Weitere Python-Bibliotheken für Ma-chi-ne Lear-ning 
 (ML) 
- []
-
-
-Overfull \hbox (3.45345pt too wide) in paragraph at lines 83--83
- [][] []\T1/pplj/m/n/10.95 FZ 2.4 Im-ple-men-tie-rung zur Über-füh-rung me-di-z
-i-ni-schen Fach- 
  []
 
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
@@ -2007,7 +2001,13 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 
 
 
-])
+]
+Overfull \hbox (3.45345pt too wide) in paragraph at lines 85--85
+ [][] []\T1/pplj/m/n/10.95 FZ 2.4 Im-ple-men-tie-rung zur Über-füh-rung me-di-z
+i-ni-schen Fach- 
+ []
+
+)
 \tf@toc=\write6
 \openout6 = `praktikumsbericht.toc'.
 
@@ -2099,7 +2099,7 @@ Overfull \hbox (5.2606pt too wide) in paragraph at lines 18--19
 
 ) (./chapters/kapitel1/forschungsfragen.tex)
 (./chapters/kapitel1/forschungsmethode.tex
-<pictures/Nunamaker2.png, id=171, 1336.995pt x 917.4275pt>
+<pictures/Nunamaker2.png, id=174, 1336.995pt x 917.4275pt>
 File: pictures/Nunamaker2.png Graphic file (type png)
 <use pictures/Nunamaker2.png>
 Package pdftex.def Info: pictures/Nunamaker2.png  used on input line 8.
@@ -2168,47 +2168,48 @@ Overfull \hbox (0.80006pt too wide) in paragraph at lines 27--28
 
 ] [11]
 Package acronym Info: Label `acro:RDF' newly defined as it shall be overridden
-although it is yet undefined on input line 96.
+although it is yet undefined on input line 94.
 Package acronym Info: Label `acro:W3C' newly defined as it shall be overridden
-although it is yet undefined on input line 96.
-<pictures/rdf-graph.png, id=265, 774.895pt x 299.1175pt>
+although it is yet undefined on input line 94.
+ [12]
+<pictures/rdf-graph.png, id=286, 774.895pt x 299.1175pt>
 File: pictures/rdf-graph.png Graphic file (type png)
 <use pictures/rdf-graph.png>
-Package pdftex.def Info: pictures/rdf-graph.png  used on input line 104.
+Package pdftex.def Info: pictures/rdf-graph.png  used on input line 102.
 (pdftex.def)             Requested size: 370.0pt x 142.82623pt.
 LaTeX Font Info:    Trying to load font information for T1+fvm on input line 10
-5.
+3.
 
 (c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 105.
+(Font)              scaled to size 8.50006pt on input line 103.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvm' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--105
+Underfull \hbox (badness 10000) in paragraph at lines 103--103
 [][]|\T1/pplj/m/n/10 ein-fa-cher RDF-Graph (vi-sua-li-siert mit [][]$\T1/fvm/m/
 n/10 https : / / www . ldf . fi /
  []
 
-[12]
-Overfull \hbox (4.21797pt too wide) in paragraph at lines 111--112
+
+Overfull \hbox (4.21797pt too wide) in paragraph at lines 109--110
 \T1/pplj/m/n/10.95 sier-tes Da-ten-mo-del-lie-rungs-vo-ka-bu-lar für RDF-Daten 
 be-reit: das RDF-Schema.
  []
 
 
-Overfull \hbox (6.3954pt too wide) in paragraph at lines 111--112
+Overfull \hbox (6.3954pt too wide) in paragraph at lines 109--110
 \T1/pplj/m/n/10.95 bie-tet ei-ne Rei-he von vor-de-fi-nier-ten Klas-sen (\T1/pp
 lj/m/it/10.95 rdfs:Class\T1/pplj/m/n/10.95 ), Res-sour-cen (\T1/pplj/m/it/10.95
  rdfs:Class\T1/pplj/m/n/10.95 )
  []
 
 
-Overfull \hbox (17.06pt too wide) in paragraph at lines 113--114
+Overfull \hbox (17.06pt too wide) in paragraph at lines 111--112
 \T1/pplj/m/n/10.95 ner be-stimm-ten Do-mä-ne (\T1/pplj/m/it/10.95 rdfs:domain\T
 1/pplj/m/n/10.95 ) und ei-nem be-stimm-ten Be-reich (\T1/pplj/m/it/10.95 rdfs:r
 ange\T1/pplj/m/n/10.95 )
@@ -2216,36 +2217,58 @@ ange\T1/pplj/m/n/10.95 )
 
 Package acronym Info: Label `acro:DCMI' newly defined as it shall be overridden
 
-although it is yet undefined on input line 118.
+although it is yet undefined on input line 116.
 
-Overfull \hbox (4.92822pt too wide) in paragraph at lines 118--119
+Overfull \hbox (4.92822pt too wide) in paragraph at lines 116--117
 \T1/pplj/m/n/10.95 15 stan-dar-di-sier-te Kern-fel-der, die zur Be-schrei-bung 
 der Merk-ma-le von Online-
  []
 
-
-Overfull \hbox (18.25352pt too wide) in paragraph at lines 126--127
+[13 <./pictures/rdf-graph.png>]
+Overfull \hbox (18.25352pt too wide) in paragraph at lines 124--125
 \T1/pplj/m/n/10.95 die-sem Prak-ti-kum er-folgt die Aus-ga-be der Wis-sens-re-p
 rä-sen-ta-ti-on im RDF/XML-
  []
 
-[13 <./pictures/rdf-graph.png>]
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.30756pt on input line 131.
+(Font)              scaled to size 9.30756pt on input line 129.
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 132.
 
 
 Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 134.
 
 
 Package xcolor Warning: Incompatible color definition on input line 135.
 
 
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 136.
+
+
+Package xcolor Warning: Incompatible color definition on input line 136.
+
+
+Package xcolor Warning: Incompatible color definition on input line 136.
+
+
+Package xcolor Warning: Incompatible color definition on input line 136.
+
+
 Package xcolor Warning: Incompatible color definition on input line 137.
 
 
@@ -2276,41 +2299,17 @@ Package xcolor Warning: Incompatible color definition on input line 139.
 Package xcolor Warning: Incompatible color definition on input line 139.
 
 
-Package xcolor Warning: Incompatible color definition on input line 139.
-
-
-Package xcolor Warning: Incompatible color definition on input line 139.
-
-
 Package xcolor Warning: Incompatible color definition on input line 140.
 
 
 Package xcolor Warning: Incompatible color definition on input line 140.
-
-
-Package xcolor Warning: Incompatible color definition on input line 140.
-
-
-Package xcolor Warning: Incompatible color definition on input line 140.
-
-
-Package xcolor Warning: Incompatible color definition on input line 141.
-
-
-Package xcolor Warning: Incompatible color definition on input line 141.
-
-
-Package xcolor Warning: Incompatible color definition on input line 142.
-
-
-Package xcolor Warning: Incompatible color definition on input line 142.
 
 Package acronym Info: Label `acro:SPARQL' newly defined as it shall be overridd
 en
-although it is yet undefined on input line 151.
+although it is yet undefined on input line 149.
 ) (./chapters/kapitel3/konzeptuelle_modellierung.tex
 Kapitel 3.
-[14]
+[14] [15]
 Overfull \hbox (0.72261pt too wide) in paragraph at lines 3--4
 \T1/pplj/m/n/10.95 In die-sem Ka-pi-tel wird der An-wen-dungs-kon-text und kon-
 kre-te An-wen-dungs-
@@ -2322,7 +2321,7 @@ Overfull \hbox (5.34427pt too wide) in paragraph at lines 3--4
 enten-/Dienstemodelle,
  []
 
-<pictures/UseCases.png, id=325, 408.77719pt x 123.46124pt>
+<pictures/UseCases.png, id=334, 408.77719pt x 123.46124pt>
 File: pictures/UseCases.png Graphic file (type png)
 <use pictures/UseCases.png>
 Package pdftex.def Info: pictures/UseCases.png  used on input line 21.
@@ -2331,30 +2330,30 @@ Package pdftex.def Info: pictures/UseCases.png  used on input line 21.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 30.
 
-<pictures/AktivitÃ¤tsdiagramm.png, id=328, 671.50874pt x 369.63094pt>
+<pictures/AktivitÃ¤tsdiagramm.png, id=337, 671.50874pt x 369.63094pt>
 File: pictures/AktivitÃ¤tsdiagramm.png Graphic file (type png)
 <use pictures/AktivitÃ¤tsdiagramm.png>
 Package pdftex.def Info: pictures/AktivitÃ¤tsdiagramm.png  used on input line 3
 2.
 (pdftex.def)             Requested size: 370.0pt x 203.66425pt.
-[15
+[16
 
 
  <./pictures/UseCases.png>]
-<pictures/Informationsmodell.png, id=338, 415.5525pt x 175.40532pt>
+<pictures/Informationsmodell.png, id=346, 415.5525pt x 175.40532pt>
 File: pictures/Informationsmodell.png Graphic file (type png)
 <use pictures/Informationsmodell.png>
 Package pdftex.def Info: pictures/Informationsmodell.png  used on input line 43
 .
 (pdftex.def)             Requested size: 370.0pt x 156.1825pt.
-<pictures/Architekturmodell.png, id=340, 1273.75874pt x 608.2725pt>
+<pictures/Architekturmodell.png, id=348, 1273.75874pt x 608.2725pt>
 File: pictures/Architekturmodell.png Graphic file (type png)
 <use pictures/Architekturmodell.png>
 Package pdftex.def Info: pictures/Architekturmodell.png  used on input line 54.
 
 (pdftex.def)             Requested size: 370.0pt x 176.68224pt.
- [16 <./pictures/AktivitÃ¤tsdiagramm.png> <./pictures/Informationsmodell.png>]
-<pictures/ComponentDiagram.png, id=350, 585.68813pt x 314.67563pt>
+ [17 <./pictures/AktivitÃ¤tsdiagramm.png> <./pictures/Informationsmodell.png>]
+<pictures/ComponentDiagram.png, id=358, 585.68813pt x 314.67563pt>
 File: pictures/ComponentDiagram.png Graphic file (type png)
 <use pictures/ComponentDiagram.png>
 Package pdftex.def Info: pictures/ComponentDiagram.png  used on input line 63.
@@ -2371,9 +2370,9 @@ Overfull \hbox (11.62877pt too wide) in paragraph at lines 72--73
 et_preprocessed_text().
  []
 
-[17 <./pictures/Architekturmodell.png (PNG copy)> <./pictures/ComponentDiagram.
+[18 <./pictures/Architekturmodell.png (PNG copy)> <./pictures/ComponentDiagram.
 png>]
-<pictures/RuleBasedPreprocessor.png, id=360, 952.55875pt x 582.175pt>
+<pictures/RuleBasedPreprocessor.png, id=368, 952.55875pt x 582.175pt>
 File: pictures/RuleBasedPreprocessor.png Graphic file (type png)
 <use pictures/RuleBasedPreprocessor.png>
 Package pdftex.def Info: pictures/RuleBasedPreprocessor.png  used on input line
@@ -2403,7 +2402,7 @@ Overfull \hbox (2.46371pt too wide) in paragraph at lines 92--93
 lated() mit un-ter-schied-
  []
 
-<pictures/KnowledgeExtractor.png, id=362, 581.17125pt x 659.46375pt>
+<pictures/KnowledgeExtractor.png, id=370, 581.17125pt x 659.46375pt>
 File: pictures/KnowledgeExtractor.png Graphic file (type png)
 <use pictures/KnowledgeExtractor.png>
 Package pdftex.def Info: pictures/KnowledgeExtractor.png  used on input line 96
@@ -2414,19 +2413,19 @@ Overfull \hbox (397.55956pt too wide) has occurred while \output is active
  []|[]|
  []
 
-[18 <./pictures/RuleBasedPreprocessor.png (PNG copy)>]
+[19 <./pictures/RuleBasedPreprocessor.png (PNG copy)>]
 Overfull \hbox (4.14363pt too wide) in paragraph at lines 104--106
 \T1/pplj/m/n/10.95 ei-ne RDF/XML-Datei. Da-bei ar-bei-tet der RDFSe-ria-li-ser 
 mit der Python-Biblio-
  []
 
-<pictures/RDFSerialiser.png, id=369, 837.1275pt x 701.62125pt>
+<pictures/RDFSerialiser.png, id=377, 837.1275pt x 701.62125pt>
 File: pictures/RDFSerialiser.png Graphic file (type png)
 <use pictures/RDFSerialiser.png>
 Package pdftex.def Info: pictures/RDFSerialiser.png  used on input line 109.
 (pdftex.def)             Requested size: 370.0pt x 310.10606pt.
-[19 <./pictures/KnowledgeExtractor.png>]
-<pictures/Main.png, id=377, 870.8535pt x 401.0985pt>
+[20 <./pictures/KnowledgeExtractor.png>]
+<pictures/Main.png, id=385, 870.8535pt x 401.0985pt>
 File: pictures/Main.png Graphic file (type png)
 <use pictures/Main.png>
 Package pdftex.def Info: pictures/Main.png  used on input line 122.
@@ -2437,7 +2436,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./chapters/kapitel4/implementierung.tex
 Kapitel 4.
-[20 <./pictures/RDFSerialiser.png (PNG copy)>] [21 <./pictures/Main.png>]
+[21 <./pictures/RDFSerialiser.png (PNG copy)>] [22 <./pictures/Main.png>]
 Overfull \hbox (8.56755pt too wide) in paragraph at lines 5--5
 |[]\T1/pplj/m/sc/10.95/80ls fz 1.3 im-ple-men-tie-rung zur vor-ver-ar-bei-tung 
 me-di-zi-ni-scher
@@ -2445,7 +2444,7 @@ me-di-zi-ni-scher
 
 ) (./chapters/kapitel5/evaluierung.tex
 Kapitel 5.
-[22
+[23
 
 
 ]
@@ -2456,10 +2455,10 @@ Overfull \hbox (3.54457pt too wide) in paragraph at lines 5--5
 
 ) (./chapters/kapitel6/zusammenfassung.tex
 Kapitel 6.
-[23
+[24
 
 
-]) [24
+]) [25
 
 
 ]
@@ -2497,22 +2496,17 @@ Overfull \hbox (9.79741pt too wide) in paragraph at lines 15--15
 n/10.95 (be-sucht am 07.11.2022). 
  []
 
-[25
+[26
 
 
 
 
 
-]) [26]
+]) [27]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 113.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 113.
  (./praktikumsbericht.aux (./frontbackmatter/Contents.aux)
-(./frontbackmatter/Acronyms.aux) (./frontbackmatter/Bibliography.aux)
-
-Package mparhack Warning: Marginpars may have changed.
-(mparhack)                Rerun to get them right.
-
-)
+(./frontbackmatter/Acronyms.aux) (./frontbackmatter/Bibliography.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 113.
 
 
@@ -2749,9 +2743,6 @@ frontbackmatter/Bibliography.tex
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 113.
 Package rerunfilecheck Info: File `praktikumsbericht.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package logreq Info: Writing requests to 'praktikumsbericht.run.xml'.
 \openout1 = `praktikumsbericht.run.xml'.
 
@@ -2761,10 +2752,10 @@ Package logreq Info: Writing requests to 'praktikumsbericht.run.xml'.
 ### simple group (level 1) entered at line 57 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38921 strings out of 480994
- 763409 string characters out of 5902830
- 1760601 words of memory out of 5000000
- 53399 multiletter control sequences out of 15000+600000
+ 38924 strings out of 480994
+ 763430 string characters out of 5902830
+ 1761634 words of memory out of 5000000
+ 53400 multiletter control sequences out of 15000+600000
  602915 words of font info for 132 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  74i,23n,97p,10112b,24241s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2782,10 +2773,10 @@ e/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/Programme/Textverarbe
 itung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/Programme
 /Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 
-Output written on praktikumsbericht.pdf (30 pages, 752757 bytes).
+Output written on praktikumsbericht.pdf (31 pages, 753879 bytes).
 PDF statistics:
- 672 PDF objects out of 1000 (max. 8388607)
- 604 compressed objects within 7 object streams
- 176 named destinations out of 1000 (max. 500000)
- 16356 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 683 PDF objects out of 1000 (max. 8388607)
+ 614 compressed objects within 7 object streams
+ 178 named destinations out of 1000 (max. 500000)
+ 16364 words of extra memory for PDF output out of 17280 (max. 10000000)
 
