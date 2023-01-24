@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:fapra="http://fapranlp.de/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://fapranlp.de/depression">
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/continuous_low_mood"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/sadness"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/feeling_hopeless_and_helpless"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/low_self-esteem"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/feeling_tearful"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/feeling_guilt-ridden"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/feeling_irritable_and_intolerant_of_others"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/having_no_motivation_or_interest_in_things"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/finding_it_difficult_to_make_decisions"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/not_getting_any_enjoyment_out_of_life"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/feeling_anxious_or_worried"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/suicidal_thoughts"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/thoughts_of_harming_yourself"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/moving_or_speaking_more_slowly_than_usual"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/changes_in_appetite_or_weight"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/constipation"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/unexplained_aches_and_pains"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/lack_of_energy"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/low_sex_drive_(loss_of_libido)"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/changes_to_your_menstrual_cycle"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/disturbed_sleep"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/finding_it_difficult_to_fall_asleep_at_night"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/waking_up_very_early_in_the_morning"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/avoiding_contact_with_friends"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/taking_part_in_fewer_social_activities"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/neglecting_your_hobbies_and_interests"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/having_difficulties_in_your_home,_work_or_family_life"/>
+  </rdf:Description>
+</rdf:RDF>
