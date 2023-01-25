@@ -5,8 +5,25 @@
 \section{FZ 1.3 Implementierung zur Vorverarbeitung medizinischer Texte}
 \label{sec:FZ1.3} 
 
-Da die zu verarbeitenden medizinischen Texte nicht nur Fließtext enthalten, sondern auch Überschriften und Aufzählungen, ist als erster Schritt eine sinnvolle Unterteilung in Satzeinheiten erforderlich. Dazu kommt die Bibliothek pySBD (\cite{sadvilkar_pysbd_2020}) zum Einsatz.
-
+Da die zu verarbeitenden medizinischen Texte nicht nur Fließtext enthalten, sondern auch Überschriften und Aufzählungen, ist als erster Schritt eine sinnvolle Unterteilung in Satzeinheiten erforderlich. Dazu kommt die Bibliothek pySBD (\cite{sadvilkar_pysbd_2020}) zum Einsatz. Anschließend werden die Satzeinheiten noch so bearbeitet und zusammengefügt, dass möglichst sinnvolle Sätze für die weitere Verarbeitung entstehen. Ist eine erkannte Satzeinheit zum Beispiel ein leerer String, so wird diese nicht weiter verarbeitet. Nachgestellte Leerzeichen werden gelöscht. Außerdem werden Aufzählungen möglichst in einzelne Sätze verwandelt. So wird beispielsweise aus der Auflistung\\
+\begin{addmargin}{10pt}
+\emph{
+	The psychological symptoms of depression include:\\
+	- continuous low mood or sadness\\
+	- feeling hopeless and helpless\\
+	- having low self-esteem
+}
+\end{addmargin}
+\vspace*{5mm}
+eine Reihe von Sätzen:\\
+\begin{addmargin}{10pt}
+\emph{
+	The psychological symptoms of depression include continuous low mood or sadness.\\
+	The psychological symptoms of depression include feeling hopeless and helpless.\\
+	The psychological symptoms of depression include having low self-esteem.
+}
+\end{addmargin}
+\vspace*{5mm}
 \section{FZ 2.4 Implementierung zur Überführung medizinischen Fachvokabulars in maschinenlesbare Form zur weiteren Verarbeitung durch NLP}
 \label{sec:FZ2.4} 
 
