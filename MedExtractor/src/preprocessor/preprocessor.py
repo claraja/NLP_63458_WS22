@@ -28,76 +28,70 @@ class RuleBasedPreprocessor(PreprocessingInterface):
 
         doc = nlp(raw_text)
 
-        enumeration = ''
-        new_raw_text = ''
-        bullet_point = ''
+        enumeration, new_raw_text, bullet_point = '', '', ''
         for sent_id, sent in enumerate(doc.sents, start=1):
             sentence = sent.text
             # delete trailing whitespace
-            stripped_line = sentence.rstrip()
-            #print(sent_id, stripped_line, sep='\t|\t')
+            sentence = sentence.rstrip()
+            #print(sent_id, sentence, sep='\t|\t')
             # ignore empty lines
-            if (stripped_line==''):
-                #print(1)
+            if (sentence==''):
                 pass
             # remember start of enumeration
-            elif stripped_line[-1] == ':':
-                #print(2)
-                enumeration = stripped_line[0:-1]
+            elif sentence[-1] == ':':
+                enumeration = sentence[0:-1]
                 continue
-            elif ((stripped_line[-1] not in ['.', '!', '?', ':']) 
+            elif ((sentence[-1] not in ['.', '!', '?', ':']) 
                     and (enumeration=='')):
-                #print(3)
-                enumeration = stripped_line
+                enumeration = sentence
                 continue
-            elif ((stripped_line[-1] not in ['.', '!', '?', ':']) 
+            elif ((sentence[-1] not in ['.', '!', '?', ':']) 
                     and (enumeration!='')):
-                #print(4)
-                stripped_line = stripped_line.lstrip()
+                sentence = sentence.lstrip()
                 # wenn bullet_point exists sollte er bei allen Teilen 
                 # der Aufzählung gleich sein
                 if bullet_point!='':
-                    if stripped_line.startswith(bullet_point):
-                        stripped_line = enumeration + ' ' + stripped_line
+                    if sentence.startswith(bullet_point):
+                        sentence = enumeration + ' ' + sentence
                     else:
                         enumeration, bullet_point = '', ''
                 else:
-                    if stripped_line[0] in our_punctuation:
-                        # stripped_line_tmp wird eingeführt um 
+                    if sentence[0] in our_punctuation:
+                        # sentence_tmp wird eingeführt um 
                         # Aufzählungszeichen herauszubekommen
-                        stripped_line_tmp = stripped_line
+                        sentence_tmp = sentence
 
-                        # Habe in der While-Schleife die Bedingung   stripped_line_tmp != ''   ergänzt. Grund: pyspd scheint Probleme mit den Literaturangaben
-                        # wie z.B. '[1]' zu haben. Es kommt vor, dass die schließende Klammer nicht mehr als Teil des Satzes gesehen wird. Dann wird aus ']' ein
-                        # einzelner Satz. Wird dann das Zeichen ']' entfernt, ist der verbleibende String leer. Alternativ könnte man alle Literaturangaben aus
+                        # In der While-Schleife wurde die Bedingung   sentence_tmp != ''   ergänzt. 
+                        # Grund: pyspd scheint Probleme mit den Literaturangaben wie z.B. '[1]' zu haben. 
+                        # Es kommt vor, dass die schließende Klammer nicht mehr als Teil des Satzes gesehen wird. 
+                        # Dann wird aus ']' ein einzelner Satz. Wird dann das Zeichen ']' entfernt, ist der 
+                        # verbleibende String leer. Alternativ könnte man alle Literaturangaben aus
                         # dem Text entfernen, bevor spaCy zum Einsatz kommt.
-                        while (stripped_line_tmp != '') and ((stripped_line_tmp[0] in our_punctuation) | (stripped_line_tmp[0] == ' ')):
-                            stripped_line_tmp = stripped_line_tmp[1:]
+                        while (sentence_tmp != '') and ((sentence_tmp[0] in our_punctuation) | (sentence_tmp[0] == ' ')):
+                            sentence_tmp = sentence_tmp[1:]
                         # speichere Aufzählungszeichen falls vorhanden
-                        if len(stripped_line)!=len(stripped_line_tmp):
-                            bullet_point = stripped_line[:stripped_line.index(stripped_line_tmp)]  
-                        stripped_line = stripped_line_tmp
+                        if len(sentence)!=len(sentence_tmp):
+                            bullet_point = sentence[:sentence.index(sentence_tmp)]  
+                        sentence = sentence_tmp
                     # String 'symptom' sollte nicht in Symptom vorhanden sein
-                    if 'symptom' in stripped_line:
+                    if 'symptom' in sentence:
                         enumeration, bullet_point = '', ''
                     else:
-                        stripped_line = enumeration + ' ' + stripped_line
+                        sentence = enumeration + ' ' + sentence
             else:
-                #print(6)
                 enumeration, bullet_point = '', ''
             # replace all occurrences of multiple spaces with a single space
-            result = re.sub(' +', ' ', stripped_line)
+            result = re.sub(' +', ' ', sentence)
             new_raw_text += f'{result}.\n'
-            # further replacements
-            new_raw_text = new_raw_text\
-                .replace('..', '.')\
-                .replace('?.', '?')\
-                .replace('!.', '!')\
-                .replace('\n ', '\n')\
-                .replace('_', '')\
-                .replace(' - ', ' ')\
-                .replace(' – ', ' ')
-            # replace all occurrences of multiple spaces with a single space
-            new_raw_text = re.sub(' +', ' ', new_raw_text)
+        # further replacements
+        new_raw_text = new_raw_text\
+            .replace('..', '.')\
+            .replace('?.', '?')\
+            .replace('!.', '!')\
+            .replace('\n ', '\n')\
+            .replace('_', '')\
+            .replace(' - ', ' ')\
+            .replace(' – ', ' ')
+        # replace again possible occurrences of multiple spaces with a single space
+        new_raw_text = re.sub(' +', ' ', new_raw_text)
         return new_raw_text
-        #return None
