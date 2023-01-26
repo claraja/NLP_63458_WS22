@@ -11,12 +11,18 @@ from src.knowledge.entity import Entity
 from src.knowledge.entity import EntityType
 from src.knowledge.relations import RelationType
 from src.knowledge.semantics import SemanticRelation
-
 from src.preprocessor.preprocessor import RuleBasedPreprocessor
 
 
 class KnowledgeExtractor(KnowledgeExtractorInterface):
+    """KnowledgeExtractor searches a text string for entities and for relations between these entities"""
+
     def __init__(self, config: ConfigManager):
+        """Upon initialization of the KnowledgeExtractor data in config.json
+        is parsed into attributes of the KnowledgeExtractor instance. An instance
+        _nlp of the Language class of spaCy and an instance _kb of the KnowledgeBase
+        class are created"""
+        
         time_tmp = time.time()
         self._kb_filename = config.knowledgebase_filename
         self.text_folder_name = config.text_folder_name
@@ -62,7 +68,18 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
 
 
     def __call__(self,text):
+        """KnowledgeExtractor is callable. Input parameter is a text string. This function 
+        adds all new entity relations it finds in the text string to the database.
+        
+        Parameters:
+        ----------
+        text: string
+            The text string to be analyzed by the KnowledgeExtractor
 
+        Returns:
+        -------
+        None
+        """
         self._doc = self._nlp(text)
 
         for sent in self._doc.sents:
@@ -101,10 +118,36 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                             #     relation.training_samples.append(sent_text.strip('\n'))
 
     def set_context(self, context):
+        """This function allows to define a context. The context is described by a
+        named entity included in the Entity Ruler (self._ruler). This entity will
+        be added to the list of entities when searching for disease/symptom relations
+        between entities.
+        
+        Parameters:
+        ----------
+        context: Span
+
+        Returns:
+        -------
+        None
+        """
         self._context = context
         return
 
     def get_knowledge_base(self):
+        """Returns the knowledgebase that contains all entities (including aliases)
+        and sample sentences that can be used for training statistical models
+        
+        Parameters:
+        ----------
+        None
+
+        Returns:
+        ------
+        KnowledgeBase
+
+        """
+
         return self._kb
     
     def _is_related(self,entity1,entity2,sent):
@@ -117,6 +160,19 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         return relation
     
     def saveKB(self,*args):
+        """Saves the database persistently. Optionally, path and file name are given
+        as a string parameter when calling this function. If no path and file name
+        are given, the function will use the path and file name in attribute
+        self._kb_filename.
+
+        Parameters:
+        ----------
+        (optional) file_name (string)
+
+        Returns:
+        -------
+        None
+        """
         error = True
         if len(args) == 0:
             self._kb.save(self._kb_filename)    
@@ -148,10 +204,32 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
             print("------")
 
     def export_for_entity_linker(self, entity_linker_export_filename):
+        """Exports all entities, aliases and example sentences into an xml-File. The data
+        is prepared for easy import into spaCy's Entity Linker. The xml-File is human
+        readable and allows reviewing the data that will be used by the Entity Linker.
+
+        Parameters:
+        ----------
+        entity_linker_export_filename: String
+
+        Returns:
+        --------
+        None
+        """
         print(f"size of knowledgebase:  {len(self._kb)}")
         self._kb.export_for_entity_linker(entity_linker_export_filename)
 
     def process_texts(self):
+        """Analyzes all text documents in the folder specified in config.json
+        
+        Parameters:
+        ----------
+        None (uses attribute self.text_folder_name)
+
+        Returns:
+        -------
+        None
+        """
         time_tmp = time.time()
         for filename in glob.glob(self.text_folder_name + "/*.txt"):
             preprocessor = RuleBasedPreprocessor(filename)
