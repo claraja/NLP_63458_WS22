@@ -22,7 +22,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         is parsed into attributes of the KnowledgeExtractor instance. An instance
         _nlp of the Language class of spaCy and an instance _kb of the KnowledgeBase
         class are created"""
-        
+
         time_tmp = time.time()
         self._knowledgebase_filename = config.knowledgebase_filename
         self._text_folder_name = config.text_folder_name
@@ -69,9 +69,9 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
 
 
     def __call__(self,text):
-        """KnowledgeExtractor is callable. Input parameter is a text string. This function 
+        """KnowledgeExtractor is callable. Input parameter is a text string. This function
         adds all new entity relations it finds in the text string to the database.
-        
+
         Parameters:
         ----------
         text: string
@@ -104,7 +104,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
                             else:
                                 entity2 = Entity('no ' + ent2.text,EntityType.SYMPTOM)
 
-                        relation = SemanticRelation(entity1,entity2,res)
+                        relation = SemanticRelation(entity1, entity2, res)
                         if not self._kb.has_relation(relation):
                             relation.training_samples.append(sent_text.strip('\n'))
                             self._kb.add_relation(relation)
@@ -123,7 +123,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         named entity included in the Entity Ruler (self._ruler). This entity will
         be added to the list of entities when searching for disease/symptom relations
         between entities.
-        
+
         Parameters:
         ----------
         context: Span
@@ -138,7 +138,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
     def get_knowledge_base(self):
         """Returns the knowledgebase that contains all entities (including aliases)
         and sample sentences that can be used for training statistical models
-        
+
         Parameters:
         ----------
         None
@@ -176,12 +176,12 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         """
         error = True
         if len(args) == 0:
-            self._kb.save(self._knowledgebase_filename)    
+            self._kb.save(self._knowledgebase_filename)
             error = False 
         elif len(args) == 1:
             if isinstance(args[0],str):
                 self._knowledgebase_filename = args[0]
-                self._kb.save(self._knowledgebase_filename)    
+                self._kb.save(self._knowledgebase_filename)
                 error = False
         if error == True:
             print("Fehlerhafte Argumente beim Speichern der Wissensbasis")  # Fehlerhandling muss noch implementiert werden
@@ -223,7 +223,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
 
     def process_texts(self):
         """Analyzes all text documents in the folder specified in config.json
-        
+
         Parameters:
         ----------
         None
