@@ -15,7 +15,7 @@ knowledgeExtractor.process_texts()
 knowledgeExtractor.saveKB()
 
 # Optional step: save data for future use with entity linker
-knowledgeExtractor.export_for_entity_linker(config.entity_linker_export_filename)
+knowledgeExtractor.export_for_entity_linker()
 
 # Create RDF serialisation class
 rdfSerialiser = RDFSerialiser(knowledgeExtractor.get_knowledge_base(), 'http://fapranlp.de/', 'nlp')
