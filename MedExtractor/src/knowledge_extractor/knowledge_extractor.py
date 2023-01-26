@@ -24,16 +24,17 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         class are created"""
         
         time_tmp = time.time()
-        self._kb_filename = config.knowledgebase_filename
-        self.text_folder_name = config.text_folder_name
+        self._knowledgebase_filename = config.knowledgebase_filename
+        self._text_folder_name = config.text_folder_name
+        self._entity_linker_export_filename = config.entity_linker_export_filename
         self._nlp = spacy.load('en_core_web_sm')
         self._doc = self._nlp("")
         self._kb = KnowledgeBase()
         self._context = []
 
-        if (self._kb_filename != "") and os.path.exists(self._kb_filename):
+        if (self._knowledgebase_filename != "") and os.path.exists(self._knowledgebase_filename):
             if not config.overwrite:
-                self._kb.load(self._kb_filename)
+                self._kb.load(self._knowledgebase_filename)
 
         pipe_exceptions = ['tok2vec','tagger','parser']
         not_required_pipes = [pipe for pipe in self._nlp.pipe_names if pipe not in pipe_exceptions]
@@ -163,7 +164,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         """Saves the database persistently. Optionally, path and file name are given
         as a string parameter when calling this function. If no path and file name
         are given, the function will use the path and file name in attribute
-        self._kb_filename.
+        self._knowledgebase_filename.
 
         Parameters:
         ----------
@@ -175,12 +176,12 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         """
         error = True
         if len(args) == 0:
-            self._kb.save(self._kb_filename)    
+            self._kb.save(self._knowledgebase_filename)    
             error = False 
         elif len(args) == 1:
             if isinstance(args[0],str):
-                self._kb_filename = args[0]
-                self._kb.save(self._kb_filename)    
+                self._knowledgebase_filename = args[0]
+                self._kb.save(self._knowledgebase_filename)    
                 error = False
         if error == True:
             print("Fehlerhafte Argumente beim Speichern der Wissensbasis")  # Fehlerhandling muss noch implementiert werden
@@ -203,35 +204,36 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
 
             print("------")
 
-    def export_for_entity_linker(self, entity_linker_export_filename):
+    def export_for_entity_linker(self):
         """Exports all entities, aliases and example sentences into an xml-File. The data
         is prepared for easy import into spaCy's Entity Linker. The xml-File is human
         readable and allows reviewing the data that will be used by the Entity Linker.
+        Path and filename are defined in config.json.
 
         Parameters:
         ----------
-        entity_linker_export_filename: String
+        None
 
         Returns:
         --------
         None
         """
         print(f"size of knowledgebase:  {len(self._kb)}")
-        self._kb.export_for_entity_linker(entity_linker_export_filename)
+        self._kb.export_for_entity_linker(self._entity_linker_export_filename)
 
     def process_texts(self):
         """Analyzes all text documents in the folder specified in config.json
         
         Parameters:
         ----------
-        None (uses attribute self.text_folder_name)
+        None
 
         Returns:
         -------
         None
         """
         time_tmp = time.time()
-        for filename in glob.glob(self.text_folder_name + "/*.txt"):
+        for filename in glob.glob(self._text_folder_name + "/*.txt"):
             preprocessor = RuleBasedPreprocessor(filename)
             preprocessed_text = preprocessor.get_preprocessed_text()
 
