@@ -1,0 +1,707 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{bird2006nltk}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=a6ad72a87713a430f7335c5656da28f1}{%
+           family={Bird},
+           familyi={B\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a6ad72a87713a430f7335c5656da28f1}
+      \strng{fullhash}{a6ad72a87713a430f7335c5656da28f1}
+      \strng{bibnamehash}{a6ad72a87713a430f7335c5656da28f1}
+      \strng{authorbibnamehash}{a6ad72a87713a430f7335c5656da28f1}
+      \strng{authornamehash}{a6ad72a87713a430f7335c5656da28f1}
+      \strng{authorfullhash}{a6ad72a87713a430f7335c5656da28f1}
+      \field{labelalpha}{Bir06}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the COLING/ACL 2006 Interactive Presentation Sessions}
+      \field{title}{NLTK: the natural language toolkit}
+      \field{year}{2006}
+      \field{pages}{69\bibrangedash 72}
+      \range{pages}{4}
+    \endentry
+    \entry{DCMI_dcmi_2022}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=18ec26168fc8e5ae33bea44769fab571}{%
+           family={DCMI},
+           familyi={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{18ec26168fc8e5ae33bea44769fab571}
+      \strng{fullhash}{18ec26168fc8e5ae33bea44769fab571}
+      \strng{bibnamehash}{18ec26168fc8e5ae33bea44769fab571}
+      \strng{authorbibnamehash}{18ec26168fc8e5ae33bea44769fab571}
+      \strng{authornamehash}{18ec26168fc8e5ae33bea44769fab571}
+      \strng{authorfullhash}{18ec26168fc8e5ae33bea44769fab571}
+      \field{labelalpha}{DCM22}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This document is an up-to-date specification of all metadata terms maintained by the Dublin Core Metadata Initiative, including properties, vocabulary encoding schemes, syntax encoding schemes, and classes.}
+      \field{title}{{DCMI} {Metadata} {Terms}}
+      \field{urlday}{4}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Anne\\Zotero\\storage\\X75ZBQX5\\dcmi-terms.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.dublincore.org/specifications/dublin-core/dcmi-terms/
+      \endverb
+      \verb{url}
+      \verb https://www.dublincore.org/specifications/dublin-core/dcmi-terms/
+      \endverb
+    \endentry
+    \entry{de2012pattern}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b32cc41776652e84c634b71c1cd957e0}{%
+           family={De\bibnamedelima Smedt},
+           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=de80d83604a86dc9aff51ca1ce3069e6}{%
+           family={Daelemans},
+           familyi={D\bibinitperiod},
+           given={Walter},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JMLR. org}%
+      }
+      \strng{namehash}{cbc9291e3576aedc60b853c90b523a7c}
+      \strng{fullhash}{cbc9291e3576aedc60b853c90b523a7c}
+      \strng{bibnamehash}{cbc9291e3576aedc60b853c90b523a7c}
+      \strng{authorbibnamehash}{cbc9291e3576aedc60b853c90b523a7c}
+      \strng{authornamehash}{cbc9291e3576aedc60b853c90b523a7c}
+      \strng{authorfullhash}{cbc9291e3576aedc60b853c90b523a7c}
+      \field{labelalpha}{DD12}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of Machine Learning Research}
+      \field{number}{1}
+      \field{title}{Pattern for python}
+      \field{volume}{13}
+      \field{year}{2012}
+      \field{pages}{2063\bibrangedash 2067}
+      \range{pages}{5}
+    \endentry
+    \entry{the_economist_worlds_2017}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c67b3757f32daaf45967993f0c00cee8}{%
+           family={Economist},
+           familyi={E\bibinitperiod},
+           given={The},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{c67b3757f32daaf45967993f0c00cee8}
+      \strng{fullhash}{c67b3757f32daaf45967993f0c00cee8}
+      \strng{bibnamehash}{c67b3757f32daaf45967993f0c00cee8}
+      \strng{authorbibnamehash}{c67b3757f32daaf45967993f0c00cee8}
+      \strng{authornamehash}{c67b3757f32daaf45967993f0c00cee8}
+      \strng{authorfullhash}{c67b3757f32daaf45967993f0c00cee8}
+      \field{labelalpha}{Eco17}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0013-0613}
+      \field{journaltitle}{The Economist}
+      \field{title}{The world’s most valuable resource is no longer oil, but data}
+      \field{urlday}{8}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb The Economist Snapshot:C\:\\Users\\Anne\\Zotero\\storage\\5QICYYAZ\\the-worlds-most-valuable-resource-is-no-longer-oil-but-data.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.economist.com/leaders/2017/05/06/the-worlds-most-valuable-resource-is-no-longer-oil-but-data?fsrc=scn%2Ftw%2Fte%2Frfd%2Fpe
+      \endverb
+      \verb{url}
+      \verb https://www.economist.com/leaders/2017/05/06/the-worlds-most-valuable-resource-is-no-longer-oil-but-data?fsrc=scn%2Ftw%2Fte%2Frfd%2Fpe
+      \endverb
+    \endentry
+    \entry{github_pattern}{misc}{}
+      \list{publisher}{1}{%
+        {University of Antwerp, Belgium}%
+      }
+      \field{labelalpha}{22}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extraalpha}{1}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{GitHub - Pattern}
+      \field{urlday}{8}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/clips/pattern
+      \endverb
+      \verb{url}
+      \verb https://github.com/clips/pattern
+      \endverb
+    \endentry
+    \entry{github_spacy}{article}{}
+      \name{author}{4}{}{%
+        {{hash=31cf0cd70714219d39b46b0f8aae95f9}{%
+           family={Honnibal},
+           familyi={H\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=22ec3e1be0d721ed1c94e7caf62cc97c}{%
+           family={Van\bibnamedelima Landeghem},
+           familyi={V\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Sofie},
+           giveni={S\bibinitperiod}}}%
+        {{hash=47c9fa7dcc4eb3484a88f4bb42655895}{%
+           family={Montani},
+           familyi={M\bibinitperiod},
+           given={Ines},
+           giveni={I\bibinitperiod}}}%
+        {{hash=536eccdf07a1897181ba997c05a422d4}{%
+           family={Boyd},
+           familyi={B\bibinitperiod},
+           given={Adriane},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{bed6dea97e0930261a0f2a5da0281ca5}
+      \strng{fullhash}{5e8acbfafd11345cc782a236d27128d0}
+      \strng{bibnamehash}{5e8acbfafd11345cc782a236d27128d0}
+      \strng{authorbibnamehash}{5e8acbfafd11345cc782a236d27128d0}
+      \strng{authornamehash}{bed6dea97e0930261a0f2a5da0281ca5}
+      \strng{authorfullhash}{5e8acbfafd11345cc782a236d27128d0}
+      \field{labelalpha}{Hon+20}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{spaCy: Industrial-strength Natural Language Processing in Python}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.5281/zenodo.1212303
+      \endverb
+      \verb{urlraw}
+      \verb https://github.com/explosion/spaCy
+      \endverb
+      \verb{url}
+      \verb https://github.com/explosion/spaCy
+      \endverb
+    \endentry
+    \entry{mpg_depression}{misc}{}
+      \list{publisher}{1}{%
+        {Max-Planck_Institut für Psychiatrie}%
+      }
+      \field{labelalpha}{22}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extraalpha}{2}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Max-Planck-Institut für Psychiatrie - Depression}
+      \field{urlday}{7}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.psych.mpg.de/840900/depression
+      \endverb
+      \verb{url}
+      \verb https://www.psych.mpg.de/840900/depression
+      \endverb
+    \endentry
+    \entry{noauthor_menhir_2022}{misc}{}
+      \list{publisher}{1}{%
+        {United States National Library of Medicine}%
+      }
+      \field{labelalpha}{22}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extraalpha}{3}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{{MENHIR}}
+      \field{urlday}{6}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://menhir-project.eu/
+      \endverb
+      \verb{url}
+      \verb https://menhir-project.eu/
+      \endverb
+    \endentry
+    \entry{norman1986user}{book}{}
+      \name{author}{2}{}{%
+        {{hash=52a99041490c5d72e932ceb3fcbddccc}{%
+           family={Norman},
+           familyi={N\bibinitperiod},
+           given={D.A.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=322bd5c093fbdd0da31b0261b006fdd2}{%
+           family={Draper},
+           familyi={D\bibinitperiod},
+           given={S.W.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{269fcf647c2033ff489f04c4ebc2b13c}
+      \strng{fullhash}{269fcf647c2033ff489f04c4ebc2b13c}
+      \strng{bibnamehash}{269fcf647c2033ff489f04c4ebc2b13c}
+      \strng{authorbibnamehash}{269fcf647c2033ff489f04c4ebc2b13c}
+      \strng{authornamehash}{269fcf647c2033ff489f04c4ebc2b13c}
+      \strng{authorfullhash}{269fcf647c2033ff489f04c4ebc2b13c}
+      \field{labelalpha}{ND86}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780898598728}
+      \field{title}{User Centered System Design: New Perspectives on Human-computer Interaction}
+      \field{year}{1986}
+      \verb{urlraw}
+      \verb https://books.google.de/books?id=Qz5jQgAACAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.de/books?id=Qz5jQgAACAAJ
+      \endverb
+    \endentry
+    \entry{nunamaker_systems_1990-1}{article}{}
+      \name{author}{3}{}{%
+        {{hash=7d0f87dfa28107ef5e7ba5526f801451}{%
+           family={Nunamaker},
+           familyi={N\bibinitperiod},
+           given={Jay\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=5c794858c4ce4838fa4349d9f82ee177}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Minder},
+           giveni={M\bibinitperiod}}}%
+        {{hash=89781a6d77c554c7e38229ef7ca5aaec}{%
+           family={Purdin},
+           familyi={P\bibinitperiod},
+           given={Titus\bibnamedelima D.M.},
+           giveni={T\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{7fbdf3087a413c1358b45b10739568ad}
+      \strng{fullhash}{7fbdf3087a413c1358b45b10739568ad}
+      \strng{bibnamehash}{7fbdf3087a413c1358b45b10739568ad}
+      \strng{authorbibnamehash}{7fbdf3087a413c1358b45b10739568ad}
+      \strng{authornamehash}{7fbdf3087a413c1358b45b10739568ad}
+      \strng{authorfullhash}{7fbdf3087a413c1358b45b10739568ad}
+      \field{labelalpha}{NCP90}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper, the use of systems development as a methodology in information systems (is) research is described and defended. A framework to explain the nature of systems development as a research methodology in is research is proposed. Use of this methodology in the engineering field in general is compared with its use specifically in computer science and computer engineering. An integrated program for conducting is research that incorporates theory building, systems development, experimentation, and observation is proposed. Progress in several application domains is reviewed to provide a basis upon which to argue that systems development is a valid research methodology. A systems development research process is presented from a methodological perspective. Software engineering, which is the basic method of applying the systems development research methodology, is then discussed. It is the authors’ belief that systems development and other research methodologies are complementary and that an integrated multi-dimensional and multimethodological approach will generate fruitful is research results. The premise is that research contributions can result from systems development, experimentation, observation, and performance testing of the systems under development and that all of these research approaches are needed to investigate different aspects of the research question.}
+      \field{issn}{0742-1222}
+      \field{journaltitle}{Journal of Management Information Systems}
+      \field{month}{12}
+      \field{note}{Publisher: Routledge \_eprint: https://doi.org/10.1080/07421222.1990.11517898}
+      \field{number}{3}
+      \field{title}{Systems {Development} in {Information} {Systems} {Research}}
+      \field{urlday}{2}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{volume}{7}
+      \field{year}{1990}
+      \field{urldateera}{ce}
+      \field{pages}{89\bibrangedash 106}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1080/07421222.1990.11517898
+      \endverb
+      \verb{file}
+      \verb INFORMATIONS SYSTEMS DEVELOPMENT METHODLGY TQNQS.pdf:C\:\\Users\\Anne\\Zotero\\storage\\U97KZ62T\\INFORMATIONS SYSTEMS DEVELOPMENT METHODLGY TQNQS.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/07421222.1990.11517898
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/07421222.1990.11517898
+      \endverb
+    \endentry
+    \entry{psychrembel_depression}{misc}{}
+      \list{publisher}{1}{%
+        {Walter de Gruyter GmbH}%
+      }
+      \field{labelalpha}{22}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extraalpha}{4}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Psychrembel Online - Depression}
+      \field{urlday}{7}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.pschyrembel.de/depression/K05PP/doc/
+      \endverb
+      \verb{url}
+      \verb https://www.pschyrembel.de/depression/K05PP/doc/
+      \endverb
+    \endentry
+    \entry{vrehuuvrek2011gensim}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{hash=d34e74524ffd551d0047dc195b0f95cf}{%
+           family={Rehurek},
+           familyi={R\bibinitperiod},
+           given={Radim},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6279e9bacedcff3b6605bcd9faaaf41c}{%
+           family={Sojka},
+           familyi={S\bibinitperiod},
+           given={Petr},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{fab19f1bc2847dab21e53ad32fea143a}
+      \strng{fullhash}{fab19f1bc2847dab21e53ad32fea143a}
+      \strng{bibnamehash}{fab19f1bc2847dab21e53ad32fea143a}
+      \strng{authorbibnamehash}{fab19f1bc2847dab21e53ad32fea143a}
+      \strng{authornamehash}{fab19f1bc2847dab21e53ad32fea143a}
+      \strng{authorfullhash}{fab19f1bc2847dab21e53ad32fea143a}
+      \field{labelalpha}{RS+11}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Retrieved from genism. org}
+      \field{title}{Gensim—statistical semantics in python}
+      \field{year}{2011}
+    \endentry
+    \entry{sadvilkar_pysbd_2020}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=0fff22b7bb7b881319995fe71abb1399}{%
+           family={Sadvilkar},
+           familyi={S\bibinitperiod},
+           given={Nipun},
+           giveni={N\bibinitperiod}}}%
+        {{hash=93f95e4f65833691b9a15cbe2791e2df}{%
+           family={Neumann},
+           familyi={N\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Online}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{e7707bd3e79ab144ca68105ce24579b1}
+      \strng{fullhash}{e7707bd3e79ab144ca68105ce24579b1}
+      \strng{bibnamehash}{e7707bd3e79ab144ca68105ce24579b1}
+      \strng{authorbibnamehash}{e7707bd3e79ab144ca68105ce24579b1}
+      \strng{authornamehash}{e7707bd3e79ab144ca68105ce24579b1}
+      \strng{authorfullhash}{e7707bd3e79ab144ca68105ce24579b1}
+      \field{labelalpha}{SN20}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{In this paper, we present a rule-based sentence boundary disambiguation Python package that works out-of-the-box for 22 languages. We aim to provide a realistic segmenter which can provide logical sentences even when the format and domain of the input text is unknown. In our work, we adapt the Golden Rules Set (a language speciﬁc set of sentence boundary exemplars) originally implemented as a ruby gem pragmatic segmenter1 which we ported to Python with additional improvements and functionality. PySBD passes 97.92\% of the Golden Rule Set examplars for English, an improvement of 25\% over the next best open source Python tool.}
+      \field{booktitle}{Proceedings of {Second} {Workshop} for {NLP} {Open} {Source} {Software} ({NLP}-{OSS})}
+      \field{shorttitle}{{PySBD}}
+      \field{title}{{PySBD}: {Pragmatic} {Sentence} {Boundary} {Disambiguation}}
+      \field{urlday}{19}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{pages}{110\bibrangedash 114}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.18653/v1/2020.nlposs-1.15
+      \endverb
+      \verb{file}
+      \verb Sadvilkar und Neumann - 2020 - PySBD Pragmatic Sentence Boundary Disambiguation.pdf:C\:\\Users\\Anne\\Zotero\\storage\\PMQ4VYLC\\Sadvilkar und Neumann - 2020 - PySBD Pragmatic Sentence Boundary Disambiguation.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.aclweb.org/anthology/2020.nlposs-1.15
+      \endverb
+      \verb{url}
+      \verb https://www.aclweb.org/anthology/2020.nlposs-1.15
+      \endverb
+    \endentry
+    \entry{shen_entity_2021}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=6089d026596d8f080674537d085ff836}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=f50aab20cb3dd0fe34bd1c54ffca03d4}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yuhan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=dc9912633266eb03015e42d8c77d8b5a}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yinan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=7cacfe272c4d395c979d6aecd2f5ec9c}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Jiawei},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7086b1d5e2957cb0df860dad4985b9c9}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Jianyong},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3f04010e681fb8695d9d802cc2afb1bc}{%
+           family={Yuan},
+           familyi={Y\bibinitperiod},
+           given={Xiaojie},
+           giveni={X\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{c75d6db70e9a5c744748da8007c6f0cd}
+      \strng{fullhash}{8e031ae4d4bc3b61624b1c99de4778de}
+      \strng{bibnamehash}{8e031ae4d4bc3b61624b1c99de4778de}
+      \strng{authorbibnamehash}{8e031ae4d4bc3b61624b1c99de4778de}
+      \strng{authornamehash}{c75d6db70e9a5c744748da8007c6f0cd}
+      \strng{authorfullhash}{8e031ae4d4bc3b61624b1c99de4778de}
+      \field{labelalpha}{She+21}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Entity linking (EL) is the process of linking entity mentions appearing in web text with their corresponding entities in a knowledge base. EL plays an important role in the ﬁelds of knowledge engineering and data mining, underlying a variety of downstream applications such as knowledge base population, content analysis, relation extraction, and question answering. In recent years, deep learning (DL), which has achieved tremendous success in various domains, has also been leveraged in EL methods to surpass traditional machine learning based methods and yield the state-of-the-art performance. In this survey, we present a comprehensive review and analysis of existing DL based EL methods. First of all, we propose a new taxonomy, which organizes existing DL based EL methods using three axes: embedding, feature, and algorithm. Then we systematically survey the representative EL methods along the three axes of the taxonomy. Later, we introduce ten commonly used EL data sets and give a quantitative performance analysis of DL based EL methods over these data sets. Finally, we discuss the remaining limitations of existing methods and highlight some promising future directions.}
+      \field{annotation}{Comment: To appear in IEEE TKDE}
+      \field{month}{9}
+      \field{note}{arXiv:2109.12520 [cs]}
+      \field{shorttitle}{Entity {Linking} {Meets} {Deep} {Learning}}
+      \field{title}{Entity {Linking} {Meets} {Deep} {Learning}: {Techniques} and {Solutions}}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Shen et al. - 2021 - Entity Linking Meets Deep Learning Techniques and.pdf:C\:\\Users\\Anne\\Zotero\\storage\\6MPHWRBH\\Shen et al. - 2021 - Entity Linking Meets Deep Learning Techniques and.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2109.12520
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2109.12520
+      \endverb
+      \keyw{Computer Science - Artificial Intelligence,Computer Science - Computation and Language}
+    \endentry
+    \entry{spacy}{misc}{}
+      \field{labelalpha}{22}
+      \field{sortinit}{s}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extraalpha}{5}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{spaCy.io}
+      \field{urlday}{9}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://spacy.io/usage/spacy-101
+      \endverb
+      \verb{url}
+      \verb https://spacy.io/usage/spacy-101
+      \endverb
+    \endentry
+    \entry{noauthor_stop_2022}{misc}{}
+      \field{labelalpha}{22}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extraalpha}{6}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{{STop} {Obesity} {Platform}}
+      \field{urlday}{6}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://stopproject.eu/
+      \endverb
+      \verb{url}
+      \verb http://stopproject.eu/
+      \endverb
+    \endentry
+    \entry{rdflib_team_rdflib_2022}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b7d2f1f03082bdbef10f998611f84a07}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={RDFLib},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7d2f1f03082bdbef10f998611f84a07}
+      \strng{fullhash}{b7d2f1f03082bdbef10f998611f84a07}
+      \strng{bibnamehash}{b7d2f1f03082bdbef10f998611f84a07}
+      \strng{authorbibnamehash}{b7d2f1f03082bdbef10f998611f84a07}
+      \strng{authornamehash}{b7d2f1f03082bdbef10f998611f84a07}
+      \strng{authorfullhash}{b7d2f1f03082bdbef10f998611f84a07}
+      \field{labelalpha}{Tea22}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{rdflib 6.2.0 — rdflib 6.2.0 documentation}
+      \field{urlday}{7}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb rdflib 6.2.0 — rdflib 6.2.0 documentation:C\:\\Users\\Anne\\Zotero\\storage\\XZGUK6LG\\index.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://rdflib.readthedocs.io/en/stable/index.html#
+      \endverb
+      \verb{url}
+      \verb https://rdflib.readthedocs.io/en/stable/index.html#
+      \endverb
+    \endentry
+    \entry{vasiliev2020natural}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d643c3dba9ef5135dd6a2b8cf501962a}{%
+           family={Vasiliev},
+           familyi={V\bibinitperiod},
+           given={Yuli},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {No Starch Press}%
+      }
+      \strng{namehash}{d643c3dba9ef5135dd6a2b8cf501962a}
+      \strng{fullhash}{d643c3dba9ef5135dd6a2b8cf501962a}
+      \strng{bibnamehash}{d643c3dba9ef5135dd6a2b8cf501962a}
+      \strng{authorbibnamehash}{d643c3dba9ef5135dd6a2b8cf501962a}
+      \strng{authornamehash}{d643c3dba9ef5135dd6a2b8cf501962a}
+      \strng{authorfullhash}{d643c3dba9ef5135dd6a2b8cf501962a}
+      \field{labelalpha}{Vas20}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Natural Language Processing with Python and SpaCy: A Practical Introduction}
+      \field{year}{2020}
+    \endentry
+    \entry{w3c_all_2022}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=446a1ae6601a5c59360c7d591c3992da}{%
+           family={W3C},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{fullhash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{bibnamehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{authorbibnamehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{authornamehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{authorfullhash}{446a1ae6601a5c59360c7d591c3992da}
+      \field{labelalpha}{W3C22}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{All {Standards} and {Drafts} - {W3C}}
+      \field{urlday}{7}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb All Standards and Drafts - W3C:C\:\\Users\\Anne\\Zotero\\storage\\2R3IX4GQ\\TR.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.w3.org/TR/?tag=data
+      \endverb
+      \verb{url}
+      \verb https://www.w3.org/TR/?tag=data
+      \endverb
+    \endentry
+    \entry{who_depression}{misc}{}
+      \list{publisher}{1}{%
+        {World Health Organization (WHO)}%
+      }
+      \field{labelalpha}{22}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extraalpha}{7}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{World Health Organization - Depression}
+      \field{urlday}{7}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.who.int/health-topics/depression#tab=tab_1
+      \endverb
+      \verb{url}
+      \verb https://www.who.int/health-topics/depression#tab=tab_1
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{drug_dependent_people}
+\endrefsection
+\endinput
+
