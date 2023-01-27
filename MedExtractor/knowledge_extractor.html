@@ -57,8 +57,9 @@
 </dl>
 <hr>
 Methods defined here:<br>
-<dl><dt><a name="KnowledgeExtractor-__call__"><strong>__call__</strong></a>(self, text)</dt><dd><tt><a href="#KnowledgeExtractor">KnowledgeExtractor</a>&nbsp;is&nbsp;callable.&nbsp;Input&nbsp;parameter&nbsp;is&nbsp;a&nbsp;text&nbsp;string.&nbsp;This&nbsp;function&nbsp;<br>
-adds&nbsp;all&nbsp;new&nbsp;entity&nbsp;relations&nbsp;it&nbsp;finds&nbsp;in&nbsp;the&nbsp;text&nbsp;string&nbsp;to&nbsp;the&nbsp;database.<br>
+<dl><dt><a name="KnowledgeExtractor-__call__"><strong>__call__</strong></a>(self, text)</dt><dd><tt><a href="#KnowledgeExtractor">KnowledgeExtractor</a>&nbsp;is&nbsp;callable.&nbsp;Input&nbsp;parameter&nbsp;is&nbsp;a&nbsp;text&nbsp;string.&nbsp;This&nbsp;function<br>
+adds&nbsp;all&nbsp;new&nbsp;entity&nbsp;relations&nbsp;it&nbsp;finds&nbsp;in&nbsp;the&nbsp;text&nbsp;string&nbsp;to&nbsp;the&nbsp;database.&nbsp;It&nbsp;also<br>
+adds&nbsp;sentences&nbsp;that&nbsp;prove&nbsp;the&nbsp;relation&nbsp;to&nbsp;the&nbsp;instance&nbsp;of&nbsp;the&nbsp;relation&nbsp;they&nbsp;prove.<br>
 &nbsp;<br>
 Parameters:<br>
 ----------<br>
@@ -89,8 +90,9 @@ Returns:<br>
 --------<br>
 None</tt></dd></dl>
 
-<dl><dt><a name="KnowledgeExtractor-get_knowledge_base"><strong>get_knowledge_base</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;knowledgebase&nbsp;that&nbsp;contains&nbsp;all&nbsp;entities&nbsp;(including&nbsp;aliases)<br>
-and&nbsp;sample&nbsp;sentences&nbsp;that&nbsp;can&nbsp;be&nbsp;used&nbsp;for&nbsp;training&nbsp;statistical&nbsp;models<br>
+<dl><dt><a name="KnowledgeExtractor-get_knowledge_base"><strong>get_knowledge_base</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;knowledgebase&nbsp;that&nbsp;contains&nbsp;all&nbsp;entities&nbsp;and<br>
+sample&nbsp;sentences.&nbsp;Samples&nbsp;sentences&nbsp;can&nbsp;be&nbsp;used&nbsp;for&nbsp;training<br>
+statistical&nbsp;models&nbsp;(e.g.&nbsp;Entity&nbsp;Linker)<br>
 &nbsp;<br>
 Parameters:<br>
 ----------<br>
@@ -123,14 +125,14 @@ Returns:<br>
 -------<br>
 None</tt></dd></dl>
 
-<dl><dt><a name="KnowledgeExtractor-set_context"><strong>set_context</strong></a>(self, context)</dt><dd><tt>This&nbsp;function&nbsp;allows&nbsp;to&nbsp;define&nbsp;a&nbsp;context.&nbsp;The&nbsp;context&nbsp;is&nbsp;described&nbsp;by&nbsp;a<br>
-named&nbsp;entity&nbsp;included&nbsp;in&nbsp;the&nbsp;Entity&nbsp;Ruler&nbsp;(self.<strong>_ruler</strong>).&nbsp;This&nbsp;entity&nbsp;will<br>
-be&nbsp;added&nbsp;to&nbsp;the&nbsp;list&nbsp;of&nbsp;entities&nbsp;when&nbsp;searching&nbsp;for&nbsp;disease/symptom&nbsp;relations<br>
+<dl><dt><a name="KnowledgeExtractor-set_context"><strong>set_context</strong></a>(self, context)</dt><dd><tt>This&nbsp;function&nbsp;allows&nbsp;defining&nbsp;a&nbsp;context.&nbsp;The&nbsp;context&nbsp;is&nbsp;described&nbsp;by<br>
+named&nbsp;entities&nbsp;included&nbsp;in&nbsp;the&nbsp;Entity&nbsp;Ruler&nbsp;(self.<strong>_ruler</strong>).&nbsp;These&nbsp;entities&nbsp;will<br>
+be&nbsp;added&nbsp;to&nbsp;the&nbsp;set&nbsp;of&nbsp;entities&nbsp;when&nbsp;searching&nbsp;for&nbsp;disease/symptom&nbsp;relations<br>
 between&nbsp;entities.<br>
 &nbsp;<br>
 Parameters:<br>
 ----------<br>
-context:&nbsp;Span<br>
+context:&nbsp;{}&nbsp;(set&nbsp;of&nbsp;spacy.Spans&nbsp;=&nbsp;Entities&nbsp;of&nbsp;Entity&nbsp;Ruler)<br>
 &nbsp;<br>
 Returns:<br>
 -------<br>

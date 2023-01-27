@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module semantics</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>semantics</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:d%3A%5Cgit_fachpraktikum%5Cmedextractor%5Csrc%5Cknowledge%5Csemantics.py">d:\git_fachpraktikum\medextractor\src\knowledge\semantics.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="semantics.html#SemanticRelation">SemanticRelation</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SemanticRelation">class <strong>SemanticRelation</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#SemanticRelation">SemanticRelation</a>(entity_1:&nbsp;src.knowledge.entity.Entity,&nbsp;entity_2:&nbsp;src.knowledge.entity.Entity,&nbsp;relation_type:&nbsp;src.knowledge.relations.RelationType,&nbsp;training_sample:&nbsp;str&nbsp;=&nbsp;None)<br>
+&nbsp;<br>
+A&nbsp;semantic&nbsp;relation&nbsp;between&nbsp;two&nbsp;entities&nbsp;connected&nbsp;by&nbsp;a&nbsp;value&nbsp;of&nbsp;RelationType.<br>
+&nbsp;<br>
+Additionally,&nbsp;training&nbsp;samples&nbsp;can&nbsp;be&nbsp;saved&nbsp;that&nbsp;resulted&nbsp;in&nbsp;this&nbsp;semantic&nbsp;relation.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="SemanticRelation-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="SemanticRelation-__init__"><strong>__init__</strong></a>(self, entity_1: src.knowledge.entity.Entity, entity_2: src.knowledge.entity.Entity, relation_type: src.knowledge.relations.RelationType, training_sample: str = None)</dt><dd><tt>Upon&nbsp;initialization&nbsp;of&nbsp;the&nbsp;<a href="#SemanticRelation">SemanticRelation</a>&nbsp;the&nbsp;two&nbsp;entities&nbsp;and&nbsp;the&nbsp;RelationType&nbsp;are&nbsp;set.<br>
+The&nbsp;list&nbsp;of&nbsp;training&nbsp;samples&nbsp;is&nbsp;initialised&nbsp;and&nbsp;optionally&nbsp;appended&nbsp;with&nbsp;the&nbsp;first&nbsp;training&nbsp;sample.<br>
+&nbsp;<br>
+Parameters:<br>
+----------<br>
+text:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;text&nbsp;string&nbsp;to&nbsp;be&nbsp;analyzed&nbsp;by&nbsp;the&nbsp;KnowledgeExtractor<br>
+entity_1:&nbsp;Entity<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;first&nbsp;Entity<br>
+entity_2:&nbsp;Entity<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;second&nbsp;entity<br>
+relation_type:&nbsp;RelationType<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;RelationType&nbsp;that&nbsp;connects&nbsp;both&nbsp;entities<br>
+training_sample:&nbsp;str&nbsp;=&nbsp;None<br>
+&nbsp;&nbsp;&nbsp;&nbsp;An&nbsp;optional&nbsp;first&nbsp;training&nbsp;sample<br>
+&nbsp;<br>
+Returns:<br>
+-------<br>
+None</tt></dd></dl>
+
+<dl><dt><a name="SemanticRelation-__str__"><strong>__str__</strong></a>(self) -&gt; str</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<dl><dt><a name="SemanticRelation-add_training_sample"><strong>add_training_sample</strong></a>(self, training_sample: str)</dt><dd><tt>Adds&nbsp;the&nbsp;training_sample&nbsp;into&nbsp;the&nbsp;list&nbsp;of&nbsp;training_samples.<br>
+&nbsp;<br>
+Parameters:<br>
+----------<br>
+training_sample:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;text&nbsp;sample/sentence&nbsp;to&nbsp;be&nbsp;added<br>
+&nbsp;<br>
+Returns:<br>
+-------<br>
+None</tt></dd></dl>
+
+<dl><dt><a name="SemanticRelation-contains_training_sample"><strong>contains_training_sample</strong></a>(self, training_sample: str) -&gt; bool</dt><dd><tt>Checks&nbsp;whether&nbsp;the&nbsp;training_sample&nbsp;given&nbsp;is&nbsp;already&nbsp;included&nbsp;in&nbsp;the&nbsp;list&nbsp;of&nbsp;training&nbsp;samples.<br>
+&nbsp;<br>
+Parameters:<br>
+----------<br>
+training_sample:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;text&nbsp;sample/sentence<br>
+&nbsp;<br>
+Returns:<br>
+-------<br>
+&nbsp;&nbsp;&nbsp;&nbsp;true,&nbsp;if&nbsp;training_sample&nbsp;is&nbsp;contained&nbsp;in&nbsp;the&nbsp;list,&nbsp;false&nbsp;otherwise</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+</td></tr></table></td></tr></table>
+</body></html>
