@@ -1,0 +1,96 @@
+\indexentry{module@\spxentry{module}!medextractor.dummy.dummy@\spxentry{medextractor.dummy.dummy}|hyperpage}{13}
+\indexentry{medextractor.dummy.dummy@\spxentry{medextractor.dummy.dummy}!module@\spxentry{module}|hyperpage}{13}
+\indexentry{DummyKnowledgeExtractor (class in medextractor.dummy.dummy)@\spxentry{DummyKnowledgeExtractor}\spxextra{class in medextractor.dummy.dummy}|hyperpage}{13}
+\indexentry{get\_knowledge\_base() (medextractor.dummy.dummy.DummyKnowledgeExtractor method)@\spxentry{get\_knowledge\_base()}\spxextra{medextractor.dummy.dummy.DummyKnowledgeExtractor method}|hyperpage}{13}
+\indexentry{DummyPreprocessor (class in medextractor.dummy.dummy)@\spxentry{DummyPreprocessor}\spxextra{class in medextractor.dummy.dummy}|hyperpage}{13}
+\indexentry{get\_preprocessed\_text() (medextractor.dummy.dummy.DummyPreprocessor method)@\spxentry{get\_preprocessed\_text()}\spxextra{medextractor.dummy.dummy.DummyPreprocessor method}|hyperpage}{13}
+\indexentry{DummyRDFSerialiser (class in medextractor.dummy.dummy)@\spxentry{DummyRDFSerialiser}\spxextra{class in medextractor.dummy.dummy}|hyperpage}{13}
+\indexentry{serialise\_knowledgebase() (medextractor.dummy.dummy.DummyRDFSerialiser method)@\spxentry{serialise\_knowledgebase()}\spxextra{medextractor.dummy.dummy.DummyRDFSerialiser method}|hyperpage}{13}
+\indexentry{module@\spxentry{module}!medextractor.dummy@\spxentry{medextractor.dummy}|hyperpage}{13}
+\indexentry{medextractor.dummy@\spxentry{medextractor.dummy}!module@\spxentry{module}|hyperpage}{13}
+\indexentry{module@\spxentry{module}!medextractor.interfaces.interfaces@\spxentry{medextractor.interfaces.interfaces}|hyperpage}{13}
+\indexentry{medextractor.interfaces.interfaces@\spxentry{medextractor.interfaces.interfaces}!module@\spxentry{module}|hyperpage}{13}
+\indexentry{KnowledgeExtractorInterface (class in medextractor.interfaces.interfaces)@\spxentry{KnowledgeExtractorInterface}\spxextra{class in medextractor.interfaces.interfaces}|hyperpage}{13}
+\indexentry{get\_knowledge\_base() (medextractor.interfaces.interfaces.KnowledgeExtractorInterface method)@\spxentry{get\_knowledge\_base()}\spxextra{medextractor.interfaces.interfaces.KnowledgeExtractorInterface method}|hyperpage}{13}
+\indexentry{PreprocessingInterface (class in medextractor.interfaces.interfaces)@\spxentry{PreprocessingInterface}\spxextra{class in medextractor.interfaces.interfaces}|hyperpage}{13}
+\indexentry{get\_preprocessed\_text() (medextractor.interfaces.interfaces.PreprocessingInterface method)@\spxentry{get\_preprocessed\_text()}\spxextra{medextractor.interfaces.interfaces.PreprocessingInterface method}|hyperpage}{14}
+\indexentry{RDFSerialiserInterface (class in medextractor.interfaces.interfaces)@\spxentry{RDFSerialiserInterface}\spxextra{class in medextractor.interfaces.interfaces}|hyperpage}{14}
+\indexentry{serialise\_knowledgebase() (medextractor.interfaces.interfaces.RDFSerialiserInterface method)@\spxentry{serialise\_knowledgebase()}\spxextra{medextractor.interfaces.interfaces.RDFSerialiserInterface method}|hyperpage}{14}
+\indexentry{set\_serialisation\_format() (medextractor.interfaces.interfaces.RDFSerialiserInterface method)@\spxentry{set\_serialisation\_format()}\spxextra{medextractor.interfaces.interfaces.RDFSerialiserInterface method}|hyperpage}{14}
+\indexentry{module@\spxentry{module}!medextractor.interfaces@\spxentry{medextractor.interfaces}|hyperpage}{14}
+\indexentry{medextractor.interfaces@\spxentry{medextractor.interfaces}!module@\spxentry{module}|hyperpage}{14}
+\indexentry{module@\spxentry{module}!medextractor.knowledge.base@\spxentry{medextractor.knowledge.base}|hyperpage}{14}
+\indexentry{medextractor.knowledge.base@\spxentry{medextractor.knowledge.base}!module@\spxentry{module}|hyperpage}{14}
+\indexentry{KnowledgeBase (class in medextractor.knowledge.base)@\spxentry{KnowledgeBase}\spxextra{class in medextractor.knowledge.base}|hyperpage}{14}
+\indexentry{add\_relation() (medextractor.knowledge.base.KnowledgeBase method)@\spxentry{add\_relation()}\spxextra{medextractor.knowledge.base.KnowledgeBase method}|hyperpage}{14}
+\indexentry{add\_training\_example\_to\_relation() (medextractor.knowledge.base.KnowledgeBase method)@\spxentry{add\_training\_example\_to\_relation()}\spxextra{medextractor.knowledge.base.KnowledgeBase method}|hyperpage}{14}
+\indexentry{export\_for\_entity\_linker() (medextractor.knowledge.base.KnowledgeBase method)@\spxentry{export\_for\_entity\_linker()}\spxextra{medextractor.knowledge.base.KnowledgeBase method}|hyperpage}{14}
+\indexentry{give\_entities() (medextractor.knowledge.base.KnowledgeBase method)@\spxentry{give\_entities()}\spxextra{medextractor.knowledge.base.KnowledgeBase method}|hyperpage}{14}
+\indexentry{has\_relation() (medextractor.knowledge.base.KnowledgeBase method)@\spxentry{has\_relation()}\spxextra{medextractor.knowledge.base.KnowledgeBase method}|hyperpage}{14}
+\indexentry{load() (medextractor.knowledge.base.KnowledgeBase method)@\spxentry{load()}\spxextra{medextractor.knowledge.base.KnowledgeBase method}|hyperpage}{14}
+\indexentry{save() (medextractor.knowledge.base.KnowledgeBase method)@\spxentry{save()}\spxextra{medextractor.knowledge.base.KnowledgeBase method}|hyperpage}{14}
+\indexentry{module@\spxentry{module}!medextractor.knowledge.entity@\spxentry{medextractor.knowledge.entity}|hyperpage}{15}
+\indexentry{medextractor.knowledge.entity@\spxentry{medextractor.knowledge.entity}!module@\spxentry{module}|hyperpage}{15}
+\indexentry{Entity (class in medextractor.knowledge.entity)@\spxentry{Entity}\spxextra{class in medextractor.knowledge.entity}|hyperpage}{15}
+\indexentry{EntityType (class in medextractor.knowledge.entity)@\spxentry{EntityType}\spxextra{class in medextractor.knowledge.entity}|hyperpage}{15}
+\indexentry{DISEASE (medextractor.knowledge.entity.EntityType attribute)@\spxentry{DISEASE}\spxextra{medextractor.knowledge.entity.EntityType attribute}|hyperpage}{15}
+\indexentry{SYMPTOM (medextractor.knowledge.entity.EntityType attribute)@\spxentry{SYMPTOM}\spxextra{medextractor.knowledge.entity.EntityType attribute}|hyperpage}{15}
+\indexentry{UNDEFINED (medextractor.knowledge.entity.EntityType attribute)@\spxentry{UNDEFINED}\spxextra{medextractor.knowledge.entity.EntityType attribute}|hyperpage}{15}
+\indexentry{module@\spxentry{module}!medextractor.knowledge.relations@\spxentry{medextractor.knowledge.relations}|hyperpage}{15}
+\indexentry{medextractor.knowledge.relations@\spxentry{medextractor.knowledge.relations}!module@\spxentry{module}|hyperpage}{15}
+\indexentry{RelationType (class in medextractor.knowledge.relations)@\spxentry{RelationType}\spxextra{class in medextractor.knowledge.relations}|hyperpage}{15}
+\indexentry{HAS\_SYMPTOM (medextractor.knowledge.relations.RelationType attribute)@\spxentry{HAS\_SYMPTOM}\spxextra{medextractor.knowledge.relations.RelationType attribute}|hyperpage}{15}
+\indexentry{IS\_SYMPTOM\_OF (medextractor.knowledge.relations.RelationType attribute)@\spxentry{IS\_SYMPTOM\_OF}\spxextra{medextractor.knowledge.relations.RelationType attribute}|hyperpage}{15}
+\indexentry{NO\_RELATION (medextractor.knowledge.relations.RelationType attribute)@\spxentry{NO\_RELATION}\spxextra{medextractor.knowledge.relations.RelationType attribute}|hyperpage}{15}
+\indexentry{module@\spxentry{module}!medextractor.knowledge.semantics@\spxentry{medextractor.knowledge.semantics}|hyperpage}{15}
+\indexentry{medextractor.knowledge.semantics@\spxentry{medextractor.knowledge.semantics}!module@\spxentry{module}|hyperpage}{15}
+\indexentry{SemanticRelation (class in medextractor.knowledge.semantics)@\spxentry{SemanticRelation}\spxextra{class in medextractor.knowledge.semantics}|hyperpage}{15}
+\indexentry{add\_training\_sample() (medextractor.knowledge.semantics.SemanticRelation method)@\spxentry{add\_training\_sample()}\spxextra{medextractor.knowledge.semantics.SemanticRelation method}|hyperpage}{15}
+\indexentry{contains\_training\_sample() (medextractor.knowledge.semantics.SemanticRelation method)@\spxentry{contains\_training\_sample()}\spxextra{medextractor.knowledge.semantics.SemanticRelation method}|hyperpage}{15}
+\indexentry{module@\spxentry{module}!medextractor.knowledge@\spxentry{medextractor.knowledge}|hyperpage}{16}
+\indexentry{medextractor.knowledge@\spxentry{medextractor.knowledge}!module@\spxentry{module}|hyperpage}{16}
+\indexentry{module@\spxentry{module}!medextractor.knowledge\_extractor.knowledge\_extractor@\spxentry{medextractor.knowledge\_extractor.knowledge\_extractor}|hyperpage}{16}
+\indexentry{medextractor.knowledge\_extractor.knowledge\_extractor@\spxentry{medextractor.knowledge\_extractor.knowledge\_extractor}!module@\spxentry{module}|hyperpage}{16}
+\indexentry{KnowledgeExtractor (class in medextractor.knowledge\_extractor.knowledge\_extractor)@\spxentry{KnowledgeExtractor}\spxextra{class in medextractor.knowledge\_extractor.knowledge\_extractor}|hyperpage}{16}
+\indexentry{call2() (medextractor.knowledge\_extractor.knowledge\_extractor.KnowledgeExtractor method)@\spxentry{call2()}\spxextra{medextractor.knowledge\_extractor.knowledge\_extractor.KnowledgeExtractor method}|hyperpage}{16}
+\indexentry{export\_for\_entity\_linker() (medextractor.knowledge\_extractor.knowledge\_extractor.KnowledgeExtractor method)@\spxentry{export\_for\_entity\_linker()}\spxextra{medextractor.knowledge\_extractor.knowledge\_extractor.KnowledgeExtractor method}|hyperpage}{16}
+\indexentry{get\_knowledge\_base() (medextractor.knowledge\_extractor.knowledge\_extractor.KnowledgeExtractor method)@\spxentry{get\_knowledge\_base()}\spxextra{medextractor.knowledge\_extractor.knowledge\_extractor.KnowledgeExtractor method}|hyperpage}{16}
+\indexentry{process\_texts() (medextractor.knowledge\_extractor.knowledge\_extractor.KnowledgeExtractor method)@\spxentry{process\_texts()}\spxextra{medextractor.knowledge\_extractor.knowledge\_extractor.KnowledgeExtractor method}|hyperpage}{16}
+\indexentry{saveKB() (medextractor.knowledge\_extractor.knowledge\_extractor.KnowledgeExtractor method)@\spxentry{saveKB()}\spxextra{medextractor.knowledge\_extractor.knowledge\_extractor.KnowledgeExtractor method}|hyperpage}{16}
+\indexentry{set\_context() (medextractor.knowledge\_extractor.knowledge\_extractor.KnowledgeExtractor method)@\spxentry{set\_context()}\spxextra{medextractor.knowledge\_extractor.knowledge\_extractor.KnowledgeExtractor method}|hyperpage}{17}
+\indexentry{module@\spxentry{module}!medextractor.knowledge\_extractor@\spxentry{medextractor.knowledge\_extractor}|hyperpage}{17}
+\indexentry{medextractor.knowledge\_extractor@\spxentry{medextractor.knowledge\_extractor}!module@\spxentry{module}|hyperpage}{17}
+\indexentry{module@\spxentry{module}!medextractor.preprocessor.preprocessor@\spxentry{medextractor.preprocessor.preprocessor}|hyperpage}{17}
+\indexentry{medextractor.preprocessor.preprocessor@\spxentry{medextractor.preprocessor.preprocessor}!module@\spxentry{module}|hyperpage}{17}
+\indexentry{RuleBasedPreprocessor (class in medextractor.preprocessor.preprocessor)@\spxentry{RuleBasedPreprocessor}\spxextra{class in medextractor.preprocessor.preprocessor}|hyperpage}{17}
+\indexentry{get\_preprocessed\_text() (medextractor.preprocessor.preprocessor.RuleBasedPreprocessor method)@\spxentry{get\_preprocessed\_text()}\spxextra{medextractor.preprocessor.preprocessor.RuleBasedPreprocessor method}|hyperpage}{17}
+\indexentry{pysbd\_sentence\_boundaries() (medextractor.preprocessor.preprocessor.RuleBasedPreprocessor method)@\spxentry{pysbd\_sentence\_boundaries()}\spxextra{medextractor.preprocessor.preprocessor.RuleBasedPreprocessor method}|hyperpage}{17}
+\indexentry{module@\spxentry{module}!medextractor.preprocessor@\spxentry{medextractor.preprocessor}|hyperpage}{17}
+\indexentry{medextractor.preprocessor@\spxentry{medextractor.preprocessor}!module@\spxentry{module}|hyperpage}{17}
+\indexentry{module@\spxentry{module}!medextractor.rdf.RDFSerialiser@\spxentry{medextractor.rdf.RDFSerialiser}|hyperpage}{17}
+\indexentry{medextractor.rdf.RDFSerialiser@\spxentry{medextractor.rdf.RDFSerialiser}!module@\spxentry{module}|hyperpage}{17}
+\indexentry{RDFSerialiser (class in medextractor.rdf.RDFSerialiser)@\spxentry{RDFSerialiser}\spxextra{class in medextractor.rdf.RDFSerialiser}|hyperpage}{17}
+\indexentry{knowledgebase\_to\_graph() (medextractor.rdf.RDFSerialiser.RDFSerialiser method)@\spxentry{knowledgebase\_to\_graph()}\spxextra{medextractor.rdf.RDFSerialiser.RDFSerialiser method}|hyperpage}{17}
+\indexentry{serialise\_knowledgebase() (medextractor.rdf.RDFSerialiser.RDFSerialiser method)@\spxentry{serialise\_knowledgebase()}\spxextra{medextractor.rdf.RDFSerialiser.RDFSerialiser method}|hyperpage}{17}
+\indexentry{set\_serialisation\_format() (medextractor.rdf.RDFSerialiser.RDFSerialiser method)@\spxentry{set\_serialisation\_format()}\spxextra{medextractor.rdf.RDFSerialiser.RDFSerialiser method}|hyperpage}{18}
+\indexentry{module@\spxentry{module}!medextractor.rdf.graphmanager@\spxentry{medextractor.rdf.graphmanager}|hyperpage}{18}
+\indexentry{medextractor.rdf.graphmanager@\spxentry{medextractor.rdf.graphmanager}!module@\spxentry{module}|hyperpage}{18}
+\indexentry{GraphManager (class in medextractor.rdf.graphmanager)@\spxentry{GraphManager}\spxextra{class in medextractor.rdf.graphmanager}|hyperpage}{18}
+\indexentry{add\_disease() (medextractor.rdf.graphmanager.GraphManager method)@\spxentry{add\_disease()}\spxextra{medextractor.rdf.graphmanager.GraphManager method}|hyperpage}{18}
+\indexentry{add\_symptom() (medextractor.rdf.graphmanager.GraphManager method)@\spxentry{add\_symptom()}\spxextra{medextractor.rdf.graphmanager.GraphManager method}|hyperpage}{18}
+\indexentry{get\_serialized\_graph() (medextractor.rdf.graphmanager.GraphManager method)@\spxentry{get\_serialized\_graph()}\spxextra{medextractor.rdf.graphmanager.GraphManager method}|hyperpage}{18}
+\indexentry{module@\spxentry{module}!medextractor.rdf@\spxentry{medextractor.rdf}|hyperpage}{18}
+\indexentry{medextractor.rdf@\spxentry{medextractor.rdf}!module@\spxentry{module}|hyperpage}{18}
+\indexentry{module@\spxentry{module}!medextractor.config\_manager@\spxentry{medextractor.config\_manager}|hyperpage}{18}
+\indexentry{medextractor.config\_manager@\spxentry{medextractor.config\_manager}!module@\spxentry{module}|hyperpage}{18}
+\indexentry{ConfigManager (class in medextractor.config\_manager)@\spxentry{ConfigManager}\spxextra{class in medextractor.config\_manager}|hyperpage}{18}
+\indexentry{module@\spxentry{module}!medextractor.manual\_rdf\_graph@\spxentry{medextractor.manual\_rdf\_graph}|hyperpage}{18}
+\indexentry{medextractor.manual\_rdf\_graph@\spxentry{medextractor.manual\_rdf\_graph}!module@\spxentry{module}|hyperpage}{18}
+\indexentry{add\_symptom() (in module medextractor.manual\_rdf\_graph)@\spxentry{add\_symptom()}\spxextra{in module medextractor.manual\_rdf\_graph}|hyperpage}{18}
+\indexentry{module@\spxentry{module}!medextractor.ruler\_creator@\spxentry{medextractor.ruler\_creator}|hyperpage}{18}
+\indexentry{medextractor.ruler\_creator@\spxentry{medextractor.ruler\_creator}!module@\spxentry{module}|hyperpage}{18}
+\indexentry{RulerCreator (class in medextractor.ruler\_creator)@\spxentry{RulerCreator}\spxextra{class in medextractor.ruler\_creator}|hyperpage}{18}
+\indexentry{load() (medextractor.ruler\_creator.RulerCreator method)@\spxentry{load()}\spxextra{medextractor.ruler\_creator.RulerCreator method}|hyperpage}{18}
+\indexentry{save() (medextractor.ruler\_creator.RulerCreator method)@\spxentry{save()}\spxextra{medextractor.ruler\_creator.RulerCreator method}|hyperpage}{18}
+\indexentry{module@\spxentry{module}!medextractor@\spxentry{medextractor}|hyperpage}{18}
+\indexentry{medextractor@\spxentry{medextractor}!module@\spxentry{module}|hyperpage}{18}

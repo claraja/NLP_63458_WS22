@@ -1,0 +1,21 @@
+medextractor.dummy package
+==========================
+
+Submodules
+----------
+
+medextractor.dummy.dummy module
+-------------------------------
+
+.. automodule:: medextractor.dummy.dummy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: medextractor.dummy
+   :members:
+   :undoc-members:
+   :show-inheritance:
