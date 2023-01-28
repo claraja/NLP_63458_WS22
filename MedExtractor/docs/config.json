@@ -1,0 +1,9 @@
+{
+    "RDF_filename": "path/name.xml",
+    "EntityLinkerExport_filename": "path/name.xml",
+    "KnowledgeBase_filename": "path/name.kb",
+    "Sample_text_folder": "path",
+    "Overwrite existing knowledgebase file": "False",
+    "Diseases_filename": "path/name.txt",
+    "Symptoms_filename": "path/name.txt"
+}

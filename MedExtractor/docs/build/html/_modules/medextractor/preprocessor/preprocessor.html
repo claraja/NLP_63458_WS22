@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>medextractor.preprocessor.preprocessor &mdash; MedExtractor 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> MedExtractor
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../readme.html">Medextractor - Konsolenapplikation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../readme.html#konfigurationsdatei-config-json">Konfigurationsdatei config.json</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../readme.html#vokabular-dateien">Vokabular-Dateien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../readme.html#aufruf-des-programms">Aufruf des Programms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../readme.html#entity-linker">Entity-Linker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">medextractor</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">MedExtractor</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">medextractor.preprocessor.preprocessor</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for medextractor.preprocessor.preprocessor</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">medextractor.interfaces.interfaces</span> <span class="kn">import</span> <span class="n">PreprocessingInterface</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">pysbd</span>
+<span class="kn">import</span> <span class="nn">spacy</span>
+<span class="kn">from</span> <span class="nn">spacy</span> <span class="kn">import</span> <span class="n">Language</span>
+<span class="kn">from</span> <span class="nn">string</span> <span class="kn">import</span> <span class="n">punctuation</span>
+
+<div class="viewcode-block" id="RuleBasedPreprocessor"><a class="viewcode-back" href="../../../medextractor.preprocessor.html#medextractor.preprocessor.preprocessor.RuleBasedPreprocessor">[docs]</a><span class="k">class</span> <span class="nc">RuleBasedPreprocessor</span><span class="p">(</span><span class="n">PreprocessingInterface</span><span class="p">):</span>
+<div class="viewcode-block" id="RuleBasedPreprocessor.pysbd_sentence_boundaries"><a class="viewcode-back" href="../../../medextractor.preprocessor.html#medextractor.preprocessor.preprocessor.RuleBasedPreprocessor.pysbd_sentence_boundaries">[docs]</a>    <span class="nd">@Language</span><span class="o">.</span><span class="n">component</span><span class="p">(</span><span class="s1">&#39;sbd&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">pysbd_sentence_boundaries</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span>
+        <span class="n">seg</span> <span class="o">=</span> <span class="n">pysbd</span><span class="o">.</span><span class="n">Segmenter</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s1">&#39;en&#39;</span><span class="p">,</span> <span class="n">clean</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">char_span</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">sents_char_spans</span> <span class="o">=</span> <span class="n">seg</span><span class="o">.</span><span class="n">segment</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">char_spans</span> <span class="o">=</span> <span class="p">[</span><span class="n">doc</span><span class="o">.</span><span class="n">char_span</span><span class="p">(</span><span class="n">sent_span</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">sent_span</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="n">alignment_mode</span><span class="o">=</span><span class="s1">&#39;contract&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">sent_span</span> <span class="ow">in</span> <span class="n">sents_char_spans</span><span class="p">]</span>
+        <span class="n">start_token_ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">span</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">idx</span> <span class="k">for</span> <span class="n">span</span> <span class="ow">in</span> <span class="n">char_spans</span> <span class="k">if</span> <span class="n">span</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
+            <span class="n">token</span><span class="o">.</span><span class="n">is_sent_start</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">token</span><span class="o">.</span><span class="n">idx</span> <span class="ow">in</span> <span class="n">start_token_ids</span> <span class="k">else</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="n">doc</span></div>
+
+
+<div class="viewcode-block" id="RuleBasedPreprocessor.get_preprocessed_text"><a class="viewcode-back" href="../../../medextractor.preprocessor.html#medextractor.preprocessor.preprocessor.RuleBasedPreprocessor.get_preprocessed_text">[docs]</a>    <span class="k">def</span> <span class="nf">get_preprocessed_text</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="c1"># TODO: funktioniert noch nicht gut z.B. für DrugDependence.txt</span>
+        <span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">blank</span><span class="p">(</span><span class="s1">&#39;en&#39;</span><span class="p">)</span>
+        <span class="n">nlp</span><span class="o">.</span><span class="n">add_pipe</span><span class="p">(</span><span class="s1">&#39;sbd&#39;</span><span class="p">,</span> <span class="n">first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+        
+        <span class="n">our_punctuation</span> <span class="o">=</span> <span class="n">punctuation</span><span class="o">+</span><span class="s1">&#39; •–&#39;</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">doc_name</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>  
+            <span class="n">raw_text</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+        <span class="n">doc</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">(</span><span class="n">raw_text</span><span class="p">)</span>
+
+        <span class="n">enumeration</span><span class="p">,</span> <span class="n">new_raw_text</span><span class="p">,</span> <span class="n">bullet_point</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">sent_id</span><span class="p">,</span> <span class="n">sent</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">sents</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">sentence</span> <span class="o">=</span> <span class="n">sent</span><span class="o">.</span><span class="n">text</span>
+            <span class="c1"># delete trailing whitespace</span>
+            <span class="n">sentence</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+            <span class="c1">#print(sent_id, sentence, sep=&#39;\t|\t&#39;)</span>
+            <span class="c1"># ignore empty lines</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">sentence</span><span class="o">==</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+                <span class="k">pass</span>
+            <span class="c1"># remember start of enumeration</span>
+            <span class="k">elif</span> <span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;:&#39;</span><span class="p">:</span>
+                <span class="n">enumeration</span> <span class="o">=</span> <span class="n">sentence</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                <span class="k">continue</span>
+            <span class="k">elif</span> <span class="p">((</span><span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">,</span> <span class="s1">&#39;?&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">])</span> 
+                    <span class="ow">and</span> <span class="p">(</span><span class="n">enumeration</span><span class="o">==</span><span class="s1">&#39;&#39;</span><span class="p">)):</span>
+                <span class="n">enumeration</span> <span class="o">=</span> <span class="n">sentence</span>
+                <span class="k">continue</span>
+            <span class="k">elif</span> <span class="p">((</span><span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">,</span> <span class="s1">&#39;?&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">])</span> 
+                    <span class="ow">and</span> <span class="p">(</span><span class="n">enumeration</span><span class="o">!=</span><span class="s1">&#39;&#39;</span><span class="p">)):</span>
+                <span class="n">sentence</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span>
+                <span class="c1"># wenn bullet_point exists sollte er bei allen Teilen </span>
+                <span class="c1"># der Aufzählung gleich sein</span>
+                <span class="k">if</span> <span class="n">bullet_point</span><span class="o">!=</span><span class="s1">&#39;&#39;</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">sentence</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">bullet_point</span><span class="p">):</span>
+                        <span class="n">sentence</span> <span class="o">=</span> <span class="n">enumeration</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">sentence</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">enumeration</span><span class="p">,</span> <span class="n">bullet_point</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">sentence</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="n">our_punctuation</span><span class="p">:</span>
+                        <span class="c1"># sentence_tmp wird eingeführt um </span>
+                        <span class="c1"># Aufzählungszeichen herauszubekommen</span>
+                        <span class="n">sentence_tmp</span> <span class="o">=</span> <span class="n">sentence</span>
+
+                        <span class="c1"># In der While-Schleife wurde die Bedingung   sentence_tmp != &#39;&#39;   ergänzt. </span>
+                        <span class="c1"># Grund: pyspd scheint Probleme mit den Literaturangaben wie z.B. &#39;[1]&#39; zu haben. </span>
+                        <span class="c1"># Es kommt vor, dass die schließende Klammer nicht mehr als Teil des Satzes gesehen wird. </span>
+                        <span class="c1"># Dann wird aus &#39;]&#39; ein einzelner Satz. Wird dann das Zeichen &#39;]&#39; entfernt, ist der </span>
+                        <span class="c1"># verbleibende String leer. Alternativ könnte man alle Literaturangaben aus</span>
+                        <span class="c1"># dem Text entfernen, bevor spaCy zum Einsatz kommt.</span>
+                        <span class="k">while</span> <span class="p">(</span><span class="n">sentence_tmp</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">((</span><span class="n">sentence_tmp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="n">our_punctuation</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">sentence_tmp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">)):</span>
+                            <span class="n">sentence_tmp</span> <span class="o">=</span> <span class="n">sentence_tmp</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+                        <span class="c1"># speichere Aufzählungszeichen falls vorhanden</span>
+                        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span><span class="o">!=</span><span class="nb">len</span><span class="p">(</span><span class="n">sentence_tmp</span><span class="p">):</span>
+                            <span class="n">bullet_point</span> <span class="o">=</span> <span class="n">sentence</span><span class="p">[:</span><span class="n">sentence</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">sentence_tmp</span><span class="p">)]</span>  
+                        <span class="n">sentence</span> <span class="o">=</span> <span class="n">sentence_tmp</span>
+                    <span class="c1"># String &#39;symptom&#39; sollte nicht in Symptom vorhanden sein</span>
+                    <span class="k">if</span> <span class="s1">&#39;symptom&#39;</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">:</span>
+                        <span class="n">enumeration</span><span class="p">,</span> <span class="n">bullet_point</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">sentence</span> <span class="o">=</span> <span class="n">enumeration</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">sentence</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">enumeration</span><span class="p">,</span> <span class="n">bullet_point</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span>
+            <span class="c1"># replace all occurrences of multiple spaces with a single space</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39; +&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">sentence</span><span class="p">)</span>
+            <span class="n">new_raw_text</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s1">.</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="c1"># further replacements</span>
+        <span class="n">new_raw_text</span> <span class="o">=</span> <span class="n">new_raw_text</span>\
+            <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>\
+            <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;?.&#39;</span><span class="p">,</span> <span class="s1">&#39;?&#39;</span><span class="p">)</span>\
+            <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;!.&#39;</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>\
+            <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> &#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>\
+            <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>\
+            <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; - &#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>\
+            <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; – &#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+        <span class="c1"># replace again possible occurrences of multiple spaces with a single space</span>
+        <span class="n">new_raw_text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39; +&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">new_raw_text</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">new_raw_text</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Fapra Gruppe 5.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
