@@ -44,6 +44,43 @@
       \field{pages}{69\bibrangedash 72}
       \range{pages}{4}
     \endentry
+    \entry{DCMI_dcmi_2022}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=18ec26168fc8e5ae33bea44769fab571}{%
+           family={DCMI},
+           familyi={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{18ec26168fc8e5ae33bea44769fab571}
+      \strng{fullhash}{18ec26168fc8e5ae33bea44769fab571}
+      \strng{bibnamehash}{18ec26168fc8e5ae33bea44769fab571}
+      \strng{authorbibnamehash}{18ec26168fc8e5ae33bea44769fab571}
+      \strng{authornamehash}{18ec26168fc8e5ae33bea44769fab571}
+      \strng{authorfullhash}{18ec26168fc8e5ae33bea44769fab571}
+      \field{labelalpha}{DCM22}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This document is an up-to-date specification of all metadata terms maintained by the Dublin Core Metadata Initiative, including properties, vocabulary encoding schemes, syntax encoding schemes, and classes.}
+      \field{title}{{DCMI} {Metadata} {Terms}}
+      \field{urlday}{4}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Anne\\Zotero\\storage\\X75ZBQX5\\dcmi-terms.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.dublincore.org/specifications/dublin-core/dcmi-terms/
+      \endverb
+      \verb{url}
+      \verb https://www.dublincore.org/specifications/dublin-core/dcmi-terms/
+      \endverb
+    \endentry
     \entry{de2012pattern}{article}{}
       \name{author}{2}{}{%
         {{hash=b32cc41776652e84c634b71c1cd957e0}{%
@@ -378,6 +415,63 @@
       \field{title}{Gensim—statistical semantics in python}
       \field{year}{2011}
     \endentry
+    \entry{sadvilkar_pysbd_2020}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=0fff22b7bb7b881319995fe71abb1399}{%
+           family={Sadvilkar},
+           familyi={S\bibinitperiod},
+           given={Nipun},
+           giveni={N\bibinitperiod}}}%
+        {{hash=93f95e4f65833691b9a15cbe2791e2df}{%
+           family={Neumann},
+           familyi={N\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Online}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{e7707bd3e79ab144ca68105ce24579b1}
+      \strng{fullhash}{e7707bd3e79ab144ca68105ce24579b1}
+      \strng{bibnamehash}{e7707bd3e79ab144ca68105ce24579b1}
+      \strng{authorbibnamehash}{e7707bd3e79ab144ca68105ce24579b1}
+      \strng{authornamehash}{e7707bd3e79ab144ca68105ce24579b1}
+      \strng{authorfullhash}{e7707bd3e79ab144ca68105ce24579b1}
+      \field{labelalpha}{SN20}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{In this paper, we present a rule-based sentence boundary disambiguation Python package that works out-of-the-box for 22 languages. We aim to provide a realistic segmenter which can provide logical sentences even when the format and domain of the input text is unknown. In our work, we adapt the Golden Rules Set (a language speciﬁc set of sentence boundary exemplars) originally implemented as a ruby gem pragmatic segmenter1 which we ported to Python with additional improvements and functionality. PySBD passes 97.92\% of the Golden Rule Set examplars for English, an improvement of 25\% over the next best open source Python tool.}
+      \field{booktitle}{Proceedings of {Second} {Workshop} for {NLP} {Open} {Source} {Software} ({NLP}-{OSS})}
+      \field{shorttitle}{{PySBD}}
+      \field{title}{{PySBD}: {Pragmatic} {Sentence} {Boundary} {Disambiguation}}
+      \field{urlday}{19}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{pages}{110\bibrangedash 114}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.18653/v1/2020.nlposs-1.15
+      \endverb
+      \verb{file}
+      \verb Sadvilkar und Neumann - 2020 - PySBD Pragmatic Sentence Boundary Disambiguation.pdf:C\:\\Users\\Anne\\Zotero\\storage\\PMQ4VYLC\\Sadvilkar und Neumann - 2020 - PySBD Pragmatic Sentence Boundary Disambiguation.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.aclweb.org/anthology/2020.nlposs-1.15
+      \endverb
+      \verb{url}
+      \verb https://www.aclweb.org/anthology/2020.nlposs-1.15
+      \endverb
+    \endentry
     \entry{shen_entity_2021}{misc}{}
       \name{author}{6}{}{%
         {{hash=6089d026596d8f080674537d085ff836}{%
@@ -607,6 +701,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{drug_dependent_people}
 \endrefsection
 \endinput
 

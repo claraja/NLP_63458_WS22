@@ -79,7 +79,7 @@ spaCy installiert wurde. Ggf. sollte hierzu active.bat im Verzeichnis
 der virtuellen Umgebung der Python-Installation aufgerufen werden.
 
 Da die Vokabulardateien umfangreich sind, dauert allein das Trainieren des
-Entity-Rulers typischerweise über eine Minute.
+Entity-Rulers ungefähr eine Minute.
 
 Nach Beendigung des Programms befinden sich die xml-Dateien mit der
 RDF-Repräsentation sowie die xml-Datei für den Entity Linker in dem
