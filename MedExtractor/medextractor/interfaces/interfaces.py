@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from spacy import Language
 
-from medextractor.rdf.graphmanager import GraphManager
+from rdf.graphmanager import GraphManager
 
 
 class PreprocessingInterface(ABC):

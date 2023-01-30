@@ -1,5 +1,5 @@
-from medextractor.knowledge.entity import Entity
-from medextractor.knowledge.relations import RelationType
+from knowledge.entity import Entity
+from knowledge.relations import RelationType
 
 
 class SemanticRelation:

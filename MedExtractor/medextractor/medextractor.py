@@ -1,6 +1,6 @@
-from medextractor.config_manager import ConfigManager
-from medextractor.knowledge_extractor.knowledge_extractor import KnowledgeExtractor
-from medextractor.rdf.RDFSerialiser import RDFSerialiser
+from config_manager import ConfigManager
+from knowledge_extractor.knowledge_extractor import KnowledgeExtractor
+from rdf.RDFSerialiser import RDFSerialiser
 
 # Load configuration file
 config = ConfigManager()

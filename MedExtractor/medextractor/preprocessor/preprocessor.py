@@ -1,4 +1,4 @@
-from medextractor.interfaces.interfaces import PreprocessingInterface
+from interfaces.interfaces import PreprocessingInterface
 import re
 import pysbd
 import spacy

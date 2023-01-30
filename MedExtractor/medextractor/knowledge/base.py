@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ElementTree
-from medextractor.knowledge.semantics import SemanticRelation
-from medextractor.knowledge.entity import Entity
-from medextractor.knowledge.entity import EntityType
+from knowledge.semantics import SemanticRelation
+from knowledge.entity import Entity
+from knowledge.entity import EntityType
 import pickle
 import spacy
 
