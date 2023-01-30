@@ -59,7 +59,7 @@
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#submodules">Submodules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor.config_manager">medextractor.config_manager module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor.manual_rdf_graph">medextractor.manual_rdf_graph module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="medextractor.html#medextractor-medextractor-module">medextractor.medextractor module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor.medextractor">medextractor.medextractor module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor.ruler_creator">medextractor.ruler_creator module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor">Module contents</a></li>
 </ul>
@@ -103,17 +103,17 @@
 <span id="medextractor-knowledge-extractor-knowledge-extractor-module"></span><h2>medextractor.knowledge_extractor.knowledge_extractor module<a class="headerlink" href="#module-medextractor.knowledge_extractor.knowledge_extractor" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">medextractor.knowledge_extractor.knowledge_extractor.</span></span><span class="sig-name descname"><span class="pre">KnowledgeExtractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="medextractor.html#medextractor.config_manager.ConfigManager" title="medextractor.config_manager.ConfigManager"><span class="pre">ConfigManager</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/medextractor/knowledge_extractor/knowledge_extractor.html#KnowledgeExtractor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="medextractor.interfaces.html#medextractor.interfaces.interfaces.KnowledgeExtractorInterface" title="medextractor.interfaces.interfaces.KnowledgeExtractorInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">KnowledgeExtractorInterface</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">medextractor.knowledge_extractor.knowledge_extractor.</span></span><span class="sig-name descname"><span class="pre">KnowledgeExtractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="medextractor.html#medextractor.config_manager.ConfigManager" title="medextractor.config_manager.ConfigManager"><span class="pre">ConfigManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">KnowledgeExtractorInterface</span></code></p>
 <p>KnowledgeExtractor searches a text string for entities and for relations between these entities</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.call2">
-<span class="sig-name descname"><span class="pre">call2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/medextractor/knowledge_extractor/knowledge_extractor.html#KnowledgeExtractor.call2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.call2" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">call2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.call2" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.export_for_entity_linker">
-<span class="sig-name descname"><span class="pre">export_for_entity_linker</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/medextractor/knowledge_extractor/knowledge_extractor.html#KnowledgeExtractor.export_for_entity_linker"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.export_for_entity_linker" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">export_for_entity_linker</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.export_for_entity_linker" title="Permalink to this definition"></a></dt>
 <dd><p>Exports all entities, aliases and example sentences into an xml-File. The data
 is prepared for easy import into spaCy’s Entity Linker. The xml-File is human
 readable and allows reviewing the data that will be used by the Entity Linker.
@@ -124,7 +124,7 @@ Path and filename are defined in config.json.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.get_knowledge_base">
-<span class="sig-name descname"><span class="pre">get_knowledge_base</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/medextractor/knowledge_extractor/knowledge_extractor.html#KnowledgeExtractor.get_knowledge_base"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.get_knowledge_base" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_knowledge_base</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.get_knowledge_base" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the knowledgebase that contains all entities and
 sample sentences. Samples sentences can be used for training
 statistical models (e.g. Entity Linker)</p>
@@ -134,7 +134,7 @@ statistical models (e.g. Entity Linker)</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.process_texts">
-<span class="sig-name descname"><span class="pre">process_texts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/medextractor/knowledge_extractor/knowledge_extractor.html#KnowledgeExtractor.process_texts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.process_texts" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">process_texts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.process_texts" title="Permalink to this definition"></a></dt>
 <dd><p>Analyzes all text documents in the folder specified in config.json</p>
 <p>None</p>
 <p>None</p>
@@ -142,7 +142,7 @@ statistical models (e.g. Entity Linker)</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.saveKB">
-<span class="sig-name descname"><span class="pre">saveKB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/medextractor/knowledge_extractor/knowledge_extractor.html#KnowledgeExtractor.saveKB"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.saveKB" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">saveKB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.saveKB" title="Permalink to this definition"></a></dt>
 <dd><p>Saves the database persistently. Optionally, path and file name are given
 as a string parameter when calling this function. If no path and file name
 are given, the function will use the path and file name in attribute
@@ -153,7 +153,7 @@ self._knowledgebase_filename.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.set_context">
-<span class="sig-name descname"><span class="pre">set_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/medextractor/knowledge_extractor/knowledge_extractor.html#KnowledgeExtractor.set_context"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.set_context" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">set_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.set_context" title="Permalink to this definition"></a></dt>
 <dd><p>This function allows defining a context. The context is described by
 named entities included in the Entity Ruler (self._ruler). These entities will
 be added to the set of entities when searching for disease/symptom relations

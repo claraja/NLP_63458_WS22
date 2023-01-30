@@ -88,5 +88,6 @@ class RulerCreator:
         print(f'time load pipeline: {time.time() - time_tmp}s')
 
 
-ruler_creator = RulerCreator()
-ruler_creator.save()
+if __name__ == "__main__":
+    ruler_creator = RulerCreator()
+    ruler_creator.save()
