@@ -4,6 +4,19 @@ from rdflib.term import URIRef
 
 class GraphManager:
     def __init__(self, namespace_prefix, namespace_uri):
+        """Bei Initialisierung des GraphManagers wird ein rdflib-Graph erstellt ...TODO
+
+        Parameters:
+        ----------
+        namespace_prefix: string
+            TODO:Beschreibung
+        namespace_uri: string
+            TODO:Beschreibung
+
+        Returns:
+        -------
+        None
+        """
         self.namespace_prefix = namespace_prefix
         self.namespace_uri = namespace_uri
         self.namespace = Namespace(self.namespace_uri)
@@ -14,6 +27,17 @@ class GraphManager:
         self.hasSymptom = URIRef(self.namespace_uri + "hasSymptom")
 
     def add_symptom(self, disease, symptom):
+        """Adds the found symptom together with the corresponding disease the the rdflib-graph.
+
+        Parameters:
+        ----------
+        diesease: string
+        symptom: string
+
+        Returns:
+        -------
+        None
+        """
         symptom_URI = URIRef(self.namespace_uri + f"symptom:{symptom}")
         if f"disease:{disease}" in self.diseases:
             disease_URI = self.diseases.get(f"disease:{disease}")
