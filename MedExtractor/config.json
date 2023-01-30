@@ -1,9 +1,0 @@
-{
-    "RDF_filename": "../../resources/med_extracted_relations.xml",
-    "EntityLinkerExport_filename": "../../resources/med_entity_linker_export.xml",
-    "KnowledgeBase_filename": "../../resources/med.kb",
-    "Sample_text_folder": "../../resources/to_analyze_small",
-    "Overwrite existing knowledgebase file": "True",
-    "Diseases_filename": "medextractor/resources/training_data/training_diseases_working.txt",
-    "Symptoms_filename": "../../resources/training_data/training_symptoms_working.txt"
-}
