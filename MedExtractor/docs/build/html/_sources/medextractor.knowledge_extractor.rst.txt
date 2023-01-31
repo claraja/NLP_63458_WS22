@@ -1,0 +1,21 @@
+medextractor.knowledge\_extractor package
+=========================================
+
+Submodules
+----------
+
+medextractor.knowledge\_extractor.knowledge\_extractor module
+-------------------------------------------------------------
+
+.. automodule:: medextractor.knowledge_extractor.knowledge_extractor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: medextractor.knowledge_extractor
+   :members:
+   :undoc-members:
+   :show-inheritance:
