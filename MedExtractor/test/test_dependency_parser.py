@@ -12,7 +12,7 @@ text_path = os.path.join('../resources', 'to_analyze', 'TextToAnalyzePreprocesse
 with open(text_path,'r') as text_file:
     text = text_file.read()
 
-ke.call2(text)
+ke.analyze_linguistically(text)
 ke.saveKB(knowledge_base_path)
 
 print(os.getcwd())

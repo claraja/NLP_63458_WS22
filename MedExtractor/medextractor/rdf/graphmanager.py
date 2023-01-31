@@ -6,14 +6,14 @@ class GraphManager:
     def __init__(self, namespace_prefix, namespace_uri):
         """Bei Initialisierung des GraphManagers wird ein rdflib-Graph erstellt ...TODO
 
-        Parameters:
+        Parameters
         ----------
         namespace_prefix: string
             TODO:Beschreibung
         namespace_uri: string
             TODO:Beschreibung
 
-        Returns:
+        Returns
         -------
         None
         """
@@ -29,12 +29,12 @@ class GraphManager:
     def add_symptom(self, disease, symptom):
         """Adds the found symptom together with the corresponding disease the the rdflib-graph.
 
-        Parameters:
+        Parameters
         ----------
         diesease: string
         symptom: string
 
-        Returns:
+        Returns
         -------
         None
         """

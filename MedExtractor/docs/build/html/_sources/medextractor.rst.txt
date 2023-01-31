@@ -7,7 +7,6 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   medextractor.dummy
    medextractor.interfaces
    medextractor.knowledge
    medextractor.knowledge_extractor

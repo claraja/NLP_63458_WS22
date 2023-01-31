@@ -11,12 +11,12 @@ class RuleBasedPreprocessor(PreprocessingInterface):
     def pysbd_sentence_boundaries(doc):
         """TODO:Beschreibung
 
-        Parameters:
+        Parameters
         ----------
         doc: TODO:dtype
             TODO:Beschreibung
 
-        Returns:
+        Returns
         -------
         TODO:dtype
         """
@@ -34,11 +34,11 @@ class RuleBasedPreprocessor(PreprocessingInterface):
         """Reads the text given in the document with which the Preprocessor is initialised and 
         processes this text such that it is in a good format for further processing.
 
-        Parameters:
+        Parameters
         ----------
         None
 
-        Returns:
+        Returns
         -------
         string
         """

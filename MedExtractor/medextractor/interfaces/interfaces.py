@@ -29,7 +29,7 @@ class RDFSerialiserInterface(ABC):
     def __init__(self, knowledgebase, namespace, namespace_prefix):
         """Initialisiert den RDFSerialiser mit einer knowledgebase, dem namespace und dem namespace-prefix
 
-        Parameters:
+        Parameters
         ----------
         knowledgebase: KnowledgeBase
         namespace: string
@@ -37,7 +37,7 @@ class RDFSerialiserInterface(ABC):
         namespace_prefix: string
             TODO: Beschreibung
 
-        Returns:
+        Returns
         -------
         None
         """

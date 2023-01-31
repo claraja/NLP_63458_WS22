@@ -67,6 +67,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
             training_data.append(to_train)
         input_data_file.close()
         # Training of Entity Ruler
+        # adding training_samples to chunked list to use as tqdm progress bar iterator
         chunk_size = 1000
         list_chunked = [training_data[i:i + chunk_size] for i in range(0, len(training_data), chunk_size)]
         for i in tqdm(range(0, len(list_chunked)), total=len(list_chunked),
@@ -217,22 +218,28 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
             print("Fehlerhafte Argumente beim Speichern der Wissensbasis")  # Fehlerhandling muss noch implementiert werden
         return
 
-    def call2(self,text):
+    def analyze_linguistically(self, text):
+        """Method that finds entities in a given text and outputs them on the command line
+        together with part-of-speech tags and the syntactic dependency within the sentenc
 
+        Parameters
+        ----------
+        text: string
+            The text string to be analyzed by the method
+
+        Returns
+        --------
+        None
+        """
         self._doc = self._nlp(text)
 
-        # displacy.serve(self._doc, style="ent")
         for sent in self._doc.sents:
-            entities = []
-
             for ent in sent.ents:
                 print(ent.text, ent.start_char, ent.end_char, ent.label_)
-                # print(self._doc.text[ent.start_char:ent.end_char])
                 for token in self._nlp(self._doc.text[ent.start_char:ent.end_char]):
                     print(token.text, token.tag_, token.dep_)
                 print()
 
-            print("------")
 
     def export_for_entity_linker(self):
         """Exports all entities, aliases and example sentences into an xml-File. The data
@@ -263,6 +270,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         None
         """
         time_tmp = time.time()                                          # time stamp
+        # adding filenames to a list for use as tqdm progress bar iterator
         filenames = [filename for filename in glob.glob(self._text_folder_name + "/*.txt")]
         for i in tqdm(range(0, len(filenames)), total=len(filenames), desc="Processing files..."):
         # for filename in glob.glob(self._text_folder_name + "/*.txt"):   # only .txt files are analyzed

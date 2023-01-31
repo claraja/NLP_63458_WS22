@@ -8,12 +8,12 @@ class RDFSerialiser(RDFSerialiserInterface):
     def serialise_knowledgebase(self, output_path):
         """Serialise knowledge base into RDF file
 
-        Parameters:
+        Parameters
         ----------
         output_path: string
             path to which the xml-document resulting from the rdflib-Graph will be saved
 
-        Returns:
+        Returns
         -------
         None
         """
@@ -25,11 +25,11 @@ class RDFSerialiser(RDFSerialiserInterface):
         """Gives the possibility to change the serialisation format to which the rdflib-graph is serialised
         Possible formats: see https://rdflib.readthedocs.io/en/stable/intro_to_parsing.html#saving-rdf
 
-        Parameters:
+        Parameters
         ----------
         serialisation_format: string
 
-        Returns:
+        Returns
         -------
         None
         """
@@ -38,11 +38,11 @@ class RDFSerialiser(RDFSerialiserInterface):
     def knowledgebase_to_graph(self):
         """Transfers the content of the knowledgebase into a rdflib-graph
 
-        Parameters:
+        Parameters
         ----------
         None
 
-        Returns:
+        Returns
         -------
         None
         """

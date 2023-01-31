@@ -48,7 +48,6 @@
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">medextractor</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="medextractor.html">medextractor package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="medextractor.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="medextractor.dummy.html">medextractor.dummy package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="medextractor.interfaces.html">medextractor.interfaces package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="medextractor.knowledge.html">medextractor.knowledge package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">medextractor.knowledge_extractor package</a></li>
@@ -107,9 +106,19 @@
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">KnowledgeExtractorInterface</span></code></p>
 <p>KnowledgeExtractor searches a text string for entities and for relations between these entities</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.call2">
-<span class="sig-name descname"><span class="pre">call2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.call2" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.analyze_linguistically">
+<span class="sig-name descname"><span class="pre">analyze_linguistically</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.analyze_linguistically" title="Permalink to this definition"></a></dt>
+<dd><p>Method that finds entities in a given text and outputs them on the command line
+together with part-of-speech tags and the syntactic dependency within the sentenc</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>string</em>) – The text string to be analyzed by the method</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.export_for_entity_linker">
@@ -167,10 +176,6 @@ between entities.</p>
 </section>
 <section id="module-medextractor.knowledge_extractor">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-medextractor.knowledge_extractor" title="Permalink to this heading"></a></h2>
-<p>knowledge_extractor package</p>
-<p>contains the knowledge_extractor module</p>
-<p>This is the form of a docstring.</p>
-<p>It can be spread over several lines.</p>
 </section>
 </section>
 

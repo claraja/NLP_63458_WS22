@@ -2,14 +2,7 @@ from enum import Enum
 
 
 class EntityType(Enum):
-    """Types of entities that can be stored in the KnowledgeBase.
-
-    Variants:
-    ----------
-        DISEASE
-        SYMPTOM
-        UNDEFINED
-    """
+    """Types of entities that can be stored in the KnowledgeBase."""
 
 
     DISEASE = 1
@@ -18,19 +11,18 @@ class EntityType(Enum):
 
 
 class Entity:
-    """An entity consisting of its name string and its EntityType
-    """
+    """An entity consisting of its name string and its EntityType"""
     def __init__(self, entity_name: str, entity_type: EntityType):
         """Upon initialization of the Entity the entity_name and its type are set.
 
-        Parameters:
+        Parameters
         ----------
         entity_name: string
             The name of the entity
         entity_type: EntityType
             The type of the entity
 
-        Returns:
+        Returns
         -------
         None
         """

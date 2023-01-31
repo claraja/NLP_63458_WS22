@@ -48,7 +48,6 @@
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">medextractor</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="medextractor.html">medextractor package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="medextractor.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="medextractor.dummy.html">medextractor.dummy package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="medextractor.interfaces.html">medextractor.interfaces package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">medextractor.knowledge package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="medextractor.knowledge_extractor.html">medextractor.knowledge_extractor package</a></li>
@@ -181,11 +180,6 @@ If the KnowledgeBase does not contain any SemanticRelations, no file is saved.</
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">medextractor.knowledge.entity.</span></span><span class="sig-name descname"><span class="pre">EntityType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge.entity.EntityType" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
 <p>Types of entities that can be stored in the KnowledgeBase.</p>
-<blockquote>
-<div><p>DISEASE
-SYMPTOM
-UNDEFINED</p>
-</div></blockquote>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="medextractor.knowledge.entity.EntityType.DISEASE">
 <span class="sig-name descname"><span class="pre">DISEASE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#medextractor.knowledge.entity.EntityType.DISEASE" title="Permalink to this definition"></a></dt>
@@ -241,24 +235,28 @@ UNDEFINED</p>
 <dt class="sig sig-object py" id="medextractor.knowledge.semantics.SemanticRelation.add_training_sample">
 <span class="sig-name descname"><span class="pre">add_training_sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">training_sample</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge.semantics.SemanticRelation.add_training_sample" title="Permalink to this definition"></a></dt>
 <dd><p>Adds the training_sample into the list of training_samples.</p>
-<dl class="simple">
-<dt>training_sample: string</dt><dd><p>The text sample/sentence to be added</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>training_sample</strong> (<em>string</em>) – The text sample/sentence to be added</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
 </dd>
 </dl>
-<p>None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.knowledge.semantics.SemanticRelation.contains_training_sample">
 <span class="sig-name descname"><span class="pre">contains_training_sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">training_sample</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#medextractor.knowledge.semantics.SemanticRelation.contains_training_sample" title="Permalink to this definition"></a></dt>
 <dd><p>Checks whether the training_sample given is already included in the list of training samples.</p>
-<dl class="simple">
-<dt>training_sample: string</dt><dd><p>A text sample/sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>training_sample</strong> (<em>string</em>) – A text sample/sentence</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>true, if training_sample is contained in the list, false otherwise</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>true, if training_sample is contained in the list, false otherwise</p>
-</div></blockquote>
 </dd></dl>
 
 </dd></dl>
@@ -266,12 +264,6 @@ UNDEFINED</p>
 </section>
 <section id="module-medextractor.knowledge">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-medextractor.knowledge" title="Permalink to this heading"></a></h2>
-<p>knowledge package</p>
-<p>contains the modules:
-base
-entity
-relations
-semantics</p>
 </section>
 </section>
 

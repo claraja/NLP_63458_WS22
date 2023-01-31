@@ -38,7 +38,7 @@ Die Pfade müssen relativ zu dem Order angegeben werden, in dem sich
 medextractor.py befindet. Alternativ können auch absolute Pfade angeben
 werden.
 
-Es werden alle Textdateien (*.txt) analysiert, die sich in dem in der
+Es werden alle Textdateien (\*.txt) analysiert, die sich in dem in der
 config.json-Datei angegebenen Ordner befinden. Die von Medextractor
 erzeugten xml- und Knowledgebase- Dateien enthalten ein über alle
 analysierten Texte akkumuliertes Ergebnis.
