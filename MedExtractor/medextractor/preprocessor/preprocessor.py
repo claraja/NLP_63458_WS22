@@ -9,6 +9,17 @@ from string import punctuation
 class RuleBasedPreprocessor(PreprocessingInterface):
     @Language.component('sbd')
     def pysbd_sentence_boundaries(doc):
+        """TODO:Beschreibung
+
+        Parameters:
+        ----------
+        doc: TODO:dtype
+            TODO:Beschreibung
+
+        Returns:
+        -------
+        TODO:dtype
+        """
         seg = pysbd.Segmenter(language='en', clean=False, char_span=True)
         sents_char_spans = seg.segment(doc.text)
         char_spans = [doc.char_span(sent_span.start, sent_span.end,
@@ -20,7 +31,17 @@ class RuleBasedPreprocessor(PreprocessingInterface):
         return doc
 
     def get_preprocessed_text(self) -> str:
-        # TODO: funktioniert noch nicht gut z.B. für DrugDependence.txt
+        """Reads the text given in the document with which the Preprocessor is initialised and 
+        processes this text such that it is in a good format for further processing.
+
+        Parameters:
+        ----------
+        None
+
+        Returns:
+        -------
+        string
+        """
         nlp = spacy.blank('en')
         nlp.add_pipe('sbd', first=True)
 
