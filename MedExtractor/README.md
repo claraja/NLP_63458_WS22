@@ -75,7 +75,7 @@ eingegeben wird.
 
 Zu beachten ist, dass in der System-Path-Umgebungsvariable der Pfad zur
 (ggf. virtuellen) Umgebung des Python-Interpreters enthalten ist, in der
-spaCy installiert wurde. Ggf. sollte hierzu active.bat im Verzeichnis
+spaCy installiert wurde. Ggf. sollte hierzu activate.bat im Verzeichnis
 der virtuellen Umgebung der Python-Installation aufgerufen werden.
 
 Da die Vokabulardateien umfangreich sind, dauert allein das Trainieren des
