@@ -1,6 +1,6 @@
-from medextractor.interfaces.interfaces import RDFSerialiserInterface
-from medextractor.knowledge.entity import EntityType
-from medextractor.knowledge.relations import RelationType
+from interfaces.interfaces import RDFSerialiserInterface
+from knowledge.entity import EntityType
+from knowledge.relations import RelationType
 
 
 class RDFSerialiser(RDFSerialiserInterface):

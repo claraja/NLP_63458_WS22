@@ -4,14 +4,14 @@ import os
 import pickle
 import time
 import spacy
-from medextractor.config_manager import ConfigManager
-from medextractor.interfaces.interfaces import KnowledgeExtractorInterface
-from medextractor.knowledge.base import KnowledgeBase
-from medextractor.knowledge.entity import Entity
-from medextractor.knowledge.entity import EntityType
-from medextractor.knowledge.relations import RelationType
-from medextractor.knowledge.semantics import SemanticRelation
-from medextractor.preprocessor.preprocessor import RuleBasedPreprocessor
+from config_manager import ConfigManager
+from interfaces.interfaces import KnowledgeExtractorInterface
+from knowledge.base import KnowledgeBase
+from knowledge.entity import Entity
+from knowledge.entity import EntityType
+from knowledge.relations import RelationType
+from knowledge.semantics import SemanticRelation
+from preprocessor.preprocessor import RuleBasedPreprocessor
 
 
 class KnowledgeExtractor(KnowledgeExtractorInterface):
