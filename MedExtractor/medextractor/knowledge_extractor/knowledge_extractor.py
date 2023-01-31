@@ -5,8 +5,6 @@ import pickle
 import time
 import spacy
 from tqdm import tqdm
-# from medextractor.config_manager import ConfigManager
-
 from config_manager import ConfigManager
 from interfaces.interfaces import KnowledgeExtractorInterface
 from knowledge.base import KnowledgeBase

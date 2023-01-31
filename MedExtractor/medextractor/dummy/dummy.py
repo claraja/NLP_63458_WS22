@@ -1,4 +1,4 @@
-from medextractor.interfaces.interfaces import PreprocessingInterface, KnowledgeExtractorInterface, RDFSerialiserInterface
+from interfaces.interfaces import PreprocessingInterface, KnowledgeExtractorInterface, RDFSerialiserInterface
 from rdflib import Graph, Literal, Namespace
 # rdflib knows about quite a few popular namespaces, like W3C ontologies, schema.org etc.
 from rdflib.term import URIRef
