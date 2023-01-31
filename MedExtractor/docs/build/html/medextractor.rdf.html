@@ -107,17 +107,30 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.rdf.RDFSerialiser.RDFSerialiser.knowledgebase_to_graph">
 <span class="sig-name descname"><span class="pre">knowledgebase_to_graph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.rdf.RDFSerialiser.RDFSerialiser.knowledgebase_to_graph" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Transfers the content of the knowledgebase into a rdflib-graph</p>
+<p>None</p>
+<p>None</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.rdf.RDFSerialiser.RDFSerialiser.serialise_knowledgebase">
 <span class="sig-name descname"><span class="pre">serialise_knowledgebase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.rdf.RDFSerialiser.RDFSerialiser.serialise_knowledgebase" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Serialise knowledge base into RDF file</p>
+<dl class="simple">
+<dt>output_path: string</dt><dd><p>path to which the xml-document resulting from the rdflib-Graph will be saved</p>
+</dd>
+</dl>
+<p>None</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.rdf.RDFSerialiser.RDFSerialiser.set_serialisation_format">
 <span class="sig-name descname"><span class="pre">set_serialisation_format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serialisation_format</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.rdf.RDFSerialiser.RDFSerialiser.set_serialisation_format" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Gives the possibility to change the serialisation format to which the rdflib-graph is serialised
+Possible formats: see <a class="reference external" href="https://rdflib.readthedocs.io/en/stable/intro_to_parsing.html#saving-rdf">https://rdflib.readthedocs.io/en/stable/intro_to_parsing.html#saving-rdf</a></p>
+<p>serialisation_format: string</p>
+<p>None</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -131,7 +144,11 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.rdf.graphmanager.GraphManager.add_symptom">
 <span class="sig-name descname"><span class="pre">add_symptom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">disease</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symptom</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.rdf.graphmanager.GraphManager.add_symptom" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Adds the found symptom together with the corresponding disease the the rdflib-graph.</p>
+<p>diesease: string
+symptom: string</p>
+<p>None</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.rdf.graphmanager.GraphManager.get_serialized_graph">
