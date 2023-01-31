@@ -6,6 +6,9 @@
 Welcome to MedExtractor's documentation!
 ========================================
 
+.. automodule:: medextractor.medextractor
+    :members:
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:

@@ -4,6 +4,7 @@ import os
 import pickle
 import time
 import spacy
+from tqdm import tqdm
 from config_manager import ConfigManager
 from interfaces.interfaces import KnowledgeExtractorInterface
 from knowledge.base import KnowledgeBase
@@ -22,7 +23,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         is parsed into attributes of the KnowledgeExtractor instance. An instance
         _nlp of the Language class of spaCy and an instance _kb of the KnowledgeBase
         class are created"""
-
+        print('Starting training of Entity Ruler')
         time_tmp = time.time()                                                          # time stamp
         self._knowledgebase_filename = config.knowledgebase_filename                    # path and file names in config.json
         self._text_folder_name = config.text_folder_name
@@ -65,10 +66,13 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
             to_train = {"label": "SYMPTOM", "pattern": row[1]}
             training_data.append(to_train)
         input_data_file.close()
-        
         # Training of Entity Ruler
-        self._ruler.add_patterns(training_data)
-
+        chunk_size = 1000
+        list_chunked = [training_data[i:i + chunk_size] for i in range(0, len(training_data), chunk_size)]
+        for i in tqdm(range(0, len(list_chunked)), total=len(list_chunked),
+                      desc="Training Entity Ruler..."):
+            self._ruler.add_patterns(list_chunked[i])
+        # self._ruler.add_patterns(training_data)
         print(f'time train Entity Ruler: {time.time() - time_tmp}s')
 
 
@@ -259,12 +263,13 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         None
         """
         time_tmp = time.time()                                          # time stamp
-        for filename in glob.glob(self._text_folder_name + "/*.txt"):   # only .txt files are analyzed
-            preprocessor = RuleBasedPreprocessor(filename)
+        filenames = [filename for filename in glob.glob(self._text_folder_name + "/*.txt")]
+        for i in tqdm(range(0, len(filenames)), total=len(filenames), desc="Processing files..."):
+        # for filename in glob.glob(self._text_folder_name + "/*.txt"):   # only .txt files are analyzed
+            preprocessor = RuleBasedPreprocessor(filenames[i])
             preprocessed_text = preprocessor.get_preprocessed_text()    # pre-process text file before passing it to knowledge_extractor
 
             for sent in self._nlp(preprocessed_text).sents:             # uses spaCy pipeline (w/o pysbd) ...
                 self(sent.text)                                         # ... to pass only sentences to knowledge_extractor
         
         print(f'time complete loop over files: {time.time() - time_tmp}s') # total time needed for text analysis (does not include training of Entity Ruler)
-

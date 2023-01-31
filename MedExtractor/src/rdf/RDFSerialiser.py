@@ -1,6 +1,6 @@
-from interfaces.interfaces import RDFSerialiserInterface
-from knowledge.entity import EntityType
-from knowledge.relations import RelationType
+from src.interfaces.interfaces import RDFSerialiserInterface
+from src.knowledge.entity import EntityType
+from src.knowledge.relations import RelationType
 
 
 class RDFSerialiser(RDFSerialiserInterface):
