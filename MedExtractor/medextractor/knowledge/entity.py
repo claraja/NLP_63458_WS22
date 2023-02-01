@@ -17,9 +17,9 @@ class Entity:
 
         Parameters
         ----------
-        entity_name: string
+        entity_name : string
             The name of the entity
-        entity_type: EntityType
+        entity_type : EntityType
             The type of the entity
 
         Returns

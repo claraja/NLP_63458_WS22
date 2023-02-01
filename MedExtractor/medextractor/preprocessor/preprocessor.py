@@ -13,7 +13,7 @@ class RuleBasedPreprocessor(PreprocessingInterface):
 
         Parameters
         ----------
-        doc: TODO:dtype
+        doc : TODO:dtype
             TODO:Beschreibung
 
         Returns

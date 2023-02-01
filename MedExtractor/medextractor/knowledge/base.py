@@ -33,7 +33,9 @@ class KnowledgeBase:
         """
         Add a SemanticRelation into the KnowledgeBase.
         
-        @param relation: a SemanticRelation
+        Parameters
+        ----------
+        relation : SemanticRelation
         """
 
         if self.allow_duplicates:
@@ -46,7 +48,9 @@ class KnowledgeBase:
         """
         Return True if the relation is in the KnowledgeBase. Return False otherwise.
 
-        @param relation: a SemanticRelation
+        Parameters
+        ----------
+        relation: SemanticRelation
         """
         for other in self.semantic_relations:
             if other == relation:
@@ -57,25 +61,27 @@ class KnowledgeBase:
         """
         Add a training sentence to a SemanticRelation
 
-        @param relation: a SemanticRelation
-        @param sent_text: a training sentence
+        Parameters
+        ----------
+        relation : SemanticRelation
+        sent_text : str
+            training sentence
         """
         for other in self.semantic_relations:
             if other == relation:
                 if sent_text.strip('\n') not in other.training_samples:
                     other.training_samples.append(sent_text.strip('\n'))
 
-    # def give_relation(self, relation: SemanticRelation) -> SemanticRelation:
-    #     for other in self.semantic_relations:
-    #         if other == relation:
-    #             return other
-    #     return None
+
 
     def give_entities(self, alias: str) -> []:
         """
         Return a list of entities that are related to symptoms in SemanticRelations stored in the KnowledgeBase
 
-        @param alias: the name of a symptom
+        Parameters
+        ----------
+        alias: str
+            the name of a symptom
         """
         alias_entity = Entity(alias, EntityType.SYMPTOM)
         result = []
@@ -88,7 +94,10 @@ class KnowledgeBase:
         """
         Save the KnowledgeBase data as an xml file that can be used to train an entity linker.
 
-        @param alias: the name of the xml file
+        Parameters
+        ----------
+        file_name: str
+            the name of the xml file
         """
         nlp = spacy.load('en_core_web_sm')
         pipe_exceptions = ['tok2vec', 'tagger', 'parser']
@@ -210,7 +219,10 @@ class KnowledgeBase:
         Save the KnowledgeBase into a pickle file.
         If the KnowledgeBase does not contain any SemanticRelations, no file is saved.
 
-        @param file_name: the name of the file
+        Parameters
+        ----------
+        file_name: str
+            the name of the file
         """
         if len(self.semantic_relations) == 0:
             print("KnowledgeBase is empty. Not saving.")
@@ -225,7 +237,10 @@ class KnowledgeBase:
         """
         Load the KnowledgeBase from file.
 
-        @param file_name: the name of the file
+        Parameters
+        ----------
+        file_name: str
+            the name of the file
         """
         if file_name == '':
             with open(file_name, 'rb') as file:

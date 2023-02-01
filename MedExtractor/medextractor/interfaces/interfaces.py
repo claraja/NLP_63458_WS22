@@ -31,10 +31,10 @@ class RDFSerialiserInterface(ABC):
 
         Parameters
         ----------
-        knowledgebase: KnowledgeBase
-        namespace: string
+        knowledgebase : KnowledgeBase
+        namespace : string
             TODO: Beschreibung
-        namespace_prefix: string
+        namespace_prefix : string
             TODO: Beschreibung
 
         Returns

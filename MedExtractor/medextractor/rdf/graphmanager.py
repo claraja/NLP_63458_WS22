@@ -8,9 +8,9 @@ class GraphManager:
 
         Parameters
         ----------
-        namespace_prefix: string
+        namespace_prefix : string
             TODO:Beschreibung
-        namespace_uri: string
+        namespace_uri : string
             TODO:Beschreibung
 
         Returns
@@ -31,8 +31,8 @@ class GraphManager:
 
         Parameters
         ----------
-        diesease: string
-        symptom: string
+        diesease : string
+        symptom : string
 
         Returns
         -------

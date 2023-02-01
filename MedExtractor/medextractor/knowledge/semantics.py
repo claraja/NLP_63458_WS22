@@ -13,20 +13,20 @@ class SemanticRelation:
         The list of training samples is initialised and optionally appended with the first training sample.
 
         Parameters
-        ===========
-        text: string
+        ----------
+        text : string
             The text string to be analyzed by the KnowledgeExtractor
-        entity_1: Entity
+        entity_1 : Entity
             The first Entity
-        entity_2: Entity
+        entity_2 : Entity
             The second entity
-        relation_type: RelationType
+        relation_type : RelationType
             The RelationType that connects both entities
-        training_sample: str = None
+        training_sample : str = None
             An optional first training sample
 
         Returns
-        ========
+        -------
         None
         """
         self.entity_1 = entity_1
@@ -48,8 +48,8 @@ class SemanticRelation:
         """Checks whether the training_sample given is already included in the list of training samples.
 
         Parameters
-        ===========
-        training_sample: string
+        ----------
+        training_sample : string
             A text sample/sentence
 
         Returns
@@ -62,12 +62,12 @@ class SemanticRelation:
         """Adds the training_sample into the list of training_samples.
 
         Parameters
-        ===========
-        training_sample: string
+        ----------
+        training_sample : string
             The text sample/sentence to be added
 
         Returns
-        ========
+        -------
         None
         """
         if not self.contains_training_sample(training_sample):

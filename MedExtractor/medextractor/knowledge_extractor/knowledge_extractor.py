@@ -82,13 +82,13 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         adds all new entity relations it finds in the text string to the database. It also
         adds sentences that prove the relation to the instance of the relation they prove.
 
-        Parameters:
-        ===========
-        text: string
+        Parameters
+        ----------
+        text : string
             The text string to be analyzed by the KnowledgeExtractor
 
-        Returns:
-        ========
+        Returns
+        -------
         None
         """
         self._doc = self._nlp(text)         # uses spaCy pipeline (w/o pysbd) to analyze the text
@@ -135,12 +135,12 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         be added to the set of entities when searching for disease/symptom relations
         between entities.
 
-        Parameters:
-        ===========
-        context: {} (set of spacy.Spans = Entities of Entity Ruler)
+        Parameters
+        ----------
+        context : {} (set of spacy.Spans = Entities of Entity Ruler)
 
-        Returns:
-        ========
+        Returns
+        -------
         None
         """
         self._context = context
@@ -151,12 +151,12 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         sample sentences. Samples sentences can be used for training
         statistical models (e.g. Entity Linker)
 
-        Parameters:
-        ===========
+        Parameters
+        ----------
         None
 
-        Returns:
-        ========
+        Returns
+        -------
         KnowledgeBase
 
         """
@@ -174,14 +174,14 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         entity2 is a symptom. Thus possible results are only RelationType.NO_RELATION
         and RelationType.HAS_SYMPTOM.
         
-        Parameters:
-        ===========
-        entity1: spacy.Span
-        entity2: spacy.Span
-        sent: spacy.Span
+        Parameters
+        ----------
+        entity1 : spacy.Span
+        entity2 : spacy.Span
+        sent : spacy.Span
 
-        Returns:
-        ========
+        Returns
+        -------
         RelationType (Enum)
         """
         relation_type = RelationType.NO_RELATION
@@ -197,12 +197,12 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         are given, the function will use the path and file name in attribute
         self._knowledgebase_filename.
 
-        Parameters:
-        ===========
-        (optional) file_name (string)
+        Parameters
+        ----------
+        file_name : string optional
 
-        Returns:
-        ========
+        Returns
+        -------
         None
         """
         error = True
@@ -247,12 +247,12 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         readable and allows reviewing the data that will be used by the Entity Linker.
         Path and filename are defined in config.json.
 
-        Parameters:
-        ===========
+        Parameters
+        ----------
         None
 
-        Returns:
-        ========
+        Returns
+        -------
         None
         """
         print(f"size of knowledgebase:  {len(self._kb)}")               # Number of relations saved in knowledge base _kb
@@ -261,12 +261,12 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
     def process_texts(self):
         """Analyzes all text documents in the folder specified in config.json
 
-        Parameters:
-        ===========
+        Parameters
+        ----------
         None
 
-        Returns:
-        ========
+        Returns
+        -------
         None
         """
         time_tmp = time.time()                                          # time stamp

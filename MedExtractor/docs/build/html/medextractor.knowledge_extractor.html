@@ -127,8 +127,14 @@ together with part-of-speech tags and the syntactic dependency within the senten
 is prepared for easy import into spaCy’s Entity Linker. The xml-File is human
 readable and allows reviewing the data that will be used by the Entity Linker.
 Path and filename are defined in config.json.</p>
-<p>None</p>
-<p>None</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -137,16 +143,28 @@ Path and filename are defined in config.json.</p>
 <dd><p>Returns the knowledgebase that contains all entities and
 sample sentences. Samples sentences can be used for training
 statistical models (e.g. Entity Linker)</p>
-<p>None</p>
-<p>KnowledgeBase</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="medextractor.knowledge.html#medextractor.knowledge.base.KnowledgeBase" title="medextractor.knowledge.base.KnowledgeBase">KnowledgeBase</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.process_texts">
 <span class="sig-name descname"><span class="pre">process_texts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge_extractor.knowledge_extractor.KnowledgeExtractor.process_texts" title="Permalink to this definition"></a></dt>
 <dd><p>Analyzes all text documents in the folder specified in config.json</p>
-<p>None</p>
-<p>None</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -156,8 +174,14 @@ statistical models (e.g. Entity Linker)</p>
 as a string parameter when calling this function. If no path and file name
 are given, the function will use the path and file name in attribute
 self._knowledgebase_filename.</p>
-<p>(optional) file_name (string)</p>
-<p>None</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_name</strong> (<em>string optional</em>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -167,8 +191,14 @@ self._knowledgebase_filename.</p>
 named entities included in the Entity Ruler (self._ruler). These entities will
 be added to the set of entities when searching for disease/symptom relations
 between entities.</p>
-<p>context: {} (set of spacy.Spans = Entities of Entity Ruler)</p>
-<p>None</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>context</strong> (<em>{}</em><em> (</em><em>set of spacy.Spans = Entities of Entity Ruler</em><em>)</em>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
