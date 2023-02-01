@@ -1,0 +1,21 @@
+medextractor.interfaces package
+===============================
+
+Submodules
+----------
+
+medextractor.interfaces.interfaces module
+-----------------------------------------
+
+.. automodule:: medextractor.interfaces.interfaces
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: medextractor.interfaces
+   :members:
+   :undoc-members:
+   :show-inheritance:
