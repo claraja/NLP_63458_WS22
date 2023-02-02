@@ -21,7 +21,7 @@ sich die Konfigurationsdatei config.json befinden.
 
 Sollte es noch keine config.json Datei geben, wird beim Aufruf von
 medextractor.py eine Beispiel-Datei erzeugt, die anschließend vom Nutzer
-angepasst werden kann.
+angepasst werden muss.
 
 Die Konfigurationsdatei enthält folgende Informationen:
 
@@ -31,8 +31,8 @@ Die Konfigurationsdatei enthält folgende Informationen:
 4. Pfad zu dem Order, der die zu analysierenden Texte enthält
 5. Spezifikation, ob die Knowledgebase Datei überschrieben werden soll
    (True oder False)
-6. Pfad und name der .txt-Datei, die das Krankheiten-Vokabular enthält
-7. Pfad und name der .txt-Datei, die das Symptome-Vokabular enthält
+6. Pfad und Name der .txt-Datei, die das Krankheiten-Vokabular enthält
+7. Pfad und Name der .txt-Datei, die das Symptome-Vokabular enthält
 
 Die Pfade müssen relativ zu dem Order angegeben werden, in dem sich
 medextractor.py befindet. Alternativ können auch absolute Pfade angeben
@@ -85,7 +85,7 @@ spaCy installiert wurde. Ggf. sollte hierzu activate.bat im Verzeichnis
 der virtuellen Umgebung der Python-Installation aufgerufen werden.
 
 Da die Vokabulardateien umfangreich sind, dauert allein das Trainieren
-des Entity-Rulers typischerweise über eine Minute.
+des Entity-Rulers typischerweise eine knappe Minute.
 
 Nach Beendigung des Programms befinden sich die xml-Dateien mit der
 RDF-Repräsentation sowie die xml-Datei für den Entity Linker in dem in
