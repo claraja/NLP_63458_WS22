@@ -35,7 +35,7 @@ class KnowledgeBase:
         
         Parameters
         ----------
-        relation : SemanticRelation
+        relation: SemanticRelation
         """
 
         if self.allow_duplicates:
@@ -63,14 +63,15 @@ class KnowledgeBase:
 
         Parameters
         ----------
-        relation : SemanticRelation
-        sent_text : str
+        relation: SemanticRelation
+        sent_text: str
             training sentence
         """
         for other in self.semantic_relations:
             if other == relation:
                 if sent_text.strip('\n') not in other.training_samples:
                     other.training_samples.append(sent_text.strip('\n'))
+
 
     def give_entities(self, alias: str) -> []:
         """
@@ -80,6 +81,10 @@ class KnowledgeBase:
         ----------
         alias: str
             the name of a symptom
+
+        Returns
+        -------
+        list of Entity
         """
         alias_entity = Entity(alias, EntityType.SYMPTOM)
         result = []
@@ -97,124 +102,120 @@ class KnowledgeBase:
         file_name: str
             the name of the xml file
         """
-        nlp = spacy.load('en_core_web_sm')                  # a new spacy.Language object is instantiated because a new Entity Ruler will be trained
+        nlp = spacy.load('en_core_web_sm')
         pipe_exceptions = ['tok2vec', 'tagger', 'parser']
         not_required_pipes = [pipe for pipe in nlp.pipe_names if pipe not in pipe_exceptions]
         nlp.disable_pipes(*not_required_pipes)
-        ruler = nlp.add_pipe("entity_ruler")                # will be trained only with entities contained in the knowledge base
+        ruler = nlp.add_pipe("entity_ruler")
         ruler_training_data = []
 
-        entity_linker_export = ElementTree.Element("entity_linker_export")      # root of the xml-tree
+        entity_linker_export = ElementTree.Element("entity_linker_export")
+        entity_node = ElementTree.SubElement(entity_linker_export, "entities")
 
-        # Add entities (diseases) to the xml file
-        entity_node = ElementTree.SubElement(entity_linker_export, "entities")  # first node is for the collection of named entities (diseases)
-
-        for entity in sorted(self._entities):                                   # iterates over all entities in the knowledge base
-            entity_xml = ElementTree.SubElement(entity_node, "entity", {"typ": "str"})  # new element and set </entity> as the tag of the new element
-            entity_xml.text = entity                                            # adds the entity to the </entities> branch
+        for entity in sorted(self._entities):
+            entity_xml = ElementTree.SubElement(entity_node, "entity", {"typ": "str"})
+            entity_xml.text = entity
             to_train = {"label": "DISEASE", "pattern": entity}
-            ruler_training_data.append(to_train)                                # adds the entity to the training samples for the entity ruler
-
-        ruler.add_patterns(ruler_training_data)                                 # trains the entity ruler with diseases
-
-        # Add aliases (symptoms) to the xml file
-        alias_node = ElementTree.SubElement(entity_linker_export, "aliases")    # next node is for the collection of aliases (symptoms)
-        ruler_training_data = []
-        for alias in sorted(self._aliases):                                     # iterates over all aliases (symptoms) in the knowledge base
-
-            alias_xml = ElementTree.SubElement(alias_node, "alias", {"typ": "str"}) # new element and set </alias> as the tag of the new element
-            alias_xml.text = alias                                              # adds the symptom (alias) to the </aliases> branch
-
-            alias_entity_node = ElementTree.SubElement(alias_xml, "alias_entities")    # for each alias (symptom) all related entities (diseases) will be added
-            for relation in self.semantic_relations:                            # iterates over all semantic relations contained in the knowledge base
-                if relation.entity_2.entity_name == alias:                      # if the symptom (alias) is part of the semantic relation ...
-                    alias_entity_xml = ElementTree.SubElement(alias_entity_node, "alias_entity")
-                    alias_entity_xml.text = relation.entity_1.entity_name       # ... the related disease (entity) will be added with tag </alias_entity>
-
-            to_train = {"label": "SYMPTOM", "pattern": alias}                   # adds the symptoms to the training samples for the entity ruler
             ruler_training_data.append(to_train)
 
-        ruler.add_patterns(ruler_training_data)                                 # trains the entity ruler with symptoms
+        ruler.add_patterns(ruler_training_data)
 
-        # Add training sentences to the xml file
-        training_node = ElementTree.SubElement(entity_linker_export, "training")    # New node </training>
+        alias_node = ElementTree.SubElement(entity_linker_export, "aliases")
+        ruler_training_data = []
+        for alias in sorted(self._aliases):
+            to_train = {"label": "SYMPTOM", "pattern": alias}
+            ruler_training_data.append(to_train)
+            alias_xml = ElementTree.SubElement(alias_node, "alias", {"typ": "str"})
+            alias_xml.text = alias
 
-        for relation in self.semantic_relations:                                # iterate over all semantic relations ...
+            alias_entity_node = ElementTree.SubElement(alias_xml, "alias_entities")
+            for relation in self.semantic_relations:
+                if relation.entity_2.entity_name == alias:
+                    alias_entity_xml = ElementTree.SubElement(alias_entity_node, "alias_entity")
+                    alias_entity_xml.text = relation.entity_1.entity_name
 
-            for sample in relation.training_samples:                            # ... and over all sentences saved for the semantic relation instance
+        ruler.add_patterns(ruler_training_data)
 
-                if sample in [string.text for string in list(entity_linker_export.iter("sample"))]:     # avoid dublicates when adding sentences
+        training_node = ElementTree.SubElement(entity_linker_export, "training")
+
+        for relation in self.semantic_relations:
+
+            for sample in relation.training_samples:
+
+                if sample in [string.text for string in list(entity_linker_export.iter("sample"))]:
                     break
 
-                sample_xml = ElementTree.SubElement(training_node, "sample", {"typ": "str"})            # add new sub-node </sample>
-                sample_xml.text = sample                                                                # add sentence
+                sample_xml = ElementTree.SubElement(training_node, "sample", {"typ": "str"})
+                sample_xml.text = sample
 
                 indices = []
 
-                training_links_node = ElementTree.SubElement(sample_xml, "links")   # new sub-node </links> to define how to link an alias to an entity
+                # training_aliases_node = ElementTree.SubElement(sample_xml, "aliases_training")
+                training_links_node = ElementTree.SubElement(sample_xml, "links")
 
-                doc = nlp(sample)               # the sentence is process by spaCy pipeline to search for named entities (diseases and symptoms).
+                doc = nlp(sample)
 
-                                                # remark: the big vocabulary trained for the knowledge_extractor may contain a symptom 'motivation'. However, the
-                                                # actual symptom may be the negated 'no motivation' which is not in the training vocabulary of
-                                                # knowledge_extractor. But knowledge_extractor stores 'no motivation' in the knowledge base. Since we have
-                                                # trained the entity ruler only with the entities and aliases contained in the knowledge base, now this
-                                                # spaCy pipeline searches for 'no motivation'. This is one of the main reasons to work with a new pipeline.
+                for alias in self._aliases:
 
-                for alias in self._aliases:     # iterates over all aliases (symptoms) contained in the knowledge base
+                    doc_entities = [ent.text for ent in doc.ents]
 
-                    doc_entities = [ent.text for ent in doc.ents]   # list of all named entities found by the spaCy pipeline
-
-                    if alias in doc_entities:                   # if an alias (symptom) is found in the sentence ...
-                        for ent in doc.ents:                    # ... the programm iterates over all found entities (spacy.span's) of the sentence ...
-                            if ent.text == alias:               # ... in order to add for ALL appearances of this alias in the sentence ...
-                                start = ent.start_char          # ... the start and ...
-                                end = start + len(alias)        # ... end position within the sentence.
-                                should_add = True               # The alias will only be added if not overlapping with another alias, that was already added
+                    if alias in doc_entities:
+                        for ent in doc.ents:
+                            if ent.text == alias:
+                                # start = sample.find(alias)
+                                start = ent.start_char
+                                # end = sample.find(alias) + len(alias)
+                                end = start + len(alias)
+                                should_add = True
                                 for i in indices:
                                     if not ((end < i[0]) or (start > i[1])):
                                         should_add = False
                                         break
                                 if should_add == True:
-                                    indices.append((start, end))    # append tuple with the start and end positions
+                                    indices.append((start, end))
 
-                                    training_alias_xml = ElementTree.SubElement(training_links_node, "alias_type",  # add 'SYMPTOM' as </alias_type>
+                                    training_alias_xml = ElementTree.SubElement(training_links_node, "alias_type",
                                                                                 {"typ": "str"})
                                     training_alias_xml.text = "SYMPTOM"
 
-                                    training_links_xml = ElementTree.SubElement(training_links_node, "position",    # add position data with </position> tag
+                                    training_links_xml = ElementTree.SubElement(training_links_node, "position",
                                                                                 {"typ": "tuple"})
-                                    training_links_xml.text = "(" + str(start) + "," + str(end) + ")"       # add tupel as string (e.g. '(34,40)')
+                                    training_links_xml.text = "(" + str(start) + "," + str(end) + ")"
 
-                                    entity_list = self.give_entities(alias)     # returns all entities (diseases) related to the alias (symptom)
+                                    entity_list = self.give_entities(alias)
                                     entity_count = 0
 
-                                    for ent in entity_list:                     # count number of diseases that are related to the symptom ...
-                                        if ent.entity_name in sample:           # ... AND that are found in the sentence
+                                    for ent in entity_list:
+                                        if ent.entity_name in sample:
                                             entity_count += 1
 
-                                    training_entities_node = ElementTree.SubElement(training_links_xml,     # new sub-node for all entities related to the alias, tag </entities_training>
+                                    training_entities_node = ElementTree.SubElement(training_links_xml,
                                                                                     "entities_training")
                                     for ent in entity_list:
 
-                                        training_entities_xml = ElementTree.SubElement(training_entities_node,  # new element </training_entity>
+                                        training_entities_xml = ElementTree.SubElement(training_entities_node,
                                                                                        "training_entity",
                                                                                        {"typ": "str"})
-                                        training_entities_xml.text = ent.entity_name                            # add entity name
+                                        training_entities_xml.text = ent.entity_name
 
-                                        training_probability_node = ElementTree.SubElement(training_entities_xml,   # new sub-node </probability>
+                                        training_probability_node = ElementTree.SubElement(training_entities_xml,
                                                                                            "probability")
-                                        training_probability_xml = ElementTree.SubElement(training_probability_node,    # value, tag is </prob>
+                                        training_probability_xml = ElementTree.SubElement(training_probability_node,
                                                                                           "prob", {"typ": "float"})
 
-                                        if ent.entity_name in sample:                                           # if entity (disease) is mentioned in the sentence ...
-                                            training_probability_xml.text = str(round(1.0 / entity_count, 1))   # ... its probability > 0 is added
+                                        if ent.entity_name in sample:
+                                            training_probability_xml.text = str(round(1.0 / entity_count, 1))
                                         else:
-                                            training_probability_xml.text = "0.0"                               # ... otherwise probability is 0.0
+                                            training_probability_xml.text = "0.0"
+
+                # for word in sample.translate(str.maketrans('', '', string.punctuation)).split():
+                #    if word.isalpha():
+                #        output += ",-1"
+                # output += "])"
 
         if file_name != "":
             et = ElementTree.ElementTree(entity_linker_export)
-            et.write(file_name, encoding='utf-8')                   # xml file is written to disk
+            et.write(file_name, encoding='utf-8')
 
     def save(self, file_name: str) -> None:
         """

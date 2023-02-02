@@ -40,7 +40,7 @@ C0424091 & loss of interest & FINDING \\
 
 Für das Auffinden der Named Entities wird die \emph{spaCy}-Komponente \emph{Entity Ruler} verwendet. Diese durchsucht einen Text konventionell nach den in den beiden Vokabular-Dateien eingetragenen Begriffen und gibt im Fall von Mehrdeutigkeiten die jeweils längsten Begriffe aus. Der \emph{Entity Ruler} wird dem \emph{Entity Recognizer} vorgezogen, da letzterer auf statistischer Modellierung beruht und das spezifische medizinische Vokabular durch eine Vielzahl von Beispielsätzen trainiert werden muss. Da das Vokabular sehr umfangreich ist und Trainingssätze für das Vokabular (noch) nicht zur Verfügung stehen, kann der \emph{Entity Recognizer} nicht zuverlässig verwendet werden.
 
-Die Verwendung des \emph{Entity Rulers} erfolgt im Modul \emph{knowledge\_extractor.py}. Der \emph{Entity Ruler} wird bei Instanziierung des \emph{KnowledgeExtractor}-Objektes trainiert, indem im Konstruktor zunächst die Vokabular-Dateien geladen, ihre Einträge aufbereitet und diese schließlich dem \emph{Entity Ruler} durch die \emph{spaCy}-Funktion \emph{add\_patterns()} übergeben werden. Ebenfalls im Konstruktor der \emph{KnowledgeExtractor}-Klasse wird ein \emph{KnowledgeBase}-Objekt erzeugt. Dieses dient dazu, gefunden Wissensinhalte zu speichern.
+Die Verwendung des \emph{Entity Rulers} erfolgt im Modul \emph{knowledge\_extractor.py}. Der \emph{Entity Ruler} wird bei Instanziierung des \emph{KnowledgeExtractor}-Objektes trainiert, indem im Konstruktor zunächst die Vokabular-Dateien geladen, ihre Einträge aufbereitet und diese schließlich dem \emph{Entity Ruler} durch die \emph{spaCy}-Funktion \emph{add\_patterns()} übergeben werden. Ebenfalls im Konstruktor der \emph{KnowledgeExtractor}-Klasse wird ein \emph{KnowledgeBase}-Objekt erzeugt. Dieses dient dazu, gefundene Wissensinhalte zu speichern.
 
 Die Suche nach Wissensinhalten ist in diesem Prototypen sehr einfach gehalten. Es wird in jedem vorprozessiertem Satz nach Entitäten (Krankheiten, Symptome) gesucht und eine Beziehung zwischen Krankheit und Symptom dann angenommen, wenn beide Begriffe in einem Satz vorkommen. Wird z.B. dem \emph{KnowledgeExtractor} der Satz \emph{\glqq During a period of depression, your symptoms may include loss of interest in everyday activities\flqq} übergeben, so findet der \emph{Entity Ruler} die Krankheit \emph{depression} und das Symptom \emph{loss of interest}. Der \emph{KnowledgeExtractor} sieht dann im Verlust von Interesse ein Symptom für eine Depression.
 
@@ -57,4 +57,20 @@ Der \emph{Entity Linker} kann auch dafür verwendet werden, Symptomen mögliche 
 
 \section{FZ 3.3 Implementierung zur Wissensrepräsentation}
 \label{sec:FZ3.3} 
+
+\section{Implementierung weiterer Funktionalität}
+
+Zusätzlich zu den ausgearbeiteten Forschungszielen haben sich während der Implementierung die folgenden Funktionalitäten herauskristallisiert, die einen Mehrwert für das Programm darstellen.
+
+\subsection{Erstellung von Trainingsdaten für den Entity-Linker}
+
+Analysiert der \emph{KnowledgeExtractor} zahlreiche Texte, so ergibt sich die Möglichkeit, nicht nur eine Wissensrepräsentation zu erstellen, sondern auch Beispielsätze zu sammeln. Der \emph{KnowledgeExtractor} speichert daher auch Beispielsätze in der Wissensbasis. Diese Beispielsätze können für das Training statistischer Modelle wie z.B. des \emph{Entity Linkers}, einer weiteren optionalen Komponente der \emph{spaCy}-Pipeline, eingesetzt werden.
+
+Der \emph{Entity Linker} arbeitet zusammen mit dem \emph{Entity Ruler} bzw. \emph{Entity Recognizer} und verknüpft von diesen Komponenten gefundene Entitäten mit Entitäten aus seiner eigenen Wissensbasis. Die Idee des \emph{Entity Linkers} ist es, mehrdeutigen Entitäten (z.B. \emph{Apple}) kontextbezogen konkrete Entitäten zuzuordnen, also etwa die Frucht, die Firma \emph{Apple} oder die Stadt New York (\emph{Big Apple}). Die vom \emph{Entity Recognizer} oder \emph{Entity Ruler} gefundenen Begriffe werden in diesem Zusammenhang als \emph{Aliases} bezeichnet.
+
+Der \emph{Entity Linker} kann somit auch dafür verwendet werden, Symptomen mögliche Krankheiten zuzuordnen, denn Symptome können zu mehreren Krankheiten gehören. Es wurde daher eine Funktion implementiert, den Inhalt der Wissensbasis des \emph{MedExtractors} in eine xml-Datei zu exportieren, in der die Daten so aufbereitet sind, dass sie einfach vom \emph{Entity Linker} importiert werden können. Wie dieser Import funktioniert, wird in dem Jupyter-Notebook \emph{entity\_linker\_demo.ipynb} vorgeführt.
+
+\subsection{Linguistische Analyse der Entitäten}
+
+Die erstellte prototypische Implementierung erbringt bereits mit der reinen Vokabelanalyse zu Krankheiten und Symptomen gute Ergebnisse. Für weitergehende Untersuchungen scheint es von Vorteil, zu den Entitäten auch die entsprechenden Wortarten und ihre Funktion im jeweiligen Satz zu ermitteln, um darauf aufbauend genauere Beziehungen zwischen den Entitäten ermitteln zu können. Eine grundlegende Implementierung dieser Funktionalität steht mit der Methode \lstinline{analyze_linguistically()} zur Verfügung.
 

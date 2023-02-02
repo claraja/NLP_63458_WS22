@@ -220,7 +220,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
 
     def analyze_linguistically(self, text):
         """Method that finds entities in a given text and outputs them on the command line
-        together with part-of-speech tags and the syntactic dependency within the sentenc
+        together with part-of-speech tags and the syntactic dependency within the sentence
 
         Parameters
         ----------

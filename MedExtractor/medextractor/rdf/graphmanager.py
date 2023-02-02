@@ -31,7 +31,7 @@ class GraphManager:
 
         Parameters
         ----------
-        diesease : string
+        disease : string
         symptom : string
 
         Returns

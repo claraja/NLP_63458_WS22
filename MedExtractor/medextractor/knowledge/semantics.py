@@ -33,7 +33,7 @@ class SemanticRelation:
         self.entity_2 = entity_2
         self.relation_type = relation_type
         self.training_samples = []
-        if relation_type == None:
+        if training_sample != None:
             self.training_samples.append(training_sample)
 
 
