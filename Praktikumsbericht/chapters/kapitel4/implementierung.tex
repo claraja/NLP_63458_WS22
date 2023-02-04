@@ -48,13 +48,6 @@ Symptome sind in der Vokabular-Datei nicht mit ihren Negationen enthalten. So gi
 
 Allerdings funktioniert dieses einfache Konzept für obigen Beispielsatz nicht bei dem Symptom \emph{interest}, da vor diesem das Wort \emph{no} fehlt und aus dem Kontext erschlossen werden muss. Im \emph{spaCy Universe} (https://spacy.io/universe) gibt es das Projekt \emph{negspaCy}, das negierte Begriffe mit einem entsprechenden Tag versieht. Leider funktioniert dieses Modul nur für einfache Sätze und liefert bei den von uns untersuchten Beispieltexten zu häufig keine guten Ergebnisse. Daher wurde auf die Verwendung von \emph{negspaCy} verzichtet.
 
-Wie eingangs erwähnt, fehlt für das Trainieren statistischer Modelle eine Sammlung von Beispielsätzen. Analysiert der \emph{KnowledgeExtractor} zahlreiche Texte, so ergibt sich die Möglichkeit, nicht nur eine Wissensrepräsentation zu erstellen, sondern auch Beispielsätze zu sammeln. Der \emph{KnowledgeExtractor} speichert daher auch Beispielsätze in der Wissensbasis. Diese Beispielsätze können z.B. für das Training des \emph{Entity Linkers}, einer weiteren optionalen Komponente der \emph{spaCy}-Pipeline, eingesetzt werden.
-
-Der \emph{Entity Linker} arbeitet zusammen mit dem \emph{Entity Ruler} bzw. \emph{Entity Recognizer} und verknüpft von diesen Komponenten gefundene Entitäten mit Entitäten aus seiner eigenen Wissensbasis. Die Idee des \emph{Entity Linkers} ist es, mehrdeutigen Entitäten (z.B. \emph{Apple}) kontextbezogen konkrete Entitäten zuzuordnen, also etwa die Firma \emph{Apple}, die Stadt New York (\emph{Big Apple}) oder die Frucht. Die von \emph{Entity Recognizer} oder \emph{Entity Ruler} gefundenen Begriffe werden in diesem Zusammenhang als \emph{Aliases} bezeichnet.
-
-Der \emph{Entity Linker} kann auch dafür verwendet werden, Symptomen mögliche Krankheiten zuzuordnen, denn Symptome können zu mehreren Krankheiten gehören. Es wurde daher eine Funktion implementiert, den Inhalt der Wissensbasis des \emph{MedExtractors} in eine xml-Datei zu exportieren, in der die Daten so aufbereitet sind, dass sie einfach vom \emph{Entity Linker} importiert werden können. Wie dieser Import funktioniert, wird in dem Jupyter-Notebook \emph{entity\_linker\_demo.ipynb} vorgeführt.
-
-
 \section{FZ 3.3 Implementierung zur Wissensrepräsentation}
 \label{sec:FZ3.3} 
 
@@ -66,9 +59,22 @@ Zusätzlich zu den ausgearbeiteten Forschungszielen haben sich während der Impl
 
 Analysiert der \emph{KnowledgeExtractor} zahlreiche Texte, so ergibt sich die Möglichkeit, nicht nur eine Wissensrepräsentation zu erstellen, sondern auch Beispielsätze zu sammeln. Der \emph{KnowledgeExtractor} speichert daher auch Beispielsätze in der Wissensbasis. Diese Beispielsätze können für das Training statistischer Modelle wie z.B. des \emph{Entity Linkers}, einer weiteren optionalen Komponente der \emph{spaCy}-Pipeline, eingesetzt werden.
 
-Der \emph{Entity Linker} arbeitet zusammen mit dem \emph{Entity Ruler} bzw. \emph{Entity Recognizer} und verknüpft von diesen Komponenten gefundene Entitäten mit Entitäten aus seiner eigenen Wissensbasis. Die Idee des \emph{Entity Linkers} ist es, mehrdeutigen Entitäten (z.B. \emph{Apple}) kontextbezogen konkrete Entitäten zuzuordnen, also etwa die Frucht, die Firma \emph{Apple} oder die Stadt New York (\emph{Big Apple}). Die vom \emph{Entity Recognizer} oder \emph{Entity Ruler} gefundenen Begriffe werden in diesem Zusammenhang als \emph{Aliases} bezeichnet.
+Der \emph{Entity Linker} arbeitet zusammen mit dem \emph{Entity Ruler} bzw. \emph{Entity Recognizer} und verknüpft von diesen Komponenten gefundene Entitäten mit Entitäten aus seiner eigenen Wissensbasis. Die Idee des \emph{Entity Linkers} ist es, mehrdeutigen Entitäten (z.B. \emph{Apple}) kontextbezogen konkrete Entitäten zuzuordnen, also etwa die Frucht, die Firma \emph{Apple} oder die Stadt New York (\emph{Big Apple}). Die vom \emph{Entity Recognizer} oder \emph{Entity Ruler} gefundenen Begriffe werden in diesem Zusammenhang als \emph{Aliase} bezeichnet.
 
 Der \emph{Entity Linker} kann somit auch dafür verwendet werden, Symptomen mögliche Krankheiten zuzuordnen, denn Symptome können zu mehreren Krankheiten gehören. Es wurde daher eine Funktion implementiert, den Inhalt der Wissensbasis des \emph{MedExtractors} in eine xml-Datei zu exportieren, in der die Daten so aufbereitet sind, dass sie einfach vom \emph{Entity Linker} importiert werden können. Wie dieser Import funktioniert, wird in dem Jupyter-Notebook \emph{entity\_linker\_demo.ipynb} vorgeführt.
+
+Abbildung \ref{fig:jupyter} zeigt einen Ausschnitt aus diesem Jupyter Notebook. Der \emph{spaCy}-Pipeline wird ein Text übergeben, in dem ein Patient seine Beschwerden während des Besuchs einer Shopping Mall beschreibt. In den nächsten beiden Zeilen wird jeweils über die vom \emph{Entity Ruler} gefundenen Entitäten in der Liste \emph{doc.ents} iteriert. Der \emph{Entity Linker} besitzt als Attribut das \emph{spacy.KnowledgeBase}-Objekt \emph{kb}\footnote{die dazugehörige \emph{spaCy}-Klasse entspricht nicht der \emph{KnowledgeBase}-Klasse im Modul \emph{base.py} des \emph{Medextractors}}, in dem die vom Medextractor gefundenen Entitäten und Aliase mitsamt der Verknüpfungen (Links) zwischen Entitäten und Aliasen gespeichert sind (nicht jedoch die Beispielsätze). Im ersten Fall wird die Funktion \emph{get\_alias\_condidates()} des \emph{KnowledgeBase}-Objektes verwendet, um sich für jedes im Text gefundene Symptom die dazu verknüpften Krankheiten anzeigen zu lassen.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{pictures/EntityLinkerDemo.png}
+    \caption{Auszug aus dem Jupyter notebook \emph{entity\_linker\_demo.ipynb}}
+    \label{fig:jupyter}
+\end{figure}
+
+In den meisten Fällen wird als Krankheit \emph{Agoraphobia (Platzangst)} angegeben, speziell für das Symptom \emph{panic attack} aber auch z.B. \emph{panic disorder} oder \emph{shock}. Eine einfache Auswertung könnte darin bestehen, die am häufigsten genannt Krankheit, hier also \emph{Agoraphobia} als die wahrscheinlichste Erkrankung zu betrachten, die zu der Beschreibung des Patienten passt.
+
+Alternativ dazu verwendet das zweite Beispiel die Funktion \emph{predict()} des \emph{Entity Linkers}. Dieser Funktion wird das gesamte \emph{doc}-Objekt übergeben und für alle vom \emph{Entity Ruler} gefundenen Entitäten von \emph{predict()} eine Vorhersage der Erkrankung ausgegeben. Hier wird das durch die Beispielsätze trainierte statistische Modell des \emph{Entity Linkers} verwendet. Im Idealfall ist der \emph{Entity Linker} in der Lage kontextbezogen die wahrscheinlichste Erkrankung zu identifizieren. Die Zuordnung des Symptoms \emph{panic attack} zur Erkrankung \emph{panic disorder} ist hier sinnvoll, da eine \emph{Agoraphobia} nicht immer mit Panikattacken verbunden ist. Eine weitere Untersuchung des \emph{Entity Linkers} ist noch nicht erfolgt, da davon auszugehen ist, dass die Menge an Trainingssätzen noch nicht ausreicht, um eine zuverlässige Funktion des \emph{Entity Linkers} zu demonstrieren.
 
 \subsection{Linguistische Analyse der Entitäten}
 
