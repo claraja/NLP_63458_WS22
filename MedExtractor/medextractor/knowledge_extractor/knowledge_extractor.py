@@ -25,17 +25,15 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         class are created"""
         print('Starting training of Entity Ruler')
         time_tmp = time.time()                                                          # time stamp
-        self._knowledgebase_filename = config.knowledgebase_filename                    # path and file names in config.json
-        self._text_folder_name = config.text_folder_name
-        self._entity_linker_export_filename = config.entity_linker_export_filename
+        self._config = config
         self._nlp = spacy.load('en_core_web_sm')                                        # Instantiate spacy.Language object (spaCy pipeline)
         self._doc = self._nlp("")                                                       # Initialize spacy.doc object with empty string
         self._kb = KnowledgeBase()                                                      # Instantiate KnowledgeBase object
-        self._context = set()                                                           # Context of a string can be described by adding entities to self._context
+        self.context = set()                                                           # Context of a string can be described by adding entities to self.context
 
-        if (self._knowledgebase_filename != "") and os.path.exists(self._knowledgebase_filename):
+        if (self._config.knowledgebase_filename != "") and os.path.exists(self._config.knowledgebase_filename):
             if not config.overwrite:
-                self._kb.load(self._knowledgebase_filename)
+                self._kb.load(self._config.knowledgebase_filename)
 
         pipe_exceptions = ['tok2vec','tagger','parser']
         not_required_pipes = [pipe for pipe in self._nlp.pipe_names if pipe not in pipe_exceptions]
@@ -100,12 +98,12 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
             for ent in sent.ents:           # iterates over all entities (spacy.Spans)  found by the entity ruler
                 entities.add(ent)
             
-            entities.update(self._context)  # updates set of entities with set of entities describing the context
+            entities.update(self.context)  # updates set of entities with set of entities describing the context
             entities = list(entities)       # converts set to list
             
             for ent1 in entities:           # ent1 and ent2 iterate over all pairs of entities
                 for ent2 in entities:
-                    relation_type = self._is_related(ent1, ent2, sent)
+                    relation_type = self.is_related(ent1, ent2, sent)
                     if relation_type != RelationType.NO_RELATION:
                         if relation_type == RelationType.HAS_SYMPTOM:                   # Use of RelationType.IS_SYMPTOM_OF is not yet implemented
                             entity1 = Entity(ent1.text, EntityType.DISEASE)
@@ -143,7 +141,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         -------
         None
         """
-        self._context = context
+        self.context = context
         return
 
     def get_knowledge_base(self):
@@ -162,7 +160,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         """
         return self._kb
     
-    def _is_related(self,entity1,entity2,sent):
+    def is_related(self,entity1,entity2,sent):
         """Returns relation type of entity1 and entity2. If both entities are
         found to be unrelated, RelationType.NO_RELATION is returned.
 
@@ -170,7 +168,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         very simple relation check without analyzing the syntax of the sentence. Such
         analysis could be added at a later stage.
 
-        At the moment _is_related() just checks whether entity1 is a disease and whether
+        At the moment is_related() just checks whether entity1 is a disease and whether
         entity2 is a symptom. Thus possible results are only RelationType.NO_RELATION
         and RelationType.HAS_SYMPTOM.
         
@@ -195,7 +193,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         """Saves the database persistently. Optionally, path and file name are given
         as a string parameter when calling this function. If no path and file name
         are given, the function will use the path and file name in attribute
-        self._knowledgebase_filename.
+        self._config.knowledgebase_filename.
 
         Parameters
         ----------
@@ -207,12 +205,12 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         """
         error = True
         if len(args) == 0:
-            self._kb.save(self._knowledgebase_filename)
+            self._kb.save(self._config.knowledgebase_filename)
             error = False 
         elif len(args) == 1:
             if isinstance(args[0],str):
-                self._knowledgebase_filename = args[0]
-                self._kb.save(self._knowledgebase_filename)
+                self._config.knowledgebase_filename = args[0]
+                self._kb.save(self._config.knowledgebase_filename)
                 error = False
         if error == True:
             print("Fehlerhafte Argumente beim Speichern der Wissensbasis")  # Fehlerhandling muss noch implementiert werden
@@ -256,7 +254,7 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         None
         """
         print(f"size of knowledgebase:  {len(self._kb)}")               # Number of relations saved in knowledge base _kb
-        self._kb.export_for_entity_linker(self._entity_linker_export_filename)  
+        self._kb.export_for_entity_linker(self._config.entity_linker_export_filename)  
 
     def process_texts(self):
         """Analyzes all text documents in the folder specified in config.json
@@ -271,9 +269,9 @@ class KnowledgeExtractor(KnowledgeExtractorInterface):
         """
         time_tmp = time.time()                                          # time stamp
         # adding filenames to a list for use as tqdm progress bar iterator
-        filenames = [filename for filename in glob.glob(self._text_folder_name + "/*.txt")]
+        filenames = [filename for filename in glob.glob(self._config.text_folder_name + "/*.txt")]
         for i in tqdm(range(0, len(filenames)), total=len(filenames), desc="Processing files..."):
-        # for filename in glob.glob(self._text_folder_name + "/*.txt"):   # only .txt files are analyzed
+        # for filename in glob.glob(self._config.text_folder_name + "/*.txt"):   # only .txt files are analyzed
             preprocessor = RuleBasedPreprocessor(filenames[i])
             preprocessed_text = preprocessor.get_preprocessed_text()    # pre-process text file before passing it to knowledge_extractor
 
