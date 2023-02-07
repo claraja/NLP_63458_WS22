@@ -73,7 +73,7 @@ class KnowledgeBase:
                     other.training_samples.append(sent_text.strip('\n'))
 
 
-    def give_entities(self, alias: str) -> []:
+    def get_entities(self, alias: str) -> []:
         """
         Return a list of entities that are related to symptoms in SemanticRelations stored in the KnowledgeBase
 
@@ -191,7 +191,8 @@ class KnowledgeBase:
                                                                                 {"typ": "tuple"})
                                     training_links_xml.text = "(" + str(start) + "," + str(end) + ")"       # add tupel as string (e.g. '(34,40)')
 
-                                    entity_list = self.give_entities(alias)     # returns all entities (diseases) related to the alias (symptom)
+                                    entity_list = self.get_entities(
+                                        alias)  # returns all entities (diseases) related to the alias (symptom)
                                     entity_count = 0
 
                                     for ent in entity_list:                     # count number of diseases that are related to the symptom ...
