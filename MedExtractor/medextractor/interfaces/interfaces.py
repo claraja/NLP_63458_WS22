@@ -27,15 +27,16 @@ class KnowledgeExtractorInterface(ABC):
 class RDFSerialiserInterface(ABC):
 
     def __init__(self, knowledgebase, namespace, namespace_prefix):
-        """Initialisiert den RDFSerialiser mit einer knowledgebase, dem namespace und dem namespace-prefix
+        """Initialised the RDFSerialiser with a knowledgebase and the 
+        namespace and namespace-prefix for thr RDF-output-generation.
 
         Parameters
         ----------
         knowledgebase : KnowledgeBase
         namespace : string
-            TODO: Beschreibung
+            namespace prefix for creating the RDF-output
         namespace_prefix : string
-            TODO: Beschreibung
+            namespace URI for creating the RDF-output
 
         Returns
         -------

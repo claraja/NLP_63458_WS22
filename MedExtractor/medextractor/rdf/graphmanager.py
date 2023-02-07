@@ -4,14 +4,15 @@ from rdflib.term import URIRef
 
 class GraphManager:
     def __init__(self, namespace_prefix, namespace_uri):
-        """Bei Initialisierung des GraphManagers wird ein rdflib-Graph erstellt ...TODO
+        """When initializing the GraphManager an rdflib-graph is generated and 
+        other instances used to develop and later serialise the graph are initialised.
 
         Parameters
         ----------
         namespace_prefix : string
-            TODO:Beschreibung
+            namespace prefix for creating the RDF-output
         namespace_uri : string
-            TODO:Beschreibung
+            namespace URI for creating the RDF-output
 
         Returns
         -------

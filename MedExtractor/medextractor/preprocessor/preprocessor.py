@@ -9,16 +9,17 @@ from string import punctuation
 class RuleBasedPreprocessor(PreprocessingInterface):
     @Language.component('sbd')
     def pysbd_sentence_boundaries(doc):
-        """TODO:Beschreibung
+        """Creates a SpaCy pipeline component to segment a text into sentences using pysbd.
 
         Parameters
         ----------
-        doc : TODO:dtype
-            TODO:Beschreibung
+        doc : Doc
+            SpaCy Doc object
 
         Returns
         -------
-        TODO:dtype
+        doc : Doc
+            SpaCy Doc object
         """
         seg = pysbd.Segmenter(language='en', clean=False, char_span=True)
         sents_char_spans = seg.segment(doc.text)
