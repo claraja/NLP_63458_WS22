@@ -52,9 +52,3 @@ class RDFSerialiserInterface(ABC):
     @abstractmethod
     def serialise_knowledgebase(self, output_path) -> str:
         raise NotImplementedError
-
-    @abstractmethod
-    def set_serialisation_format(self, serialisation_format):
-        raise NotImplementedError
-
-

@@ -21,20 +21,6 @@ class RDFSerialiser(RDFSerialiserInterface):
         self._graphmanager.get_serialized_graph(
             output_path, self._serialisation_format)
 
-    def set_serialisation_format(self, serialisation_format):
-        """Gives the possibility to change the serialisation format to which the rdflib-graph is serialised
-        Possible formats: see https://rdflib.readthedocs.io/en/stable/intro_to_parsing.html#saving-rdf
-
-        Parameters
-        ----------
-        serialisation_format: string
-
-        Returns
-        -------
-        None
-        """
-        self._serialisation_format = serialisation_format
-
     def knowledgebase_to_graph(self):
         """Transfers the content of the knowledgebase into a rdflib-graph
 
