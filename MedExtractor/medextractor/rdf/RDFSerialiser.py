@@ -6,7 +6,7 @@ from knowledge.relations import RelationType
 class RDFSerialiser(RDFSerialiserInterface):
 
     def serialise_knowledgebase(self, output_path):
-        """Serialise knowledge base into RDF file
+        """Serialises knowledge base into an RDF file.
 
         Parameters
         ----------
@@ -22,7 +22,7 @@ class RDFSerialiser(RDFSerialiserInterface):
             output_path, self._serialisation_format)
 
     def knowledgebase_to_graph(self):
-        """Transfers the content of the knowledgebase into a rdflib-graph
+        """Transfers the content of the knowledgebase into an rdflib-graph.
 
         Parameters
         ----------

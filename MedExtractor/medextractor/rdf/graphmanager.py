@@ -28,7 +28,8 @@ class GraphManager:
         self.hasSymptom = URIRef(self.namespace_uri + "hasSymptom")
 
     def add_symptom(self, disease, symptom):
-        """Adds the found symptom together with the corresponding disease the the rdflib-graph.
+        """Adds the given symptom together with the given disease to the rdflib-graph
+        and saves the given disease in the set of diseases.
 
         Parameters
         ----------
@@ -48,4 +49,16 @@ class GraphManager:
         self.graph.add((disease_URI, self.hasSymptom, symptom_URI))
 
     def get_serialized_graph(self, output_path, serialization_format='pretty-xml'):
-        return self.graph.serialize(format=serialization_format, destination=output_path)
+        """Serializes the graph according to the given serialization_format and 
+        saves the resulting document to the given output_path.
+
+        Parameters
+        ----------
+        output_path : string
+        serialization_format : string
+
+        Returns
+        -------
+        None
+        """
+        self.graph.serialize(format=serialization_format, destination=output_path)

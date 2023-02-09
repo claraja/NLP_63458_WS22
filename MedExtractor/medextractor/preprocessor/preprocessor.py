@@ -50,9 +50,10 @@ class RuleBasedPreprocessor(PreprocessingInterface):
         with open(self.doc_name, 'r', encoding='utf-8') as file:
             raw_text = file.read()
 
-        # Aufzählungen sollen als einzelne Sätze gefunden werden
+        # enumerations should be found as individual sentences
         raw_text = raw_text.replace('•', '\n-')
-        # eckige Klammern mit Ziffern (z.B. bei Literaturangaben) entfernen
+        # square brackets with digits in them 
+        # (for example in bibliographic references) are removed
         raw_text = re.sub('\[\d+\]', '', raw_text)
 
         doc = nlp(raw_text)
@@ -76,8 +77,8 @@ class RuleBasedPreprocessor(PreprocessingInterface):
             elif ((sentence[-1] not in ['.', '!', '?', ':'])
                     and (enumeration != '')):
                 sentence = sentence.lstrip()
-                # wenn bullet_point existiert sollte er bei allen Teilen
-                # der Aufzählung gleich sein
+                # if bullet point exists it should be the 
+                # same for all parts of the enumeration
                 if bullet_point != '':
                     if sentence.startswith(bullet_point):
                         sentence = enumeration + ' ' + sentence
@@ -85,18 +86,18 @@ class RuleBasedPreprocessor(PreprocessingInterface):
                         enumeration, bullet_point = '', ''
                 else:
                     if sentence[0] in our_punctuation:
-                        # sentence_tmp wird eingeführt um
-                        # Aufzählungszeichen herauszubekommen
+                        # sentence_tmp is introduced to get 
+                        # kind of bullet point if existent
                         sentence_tmp = sentence
 
                         while ((sentence_tmp[0] in our_punctuation) | (sentence_tmp[0] == ' ')):
                             sentence_tmp = sentence_tmp[1:]
-                        # speichere Aufzählungszeichen falls vorhanden
+                        # save kind of bullet point if existent
                         if len(sentence) != len(sentence_tmp):
                             bullet_point = sentence[:sentence.index(
                                 sentence_tmp)]
                         sentence = sentence_tmp
-                    # String 'symptom' sollte nicht in Symptom vorhanden sein
+                    # string 'symptom' should not be a part of a symptom
                     if 'symptom' in sentence:
                         enumeration, bullet_point = '', ''
                     else:
