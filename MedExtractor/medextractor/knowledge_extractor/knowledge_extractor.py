@@ -6,7 +6,6 @@ import time
 import spacy
 from tqdm import tqdm
 from config_manager import ConfigManager
-from interfaces.interfaces import KnowledgeExtractorInterface
 from knowledge.base import KnowledgeBase
 from knowledge.entity import Entity
 from knowledge.entity import EntityType
@@ -15,7 +14,7 @@ from knowledge.semantics import SemanticRelation
 from preprocessor.preprocessor import RuleBasedPreprocessor
 
 
-class KnowledgeExtractor(KnowledgeExtractorInterface):
+class KnowledgeExtractor():
     """KnowledgeExtractor searches a text string for entities and for relations between these entities"""
 
     def __init__(self, config: ConfigManager):

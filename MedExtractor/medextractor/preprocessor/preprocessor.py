@@ -1,4 +1,3 @@
-from interfaces.interfaces import PreprocessingInterface
 import re
 import pysbd
 import spacy
@@ -6,7 +5,11 @@ from spacy import Language
 from string import punctuation
 
 
-class RuleBasedPreprocessor(PreprocessingInterface):
+class RuleBasedPreprocessor():
+
+    def __init__(self, doc_name):
+        self.doc_name = doc_name
+
     @Language.component('sbd')
     def pysbd_sentence_boundaries(doc):
         """Creates a SpaCy pipeline component to segment a text into sentences using pysbd.
