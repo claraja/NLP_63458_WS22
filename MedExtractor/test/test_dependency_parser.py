@@ -1,7 +1,7 @@
 import os
 import spacy
 
-from medextractor.knowledge_extractor.knowledge_extractor import KnowledgeExtractor
+from knowledge.knowledge_extractor import KnowledgeExtractor
 
 nlp = spacy.load('en_core_web_sm')
 print("test knowledge extractor cwd: " + os.getcwd())

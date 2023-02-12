@@ -4,7 +4,7 @@ import spacy
 #sys.path.append('MedExtractor')
 #sys.path.append('MedExtractor\\knowledge_extractor')
 
-from medextractor.knowledge_extractor.knowledge_extractor import KnowledgeExtractor
+from knowledge.knowledge_extractor import KnowledgeExtractor
 
 nlp = spacy.load('en_core_web_sm')
 print("test knowledge extractor cwd: " + os.getcwd())

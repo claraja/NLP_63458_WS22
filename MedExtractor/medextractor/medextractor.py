@@ -1,5 +1,5 @@
 from config_manager import ConfigManager
-from knowledge_extractor.knowledge_extractor import KnowledgeExtractor
+from knowledge.knowledge_extractor import KnowledgeExtractor
 from rdf.RDFSerialiser import RDFSerialiser
 
 if __name__ == "__main__":
