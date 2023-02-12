@@ -117,43 +117,72 @@ load(str)</p>
 <dt class="sig sig-object py" id="medextractor.knowledge.base.KnowledgeBase.add_relation">
 <span class="sig-name descname"><span class="pre">add_relation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#medextractor.knowledge.semantics.SemanticRelation" title="medextractor.knowledge.semantics.SemanticRelation"><span class="pre">SemanticRelation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#medextractor.knowledge.base.KnowledgeBase.add_relation" title="Permalink to this definition"></a></dt>
 <dd><p>Add a SemanticRelation into the KnowledgeBase.</p>
-<p>&#64;param relation: a SemanticRelation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>relation</strong> (<a class="reference internal" href="#medextractor.knowledge.semantics.SemanticRelation" title="medextractor.knowledge.semantics.SemanticRelation"><em>SemanticRelation</em></a>) – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.knowledge.base.KnowledgeBase.add_training_example_to_relation">
 <span class="sig-name descname"><span class="pre">add_training_example_to_relation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#medextractor.knowledge.semantics.SemanticRelation" title="medextractor.knowledge.semantics.SemanticRelation"><span class="pre">SemanticRelation</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sent_text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#medextractor.knowledge.base.KnowledgeBase.add_training_example_to_relation" title="Permalink to this definition"></a></dt>
 <dd><p>Add a training sentence to a SemanticRelation</p>
-<p>&#64;param relation: a SemanticRelation
-&#64;param sent_text: a training sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>relation</strong> (<a class="reference internal" href="#medextractor.knowledge.semantics.SemanticRelation" title="medextractor.knowledge.semantics.SemanticRelation"><em>SemanticRelation</em></a>) – </p></li>
+<li><p><strong>sent_text</strong> (<em>str</em>) – training sentence</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.knowledge.base.KnowledgeBase.export_for_entity_linker">
 <span class="sig-name descname"><span class="pre">export_for_entity_linker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge.base.KnowledgeBase.export_for_entity_linker" title="Permalink to this definition"></a></dt>
 <dd><p>Save the KnowledgeBase data as an xml file that can be used to train an entity linker.</p>
-<p>&#64;param file_name: the name of the xml file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_name</strong> (<em>str</em>) – the name of the xml file</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="medextractor.knowledge.base.KnowledgeBase.give_entities">
-<span class="sig-name descname"><span class="pre">give_entities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alias</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#medextractor.knowledge.base.KnowledgeBase.give_entities" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="medextractor.knowledge.base.KnowledgeBase.get_entities">
+<span class="sig-name descname"><span class="pre">get_entities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alias</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#medextractor.knowledge.base.KnowledgeBase.get_entities" title="Permalink to this definition"></a></dt>
 <dd><p>Return a list of entities that are related to symptoms in SemanticRelations stored in the KnowledgeBase</p>
-<p>&#64;param alias: the name of a symptom</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>alias</strong> (<em>str</em>) – the name of a symptom</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of <a class="reference internal" href="#medextractor.knowledge.entity.Entity" title="medextractor.knowledge.entity.Entity">Entity</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.knowledge.base.KnowledgeBase.has_relation">
 <span class="sig-name descname"><span class="pre">has_relation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#medextractor.knowledge.semantics.SemanticRelation" title="medextractor.knowledge.semantics.SemanticRelation"><span class="pre">SemanticRelation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#medextractor.knowledge.base.KnowledgeBase.has_relation" title="Permalink to this definition"></a></dt>
 <dd><p>Return True if the relation is in the KnowledgeBase. Return False otherwise.</p>
-<p>&#64;param relation: a SemanticRelation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>relation</strong> (<a class="reference internal" href="#medextractor.knowledge.semantics.SemanticRelation" title="medextractor.knowledge.semantics.SemanticRelation"><em>SemanticRelation</em></a>) – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.knowledge.base.KnowledgeBase.load">
 <span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge.base.KnowledgeBase.load" title="Permalink to this definition"></a></dt>
 <dd><p>Load the KnowledgeBase from file.</p>
-<p>&#64;param file_name: the name of the file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_name</strong> (<em>str</em>) – the name of the file</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -161,7 +190,11 @@ load(str)</p>
 <span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#medextractor.knowledge.base.KnowledgeBase.save" title="Permalink to this definition"></a></dt>
 <dd><p>Save the KnowledgeBase into a pickle file.
 If the KnowledgeBase does not contain any SemanticRelations, no file is saved.</p>
-<p>&#64;param file_name: the name of the file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_name</strong> (<em>str</em>) – the name of the file</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>

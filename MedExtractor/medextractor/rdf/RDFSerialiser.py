@@ -1,12 +1,34 @@
-from interfaces.interfaces import RDFSerialiserInterface
 from knowledge.entity import EntityType
 from knowledge.relations import RelationType
+from rdf.graphmanager import GraphManager
 
 
-class RDFSerialiser(RDFSerialiserInterface):
+class RDFSerialiser():
+
+    def __init__(self, knowledgebase, namespace, namespace_prefix):
+        """Initialises the RDFSerialiser with a knowledgebase and the 
+        namespace and namespace-prefix for thr RDF-output-generation.
+
+        Parameters
+        ----------
+        knowledgebase : KnowledgeBase
+        namespace : string
+            namespace prefix for creating the RDF-output
+        namespace_prefix : string
+            namespace URI for creating the RDF-output
+
+        Returns
+        -------
+        None
+        """
+        self._knowledgebase = knowledgebase
+        self._namespace = namespace
+        self._namespace_prefix = namespace_prefix
+        self._serialisation_format = 'pretty-xml'
+        self._graphmanager = GraphManager(self._namespace_prefix, self._namespace)
 
     def serialise_knowledgebase(self, output_path):
-        """Serialise knowledge base into RDF file
+        """Serialises knowledge base into an RDF file.
 
         Parameters
         ----------
@@ -22,7 +44,7 @@ class RDFSerialiser(RDFSerialiserInterface):
             output_path, self._serialisation_format)
 
     def knowledgebase_to_graph(self):
-        """Transfers the content of the knowledgebase into a rdflib-graph
+        """Transfers the content of the knowledgebase into an rdflib-graph.
 
         Parameters
         ----------
