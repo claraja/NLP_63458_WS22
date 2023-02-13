@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:nlp="http://fapranlp.de/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://fapranlp.de/anxiety_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:no_mental_disorder"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:agoraphobia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:adolescence"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stress"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suffered"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:will_find"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:interested"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:alexithymia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:crisis"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:difficulty_eating"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/panic_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:agoraphobia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:attacks"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic_attacks"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:impairment"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:no_mental_disorder"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:allele"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sensitivity"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:reflect"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:disability"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:worries"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:quality_of_life"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:claustrophobia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:exacerbate"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:conducting"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:personality_traits"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:mutation"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:hyperventilation"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:effectiveness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:comorbid_conditions"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:oriented"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:distress"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/personality_disorders">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:personality_traits"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:neglect"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:verbal_abuse"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:antisocial"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/eating_disorders">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:preoccupation"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:crisis"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anorexia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:binge_eating"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:underweight"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:engaging"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:eating_problem"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:binge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/dementia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:social_anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:delirium"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:distress"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:crisis"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/insomnia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sensitivity"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:dysphoria"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:fluctuations"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:comorbid_disorders"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:psychiatric_symptoms"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:awake"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:effectiveness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suffered"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:ask_questions"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:rumination"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:tired"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:employ"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:poor_sleep"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:opposition"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:motivation"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:impairment"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:distress"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:daytime_sleepiness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sleep_deprivation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/paranoia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:magical_thinking"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:paranoid_delusions"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:delusions"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:auditory_hallucinations"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stressed"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/depression">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:no_mental_disorder"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:genetic_variance"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:breathlessness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:heart_pounding"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal_behavior"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sensitivity"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:tension"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic_attacks"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:teasing"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:obsessions"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:marital_discord"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:distress"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:compulsions"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:motivation"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:social_anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:lack_of_interest"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:depressive_symptoms"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:impairment"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:symptom_severity"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stress"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:polymorphism"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:genetic_susceptibility"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:emotional_problems"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:disability"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:pain"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidality"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:episode_of_depression"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:effectiveness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:undifferentiated"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:reflected"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:geriatric"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:loneliness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:difficulty_coping"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:social_isolation"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_empty"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:pregnancy"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:postpartum"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:elderly"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:weight_gain"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:weight_loss"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:psychiatric_disorders"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:optimistic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:enthusiastic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:pessimistic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_down"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:loss_of_appetite"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:conflicts"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:complicated_bereavement"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_guilty"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:disputes"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:able_to_see"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:employs"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:hopelessness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:reflect"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:rumination"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:oriented"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_better"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:walks"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:asked_questions"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:interest"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:fatigue"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sick"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:behavioral_changes"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:inpatient_psychiatric"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:of_child"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:social_adjustment"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:bingeing"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:delirium"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:crisis"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:manic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:brief_periods"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:cyclothymic_disorder"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:interests"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:family_history_of"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:delusions"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:magical_thinking"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:comorbid_disorders"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:self_harm"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:males"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:boredom"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:comorbid_conditions"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:work_in"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:selection"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:gambling"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:shoplifting"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:abstinent"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suffers"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:clinical_findings"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:poor_sleep"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:severe_weight_loss"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:obesity"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:overeating"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:life_crisis"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/eating_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidality"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suffers"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:hospitalized"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:ambivalent"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:binge"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:prone"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:binge_eating"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stress"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/posttraumatic_stress_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:attacks"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:symptom_severity"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:child_abuse"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:female"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:rape_victims"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:impairment"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:hyperactivity"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/drinking_problem">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:self_efficacy"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:motivation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/disorder,_panic">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:attacks"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/obsessive_compulsive_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:delusions"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:agoraphobia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/social_phobia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:social_anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic_attacks"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:reflect"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:impairment"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:distress"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:fears"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/antisocial_personality_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:males"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/minor">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:pains"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:geriatric"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:manic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suffered"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:temperature"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:seizures"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:withdrawal_symptoms"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:pressure"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:difficulty_sleeping"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:hallucinations"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:delirium"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:nausea"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:prone"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/vomiting">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:temperature"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:seizures"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:withdrawal_symptoms"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:pressure"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:difficulty_sleeping"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:hallucinations"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:delirium"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:nausea"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:binge_eating"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sensitivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/major_depressive_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suffered"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:social_anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:obesity"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:mental_status"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/bipolar_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal_behavior"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:female"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:willing"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:impairment"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:manic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stress"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:effectiveness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:cognitive_impairment"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:depressive_episode"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:communicating"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:divorced"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:hostility"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stigma"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:painful"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:social_stigma"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:conflicts"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:conscientious"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:diets"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:employed"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:adolescence"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:phobias"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/starvation">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:social_withdrawal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/diabetes">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:obesity"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:pain"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/anxiety_disorders">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:no_mental_disorder"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sensitivity"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:agoraphobia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:hyperventilation"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:marry"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:impairment"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:phobia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:painful"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:social_anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:symptom_severity"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:comorbid_disorders"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:males"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/thyroid_dysfunction">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/cancer">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:pains"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/bulimia_nervosa">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anorexia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:females"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:binge"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:binge_eating"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:adolescence"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:underweight"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/alcoholism">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:cognitive_deficits"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:family_history_of"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:effectiveness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:alcoholic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:marital"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/schizophrenia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:reflect"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:allele"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:depressive_symptoms"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:elated"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:social_factors"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stress"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidality"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:restricted_affect"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:hopelessness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:self_harm"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:frustrations"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:low_self_esteem"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:hallucinations"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/alcohol_dependence">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:physiological_dependence"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:family_history_of"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:unemployed"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:homeless"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:agoraphobia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/mood_disorders">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic_attacks"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:impairment"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:mood_disturbance"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:local"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:selection"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/social_anxiety_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:agoraphobia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic_attacks"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:worries"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:married"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:comorbid_disorders"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:impairment"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:inclusion"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:social_behavior"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:plays"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:quality_of_life"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:phobia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/depressive_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:manic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:severe_symptoms"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/brain_injury">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidality"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/alcohol_abuse">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:marriage"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:divorce"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:married"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/hypomania">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/binge_eating_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:effectiveness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:hyperactivity"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anorexia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:binges"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:obesity"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:overweight"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:binge_eating"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:conducting"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/post_traumatic_stress_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:rape_victims"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/agoraphobia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:distress"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:housebound"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:limited_mobility"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic_attacks"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:males"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:females"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:attacks"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:impairment"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:agoraphobia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxieties"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:variation"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:marital"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/acute_insomnia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:jet_lag"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/phobia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:quality_of_life"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:fears"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/major_depression">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:agoraphobia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:depressive_symptoms"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:hormone_levels"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sick"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:optimistic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:old_age"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:crisis"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/intoxication">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:alcoholics"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:marital"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/mental_disorders">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stress"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/bulimia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:females"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anorexia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:eating_problem"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:conducting"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:psychiatric_disorders"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/mild_depression">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:impairment"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sensitivity"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:dysphoria"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:fluctuations"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/nervosa,_bulimia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anorexia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:binge_eating"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/childhood_obesity">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:low_self_esteem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/personality_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stigma"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:oriented"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:impulsive"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:personality_traits"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:transference"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal_behavior"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:self_harm"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:cyclothymic_disorder"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:shoplifting"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:mental_status"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:binge"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:distress"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:engaging"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/fed">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:relationship_problems"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:mood_swings"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:bingeing"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:financial_problems"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/primary_insomnia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:quality_of_life"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:effectiveness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/anorexia_nervosa">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:bingeing"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:female"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:females"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:weight_loss"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:binge"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:binge_eating"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:underweight"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/antisocial_personality">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/alcohol_withdrawal">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:seizures"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:hallucinations"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:disorientation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/developmental_disability">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:antisocial_behavior"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/pile">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:marriage"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:staying_in_bed"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/specific_phobias">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:no_anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:social_anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sensitivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/psychotic_disorders">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:reflect"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/avoidant_personality">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:shoplifting"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:mental_status"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/abuse">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:neglect"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:of_child"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:gambling"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:shoplifting"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suffers"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:clinical_findings"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/obesity">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:overweight"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/generalized_anxiety_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:reflects"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:effectiveness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:will_find"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:interested"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:associated_symptom"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sensitivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/throw_up">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sick"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/major_depressive_illness">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:brief_periods"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:cyclothymic_disorder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/mood_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:manic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:depressive_episode"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:interests"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:unemployment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/depressive_disorders">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:depressive_symptoms"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:impairment"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:symptom_severity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/hair_pulling">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:repetitive_behaviors"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/cold">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:worried"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:able_to_sleep"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/injury">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:full_time"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:disability"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:transference"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/drinking_problems">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:conflicts"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/drug_abuse">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:binge"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:psychiatric_disorders"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:family_history_of"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:crisis"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/mental_illness">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stressed"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stigma"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/cuts">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:impairment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/substance_abuse">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:aggressive_behavior"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:overeating"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:female"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:adolescence"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:unrelated"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:selection"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stress"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:gambling"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:shoplifting"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:effectiveness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/psychiatric_illness">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:social_stigma"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:social_factors"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/depressive_illness">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:conflict"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:employs"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/body_dysmorphic_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:compulsions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/mania">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:hypomania"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:family_history_of"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sensitivity"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:juvenile"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/polysubstance_dependence">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:mental_status"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/bacterial_infection">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stillbirth"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/seizure_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal_behavior"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:hopelessness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/sleep_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:unemployment"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:persistence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/trichotillomania">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:repetitive_behaviors"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/psychoses">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:interest"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/disorder,_bipolar">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:reflect"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/compulsive_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/sleep_disturbances">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:psychiatric_disorders"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/heart_attack">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:racing_heart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/delirium">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:social_anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:seizures"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:hallucinations"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:disorientation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/pa">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:thought_content"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:depressive_symptoms"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/severe_depression">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:depressive_symptoms"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:reflecting"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidality"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/pathological_gambling">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:shoplifting"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:mental_status"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/excoriation">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:repetitive_behaviors"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/mental_retardation">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal_behavior"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:hopelessness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:willing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/hypersomnia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:weight_gain"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:weight_loss"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/suppression">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:effectiveness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:unsafe_sex"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/mitral_valve_prolapse">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:heart_flutter"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:shortness_of_breath"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:dizziness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/struck">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:incarceration"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/recurrent_major_depression">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:low_mood"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/chronic_illness">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:hopelessness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:impairment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/cyclothymia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:prone"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/histrionic_personality">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:agoraphobia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/flashbacks">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:nightmares"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/panic_disorders">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/sleep_problems">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:tension"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/problem_drinking">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:motivation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/shocked">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:unable_to_cry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/asthma">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:heart_flutter"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:pressure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/scars">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:self_harm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/schizoaffective_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:delusions"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:hallucinations"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/hypoglycemia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:shortness_of_breath"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/attrition">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:agoraphobia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/injuries">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suffered"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/sleeplessness">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:worries"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/cut">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:euphoric"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/affective_disorders">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/autism">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidality"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/bipolar_illness">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:psychiatric_disorders"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/postpartum_depression">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:married"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/psychological_disorders">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/specific_phobia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:agoraphobia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/depressions">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:detected"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/olan">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/diminished_vision">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:naked"/>
+  </rdf:Description>
+</rdf:RDF>
