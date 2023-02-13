@@ -93,7 +93,7 @@ class RuleBasedPreprocessor():
                         # kind of bullet point if existent
                         sentence_tmp = sentence
 
-                        while ((sentence_tmp[0] in our_punctuation) | (sentence_tmp[0] == ' ')):
+                        while (sentence_tmp != '' and (sentence_tmp[0] in our_punctuation) | (sentence_tmp[0] == ' ')):
                             sentence_tmp = sentence_tmp[1:]
                         # save kind of bullet point if existent
                         if len(sentence) != len(sentence_tmp):
