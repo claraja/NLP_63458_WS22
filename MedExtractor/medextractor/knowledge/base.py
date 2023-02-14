@@ -250,7 +250,7 @@ class KnowledgeBase:
         file_name: str
             the name of the file
         """
-        if file_name == '':
+        if file_name != '':
             with open(file_name, 'rb') as file:
                 self.semantic_relations, self._entities, self._aliases = pickle.load(file)
 
