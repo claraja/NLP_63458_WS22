@@ -32,7 +32,7 @@ if __name__ == "__main__":
                 "neglecting your hobbies and interests", "having difficulties in your home, work or family life"]
 
     for symptom in symptoms:
-        add_symptom(symptom)
+        add_symptom("symptom:" + symptom)
 
     g.serialize(format='pretty-xml', destination=output_path)
 
