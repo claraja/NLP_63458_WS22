@@ -1,3 +1,8 @@
+"""
+Program for "manual" creation of an RDF-Graph: 
+Disease and corresponding symptoms are given, an RDF-Graph is built and saved as xml-file.
+"""
+
 from rdflib import Namespace, Graph, URIRef, Literal
 
 
