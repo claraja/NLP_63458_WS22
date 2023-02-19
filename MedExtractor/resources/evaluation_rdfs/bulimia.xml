@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:nlp="http://fapranlp.de/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://fapranlp.de/bulimia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:binge_eating"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:mood_changes"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:tense"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_guilty"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:physical_signs"/>
+  </rdf:Description>
+</rdf:RDF>

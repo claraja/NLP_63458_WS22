@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:nlp="http://fapranlp.de/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://fapranlp.de/depression">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:delirium"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stress"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:memory_problems"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/dementia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:aging"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stop_working"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:getting_lost"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:interest"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:delusions"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:genetic_mutations"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:delirium"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stress"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:memory_problems"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/paranoia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:delusions"/>
+  </rdf:Description>
+</rdf:RDF>

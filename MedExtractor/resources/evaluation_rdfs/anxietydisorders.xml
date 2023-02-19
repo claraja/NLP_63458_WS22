@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:nlp="http://fapranlp.de/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://fapranlp.de/social_anxiety_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:phobia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:trembling"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sweating"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:racing_heart"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:soft_voice"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:body_posture"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/panic_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:phobia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic_attacks"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic_attack"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:attack"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:attacks"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/anxiety_disorders">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:phobia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/anxiety_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:fear_of_being_watched"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/wound">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:restless"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/generalized_anxiety_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:phobia"/>
+  </rdf:Description>
+</rdf:RDF>

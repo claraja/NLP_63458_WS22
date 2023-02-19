@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:nlp="http://fapranlp.de/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://fapranlp.de/depression">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:psychological_symptoms"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:low_mood"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_hopeless"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:low_self_esteem"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:tearful"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_guilt"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_irritable"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:no_motivation"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:interest"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:worried"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal_thoughts"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:changes_in_appetite"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:constipation"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:aches"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:pains"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:lack_of_energy"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:loss_of_libido"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:low_sex_drive"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:neglecting"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:interests"/>
+  </rdf:Description>
+</rdf:RDF>

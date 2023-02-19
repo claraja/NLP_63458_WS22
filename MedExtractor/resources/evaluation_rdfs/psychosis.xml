@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:nlp="http://fapranlp.de/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://fapranlp.de/postnatal_psychosis">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:elated"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:loss_of_appetite"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:lack_of_energy"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:low_mood"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/mania">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:elated"/>
+  </rdf:Description>
+</rdf:RDF>
