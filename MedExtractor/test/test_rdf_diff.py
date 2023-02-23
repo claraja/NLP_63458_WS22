@@ -1,6 +1,8 @@
 from rdflib import Graph
 from rdflib.compare import to_isomorphic, graph_diff
 from rdflib import Namespace, Graph, URIRef, Literal
+import pandas as pd
+
 
 def dump_nt_sorted(g):
     print()
@@ -64,3 +66,5 @@ if __name__ == "__main__":
     print(f"Graph in_both has {len(in_both)} statements.")
     print(f"Graph in_first has {len(in_first)} statements.")
     print(f"Graph in_second has {len(in_second)} statements.")
+    df = pd.DataFrame()
+    print(df.size)
