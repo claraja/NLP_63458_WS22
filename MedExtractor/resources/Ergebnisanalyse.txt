@@ -1,0 +1,55 @@
+Analyse der NHS Texte:
+
+Mehrdeutige Begriffe
+====================
+Einige Begriffe sind mehrdeutig und werden daher irrtümlich als Krankheit oder Symptom erkannt. Dies ist z.B. für den Begriff "cut" in folgendem Satz der Fall: 
+
+"A dependent drinker usually experiences physical and psychological withdrawal symptoms if they suddenly cut down or stop drinking."
+
+Entzugserscheinungen (withdrawal symptoms) werden daher falsch als Symptom von Schnitt(wunden) erkannt. Ähnlich verhält es sich mit dem Begriff "cold".
+
+
+Begriffe, die sowohl Krankheit als auch Symptom sind
+====================================================
+Es gibt Begriffe, die sowohl in der Liste der Krankheiten als auch der Symptome enthalten sind. Dies ist z.B. für den Begriff "fire setting" der Fall. In diesem Fall betrachtet der Medextractor den Begriff immer als Krankheit, was in diesem Fall ungünstig ist.
+
+"CD refers to severe behaviour problems, characterized by repetitive and persistent manifestations of serious aggressive or non aggressive behaviours ... such as ... fire setting, stealing, ... and frequent school truancy."
+
+In diesem Fall ist Brandstiftung nur ein erklärendes Beispiel für das allgemeine Symptom "aggressive behaviours" der Krankheit CD (conduct disorder).
+
+
+Unspezifische Begriffe
+======================
+Eine Einträge in den Vokabularlisten sind sehr unspezifisch. Ein Beispiel ist das Verb "aggravate". Dieses ist wahrscheinlich deshalb im MetaMapLite Vokabular aufgeführt, da es ein häufig bei der Beschreibung von Gesundheitszuständen verwendetes Verb ist wie z.B. in folgendem Satz:
+
+"Certain substances such as caffeine, some over the counter cold medicines, illicit drugs, and herbal supplements may aggravate the symptoms of anxiety disorders or interact with prescribed medication."
+
+Medextractor findet hier das Verb "verschlimmern" (aggravate) als Symptom von Angstörungen (anxiety disorders). Das Verb allein ist aber natürlich kein Symptom. Ähnlich unspezifisch sind die Begriffe "aggraveted by", "aggravating", "destructive"
+
+Ebenfalls sehr unspezifisch ist der Begriff "ailments" (Beschwerden, Leiden). Im Satz "Depression often occurs in children under stress, experiencing loss ... and other chronic physical ailments." wird "ailments" als mögliches Symptom einer Depression gefunden. Da es sich bei "ailments" aber um einen generischen Überbegriff handelt, ist diese Zuordnung nicht hilfreich.
+
+Im Zusammenhang von Panikattacken wird mitunter nur der Begriff "attack" verwendet: "People with panic disorder often worry about when the next attack will happen... ." Da auch der einzelne Begriff "attack" in der Vokabularliste für Symptome vorkommt, wird hier nun vom Medextractor eine beliebige Attacke, also z.B. auch eine ein (heart) attack, allgemein als Symptom einer Angststörung zugeordnet.
+
+Im Satz "People with social anxiety disorder may experience Rigid body posture or speaking with an overly soft voice." findet Medextractor nur das Symptom "body posture", da "rigid body posture" in der Vokabularliste nicht vorkommt. Dort kommen stattdessen Begriffe wie "erect body posture" oder "upright body posture" vor. "Body posture" allein ist jedoch als Symptom zu unspezifisch.
+
+Im Satz "For some people, painful childhood experiences — such as family problems and critical comments about your shape, weight, or eating habits — are linked to developing binge eating disorder." wird 'painful' als Symptom einer Binge Eating Disorder (Esssucht) gefunden. Hier ist der Begriff painful zu unspezifisch. 
+
+Ebenfalls zu unspezifisch sind die Einträge "depressive symptoms" und "psychological symptoms" in der Symptom-Liste.
+
+
+Negation nicht erkannt
+======================
+Im Satz "The psychological symptoms of depression include having no motivation or interest in things." wird aus dem Kontext nicht erschlossen, dass "interest" eigentlich negiert ist. Daher wird vom Medextractor "interest" als Symptom einer Depression gefunden. Ähnliches gilt für die Begriffe normal behavior, normal social behavior und normal weight.
+
+
+Stigmatisierende Symptome, schwacher Ursache-Wirkung Zusammenhang
+=================================================================
+Die Symptom-Vokabeliste enthält den Eintrag "aging". Im Satz "But dementia is not a normal part of aging." wird daher die Alterung als Symptom (eigentlich Befund) einer Demenz gefunden. Da Demenz i.d.R. erst fortgeschrittenem Alter auftritt, ist der Zusammenhang zwischen Demenz und Alterung zwar gegeben, allerdings ist in diesem Zusammenhang "Alterung" eher eine Ursache und keine Wirkung (kein Symptom). Insbesondere sollte ein Chatbot nicht bei älteren Menschen nur aufgrund des Alters eine Demenz annehmen.
+
+Ähnlich verhält es sich mit dem Satz "As well as causing serious health problems, long term alcohol misuse can lead to social problems for some people, such as unemployment, divorce, domestic abuse and homelessness." Hier wird abuse (Missbrauch) als Krankheit und unemployment (Arbeitslosigkeit) als Symptom gefunden. In diesem Satz ist der Begriff domestic abuse als Symptom und nicht als Krankheit gemeint, befindet sich jedoch nicht in der Symptomliste.
+
+Ebenfalls stigmatisierend: poverty. Schwacher Ursache-Wirkungszusammenhang zwischen seizure (Anfall) und (alcohol) poisening
+
+Aussage von Sätzen werden nicht verstanden
+==========================================
+Im Satz "Other adverse environments are characterized by limited sensory input or excessive noise, unresponsive or unpredictable carers, predisposition to neglect and abuse, and where physical health needs and pain are not promptly identified." werden "unresponsive" als Symptom und 'abuse' als Krankheit gefunden. Dies entspricht nicht der Aussage des Satzes.
