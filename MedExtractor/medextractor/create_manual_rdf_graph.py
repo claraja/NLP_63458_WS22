@@ -24,9 +24,7 @@ if __name__ == "__main__":
     depression = URIRef(namespace_string + "depression")
     hasSymptom = URIRef(namespace_string + "hasSymptom")
 
-
-    for symptom in symptoms:
-        symptoms = {"depression": ["continuous low mood", "sadness", "feeling hopeless and helpless", "low self-esteem", "feeling tearful",
+    symptoms = {"depression": ["continuous low mood", "sadness", "feeling hopeless and helpless", "low self-esteem", "feeling tearful",
                                    "feeling guilt-ridden", "feeling irritable and intolerant of others",
                                    "having no motivation or interest in things", "finding it difficult to make decisions",
                                    "not getting any enjoyment out of life", "feeling anxious or worried",
@@ -105,11 +103,30 @@ if __name__ == "__main__":
                                        "shortness of breath", "trembling", "hot flushes", "chills", "shaky limbs",
                                        "a choking sensation", "dizziness", "numbness or pins and needles", "dry mouth",
                                        "a need to go to the toilet", "ringing in your ears", "a feeling of dread or a fear of dying",
-                                       "a churning stomach", "a tingling in your fingers", "feeling like you're not connected to your body"]
-
-
-
+                                       "a churning stomach", "a tingling in your fingers", "feeling like you're not connected to your body"],
+                    "Psychosis":["hallucinations", "seeing colours, shapes or people","hearing voices or other sounds",
+                                 "feeling touched when there is nobody there", "an odour that other people cannot smell",
+                                 "a taste when there is nothing in the mouth", "delusions", "confused and disturbed thoughts",
+                                 "disturbed, confused, and disrupted patterns of thought", "rapid and constant speech",
+                                 "disturbed speech", "switch from one topic to another mid-sentence",
+                                 "a sudden loss in their train of thought", "an abrupt pause in conversation or activity",
+                                 "high mood(mania)", "feeling elated", "talking and thinking too much or too quickly",
+                                 "low mood", "feeling sad", "lack of energy", "loss of appetite", "trouble sleeping"],
+                    "Social anxiety": ["fear of social situations",
+                                       "worry about everyday activities, such as meeting strangers, starting conversations, speaking on the phone, working or shopping",
+                                       "avoid or worry a lot about social activities, such as group conversations, eating with company and parties",
+                                       "always worry about doing something you think is embarrassing, such as blushing, sweating or appearing incompetent",
+                                       "find it difficult to do things when others are watching", "feel like you're being watched and judged all the time",
+                                       "fear being criticised", "avoid eye contact","have low self-esteem", "feeling sick",
+                                       "sweating", "trembling", "pounding heartbeat", "palpitations", "have panic attacks",
+                                       "have an overwhelming sense of fear and anxiety, usually only for a few minutes"],
+                    "Stress": ["headaches", "dizziness", "muscle tension", "pain", "stomach problems", "chest pain",
+                               "faster heartbeat", "sexual problems", "difficulty concentrating", "struggling to make decisions",
+                               "feeling overwhelmed", "constantly worrying", "being forgetful", "being irritable and snappy",
+                               "sleeping too much or too little", "eating too much or too little", "avoiding certain places or people",
+                               "drinking or smoking more"]
                     }
+    for symptom in symptoms:
         add_symptom("symptom:" + symptom)
 
     g.serialize(format='pretty-xml', destination=output_path)
