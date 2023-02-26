@@ -53,3 +53,68 @@ Ebenfalls stigmatisierend: poverty. Schwacher Ursache-Wirkungszusammenhang zwisc
 Aussage von Sätzen werden nicht verstanden
 ==========================================
 Im Satz "Other adverse environments are characterized by limited sensory input or excessive noise, unresponsive or unpredictable carers, predisposition to neglect and abuse, and where physical health needs and pain are not promptly identified." werden "unresponsive" als Symptom und 'abuse' als Krankheit gefunden. Dies entspricht nicht der Aussage des Satzes.
+
+============================
+Analyse des Wikipedia-Textes
+============================
+
+Fragliche Krankheiten: stereotypes
+
+adolescence - schizophrenia
+antisocial
+bullying - abuse
+conflicting
+
+criminality - mental illness
+"Media coverage of mental illness comprises predominantly negative and pejorative depictions, for example, of incompetence, violence or criminality, with far less coverage of positive issues such as accomplishments or human rights issues."
+
+"fire setting - kleptomania"
+Impulse control disorder: People who are abnormally unable to resist certain urges or impulses that could be harmful to themselves or others, may be classified as having an impulse control disorder, and disorders such as kleptomania (stealing) or pyromania (fire setting).
+
+
+homosexuality - mental illness / disorder
+"These challenges came ... from gay rights activists who criticised the APA's listing of homosexuality as a mental disorder." (https://en.wikipedia.org/wiki/Mental_disorder)
+
+
+imprisoned
+"For millennia, society did not treat persons suffering from depression, autism, schizophrenia and other mental illnesses much better than slaves or criminals: they were imprisoned, tortured or killed".
+
+neglect - abuse
+
+old age
+"Disorders such as depression, anxiety, schizophrenia, personality disorder, old age related disorder, and substance abuse disorder are common in Nigeria, as in other countries in Africa."
+
+plays
+"Nutrition also plays a role in mental disorders."
+
+pregnancy - mental disorder
+
+Symptom: psychiatric disorder
+
+reflect
+"Studying comorbidity between disorders have demonstrated two latent (unobserved) factors or dimensions in the structure of mental disorders that are thought to possibly reflect etiological processes."
+
+separated / separation
+"Management Haus Tornow am See" ... is today separated into a special education school and a hotel ... for people with mental disorders.
+
+
+short periods
+
+sleep behavior
+"Other sleep disorders include narcolepsy, sleep apnea, REM sleep behavior disorder, chronic sleep deprivation, and restless leg syndrome."
+
+unemployment - mental illness
+"Employment discrimination is reported to play a significant part in the high rate of unemployment among those with a diagnosis of mental illness."
+
+work in
+"The term stress, having emerged from endocrinology work in the 1930s, was increasingly applied to mental disorders."
+
+
+========
+Handbook
+========
+
+pile(s)
+"For example, it can fall over or collapse on people, if kept in large piles."
+
+
