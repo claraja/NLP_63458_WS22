@@ -7,7 +7,7 @@
 \contentsline {section}{\numberline {1.3}{Forschungsfragen}}{3}{section.1.3}%
 \contentsline {section}{\numberline {1.4}{Forschungsmethode}}{3}{section.1.4}%
 \contentsline {section}{\numberline {1.5}{Forschungsziele}}{5}{section.1.5}%
-\contentsline {section}{\numberline {1.6}{Lösungsansatz}}{5}{section.1.6}%
+\contentsline {section}{\numberline {1.6}{Lösungsansatz}}{6}{section.1.6}%
 \contentsline {chapter}{\numberline {2}{Stand der Wissenschaft}}{10}{chapter.2}%
 \contentsline {section}{\numberline {2.1}{FZ 1.1. Aufbau und Struktur medizinischer Texte}}{10}{section.2.1}%
 \contentsline {section}{\numberline {2.2}{FZ 2.1. Überblick über depressive Erkrankungen}}{10}{section.2.2}%
@@ -36,8 +36,8 @@
 \contentsline {subsection}{\numberline {3.1.4}{Architektur- und Komponentenmodell}}{18}{subsection.3.1.4}%
 \contentsline {section}{\numberline {3.2}{FZ 1.2 Theoriebildung zur Vorverarbeitung medizinischer Texte}}{18}{section.3.2}%
 \contentsline {section}{\numberline {3.3}{FZ 2.3 Theoriebildung zur Überführung medizinischen Fachvokabulars in maschinenlesbare Form zur weiteren Verarbeitung durch NLP}}{19}{section.3.3}%
-\contentsline {section}{\numberline {3.4}{FZ 3.2 Theoriebildung zur Wissensrepräsentation}}{20}{section.3.4}%
-\contentsline {section}{\numberline {3.5}{Zusammenfassung}}{21}{section.3.5}%
+\contentsline {section}{\numberline {3.4}{FZ 3.2 Theoriebildung zur Wissensrepräsentation}}{19}{section.3.4}%
+\contentsline {section}{\numberline {3.5}{Zusammenfassung}}{20}{section.3.5}%
 \contentsline {chapter}{\numberline {4}{Proof-Of-Concept Implementierung}}{23}{chapter.4}%
 \contentsline {section}{\numberline {4.1}{FZ 1.3 Implementierung zur Vorverarbeitung medizinischer Texte}}{23}{section.4.1}%
 \contentsline {section}{\numberline {4.2}{FZ 2.4 Implementierung zur Überführung medizinischen Fachvokabulars in maschinenlesbare Form zur weiteren Verarbeitung durch NLP}}{23}{section.4.2}%
@@ -51,8 +51,10 @@
 \contentsline {subsection}{\numberline {5.1.2}{Limitierungen}}{27}{subsection.5.1.2}%
 \contentsline {section}{\numberline {5.2}{FZ 2.5 Evaluierung zur Überführung medizinischen Fachvokabulars in maschinenlesbare Form zur weiteren Verarbeitung durch NLP}}{27}{section.5.2}%
 \contentsline {section}{\numberline {5.3}{FZ 3.4 Evaluierung zur Wissensrepräsentation}}{27}{section.5.3}%
-\contentsline {section}{\numberline {5.4}{Zusammenfassung}}{27}{section.5.4}%
-\contentsline {chapter}{\numberline {6}{Zusammenfassung und Ausblick}}{28}{chapter.6}%
-\contentsline {section}{\numberline {6.1}{Zusammenfassung}}{28}{section.6.1}%
-\contentsline {section}{\numberline {6.2}{Ausblick}}{28}{section.6.2}%
+\contentsline {section}{\numberline {5.4}{Zusammenfassung}}{28}{section.5.4}%
+\contentsline {chapter}{\numberline {6}{Zusammenfassung und Ausblick}}{29}{chapter.6}%
+\contentsline {section}{\numberline {6.1}{Zusammenfassung}}{29}{section.6.1}%
+\contentsline {section}{\numberline {6.2}{Ausblick}}{29}{section.6.2}%
+\vspace {\beforebibskip }
+\contentsline {chapter}{\numberline {}{Literatur}}{30}{section*.24}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

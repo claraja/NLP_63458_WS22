@@ -1,0 +1,26 @@
+Im Folgenden sollen die Fälle untersucht werden, in denen der Medextractor falsche Symptom-Krankheit-Zuordnungen findet. Die vom Medextractor analysierten Texte stammen dabei aus drei Quellen:
+
+\begin{enumerate}
+	\item Webseite des National Health Service UK (NHS) - 49 Texte zu mehreren mentalen Erkrankungen oder Störungen (Agoraphobie, Alkoholmissbrauch, Angststörungen, Essstörungen, Demenz, Depression, Panikstörungen, u.s.w.) \cite{nhs_webpage}
+	\item Der Artikel zum Thema Mental Disorder auf Wikipedia \cite{wikimentaldisorder}
+	\item Clinical Handbook of Psychological Disorders \cite{clinicalhandbook}
+\end{enumerate}
+
+Zur Auswertung dienen die xml-Dateien für den Entity-Linker, da diese auch die Sätze enthalten, in denen Krankheiten bzw. Symptome gefunden wurden. Die Anzahl gefundener Krankheiten, Symptome und Trainingssätze lässt sich einfach durch Zählen der Tags <\textbackslash entity>, <\textbackslash alias> und <\textbackslash sample> ermitteln. Das Ergebnis zeigt Tabelle \ref{tab:zaehlung}. Entitäten bedeuten hierbei Krankheiten und Aliase bedeuten Symptome.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{lrrrr}
+\hline
+\textbf{Quelle}	& \textbf{Dateigröße}	& \textbf{Entitäten} & \textbf{Aliase} & \textbf{Sätze} \\
+\hline
+NHS &	272 KB & 93 & 221 & 262 \\
+Wikipedia & 78 KB & 55 & 67  & 62 \\
+Handbook & 3,5 MB & 204 & 485  & 917 \\
+\hline
+\end{tabular}
+\caption{Von Medextractor gefundene Entitäten, Aliase und Beispielsätze}
+\label{tab:zaehlung}
+\end{center}
+\end{table}
+

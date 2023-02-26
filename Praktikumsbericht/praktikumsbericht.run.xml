@@ -83,7 +83,7 @@
       <file>praktikumsbericht.bcf</file>
     </requires>
     <requires type="editable">
-      <file>praktikumsbericht.bib</file>
+      <file>Praktikumsbericht.bib</file>
     </requires>
   </external>
 </requests>

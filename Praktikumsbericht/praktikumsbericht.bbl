@@ -19,6 +19,32 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{clinicalhandbook}{book}{}
+      \name{author}{1}{}{%
+        {{hash=33fee1db0577fb9d1408bb88d4575299}{%
+           family={Barlow},
+           familyi={B\bibinitperiod},
+           given={David\bibnamedelima H.},
+           giveni={D\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The Guilford Press}%
+      }
+      \strng{namehash}{33fee1db0577fb9d1408bb88d4575299}
+      \strng{fullhash}{33fee1db0577fb9d1408bb88d4575299}
+      \strng{bibnamehash}{33fee1db0577fb9d1408bb88d4575299}
+      \strng{authorbibnamehash}{33fee1db0577fb9d1408bb88d4575299}
+      \strng{authornamehash}{33fee1db0577fb9d1408bb88d4575299}
+      \strng{authorfullhash}{33fee1db0577fb9d1408bb88d4575299}
+      \field{labelalpha}{Bar14}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Fifth Edition}
+      \field{title}{Clinical Handbook of Psychological Disorders}
+      \field{year}{2014}
+    \endentry
     \entry{bird2006nltk}{inproceedings}{}
       \name{author}{1}{}{%
         {{hash=a6ad72a87713a430f7335c5656da28f1}{%
@@ -266,6 +292,29 @@
       \endverb
       \verb{url}
       \verb https://menhir-project.eu/
+      \endverb
+    \endentry
+    \entry{wikimentaldisorder}{misc}{}
+      \list{publisher}{1}{%
+        {Wikipedia}%
+      }
+      \field{labelalpha}{23}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extraalpha}{1}
+      \field{labeltitlesource}{title}
+      \field{month}{1}
+      \field{title}{Mental Disorder}
+      \field{urlday}{21}
+      \field{urlmonth}{1}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Mental_disorder
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Mental_disorder
       \endverb
     \endentry
     \entry{norman1986user}{book}{}
@@ -617,6 +666,29 @@
       \endverb
       \verb{url}
       \verb https://rdflib.readthedocs.io/en/stable/index.html#
+      \endverb
+    \endentry
+    \entry{nhs_webpage}{misc}{}
+      \list{publisher}{1}{%
+        {National Health Service UK}%
+      }
+      \field{labelalpha}{23}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extraalpha}{2}
+      \field{labeltitlesource}{title}
+      \field{month}{1}
+      \field{title}{The NHS Website - NHS}
+      \field{urlday}{14}
+      \field{urlmonth}{1}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nhs.uk
+      \endverb
+      \verb{url}
+      \verb https://www.nhs.uk
       \endverb
     \endentry
     \entry{vasiliev2020natural}{book}{}
