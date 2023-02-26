@@ -24,3 +24,54 @@ Handbook & 3,5 MB & 204 & 485  & 917 \\
 \end{center}
 \end{table}
 
+Bei Durchsicht der gefundenen Symptom-Krankheit-Relationen fällt zunächst auf, dass das Trainingsvokabular aus MetaMapLite sehr viele Begriffe enthält, die zwar bei der Beschreibung von Krankheiten oder Symptomen häufig verwendet werden, für sich allein aber keine Rückschlüsse auf eine Krankheit oder ein Symptom erlauben.
+
+Dazu gehören z.B. die Begriffe \emph{aggravate}, \emph{aggraveted by}, \emph{aggravating}. So wird z.B. im Satz\\
+
+\emph{\glqq Certain substances such as caffeine ... may aggravate the symptoms of anxiety disorders or interact with prescribed medication.\grqq}\\
+
+der Begriff \emph{aggravate} als Symptom einer \emph{anxiety disorder} (Angststörung) gefunden. Da das Verb \emph{aggravate} allein kein Symptom ist, stellt sich die Frage, wie der Medextractor entscheiden könnte, den hier nun gefundenen Zusammenhang zu verwerfen. Eine Lösung könnte mit Hilfe von \emph{spaCy} erfolgen: der Text lässt sich nämlich auch mit der normale \emph{spaCy}-Pipeline analysieren. Das Ergebnis der grammatikalische Analyse ist in Tabelle \ref{tab:spaCy} wiedergegeben.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{lllll}
+\hline
+\textbf{Text}	& \textbf{Lemma}	& \textbf{POS} & \textbf{TAG} & \textbf{DEP} \\
+\hline
+Certain & certain & ADJ & JJ & amod \\
+substances & substance & NOUN & NNS & nsubj \\
+such & such & ADJ & JJ & amod \\
+as & as & ADP & IN & prep \\
+caffeine & caffeine & NOUN & NN & pobj \\
+may & may & AUX & MD & aux \\
+aggravate & aggravate & VERB & VB & ROOT \\
+the & the & DET & DT & det \\
+symptoms & symptom & NOUN & NNS & dobj \\
+of & of & ADP & IN & prep \\
+anxiety & anxiety & NOUN & NN & compound \\
+disorders & disorder & NOUN & NNS & pobj \\
+or & or & CCONJ & CC & cc \\
+interact & interact & VERB & VB & conj \\
+with & with & ADP & IN & prep \\
+prescribed & prescribed & ADJ & JJ & amod \\
+medication & medication & NOUN & NN & pobj \\
+\hline
+\end{tabular}
+\caption{Ergebnis der \emph{spaCy}-Pipeline}
+\label{tab:spaCy}
+\end{center}
+\end{table}
+
+In der Spalte \emph{Text} befinden sich die einzelnen Wörter des zu analysierenden Textes. Als \emph{Lemma} wird das Grundwort verstanden, also z.B. der Singular (\emph{substance}) eines im Plural stehenden Begriffs (\emph{substances}). 
+Das Kürzel \emph{POS} steht für \emph{Part of Speech Tag}. Dies entspricht der Wortart der einzelnen Begriffe. Die grobe Einordnung der Wortarten steht in der Spalte \emph{POS}, während in der Spalte \emph{Tag} eine genauere Bestimmung der Wortart eingetragen ist. Dazu gehört u.a. bei Substantiven die Unterscheidung zwischen Singular und Plural sowie bei Verben die Zeitform.
+
+An dieser Stelle kann bereits festgehalten werden, dass die Wortart des Verbs \emph{aggravate} von \emph{spaCy} richtig erkannt wird. Der Tag \emph{VB} drückt aus, dass das Verb in der Infinitiv-Form vorliegt. In der Spalte \emph{DEP} werden Abhängigkeiten der Wörter untereinander charakterisiert. So wird \emph{aggravate} als zentrales Verb (\emph{root}) des Satzes identifiziert. Mit \emph{nsubj} wird das Subjekt des Satzes markiert, hier also der Begriff \emph{substances}.
+
+Eine Verbesserung des Medextractors könnte nun dadurch erfolgen, dass die Sätze, in den Symptome und Krankheiten gefunden wurden, zusätzlich durch die \emph{spaCy}-Pipeline analysiert werden und einfache Verben, die sich im Trainingsvokabular befinden, ignoriert werden.
+
+Im Trainingsvokabular finden sich generische Überbegriffe wie z.B. \emph{ailments} (Beschwerden, Krankheiten), die ebenfalls weder als konkrete Krankheit oder Symptom taugen. So wird in dem Satz\\
+
+\emph{\glqq Depression often occurs in children ... experiencing loss, or having ... anxiety disorders and other chronic physical ailments.\grqq}\\
+
+\emph{ailments} als Symptom einer \emph{anxiety disorder} gefunden. Wie könnte hier nun der Medextractor entscheiden, ob \emph{ailments} ein konkreter oder doch eher generischer Begriff ist? Der Dependency-Parser von \emph{spaCy} erkennt, dass in diesem Satz der Begriff \emph{ailments} in einer Konjunktion zum Begriff \emph{disorder} steht und dass das Wort \emph{other} zu \emph{ailments} gehört. Der Medextractor könnte z.B. an dem Wort \emph{other} erkennen, dass der Begriff \emph{ailments} wahrscheinlich eher generischer Natur ist.
+
