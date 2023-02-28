@@ -7,8 +7,9 @@ from string import punctuation
 
 class RuleBasedPreprocessor():
 
-    def __init__(self, doc_name):
+    def __init__(self, doc_name, with_pysbd):
         self.doc_name = doc_name
+        self.with_pysbd = with_pysbd
 
     @Language.component('sbd')
     def pysbd_sentence_boundaries(doc):
@@ -62,8 +63,11 @@ class RuleBasedPreprocessor():
         doc = nlp(raw_text)
 
         enumeration, new_raw_text, bullet_point = '', '', ''
-        for _, sent in enumerate(doc.sents, start=1):
-            sentence = sent.text
+        if self.with_pysbd:
+            sent_iterator_list = [sent.text for _, sent in enumerate(doc.sents, start=1)]
+        else:
+            sent_iterator_list = raw_text.split('\n')
+        for sentence in sent_iterator_list:
             # delete trailing whitespace
             sentence = sentence.rstrip()
             # ignore empty lines
@@ -107,10 +111,12 @@ class RuleBasedPreprocessor():
                         sentence = enumeration + ' ' + sentence
             else:
                 enumeration, bullet_point = '', ''
+            
             # replace all occurrences of multiple spaces with a single space
             processed_sentence = re.sub(' +', ' ', sentence)
             new_raw_text += f'{processed_sentence}.\n'
         # further replacements
+        
         new_raw_text = new_raw_text\
             .replace('..', '.')\
             .replace('?.', '?')\
@@ -121,4 +127,5 @@ class RuleBasedPreprocessor():
             .replace('–', ' ')
         # replace again possible occurrences of multiple spaces with a single space
         new_raw_text = re.sub(' +', ' ', new_raw_text)
+        
         return new_raw_text
