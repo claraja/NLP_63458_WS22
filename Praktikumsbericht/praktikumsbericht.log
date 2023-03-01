@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.8.16)  1 MAR 2023 00:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.8.16)  1 MAR 2023 23:45
 entering extended mode
 **./praktikumsbericht.tex
 (praktikumsbericht.tex
@@ -2567,12 +2567,44 @@ Overfull \hbox (10.53186pt too wide) in paragraph at lines 29--30
 ied in-to 3 types:[][]\T1/fvm/m/n/10.95 \n[]\n
  []
 
-) (chapters/kapitel5/Auswertung_False_Positive.tex
 
-LaTeX Warning: Citation 'nhs_webpage' on page 28 undefined on input line 4.
+Underfull \hbox (badness 10000) in paragraph at lines 54--56
+
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+
+ []
 
 
-LaTeX Warning: Citation 'wikimentaldisorder' on page 28 undefined on input line
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+
+ []
+
+
+Overfull \hbox (13.91832pt too wide) in paragraph at lines 74--75
+[]\T1/pplj/m/n/10.95 '.Also cal-led der-ma-til-lo-ma-nia or ex-co-ria-ti-on dis
+-or-der, skin picking
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+ []
+
+
+Overfull \hbox (1.12708pt too wide) in paragraph at lines 82--83
+[]\T1/pplj/m/n/10.95 'RAISE stu-died coor-di-na-ted spe-ci-al-ty care treat-men
+ts and the best ways
+ []
+
+) (chapters/kapitel5/Auswertung_False_Positive.tex [29]
+
+LaTeX Warning: Citation 'nhs_webpage' on page 30 undefined on input line 4.
+
+
+LaTeX Warning: Citation 'wikimentaldisorder' on page 30 undefined on input line
  5.
 
 
@@ -2582,31 +2614,31 @@ r-der \T1/pplj/m/n/10.95 auf Wi-ki-pe-dia [[]]
  []
 
 
-LaTeX Warning: Citation 'clinicalhandbook' on page 28 undefined on input line 6
+LaTeX Warning: Citation 'clinicalhandbook' on page 30 undefined on input line 6
 .
 
 
-Overfull \hbox (379.89952pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[28]
 Overfull \hbox (4.51137pt too wide) in paragraph at lines 36--37
 \T1/pplj/m/n/10.95 Bei Durch-sicht der ge-fun-de-nen Symptom-Krankheit-Relation
 en fällt zu-nächst
  []
 
 
+Overfull \hbox (379.89952pt too wide) has occurred while \output is active
+ []|[]|
+ []
+
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
-[29]
+
 Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
-[30]
+
 Overfull \hbox (1.30453pt too wide) in paragraph at lines 83--84
 \T1/pplj/m/n/10.95 (Be-schwer-den, Krank-hei-ten), die eben-falls we-der als ko
 n-kre-te Krank-heit oder
@@ -2617,7 +2649,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
-
+[31]
 Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
@@ -2627,7 +2659,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
-
+[32]
 Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
@@ -2648,13 +2680,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
-[31]
-<pictures/Dep_Parser.png, id=458, 869.49844pt x 204.01219pt>
+<pictures/Dep_Parser.png, id=469, 869.49844pt x 204.01219pt>
 File: pictures/Dep_Parser.png Graphic file (type png)
 <use pictures/Dep_Parser.png>
 Package pdftex.def Info: pictures/Dep_Parser.png  used on input line 113.
 (pdftex.def)             Requested size: 370.0pt x 86.81453pt.
-
+[33 <./pictures/Dep_Parser.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
@@ -2664,18 +2695,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
-<pictures/Dep_Parser_Negation.png, id=459, 758.08218pt x 305.64188pt>
+<pictures/Dep_Parser_Negation.png, id=477, 758.08218pt x 305.64188pt>
 File: pictures/Dep_Parser_Negation.png Graphic file (type png)
 <use pictures/Dep_Parser_Negation.png>
 Package pdftex.def Info: pictures/Dep_Parser_Negation.png  used on input line 1
 31.
 (pdftex.def)             Requested size: 370.0pt x 149.17819pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[32 <./pictures/Dep_Parser.png>])) (chapters/kapitel6/zusammenfassung.tex
+)) (chapters/kapitel6/zusammenfassung.tex
 Kapitel 6.
-[33 <./pictures/Dep_Parser_Negation.png>]) [34
+[34 <./pictures/Dep_Parser_Negation.png>]) [35
 
 
 ]
@@ -2956,10 +2984,10 @@ Package logreq Info: Writing requests to 'praktikumsbericht.run.xml'.
 ### simple group (level 1) entered at line 57 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 42672 strings out of 478868
- 827771 string characters out of 2847825
- 1949744 words of memory out of 3000000
- 59482 multiletter control sequences out of 15000+600000
+ 42681 strings out of 478868
+ 827841 string characters out of 2847825
+ 1949749 words of memory out of 3000000
+ 59483 multiletter control sequences out of 15000+600000
  482553 words of font info for 146 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,23n,108p,10614b,27765s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2975,9 +3003,9 @@ AppData/Local/Programs/MiKTeX/fonts/type1/bera/fvmr8a.pfb><C:/Users/Clara J/App
 Data/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Clara 
 J/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/C
 lara J/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on praktikumsbericht.pdf (38 pages, 735001 bytes).
+Output written on praktikumsbericht.pdf (39 pages, 740088 bytes).
 PDF statistics:
- 757 PDF objects out of 1000 (max. 8388607)
- 194 named destinations out of 1000 (max. 500000)
+ 769 PDF objects out of 1000 (max. 8388607)
+ 202 named destinations out of 1000 (max. 500000)
  18515 words of extra memory for PDF output out of 20736 (max. 10000000)
 

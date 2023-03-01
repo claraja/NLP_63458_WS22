@@ -38,7 +38,49 @@ Eine Gemeinsamkeit ist, dass mit beide Arten zur Satzerkennung \emph{leere} Sät
 
 \subsubsection{Vergleich der Ergebnisse des Preprocessings mit und ohne pysbd}
 
-Als nächstes wurde untersucht inwieweit die Sätze, die durch das Preprocessing des MedExtractors entstehen, sich unterscheiden, wenn man pysbd zur Verarbeitung nutzt.
+Als nächstes wurde untersucht inwieweit die Sätze, die durch das Preprocessing des MedExtractors entstehen, sich unterscheiden, wenn man pysbd zur Verarbeitung nutzt bzw. nicht nutzt.
+Dafür wurde zunächst \emph{with\_pysbd} als Attribut der Klasse \emph{RuleBasedPreprocessor} eingeführt. Je nachdem, welchen Wert dieses Attribut annimmt (True oder False), erfolgt die Vorverarbeitung des übergebenen Textes mit (True) oder ohne (False) pysbd. Anschließend wurden mithilfe des Python-Skriptes \emph{pysbd\_evaluation\_preprocessor.py} 51 der Beispieltexte mit jeweils beiden Methoden verarbeitet und das Ergebnis verglichen. 21 der 51 Texte (d. h. etwa 41\%) der Texte wurden exakt gleich verarbeitet, d.h. für diese Texte wäre es egal, ob man pysbd nutzt oder nicht.\\
+In den Texten, die nicht gleich verarbeitet wurden, sind die Unterschiede teilweise vernachlässigbar. Z. B. wird in dem Text \emph{fabricatedIllness.txt} ohne pysbd der Satz 
+\begin{quotation}
+	'For more information, you can read the NICE guidance about when to suspect child maltreatment in under 18s...symptoms only appear when the parent or carer is present'
+\end{quotation}
+ausgegeben, während dieser mit pysbd in die folgenden beiden Sätze aufgeteilt wurde:
+\begin{enumerate}
+	\item 'For more information, you can read the NICE guidance about when to suspect child maltreatment in under 18s'
+	\item 'symptoms only appear when the parent or carer is present'
+\end{enumerate}
+Der Originalabschnitt im Text ist in diesem Fall
+\begin{quotation}
+	[$\dots$]
+	For more information, you can read the NICE guidance about when to suspect child maltreatment in under 18s.\\
+	
+	They should also look out for 1 or more of the following warning signs:\\
+	
+	symptoms only appear when the parent or carer is present\\
+	the only person claiming to notice symptoms is the parent or carer\\
+	the parent or carer does not let healthcare professionals see the child on their own
+	[$\dots$]
+\end{quotation}
+Der Start der Aufzählung wird hier nicht wie erwartet verarbeitet, wodurch der Satz \emph{They should also look out for 1 or more of the following warning signs:} für beide Methoden aus dem verarbeiteten Text herausfällt.\\
 
-[TODO: ...]
+Teilweise sind auch nur einzelne Satzzeichen und/oder \emph{leere} Sätze der Unterschied zwischen den Verarbeitungsmethoden, z. B. für den Text SkinPickingDisorder.txt. Ohne pysbd werden die beiden Sätze
+\begin{enumerate}
+	\item ''
+	\item 'Also called dermatillomania or excoriation disorder, skin picking disorder is where you cannot stop picking at your skin'
+\end{enumerate}
+gefunden.
+Mit pysbd wird stattdessen nur der Satz 
+\begin{quotation}
+	'.Also called dermatillomania or excoriation disorder, skin picking disorder is where you cannot stop picking at your skin'
+\end{quotation}
+gefunden.\\
+
+Teilweise sind die Unterschiede aber schwerwiegender, z. B. für den Text \emph{Psychosis-2.txt} werden in dem mit pysbd verarbeiteten Text Sätze ausgegeben, die man in dem ohne pysbd verarbeiteten Text nicht wiederfindet. Diese zusätzlichen Texte sind die folgenden:
+\begin{enumerate}
+	\item 'Research supports a variety of treatments for early psychosis, especially coordinated specialty care'
+	\item 'In 2008, the National Institute of Mental Health (NIMH) launched the research initiative, Recovery After an Initial Schizophrenia Episode (RAISE) project'
+	\item 'RAISE studied coordinated specialty care treatments and the best ways to intervene after people begin to experience psychotic symptoms and to help them return to a path toward productive, independent lives'
+\end{enumerate}
+
+[TODO: herausfinden, woher dieser Unterschied kommt; ggfs. weitere Unterschiede; Fazit, ob pysbd besser ist oder nicht; allgemeine Infos zu pysbd]
 
