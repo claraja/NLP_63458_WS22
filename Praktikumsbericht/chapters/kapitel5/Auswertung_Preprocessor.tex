@@ -1,0 +1,44 @@
+\subsection{Auswirkungen von pysbd auf das Preprocessing}
+
+\subsubsection{Vergleich der Einteilung von Texten in Sätze mit und ohne pysbd}
+Es soll untersucht werden worin die Vor- und Nachteile beim Einteilen von Texten in Sätze mit der Bibliothek ‚pysbd‘ liegen. Dafür wurde zunächst die Verarbeitung einzelner Texte in der python-Datei \emph{pysbd\_evaluation\_sentences.py} des Repositories verglichen.\\
+
+Der Hauptunterschied in der Einteilung von Texten in einzelne Sätze mit und ohne pysbd besteht darin, dass ein Zeilenumbruch unterschiedlich interpretiert wird.
+Ohne pysbd wird zum Beispiel der Satz
+
+\begin{quotation}
+	'\verb!\n!Symptoms - Agoraphobia\verb!\n!\verb!\n!The severity of agoraphobia can vary significantly between individuals.'
+\end{quotation}
+
+gefunden, während die Aufteilung in Sätze mit pysbd folgendermaßen aussieht:
+
+\begin{enumerate}
+	\item 'Symptoms - Agoraphobia\verb!\n!\verb!\n!'
+	\item 'The severity of agoraphobia can vary significantly between individuals.\verb!\n!\verb!\n!'
+\end{enumerate}
+
+Ein weiteres Beispiel:\\
+
+ohne pysbd: 
+\begin{quotation}
+	'The symptoms of agoraphobia can be broadly classified into 3 types:\verb!\n!\verb!\n!    physical\verb!\n!    cognitive\verb!\n!    behavioural\verb!\n!\verb!\n!Physical symptoms\verb!\n!\verb!\n!The physical symptoms of agoraphobia usually only occur when you find yourself in a situation or environment that causes anxiety.\verb!\n!\verb!\n!'
+\end{quotation}
+
+mit pysbd:
+\begin{enumerate}
+	\item 'The symptoms of agoraphobia can be broadly classified into 3 types:\verb!\n!\verb!\n!    '
+	\item 'physical\verb!\n!    '
+	\item 'cognitive\verb!\n!    '
+	\item 'behavioural\verb!\n!\verb!\n!'
+	\item 'Physical symptoms\verb!\n!\verb!\n!'
+	\item 'The physical symptoms of agoraphobia usually only occur when you find yourself in a situation or environment that causes anxiety.\verb!\n!\verb!\n!'
+\end{enumerate}
+
+Eine Gemeinsamkeit ist, dass mit beide Arten zur Satzerkennung \emph{leere} Sätze wie z.B. \verb!\n! oder \verb!\n!\verb!\n! finden.
+
+\subsubsection{Vergleich der Ergebnisse des Preprocessings mit und ohne pysbd}
+
+Als nächstes wurde untersucht inwieweit die Sätze, die durch das Preprocessing des MedExtractors entstehen, sich unterscheiden, wenn man pysbd zur Verarbeitung nutzt.
+
+[TODO: ...]
+

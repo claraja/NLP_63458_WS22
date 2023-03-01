@@ -1,0 +1,140 @@
+Im Folgenden sollen die Fälle untersucht werden, in denen der Medextractor falsche Symptom-Krankheit-Zuordnungen findet. Die vom Medextractor analysierten Texte stammen dabei aus drei Quellen:
+
+\begin{enumerate}
+	\item Webseite des \emph{National Health Service UK (NHS)} - 49 Texte zu mehreren mentalen Erkrankungen oder Störungen (Agoraphobie, Alkoholmissbrauch, Angststörungen, Essstörungen, Demenz, Depression, Panikstörungen, u.s.w.) \cite{nhs_webpage}
+	\item Ein Artikel zum Thema \emph{Mental Disorder} auf Wikipedia \cite{wikimentaldisorder}
+	\item Clinical Handbook of Psychological Disorders \cite{clinicalhandbook}
+\end{enumerate}
+
+Zur Auswertung dienen die xml-Dateien für den Entity-Linker, da diese auch die Sätze enthalten, in denen Krankheiten bzw. Symptome gefunden wurden. Die Anzahl gefundener Krankheiten, Symptome und Trainingssätze lässt sich einfach durch Zählen der Tags <\textbackslash entity>, <\textbackslash alias> und <\textbackslash sample> ermitteln. Das Ergebnis zeigt Tabelle \ref{tab:zaehlung}. Entitäten bedeuten hierbei Krankheiten und Aliase bedeuten Symptome.
+
+Das in MetaMapLite enthaltene Vokabular erweist sich dabei als umfangreich genug, um zahlreiche richtige Symptom-Krankheit-Relationen zu finden. Man erkennt insbesondere an der Analyse des Handbuchs, dass die Zahl gefundener Begriffe nicht mit dem Umfang des Dokumentes skaliert. Dies mag zwar einerseits an der Begrenztheit des Trainingsvokabulars liegen, wahrscheinlicher ist aber, dass mentale Krankheiten durch die Analyse der Texte weitgehend vollständig erfasst werden.
+
+Neben den häufig richtig erkannten Zusammenhänge, finden sich jedoch in den xml-Dateien auch einige Zusammenhänge, die vom Medextractor falsch erkannt werden. Häufig liegt dies daran, dass im Trainingsvokabular ungeeignete Begriffe enthalten sind oder dass Grammatik und Semantik eines Satzes unzureichend analysiert werden. Es werden nun in den folgenden Abschnitten typische Fälle untersucht und Wege aufgezeigt, wie insbesondere durch Verwendung der \emph{spaCy}-Pipeline eine Verbesserung des Medextractors erzielt werden könnte.
+
+Da der bisherige Schwerpunkt der Arbeit auf der Verwendung der \emph{Named Entity Recognition} lag und der Standard-NER von \emph{spaCy} in diesem Zusammenhang wenig hilfreich ist, wurden die Stärken von \emph{spaCy} bisher nicht ausgenutzt. Als Ziel sollte verfolgt werden, das Vokabular nicht manuell zu bearbeiten, sondern Algorithmen zu finden, mit denen \emph{spaCy} möglichst automatisch ungeeignete Begriffe erkennt oder auch Begriffe findet, die nicht identisch dem Entity Ruler trainiert wurden.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{lrrrr}
+\hline
+\textbf{Quelle}	& \textbf{Dateigröße}	& \textbf{Entitäten} & \textbf{Aliase} & \textbf{Sätze} \\
+\hline
+NHS &	272 KB & 93 & 221 & 262 \\
+Wikipedia & 78 KB & 55 & 67  & 62 \\
+Handbook & 3,5 MB & 204 & 485  & 917 \\
+\hline
+\end{tabular}
+\caption{Von Medextractor gefundene Entitäten, Aliase und Beispielsätze}
+\label{tab:zaehlung}
+\end{center}
+\end{table}
+
+\subsection{Verben im Symptomvokabular}
+\label{subsec: verben} 
+
+Bei Durchsicht der gefundenen Symptom-Krankheit-Relationen fällt zunächst auf, dass das Trainingsvokabular aus MetaMapLite Verben enthält, die zwar bei der Beschreibung von Krankheiten oder Symptomen häufig verwendet werden, für sich allein aber keine Rückschlüsse auf eine Krankheit oder ein Symptom erlauben.
+
+Dazu gehört z.B. das Verb \emph{aggravate}, das auch in den Formen \emph{aggraveted by} und \emph{aggravating} im Vokabular enthalten ist. So wird z.B. in folgendem Satz der Begriff \emph{aggravate} als Symptom einer \emph{anxiety disorder} (Angststörung) gefunden:\\
+
+\emph{\glqq Certain substances such as caffeine ... may aggravate the symptoms of anxiety disorders or interact with prescribed medication.\grqq}\\
+
+Da das Verb \emph{aggravate} allein kein Symptom ist, stellt sich die Frage, wie der Medextractor entscheiden könnte, den hier nun gefundenen Zusammenhang zu verwerfen. Eine Lösung könnte mit Hilfe von \emph{spaCy} erfolgen: der Text lässt sich nämlich auch mit der normale \emph{spaCy}-Pipeline analysieren. Das Ergebnis der grammatikalische Analyse ist in Tabelle \ref{tab:spaCy} wiedergegeben.
+
+\begin{table}
+\centering
+\begin{tabular}{lllll}
+\hline
+\textbf{Text}	& \textbf{Lemma}	& \textbf{POS} & \textbf{TAG} & \textbf{DEP} \\
+\hline
+Certain & certain & ADJ & JJ & amod \\
+substances & substance & NOUN & NNS & nsubj \\
+such & such & ADJ & JJ & amod \\
+as & as & ADP & IN & prep \\
+caffeine & caffeine & NOUN & NN & pobj \\
+may & may & AUX & MD & aux \\
+aggravate & aggravate & VERB & VB & ROOT \\
+the & the & DET & DT & det \\
+symptoms & symptom & NOUN & NNS & dobj \\
+of & of & ADP & IN & prep \\
+anxiety & anxiety & NOUN & NN & compound \\
+disorders & disorder & NOUN & NNS & pobj \\
+or & or & CCONJ & CC & cc \\
+interact & interact & VERB & VB & conj \\
+with & with & ADP & IN & prep \\
+prescribed & prescribed & ADJ & JJ & amod \\
+medication & medication & NOUN & NN & pobj \\
+\hline
+\end{tabular}
+\caption{Ergebnis der \emph{spaCy}-Pipeline}
+\label{tab:spaCy}
+\end{table}
+
+In der Spalte \emph{Text} befinden sich die einzelnen Wörter des zu analysierenden Satzes. Als \emph{Lemma} wird das Grundwort verstanden, also z.B. der Singular (\emph{substance}) eines im Plural stehenden Begriffs (\emph{substances}). 
+Das Kürzel \emph{POS} steht für \emph{Part of Speech Tag}. Dies entspricht der Wortart der einzelnen Begriffe. Die grobe Einordnung der Wortarten steht in der Spalte \emph{POS}, während in der Spalte \emph{Tag} eine genauere Bestimmung der Wortart eingetragen ist. Dazu gehört u.a. bei Substantiven die Unterscheidung zwischen Singular und Plural sowie bei Verben die Zeitform.
+
+An dieser Stelle kann bereits festgehalten werden, dass die Wortart des Verbs \emph{aggravate} von \emph{spaCy} richtig erkannt wird. Der Tag \emph{VB} drückt aus, dass das Verb in der Infinitiv-Form vorliegt. In der Spalte \emph{DEP} werden Abhängigkeiten der Wörter untereinander charakterisiert. So wird \emph{aggravate} als zentrales Verb (\emph{root}) des Satzes identifiziert. Mit \emph{nsubj} wird das Subjekt des Satzes markiert, hier also der Begriff \emph{substances}.
+
+Eine Verbesserung des Medextractors könnte nun dadurch erfolgen, dass die Sätze, in denen Symptome und Krankheiten gefunden wurden, zusätzlich durch die \emph{spaCy}-Pipeline analysiert werden und einfache Verben, die sich im Trainingsvokabular befinden, ignoriert werden.
+
+\subsection{Generische Überbegriffe}
+\label{subsec: generisch} 
+
+Im Trainingsvokabular finden sich generische Überbegriffe wie z.B. \emph{ailments} (Beschwerden, Krankheiten), die ebenfalls weder als konkrete Krankheit oder Symptom taugen. Im folgenden Satz wird \emph{ailments} als Symptom einer \emph{anxiety disorder} gefunden:\\
+
+\emph{\glqq Depression often occurs in children ... experiencing loss, or having ... anxiety disorders and other chronic physical ailments.\grqq}\\
+
+Wie könnte hier nun der Medextractor entscheiden, ob \emph{ailments} ein konkreter oder doch eher ein generischer Begriff ist? Der Dependency-Parser von \emph{spaCy} erkennt, dass in diesem Satz der Begriff \emph{ailments} in einer Konjunktion zum Begriff \emph{disorder} steht und dass das Wort \emph{other} zu \emph{ailments} gehört. Der Medextractor könnte z.B. an dem Wort \emph{other} erkennen, dass der Begriff \emph{ailments} wahrscheinlich eher generischer Natur ist.
+
+\subsection{Mehrdeutige Begriffe}
+\label{subsec: mehrdeutig} 
+
+Einige Begriffe im Trainingsvokabular sind mehrdeutig und werden daher mitunter irrtümlich als Krankheit oder Symptom gedeutet. Dies ist z.B. für den Begriff \emph{cut} in folgendem Satz der Fall:\\
+
+\emph{\glqq A dependent drinker usually experiences physical and psychological withdrawal symptoms if they suddenly cut down or stop drinking.\grqq}\\
+
+\emph{Withdrawal symptoms} (Entzugserscheinungen) werden daher falsch als Symptom von Schnitt(wunden) erkannt. In diesem Fall kann erneut der Ansatz helfen, keine Verben als Krankheiten zu akzeptieren. Auch wenn \emph{cut} sowohl Nomen als auch Verb sein kann, ist \emph{spaCy} in der Lage, zu erkennen, dass \emph{cut} in diesem Satz ein Verb ist.
+
+Ähnlich verhält es sich mit dem Begriff \emph{cold}. Der Medextractor findet in folgendem Satz fälschlicherweise den Zusammenhang \emph{cold} - \emph {physical signs}:\\
+
+\emph{\glqq You may also notice physical signs and symptoms such as feeling cold, dizzy or very tired.\grqq}\\
+
+Dabei deutet der Medextractor \emph{cold} (Erkältung) als Krankheit und \emph{physical signs} als Symptom.  Durch Analyse mit \emph{spaCy} lässt sich bestimmen, dass \emph{cold} in diesem Satz ein Adjektiv ist, während \emph{spaCy} etwa in dem Satz \emph{\glqq I have a bad cold.\grqq} das Wort \emph{cold} als Nomen identifiziert. Ähnlich wie Verben, sollten einzelne Adjektive nicht als Krankheit gewertet werden.
+
+\subsection{Adjektive}
+\label{subsec: adjektiv} 
+
+Bei Symptomen können Adjektive nicht ohne weiteres ignoriert werden. Allerdings kommen sie, sofern sie ein Symptom beschreiben, häufig mit einem Verb wie \emph{feeling} vor, also etwa \emph{feeling cold}, \emph{feeling dizzy} oder \emph{feeling very tired}. Tatsächlich enthält das Trainingsvokabular zahlreiche Einträge wie z.B. \emph{feeling angry}, \emph{feeling helpless} oder \emph{feeling bad}. Allerdings fehlen die zuvor genannten und in dem Beispielsatz vorhandenen Ausdrücke.
+
+Es ist daher sinnvoll, alle Adjektive, die mit Verben wie z.B. \emph{feeling} eingeleitet werden, als Symptom zu deuten. Abbildung \ref{fig:dep_parser} zeigt graphisch das Ergebnis der Analyse durch die \emph{spaCy}-Pipeline und zeigt, dass der Dependency Parser einerseits \emph{feeling} und \emph{cold} als zusammengehörig identifiziert (acomp = adjectival complement) und auch erkennt, dass die weiteren Adjektive \emph{dizzy} und \emph{tired} ebenfalls über (grammatikalische) Konjunktionen mit dem Verb \emph{feeling} verbunden sind.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{pictures/Dep_Parser.png}
+    \caption{Dependency Parser}
+    \label{fig:dep_parser}
+\end{figure}
+
+Es eröffnet sich damit eine einfache Methode, auch Symptome, die nicht im Trainingsvokabular enthalten sind, als Symptome von \emph{spaCy} erkennen zu lassen.
+
+\subsection{Negationen}
+\label{subsec: negations} 
+
+In folgendem Satz wird fälschlich vom Medextractor erkannt, dass Interesse ein Symptom einer Depression ist:\\
+
+\emph{\glqq The psychological symptoms of depression include having no motivation or interest in things.\grqq}\\
+
+Dies liegt daran, dass der Medextractor nicht aus dem Zusammenhang erkennt, dass \emph{interest} in diesem Fall negiert ist, auch wenn das \emph{no} lediglich vor \emph{motivation}\ steht. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{pictures/Dep_Parser_Negation.png}
+    \caption{Dependency Parser bei Negation}
+    \label{fig:negation}
+\end{figure}
+
+Abbildung \ref{fig:negation} zeigt, dass auch hier der Dependency Parser von \emph{spaCy} gute Dienste leisten kann. Er erkennt, dass \emph{motivation} und \emph{interest} über eine Konjunktion miteinander verbunden sind und dass \emph{no} damit sowohl die Begriffe {motivation} als auch \emph{interest} näher bestimmt.
+
+\subsection{Schwacher Ursache-Wirkungs-Zusammenhang}
+\label{subsec: ursache} 
+
