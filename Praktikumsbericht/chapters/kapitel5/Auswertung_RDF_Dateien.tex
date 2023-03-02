@@ -1,0 +1,103 @@
+
+
+\subsection{Vergleich der manuell und vom MedExtractor erstellten RDF-Dateien}
+\label{subsec: RDF-Vergleich} 
+
+
+Beispielauswertung des Depressionstextes. In Tabelle \ref{tab:vergleich_manuell_medextractor} ist gegenübergestellt, welchen Entitäten in der manuell erstellten Wissensrepräsentation Entsprechungen in der MedExtractor-Wissensrepräsentation gegenüberstehen. Umgekehrt stellt Tabelle \label{tab:vergleich_manuell_medextractor} dar, welche Entitäten in der manuell erstellten Wissensrepräsentation den vom MedExtractor gefundenen Entitäten entsprechen, sofern jeweils welche gefunden wurden.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+                                    Symptom\_manual &                 Symptom\_found \\
+\midrule
+             not getting any enjoyment out of life &                               \\
+                    low sex drive (loss of libido) &  low sex drive;loss of libido \\
+                                    lack of energy &                lack of energy \\
+        having no motivation or interest in things &        no motivation;interest \\
+                                   disturbed sleep &                               \\
+                   changes to your menstrual cycle &                               \\
+                     avoiding contact with friends &                               \\
+                                 suicidal thoughts &             suicidal thoughts \\
+having difficulties in your home, work or famil... &                               \\
+            taking part in fewer social activities &                               \\
+         moving or speaking more slowly than usual &                               \\
+            finding it difficult to make decisions &                               \\
+                     feeling hopeless and helpless &              feeling hopeless \\
+                      thoughts of harming yourself &                               \\
+      finding it difficult to fall asleep at night &                               \\
+                              feeling guilt-ridden &                 feeling guilt \\
+                               continuous low mood &                      low mood \\
+                                      constipation &                  constipation \\
+                                   feeling tearful &                       tearful \\
+             neglecting your hobbies and interests & interests;interest;neglecting \\
+                                           sadness &                               \\
+                                   low self-esteem &                               \\
+        feeling irritable and intolerant of others &             feeling irritable \\
+                        feeling anxious or worried &                       worried \\
+                     changes in appetite or weight &           changes in appetite \\
+                       unexplained aches and pains &                   aches;pains \\
+               waking up very early in the morning &                               \\
+\bottomrule
+\end{tabular}
+\caption{manuell erstellte Wissensrepräsentation verglichen mit vom MedExtractor gefundenen Entitäten}
+\label{tab:vergleich_manuell_medextractor}
+\end{center}
+\end{table}
+
+
+\begin{table}
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+  Symptom\_Medextractor &                                   Original\_Symptom \\
+\midrule
+        lack of energy &                                     lack of energy \\
+             interests &              neglecting your hobbies and interests \\
+               worried &                         feeling anxious or worried \\
+              low mood &                                continuous low mood \\
+      feeling hopeless &                      feeling hopeless and helpless \\
+         no motivation &         having no motivation or interest in things \\
+     suicidal thoughts &                                  suicidal thoughts \\
+              interest & having no motivation or interest in things;negl... \\
+   changes in appetite &                      changes in appetite or weight \\
+                 aches &                        unexplained aches and pains \\
+         low sex drive &                     low sex drive (loss of libido) \\
+         feeling guilt &                               feeling guilt-ridden \\
+          constipation &                                       constipation \\
+                 pains &                        unexplained aches and pains \\
+        loss of libido &                     low sex drive (loss of libido) \\
+            neglecting &              neglecting your hobbies and interests \\
+psychological symptoms &                                                    \\
+       low self esteem &                                                    \\
+               tearful &                                    feeling tearful \\
+     feeling irritable &         feeling irritable and intolerant of others \\
+\bottomrule
+\end{tabular}
+\caption{Vom MedExtractor gefundene Entitäten verglichen mit den Entsprechungen in der manuell erstellten Wissensrepräsentation}
+\label{tab:vergleich_manuell_medextractor}
+\end{center}
+\end{table}
+
+Auswertung der Beispieltexte:
+
+\begin{table}
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+      Text & Precision & Recall \\
+\midrule
+Depression &     0.900 &  0.581 \\
+Anxiety Disorders &     -- &  --- \\
+-- &     -- &  --- \\
+\bottomrule
+\end{tabular}
+\caption{Precision und Recall der Beispieltexte}
+\label{tab:vergleich_manuell_medextractor}
+\end{center}
+\end{table}
+
+
+
+
