@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  2 MAR 2023 18:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.3)  2 MAR 2023 20:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1713,6 +1713,9 @@ Package csquotes Info: Redefining alias 'default' -> 'american'.
 
 LaTeX Warning: Label `tab:vergleich_manuell_medextractor' multiply defined.
 
+
+LaTeX Warning: Label `tab:vergleich_manuell_medextractor' multiply defined.
+
 (./frontbackmatter/Bibliography.aux))
 \openout1 = `praktikumsbericht.aux'.
 
@@ -2005,13 +2008,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 
 
 
-]
-Overfull \hbox (3.45345pt too wide) in paragraph at lines 85--85
- [][] []\T1/pplj/m/n/10.95 FZ 2.4 Im-ple-men-tie-rung zur ‹ber-f¸h-rung me-di-z
-i-ni-schen Fach- 
- []
-
-)
+])
 \tf@toc=\write6
 \openout6 = `praktikumsbericht.toc'.
 
@@ -2136,7 +2133,7 @@ Overfull \hbox (24.62729pt too wide) in paragraph at lines 4--5
 \T1/pplj/m/n/10.95 blier-te Me-tho-de von Nu-n-a-ma-ker, Chen und Pur-din [[]]
  []
 
-<pictures/Nunamaker2.png, id=192, 1336.995pt x 917.4275pt>
+<pictures/Nunamaker2.png, id=182, 1336.995pt x 917.4275pt>
 File: pictures/Nunamaker2.png Graphic file (type png)
 <use pictures/Nunamaker2.png>
 Package pdftex.def Info: pictures/Nunamaker2.png  used on input line 8.
@@ -2282,7 +2279,7 @@ LaTeX Warning: Citation 'w3c_all_2022' on page 13 undefined on input line 94.
 
 Package acronym Info: Label `acro:W3C' newly defined as it shall be overridden
 although it is yet undefined on input line 94.
-<pictures/rdf-graph.png, id=274, 774.895pt x 299.1175pt>
+<pictures/rdf-graph.png, id=264, 774.895pt x 299.1175pt>
 File: pictures/rdf-graph.png Graphic file (type png)
 <use pictures/rdf-graph.png>
 Package pdftex.def Info: pictures/rdf-graph.png  used on input line 102.
@@ -2435,7 +2432,7 @@ enten-/Dienstemodelle,
 
 LaTeX Warning: Citation 'norman1986user' on page 16 undefined on input line 7.
 
-<pictures/UseCases.png, id=317, 408.77719pt x 123.46124pt>
+<pictures/UseCases.png, id=307, 408.77719pt x 123.46124pt>
 File: pictures/UseCases.png Graphic file (type png)
 <use pictures/UseCases.png>
 Package pdftex.def Info: pictures/UseCases.png  used on input line 21.
@@ -2444,7 +2441,7 @@ Package pdftex.def Info: pictures/UseCases.png  used on input line 21.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 30.
 
-<pictures/Aktivit√§tsdiagramm.png, id=320, 671.50874pt x 369.63094pt>
+<pictures/Aktivit√§tsdiagramm.png, id=310, 671.50874pt x 369.63094pt>
 File: pictures/Aktivit√§tsdiagramm.png Graphic file (type png)
 <use pictures/Aktivit√§tsdiagramm.png>
 Package pdftex.def Info: pictures/Aktivit√§tsdiagramm.png  used on input line 3
@@ -2454,20 +2451,20 @@ Package pdftex.def Info: pictures/Aktivit√§tsdiagramm.png  used on input line 3
 
 
  <./pictures/UseCases.png>]
-<pictures/Informationsmodell.png, id=328, 415.5525pt x 175.40532pt>
+<pictures/Informationsmodell.png, id=318, 415.5525pt x 175.40532pt>
 File: pictures/Informationsmodell.png Graphic file (type png)
 <use pictures/Informationsmodell.png>
 Package pdftex.def Info: pictures/Informationsmodell.png  used on input line 43
 .
 (pdftex.def)             Requested size: 370.0pt x 156.1825pt.
-<pictures/Architekturmodell.png, id=330, 1273.75874pt x 608.2725pt>
+<pictures/Architekturmodell.png, id=320, 1273.75874pt x 608.2725pt>
 File: pictures/Architekturmodell.png Graphic file (type png)
 <use pictures/Architekturmodell.png>
 Package pdftex.def Info: pictures/Architekturmodell.png  used on input line 54.
 
 (pdftex.def)             Requested size: 370.0pt x 176.68224pt.
  [17 <./pictures/Aktivit√§tsdiagramm.png> <./pictures/Informationsmodell.png>]
-<pictures/ComponentDiagram.png, id=340, 585.68813pt x 314.67563pt>
+<pictures/ComponentDiagram.png, id=330, 585.68813pt x 314.67563pt>
 File: pictures/ComponentDiagram.png Graphic file (type png)
 <use pictures/ComponentDiagram.png>
 Package pdftex.def Info: pictures/ComponentDiagram.png  used on input line 63.
@@ -2486,7 +2483,7 @@ et_preprocessed_text().
 
 [18 <./pictures/Architekturmodell.png (PNG copy)> <./pictures/ComponentDiagram.
 png>]
-<pictures/RuleBasedPreprocessor.png, id=350, 433.62pt x 153.57375pt>
+<pictures/RuleBasedPreprocessor.png, id=340, 433.62pt x 153.57375pt>
 File: pictures/RuleBasedPreprocessor.png Graphic file (type png)
 <use pictures/RuleBasedPreprocessor.png>
 Package pdftex.def Info: pictures/RuleBasedPreprocessor.png  used on input line
@@ -2516,7 +2513,7 @@ Overfull \hbox (2.46371pt too wide) in paragraph at lines 92--93
 lated() mit un-ter-schied-
  []
 
-<pictures/KnowledgeExtractor.png, id=352, 1029.09468pt x 660.21657pt>
+<pictures/KnowledgeExtractor.png, id=342, 1029.09468pt x 660.21657pt>
 File: pictures/KnowledgeExtractor.png Graphic file (type png)
 <use pictures/KnowledgeExtractor.png>
 Package pdftex.def Info: pictures/KnowledgeExtractor.png  used on input line 96
@@ -2537,7 +2534,7 @@ Overfull \hbox (397.55956pt too wide) has occurred while \output is active
  []
 
 [19 <./pictures/RuleBasedPreprocessor.png>]
-<pictures/RDFSerialiser.png, id=361, 282.30469pt x 340.27126pt>
+<pictures/RDFSerialiser.png, id=351, 282.30469pt x 340.27126pt>
 File: pictures/RDFSerialiser.png Graphic file (type png)
 <use pictures/RDFSerialiser.png>
 Package pdftex.def Info: pictures/RDFSerialiser.png  used on input line 109.
@@ -2546,7 +2543,7 @@ Package pdftex.def Info: pictures/RDFSerialiser.png  used on input line 109.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pictures/Main.png, id=363, 977.90344pt x 488.57532pt>
+<pictures/Main.png, id=353, 977.90344pt x 488.57532pt>
 File: pictures/Main.png Graphic file (type png)
 <use pictures/Main.png>
 Package pdftex.def Info: pictures/Main.png  used on input line 122.
@@ -2592,13 +2589,8 @@ Overfull \hbox (43.56348pt too wide) in paragraph at lines 49--50
 .95 spa-Cy Uni-ver-se \T1/pplj/m/n/10.95 (htt-ps://spacy.io/universe)
  []
 
-
-Overfull \hbox (406.79955pt too wide) has occurred while \output is active
- []|[]|
- []
-
 [24]
-<pictures/EntityLinkerDemo.png, id=391, 829.59938pt x 363.60844pt>
+<pictures/EntityLinkerDemo.png, id=381, 829.59938pt x 363.60844pt>
 File: pictures/EntityLinkerDemo.png Graphic file (type png)
 <use pictures/EntityLinkerDemo.png>
 Package pdftex.def Info: pictures/EntityLinkerDemo.png  used on input line 70.
@@ -2687,129 +2679,129 @@ Overfull \hbox (1.12708pt too wide) in paragraph at lines 82--83
 ts and the best ways
  []
 
-) (./chapters/kapitel5/Auswertung_False_Positive.tex
+)
+Overfull \hbox (26.87122pt too wide) in paragraph at lines 34--35
+\T1/pplj/m/n/10.95 nach wer-den die-se und wei-te-re beim stich-pro-ben-ar-ti-g
+en Sich-ten der MedExtractor-
+ []
 
-LaTeX Warning: Citation 'nhs_webpage' on page 30 undefined on input line 4.
+(./chapters/kapitel5/Auswertung_RDF_Dateien.tex
+Overfull \hbox (24.33926pt too wide) in paragraph at lines 14--47
+ [] 
+ []
 
 
-LaTeX Warning: Citation 'wikimentaldisorder' on page 30 undefined on input line
- 5.
+Overfull \hbox (9.83052pt too wide) in paragraph at lines 55--81
+ [] 
+ []
+
+) (./chapters/kapitel5/Auswertung_False_Positive.tex [30] [31] [32]
+
+LaTeX Warning: Citation 'nhs_webpage' on page 33 undefined on input line 7.
 
 
-Overfull \hbox (26.13768pt too wide) in paragraph at lines 5--6
+LaTeX Warning: Citation 'wikimentaldisorder' on page 33 undefined on input line
+ 8.
+
+
+Overfull \hbox (26.13768pt too wide) in paragraph at lines 8--9
 []\T1/pplj/m/n/10.95 Ein Ar-ti-kel zum The-ma \T1/pplj/m/it/10.95 Men-tal Dis-o
 r-der \T1/pplj/m/n/10.95 auf Wi-ki-pe-dia [[]] 
  []
 
 
-LaTeX Warning: Citation 'clinicalhandbook' on page 30 undefined on input line 6
+LaTeX Warning: Citation 'clinicalhandbook' on page 33 undefined on input line 9
 .
 
 
-Overfull \hbox (379.89952pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[30]
-Overfull \hbox (4.51137pt too wide) in paragraph at lines 36--37
+Overfull \hbox (4.51137pt too wide) in paragraph at lines 39--40
 \T1/pplj/m/n/10.95 Bei Durch-sicht der ge-fun-de-nen Symptom-Krankheit-Relation
 en f‰llt zu-n‰chst
  []
 
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
-
- []
-
-[31]
-Overfull \hbox (1.30453pt too wide) in paragraph at lines 83--84
+Overfull \hbox (1.30453pt too wide) in paragraph at lines 86--87
 \T1/pplj/m/n/10.95 (Be-schwer-den, Krank-hei-ten), die eben-falls we-der als ko
 n-kre-te Krank-heit oder
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+
+ []
+
+[34]
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
-
- []
-
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-
-Overfull \hbox (2.48563pt too wide) in paragraph at lines 96--97
+[35]
+Overfull \hbox (2.48563pt too wide) in paragraph at lines 99--100
 []\T1/pplj/m/it/10.95 Withdrawal sym-ptoms \T1/pplj/m/n/10.95 (Ent-zugs-er-sche
 i-nun-gen) wer-den da-her falsch als Sym-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
 
-[33]
-<pictures/Dep_Parser.png, id=459, 869.49844pt x 204.01219pt>
+<pictures/Dep_Parser.png, id=466, 869.49844pt x 204.01219pt>
 File: pictures/Dep_Parser.png Graphic file (type png)
 <use pictures/Dep_Parser.png>
-Package pdftex.def Info: pictures/Dep_Parser.png  used on input line 113.
+Package pdftex.def Info: pictures/Dep_Parser.png  used on input line 116.
 (pdftex.def)             Requested size: 370.0pt x 86.81453pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+[36 <./pictures/Dep_Parser.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
-<pictures/Dep_Parser_Negation.png, id=460, 758.08218pt x 305.64188pt>
+<pictures/Dep_Parser_Negation.png, id=475, 758.08218pt x 305.64188pt>
 File: pictures/Dep_Parser_Negation.png Graphic file (type png)
 <use pictures/Dep_Parser_Negation.png>
 Package pdftex.def Info: pictures/Dep_Parser_Negation.png  used on input line 1
-31.
+34.
 (pdftex.def)             Requested size: 370.0pt x 149.17819pt.
-) (./chapters/kapitel5/Auswertung_RDF_Dateien.tex [34 <./pictures/Dep_Parser.PN
-G> <./pictures/Dep_Parser_Negation.PNG>]
-Overfull \hbox (24.33926pt too wide) in paragraph at lines 11--44
- [] 
- []
-
-
-Overfull \hbox (9.83052pt too wide) in paragraph at lines 52--78
- [] 
- []
-
 )) (./chapters/kapitel6/zusammenfassung.tex
 Kapitel 6.
-[35] [36] [37]) [38
+[37 <./pictures/Dep_Parser_Negation.PNG>]) [38
 
 
 ]
 \openout2 = `frontbackmatter/Bibliography.aux'.
 
- (./frontbackmatter/Bibliography.tex
+
+(./frontbackmatter/Bibliography.tex
 
 LaTeX Warning: Empty bibliography on input line 15.
 
@@ -2817,7 +2809,12 @@ LaTeX Warning: Empty bibliography on input line 15.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 113.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 113.
  (./praktikumsbericht.aux (./frontbackmatter/Contents.aux)
-(./frontbackmatter/Acronyms.aux) (./frontbackmatter/Bibliography.aux))
+(./frontbackmatter/Acronyms.aux) (./frontbackmatter/Bibliography.aux)
+
+Package mparhack Warning: Marginpars may have changed.
+(mparhack)                Rerun to get them right.
+
+)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 113.
 
 
@@ -3049,10 +3046,10 @@ chapters/kapitel4/implementierung.tex
 pictures/EntityLinkerDemo.png
 chapters/kapitel5/evaluierung.tex
 chapters/kapitel5/Auswertung_Preprocessor.tex
+chapters/kapitel5/Auswertung_RDF_Dateien.tex
 chapters/kapitel5/Auswertung_False_Positive.tex
 pictures/Dep_Parser.png
 pictures/Dep_Parser_Negation.png
-chapters/kapitel5/Auswertung_RDF_Dateien.tex
 chapters/kapitel6/zusammenfassung.tex
 frontbackmatter/Bibliography.tex
  ***********
@@ -3080,13 +3077,13 @@ Package logreq Info: Writing requests to 'praktikumsbericht.run.xml'.
 ### simple group (level 1) entered at line 57 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38991 strings out of 480994
- 763191 string characters out of 5902830
- 1762588 words of memory out of 5000000
- 53416 multiletter control sequences out of 15000+600000
+ 38990 strings out of 480994
+ 763273 string characters out of 5902830
+ 1762470 words of memory out of 5000000
+ 53414 multiletter control sequences out of 15000+600000
  611461 words of font info for 143 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 74i,23n,97p,10112b,24386s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 74i,23n,97p,10112b,24410s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/fonts/en
 c/dvips/base/8r.enc}<c:/Programme/Textverarbeitung/TexLive/2019/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr10.pfb><c:/Programme/Textverarbeitung/TexLive/201
@@ -3101,10 +3098,10 @@ e/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/Programme/Textverarbe
 itung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/Programme
 /Textverarbeitung/TexLive/2019/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 
-Output written on praktikumsbericht.pdf (42 pages, 652490 bytes).
+Output written on praktikumsbericht.pdf (42 pages, 653590 bytes).
 PDF statistics:
- 767 PDF objects out of 1000 (max. 8388607)
- 680 compressed objects within 7 object streams
- 209 named destinations out of 1000 (max. 500000)
- 18523 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 751 PDF objects out of 1000 (max. 8388607)
+ 664 compressed objects within 7 object streams
+ 210 named destinations out of 1000 (max. 500000)
+ 18483 words of extra memory for PDF output out of 20736 (max. 10000000)
 

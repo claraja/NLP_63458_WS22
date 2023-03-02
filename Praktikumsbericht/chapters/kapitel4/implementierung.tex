@@ -24,7 +24,7 @@ eine Reihe von Sätzen:\\
 }
 \end{addmargin}
 \vspace*{5mm}
-\section{FZ 2.4 Implementierung zur Überführung medizinischen Fachvokabulars in maschinenlesbare Form zur weiteren Verarbeitung durch NLP}
+\section[FZ 2.4 Implementierung zur Überf. med. Fachvokabulars]{FZ 2.4 Implementierung zur Überführung medizinischen Fachvokabulars in maschinenlesbare Form zur weiteren Verarbeitung durch NLP}
 \label{sec:FZ2.4}
 
 Wie in Abschnitt \ref{loesungsansatz} beschrieben, wurde das Vokabular der Datei \emph{postings} des MetaMapLite-Projektes verwendet. Aus dieser Datei wurden zwei Dateien \emph{training\_diseases\_original.txt} und \emph{training\_symptoms\_original.txt} extrahiert, die jeweils nur die Einträge enthalten, die in der \emph{postings}-Datei als \emph{disease} bzw. \emph{disorder} oder \emph{finding} markiert sind. Diese Dateien bleiben als Referenz unverändert. Das Programm verwendet Kopien namens \emph{training\_diseases\_working.txt} und \emph{training\_symptoms\_working.txt}, aus denen bei Bedarf Begriffe entfernt werden können. Dies ist sinnvoll, da die Vokabular-Dateien sehr umfangreich sind, dadurch aber auch Einträge enthalten, die zum Auffinden von Krankheiten und Symptomen nicht hilfreich sind.
