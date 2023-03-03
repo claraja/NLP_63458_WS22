@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:fapra="http://fapranlp.de/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://fapranlp.de/dementia">
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:loss_of_cognitive_functioning"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:cannot_control_their_emotions"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:personalities_may_change"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:depend_completely_on_others_for_basic_activities_of_living"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:memory_loss"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:poor_judgment"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:confusion"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:difficulty_speaking,_understanding_and_expressing_thoughts,_or_reading_and_writing"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:wandering"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:getting_lost_in_a_familiar_neighborhood"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:trouble_handling_money_responsibly_and_paying_bills"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:repeating_questions"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:using_unusual_words_to_refer_to_familiar_objects"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:taking_longer_to_complete_normal_daily_tasks"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:losing_interest_in_normal_daily_activities_or_events"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:hallucinating"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:experiencing_delusions_or_paranoia"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:acting_impulsively"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:not_caring_about_other_people’s_feelings"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:losing_balance"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:problems_with_movement"/>
+  </rdf:Description>
+</rdf:RDF>

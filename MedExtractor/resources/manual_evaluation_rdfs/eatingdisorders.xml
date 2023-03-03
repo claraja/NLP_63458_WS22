@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:fapra="http://fapranlp.de/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://fapranlp.de/eating_disorders">
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:eating_too_much_or_too_little"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:worrying_about_your_weight_or_body_shape"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:anorexia_nervosa"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:trying_to_control_your_weight"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:not_eating_enough_food"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:exercising_too_much"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:bulimia"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:losing_control_over_how_much_you_eat"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:taking_drastic_action_to_not_put_on_weight"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:binge_eating_disorder(BED)"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:eating_large_portions_of_food_until_you_feel_uncomfortably_full"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:avoids_certain_foods"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:limits_how_much_they_eat"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:spending_a_lot_of_time_worrying_about_your_weight_and_body_shape"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:avoiding_socialising_when_you_think_food_will_be_involved"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:eating_very_little_food"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:making_yourself_sick"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:taking_laxatives_after_you_eat"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:having_very_strict_habits_or_routines_around_food"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:changes_in_your_mood"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:being_withdrawn,_anxious_or_depressed"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_cold,_tired_or_dizzy"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:pains,_tingling_or_numbness_in_your_arms_and_legs(poor_circulation)"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_your_heart_racing"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:fainting"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_faint"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:problems_with_your_digestion"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:bloating"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:constipation"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:diarrhoea"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:you_weight_being_very_high_or_very_low_for_someone_of_your_age_and_height"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:not_getting_your_period"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:delayed_signs_of_puberty"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:dramatic_weight_loss"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:lying_about_how_much_they've_eaten,_when_they'_ve_eaten,_or_their_weight"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:eating_a_lot_of_food_very_fast"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:going_to_the_bathroom_a_lot_after_eating"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:exercising_a_lot"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:avoiding_eating_with_others"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:cutting_food_into_small_pieces_or_eating_very_slowly"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:wearing_loose_or_baggy_clothes_to_hide_their_weight_loss"/>
+  </rdf:Description>
+</rdf:RDF>

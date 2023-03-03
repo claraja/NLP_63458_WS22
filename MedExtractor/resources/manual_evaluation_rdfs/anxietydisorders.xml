@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:fapra="http://fapranlp.de/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://fapranlp.de/anxiety_disorders">
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:worry"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:temporary_worry"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:fear"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:interfere_with_daily_activities"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:persistent_feeling_of_anxiety_or_dread"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:Feeling_restless"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_wound-up"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_on-edge"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:being_easily_fatigued"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:having_difficulty_concentrating"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:being_irritable"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:headaches"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:muscle_aches"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:stomachaches"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:unexplained_pains"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:difficulty_controlling_feelings_of_worry"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:sleep_problems"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:difficulty_falling"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:difficulty_staying_asleep"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:sudden_periods_of_intense_fear"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:discomfort"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:sense_of_losing_control"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:pounding_heart"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:racing_heart"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:sweating"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:trembling"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:tingling"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:chest_pain"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feelings_of_impending_doom"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feelings_of_being_out_of_control"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:avoiding_places"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:avoiding_situations"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:avoiding_behaviors"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:fear_of_being_watched_and_judged_by_others"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:blushing"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:rigid_body_posture"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:speaking_with_an_overly_soft_voice"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:difficulty_making_eye_contact"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:difficulty_being_around_people_they_don’t_know"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feelings_of_self-consciousness"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:fear_that_people_will_judge_them_negatively"/>
+  </rdf:Description>
+</rdf:RDF>

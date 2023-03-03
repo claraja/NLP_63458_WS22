@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:fapra="http://fapranlp.de/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://fapranlp.de/psychosis">
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:hallucinations"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:seeing_colours,_shapes_or_people"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:hearing_voices_or_other_sounds"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_touched_when_there_is_nobody_there"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:an_odour_that_other_people_cannot_smell"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:a_taste_when_there_is_nothing_in_the_mouth"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:delusions"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:confused_and_disturbed_thoughts"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:disturbed,_confused,_and_disrupted_patterns_of_thought"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:rapid_and_constant_speech"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:disturbed_speech"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:switch_from_one_topic_to_another_mid-sentence"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:a_sudden_loss_in_their_train_of_thought"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:an_abrupt_pause_in_conversation_or_activity"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:high_mood(mania)"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_elated"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:talking_and_thinking_too_much_or_too_quickly"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:low_mood"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_sad"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:lack_of_energy"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:loss_of_appetite"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:trouble_sleeping"/>
+  </rdf:Description>
+</rdf:RDF>
