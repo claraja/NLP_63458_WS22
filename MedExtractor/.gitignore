@@ -3,3 +3,9 @@ __pycache__
 .idea
 *.pyi
 *.bat
+*.aux
+*.bbl
+*.blg
+*.bcf
+*.log
+*.gz
