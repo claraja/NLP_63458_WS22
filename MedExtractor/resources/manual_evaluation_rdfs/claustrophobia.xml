@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:fapra="http://fapranlp.de/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://fapranlp.de/claustrophobia">
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:irrational_fear_of_confined_spaces"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:avoid_confined_spaces"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:mild_anxiety_when_in_a_confined_space"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:severe_anxiety"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic_attack"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_of_losing_control"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:fear_of_losing_control"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:thinking_about_certain_situations"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:felt_anxious_about_being_in_a_confined_space"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:felt_anxious_about_being_in_a_crowded_place"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic_attacks"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:frightening"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:distressing"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:sweating"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:trembling"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:hot_flushes_or_chills"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:shortness_of_breath"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:difficulty_breathing"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:a_choking_sensation"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:a_rapid_heartbeat(tachycardia)"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:chest_pain"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_of_tightness_in_the_chest"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:a_sensation_of_butterflies_in_the_stomach"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_sick"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:headaches"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:dizziness"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_faint"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:numbness"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:pins_and_needles"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:a_dry_mouth"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:a_need_to_go_to_the_toilet"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:ringing_in_your_ears"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_confused"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_disorientated"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:fear_of_fainting"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feelings_of_dread"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:fear_of_dying"/>
+  </rdf:Description>
+</rdf:RDF>

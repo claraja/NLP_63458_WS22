@@ -1,3 +1,6 @@
+\subsection{***Detaillierte Auswertung***}
+\label{subsec:detaillierteAuswertung} 
+
 Im Folgenden sollen die Fälle untersucht werden, in denen der Medextractor falsche Symptom-Krankheit-Zuordnungen findet. Die vom Medextractor analysierten Texte stammen dabei aus drei Quellen:
 
 \begin{enumerate}
@@ -30,7 +33,7 @@ Handbook & 3,5 MB & 204 & 485  & 917 \\
 \end{center}
 \end{table}
 
-\subsection{Verben im Symptomvokabular}
+\subsubsection{Verben im Symptomvokabular}
 \label{subsec: verben} 
 
 Bei Durchsicht der gefundenen Symptom-Krankheit-Relationen fällt zunächst auf, dass das Trainingsvokabular aus MetaMapLite Verben enthält, die zwar bei der Beschreibung von Krankheiten oder Symptomen häufig verwendet werden, für sich allein aber keine Rückschlüsse auf eine Krankheit oder ein Symptom erlauben.
@@ -77,7 +80,7 @@ An dieser Stelle kann bereits festgehalten werden, dass die Wortart des Verbs \e
 
 Eine Verbesserung des Medextractors könnte nun dadurch erfolgen, dass die Sätze, in denen Symptome und Krankheiten gefunden wurden, zusätzlich durch die \emph{spaCy}-Pipeline analysiert werden und einfache Verben, die sich im Trainingsvokabular befinden, ignoriert werden.
 
-\subsection{Generische Überbegriffe}
+\subsubsection{Generische Überbegriffe}
 \label{subsec: generisch} 
 
 Im Trainingsvokabular finden sich generische Überbegriffe wie z.B. \emph{ailments} (Beschwerden, Krankheiten), die ebenfalls weder als konkrete Krankheit oder Symptom taugen. Im folgenden Satz wird \emph{ailments} als Symptom einer \emph{anxiety disorder} gefunden:\\
@@ -86,7 +89,7 @@ Im Trainingsvokabular finden sich generische Überbegriffe wie z.B. \emph{ailmen
 
 Wie könnte hier nun der Medextractor entscheiden, ob \emph{ailments} ein konkreter oder doch eher ein generischer Begriff ist? Der Dependency-Parser von \emph{spaCy} erkennt, dass in diesem Satz der Begriff \emph{ailments} in einer Konjunktion zum Begriff \emph{disorder} steht und dass das Wort \emph{other} zu \emph{ailments} gehört. Der Medextractor könnte z.B. an dem Wort \emph{other} erkennen, dass der Begriff \emph{ailments} wahrscheinlich eher generischer Natur ist.
 
-\subsection{Mehrdeutige Begriffe}
+\subsubsection{Mehrdeutige Begriffe}
 \label{subsec: mehrdeutig} 
 
 Einige Begriffe im Trainingsvokabular sind mehrdeutig und werden daher mitunter irrtümlich als Krankheit oder Symptom gedeutet. Dies ist z.B. für den Begriff \emph{cut} in folgendem Satz der Fall:\\
@@ -101,7 +104,7 @@ Einige Begriffe im Trainingsvokabular sind mehrdeutig und werden daher mitunter 
 
 Dabei deutet der Medextractor \emph{cold} (Erkältung) als Krankheit und \emph{physical signs} als Symptom.  Durch Analyse mit \emph{spaCy} lässt sich bestimmen, dass \emph{cold} in diesem Satz ein Adjektiv ist, während \emph{spaCy} etwa in dem Satz \emph{\glqq I have a bad cold.\grqq} das Wort \emph{cold} als Nomen identifiziert. Ähnlich wie Verben, sollten einzelne Adjektive nicht als Krankheit gewertet werden.
 
-\subsection{Adjektive}
+\subsubsection{Adjektive}
 \label{subsec: adjektiv} 
 
 Bei Symptomen können Adjektive nicht ohne weiteres ignoriert werden. Allerdings kommen sie, sofern sie ein Symptom beschreiben, häufig mit einem Verb wie \emph{feeling} vor, also etwa \emph{feeling cold}, \emph{feeling dizzy} oder \emph{feeling very tired}. Tatsächlich enthält das Trainingsvokabular zahlreiche Einträge wie z.B. \emph{feeling angry}, \emph{feeling helpless} oder \emph{feeling bad}. Allerdings fehlen die zuvor genannten und in dem Beispielsatz vorhandenen Ausdrücke.
@@ -117,7 +120,7 @@ Es ist daher sinnvoll, alle Adjektive, die mit Verben wie z.B. \emph{feeling} ei
 
 Es eröffnet sich damit eine einfache Methode, auch Symptome, die nicht im Trainingsvokabular enthalten sind, als Symptome von \emph{spaCy} erkennen zu lassen.
 
-\subsection{Negationen}
+\subsubsection{Negationen}
 \label{subsec: negations} 
 
 In folgendem Satz wird fälschlich vom Medextractor erkannt, dass Interesse ein Symptom einer Depression ist:\\
@@ -135,6 +138,6 @@ Dies liegt daran, dass der Medextractor nicht aus dem Zusammenhang erkennt, dass
 
 Abbildung \ref{fig:negation} zeigt, dass auch hier der Dependency Parser von \emph{spaCy} gute Dienste leisten kann. Er erkennt, dass \emph{motivation} und \emph{interest} über eine Konjunktion miteinander verbunden sind und dass \emph{no} damit sowohl die Begriffe {motivation} als auch \emph{interest} näher bestimmt.
 
-\subsection{Schwacher Ursache-Wirkungs-Zusammenhang}
+\subsubsection{Schwacher Ursache-Wirkungs-Zusammenhang}
 \label{subsec: ursache} 
 

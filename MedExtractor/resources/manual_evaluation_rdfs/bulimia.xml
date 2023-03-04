@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:fapra="http://fapranlp.de/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://fapranlp.de/bulimia">
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:eating_a_large_amount_of_food_over_a_very_short_time_(binge_eating)"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:ridding_your_body_of_the_extra_food_(purging)"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:making_yourself_vomit"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:taking_laxatives"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:exercising_excessively"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:fear_of_putting_on_weight"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:being_very_critical_about_your_weight_and_body_shape"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:mood_changes"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_very_tense"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_very_anxious"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:thinking_about_food_a_lot"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_guilty"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_ashamed"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:behaving_secretively"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:avoiding_social_activities_that_involve_food"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_like_you_have_no_control_over_your_eating"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_tired"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:a_sore_throat_from_being_sick"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:bloating"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:tummy_pain"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:puffy_face"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:self-harming"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:eating_a_lot_of_food,_very_fast"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:going_to_the_bathroom_a_lot_after_eating"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:excessively_or_obsessively_exercising"/>
+  </rdf:Description>
+</rdf:RDF>

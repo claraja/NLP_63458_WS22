@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:fapra="http://fapranlp.de/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://fapranlp.de/social_anxiety">
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:fear_of_social_situations"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:worry_about_everyday_activities,_such_as_meeting_strangers,_starting_conversations,_speaking_on_the_phone,_working_or_shopping"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:avoid_or_worry_a_lot_about_social_activities,_such_as_group_conversations,_eating_with_company_and_parties"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:always_worry_about_doing_something_you_think_is_embarrassing,_such_as_blushing,_sweating_or_appearing_incompetent"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:find_it_difficult_to_do_things_when_others_are_watching"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feel_like_you're_being_watched_and_judged_all_the_time"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:fear_being_criticised"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:avoid_eye_contact"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:have_low_self-esteem"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_sick"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:sweating"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:trembling"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:pounding_heartbeat"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:palpitations"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:have_panic_attacks"/>
+    <fapra:hasSymptom rdf:resource="http://fapranlp.de/symptom:have_an_overwhelming_sense_of_fear_and_anxiety,_usually_only_for_a_few_minutes"/>
+  </rdf:Description>
+</rdf:RDF>
