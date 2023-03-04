@@ -1,0 +1,68 @@
+\babel@toc {american}{}\relax 
+\vspace {-\cftbeforepartskip }
+\babel@toc {ngerman}{}\relax 
+\contentsline {chapter}{\numberline {1}{Einleitung}}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}{Motivation}}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}{Problembeschreibung}}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}{Forschungsfragen}}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.4}{Forschungsmethode}}{3}{section.1.4}%
+\contentsline {section}{\numberline {1.5}{Forschungsziele}}{5}{section.1.5}%
+\contentsline {section}{\numberline {1.6}{Lösungsansatz}}{5}{section.1.6}%
+\contentsline {chapter}{\numberline {2}{Stand der Wissenschaft}}{10}{chapter.2}%
+\contentsline {section}{\numberline {2.1}{FZ 1.1. Aufbau und Struktur medizinischer Texte}}{10}{section.2.1}%
+\contentsline {section}{\numberline {2.2}{FZ 2.1. Überblick über depressive Erkrankungen}}{10}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}{Allgemein}}{10}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}{Symptome}}{10}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}{Formen der Depression}}{10}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}{Ursachen}}{11}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}{Behandlung}}{11}{subsection.2.2.5}%
+\contentsline {section}{\numberline {2.3}{FZ 2.2. Automatisierung durch NLP}}{11}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}{Natural Language Processing}}{11}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}{Named Entity Recognition}}{11}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}{Entity Linking}}{12}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}{spaCy}}{12}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}{pySBD}}{12}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}{Weitere Python-Bibliotheken für Machine Learning (ML) und NER}}{12}{subsection.2.3.6}%
+\contentsline {section}{\numberline {2.4}{FZ 3.1. Wissensrepräsentation mittels RDF}}{13}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}{Resource Description Framework Schema}}{13}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}{Dublin Core Metadata Initiative}}{14}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}{Serialisierung von RDF-Graphen}}{14}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}{SPARQL}}{14}{subsection.2.4.4}%
+\contentsline {chapter}{\numberline {3}{Konzeptuelle Modellierung und Entwurf}}{16}{chapter.3}%
+\contentsline {section}{\numberline {3.1}{User Centered System Design }}{16}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}{Anwendungskontext und Anwendungsfall}}{16}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}{Aktivitätsmodell}}{17}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}{Informationsmodell}}{17}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}{Architektur- und Komponentenmodell}}{18}{subsection.3.1.4}%
+\contentsline {section}{\numberline {3.2}{FZ 1.2 Theoriebildung zur Vorverarbeitung medizinischer Texte}}{18}{section.3.2}%
+\contentsline {section}{\numberline {3.3}{FZ 2.3 Theoriebildung zur Überführung medizinischen Fachvokabulars in maschinenlesbare Form zur weiteren Verarbeitung durch NLP}}{19}{section.3.3}%
+\contentsline {section}{\numberline {3.4}{FZ 3.2 Theoriebildung zur Wissensrepräsentation}}{19}{section.3.4}%
+\contentsline {section}{\numberline {3.5}{Zusammenfassung}}{20}{section.3.5}%
+\contentsline {chapter}{\numberline {4}{Proof-Of-Concept Implementierung}}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}{FZ 1.3 Implementierung zur Vorverarbeitung medizinischer Texte}}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}{FZ 2.4 Implementierung zur Überführung medizinischen Fachvokabulars in maschinenlesbare Form zur weiteren Verarbeitung durch NLP}}{23}{section.4.2}%
+\contentsline {section}{\numberline {4.3}{FZ 3.3 Implementierung zur Wissensrepräsentation}}{25}{section.4.3}%
+\contentsline {section}{\numberline {4.4}{Implementierung weiterer Funktionalität}}{25}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}{Erstellung von Trainingsdaten für den Entity-Linker}}{25}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}{Linguistische Analyse der Entitäten}}{26}{subsection.4.4.2}%
+\contentsline {chapter}{\numberline {5}{Evaluierung}}{27}{chapter.5}%
+\contentsline {section}{\numberline {5.1}{FZ 1.4 Evaluierung zur Vorverarbeitung medizinischer Texte}}{27}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}{Fähigkeiten}}{27}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}{Limitierungen}}{27}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}{Auswirkungen von pysbd auf das Preprocessing}}{27}{subsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.1}{Vergleich der Einteilung von Texten in Sätze mit und ohne pysbd}}{27}{subsubsection.5.1.3.1}%
+\contentsline {subsubsection}{\numberline {5.1.3.2}{Vergleich der Ergebnisse des Preprocessings mit und ohne pysbd}}{28}{subsubsection.5.1.3.2}%
+\contentsline {section}{\numberline {5.2}{FZ 2.5 Evaluierung zur Überführung medizinischen Fachvokabulars in maschinenlesbare Form zur weiteren Verarbeitung durch NLP}}{30}{section.5.2}%
+\contentsline {section}{\numberline {5.3}{FZ 3.4 Evaluierung zur Wissensrepräsentation}}{30}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}{Verben im Symptomvokabular}}{31}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}{Generische Überbegriffe}}{32}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}{Mehrdeutige Begriffe}}{33}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}{Adjektive}}{33}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}{Negationen}}{34}{subsection.5.3.5}%
+\contentsline {subsection}{\numberline {5.3.6}{Schwacher Ursache-Wirkungs-Zusammenhang}}{35}{subsection.5.3.6}%
+\contentsline {subsection}{\numberline {5.3.7}{Vergleich der manuell und vom MedExtractor erstellten RDF-Dateien}}{35}{subsection.5.3.7}%
+\contentsline {section}{\numberline {5.4}{Zusammenfassung}}{35}{section.5.4}%
+\contentsline {chapter}{\numberline {6}{Zusammenfassung und Ausblick}}{38}{chapter.6}%
+\contentsline {section}{\numberline {6.1}{Zusammenfassung}}{38}{section.6.1}%
+\contentsline {section}{\numberline {6.2}{Ausblick}}{38}{section.6.2}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
