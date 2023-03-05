@@ -1,9 +1,9 @@
 {
-    "RDF_filename": "../resources/wiki_extracted_relations.xml",
-    "EntityLinkerExport_filename": "../resources/wiki_entity_linker_export.xml",
-    "KnowledgeBase_filename": "../resources/wiki.kb",
-    "Sample_text_folder": "../resources/to_analyze_wikipedia",
-    "Overwrite existing knowledgebase file": "False",
+    "RDF_filename": "../resources/all_extracted_relations.xml",
+    "EntityLinkerExport_filename": "../resources/all_entity_linker_export.xml",
+    "KnowledgeBase_filename": "../resources/all.kb",
+    "Sample_text_folder": "../resources/to_analyze_all",
+    "Overwrite existing knowledgebase file": "True",
     "Diseases_filename": "../resources/training_data/training_diseases_working.txt",
     "Symptoms_filename": "../resources/training_data/training_symptoms_working.txt"
 }
