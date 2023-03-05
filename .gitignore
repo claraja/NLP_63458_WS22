@@ -3,7 +3,7 @@ __pycache__
 .idea
 *.pyi
 *.bat
-Praktikumsbericht/*.aux
+*.aux
 *.bbl
 *.blg
 *.bcf
