@@ -66,7 +66,9 @@ class RuleBasedPreprocessor():
         if self.with_pysbd:
             sent_iterator_list = [sent.text for _, sent in enumerate(doc.sents, start=1)]
         else:
-            sent_iterator_list = raw_text.split('\n')
+            nlp = spacy.load('en_core_web_sm')
+            #sent_iterator_list = raw_text.split('\n')
+            sent_iterator_list = [sent.text for sent in nlp(raw_text).sents]
         for sentence in sent_iterator_list:
             # delete trailing whitespace
             sentence = sentence.rstrip()

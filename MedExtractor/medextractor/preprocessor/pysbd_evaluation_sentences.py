@@ -20,58 +20,78 @@ def pysbd_sentence_boundaries(doc):
 
 
 filenames = [filename for filename in glob.glob("resources/to_analyze" + "/*.txt")]
-doc_name = filenames[6]
-print(f'====================== {doc_name} ==================')
+#doc_name = filenames[4]
+number_of_files = len(filenames)
+same_sentence_separation = 0
+with_some_preprocessing = True  # whether some processing should be done after the sentence boundary detection
+for doc_name in filenames[:-1]:
+    print(f'====================== {doc_name} ==================')
 
-nlp_pysbd = spacy.blank('en')
-nlp_pysbd.add_pipe('sbd', first=True)
+    nlp_pysbd = spacy.blank('en')
+    nlp_pysbd.add_pipe('sbd', first=True)
 
-nlp = spacy.load('en_core_web_sm')
+    nlp = spacy.load('en_core_web_sm')
 
-with open(doc_name, 'r', encoding='utf-8') as file:
-    raw_text = file.read()
+    with open(doc_name, 'r', encoding='utf-8') as file:
+        raw_text = file.read()
 
-    pysbd_list = []
-    nopysbd_list = []
+        pysbd_list = []
+        nopysbd_list = []
 
-    doc_pysbd = nlp_pysbd(raw_text)
-    doc_nopysbd = nlp(raw_text)
+        doc_pysbd = nlp_pysbd(raw_text)
+        doc_nopysbd = nlp(raw_text)
 
-    for sent in doc_nopysbd.sents:
-        sentence = sent.text
-        nopysbd_list.append(sentence)
+        if with_some_preprocessing:
+
+            # Sätze, die ein \n enthalten, werden an dieser Stelle in zwei Sätze aufgesplittet
+            for sent in doc_nopysbd.sents:
+                sentence = sent.text
+                sentences = sentence.split('\n')
+                for sentence in sentences:
+                    nopysbd_list.append(sentence)
 
 
-    for _, sent in enumerate(doc_pysbd.sents, start=1):
-        sentence = sent.text
-        pysbd_list.append(sentence)
+            for _, sent in enumerate(doc_pysbd.sents, start=1):
+                sentence = sent.text
+                sentences = sentence.split('\n')
+                for sentence in sentences:
+                    pysbd_list.append(sentence)
 
-    """
-    # etwas Verarbeitung:
-    # Zeilenumbrüche ('\n') aus Satzanfängen und -enden entfernen
-    for i in range(len(nopysbd_list)):
-        nopysbd_list[i] = nopysbd_list[i].rstrip('\n').lstrip('\n')
-    for i in range(len(pysbd_list)):
-        pysbd_list[i] = pysbd_list[i].rstrip('\n').lstrip('\n')
+            # Leerzeichen vor und nach Satz werden entfernt
+            nopysbd_list = [x.rstrip().lstrip() for x in nopysbd_list]
+            pysbd_list = [x.rstrip().lstrip() for x in pysbd_list]
 
-    # Leerzeichen vor und nach Satz entfernen
-    nopysbd_list = [x.rstrip().lstrip() for x in nopysbd_list]
-    pysbd_list = [x.rstrip().lstrip() for x in pysbd_list]
+            # leere Sätze werden entfernt
+            while '' in nopysbd_list:
+                nopysbd_list.remove('')
+            while '' in pysbd_list:
+                pysbd_list.remove('')
+        
+        else:
+            for sent in doc_nopysbd.sents:
+                sentence = sent.text
+                nopysbd_list.append(sentence)
 
-    # leere Sätze entfernen
-    while '' in nopysbd_list:
-        nopysbd_list.remove('')
-    while '' in pysbd_list:
-        pysbd_list.remove('')
-    """
-    if nopysbd_list!=pysbd_list:
-        print(f'ohne pysbd: ')
-        for sentence in [x for x in nopysbd_list if x not in pysbd_list]:
-            print('- ', [sentence])
-        print(f'\nmit pysbd: ')
-        for sentence in [x for x in pysbd_list if x not in nopysbd_list]:
-            print('- ', [sentence])
-    else: 
-        print('same sentence separation')
 
-    print('\n==================================================================================\n')
+            for _, sent in enumerate(doc_pysbd.sents, start=1):
+                sentence = sent.text
+                pysbd_list.append(sentence)
+        
+        if nopysbd_list!=pysbd_list:
+            print(f'ohne pysbd: ')
+            for sentence in [x for x in nopysbd_list if x not in pysbd_list]:
+                print('- ', [sentence])
+            print(f'\nmit pysbd: ')
+            for sentence in [x for x in pysbd_list if x not in nopysbd_list]:
+                print('- ', [sentence])
+        else: 
+            #print('same sentence separation')
+            same_sentence_separation += 1
+        
+        #for sentence in pysbd_list:
+        #    print('- ', [sentence])
+        
+        print('==================================================================================\n')
+print(f'Anzahl files: {number_of_files}')
+print(f'Anzahl gleichverarbeiteter Texte: {same_sentence_separation}')
+print(f'Anteil gleichverarbeiteter Texte: {same_sentence_separation/number_of_files}')
