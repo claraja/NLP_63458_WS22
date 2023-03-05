@@ -271,7 +271,7 @@ class KnowledgeExtractor():
         filenames = [filename for filename in glob.glob(self._config.text_folder_name + "/*.txt")]
         for i in tqdm(range(0, len(filenames)), total=len(filenames), desc="Processing files..."):
         # for filename in glob.glob(self._config.text_folder_name + "/*.txt"):   # only .txt files are analyzed
-            preprocessor = RuleBasedPreprocessor(filenames[i])
+            preprocessor = RuleBasedPreprocessor(filenames[i],with_pysbd=False)
             preprocessed_text = preprocessor.get_preprocessed_text()    # pre-process text file before passing it to knowledge_extractor
 
             for sent in self._nlp(preprocessed_text).sents:             # uses spaCy pipeline (w/o pysbd) ...
