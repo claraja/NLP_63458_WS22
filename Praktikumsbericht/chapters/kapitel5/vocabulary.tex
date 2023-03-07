@@ -1,0 +1,17 @@
+Für die \emph{Named Entity Recognition} ist der \emph{EntityRuler} das einfachste Mittel, das von \emph{spaCy} angeboten wird. Der \emph{Entity Ruler} sucht die trainierten Begriffe im Text, wobei bei Mehrdeutigkeit / Überlappungen der jeweils längste Ausdruck (gemessen an der Anzahl der Worte) oder, wenn dies nicht eindeutig ist, der als erstes auftretende Ausdruck angezeigt wird. Der \emph{Entity Ruler} benötigt keine Trainingssätze und ist daher für das Medextractor-Projekt am Anfang besser geeignet als der auf statistische Modellen basierende \emph{Entity Recognizer}.
+
+Mit den Exporten für den \emph{Entity Linker} steht nun aber eine größere Anzahl von Trainingsätzen zur Verfügung und es stellt sich die Frage, ob diese ein Training des \emph{Entity Recognizers} erlauben, so dass dieser zuverlässig Entitäten erkennt.
+
+In dem Jupyter Notebook \emph{entity\_recognizer\_demo.ipynb} werden \emph{Entity Ruler} und \emph{Entity Recognizer} gegenübergestellt. Die Trainingsdaten stammen in beiden Fällen aus der Datei \emph{all\_entity\_linker\_export.xml}. Diese wiederum wurden vom Medextractor aus den drei Quellen extrahiert, die auch in Abschnitt \ref{subsec:detaillierteAuswertung} analysiert werden (vgl. auch Tabelle \ref{tab:zaehlung}). Als Test-Text wurde der englischsprachige Artikel über \emph{Agoraphobie} auf Wikipedia verwendet, der nicht Teil der drei Quellen ist, aus denen die Trainingsdaten stammen.
+
+Der \emph{Entity Ruler} findet 105 und der \emph{Entity Recognizer} 98 Entitäten. Überwiegend decken sich die Ergebnisse von \emph{Entity Ruler} und \emph{Entity Recognizer}. Jedoch findet der \emph{Entity Recognizer} 12 Entitäten, die nicht trainiert wurden und falsch sind. Dazu gehören z.B. die Begriffe \emph{scholar}, \emph{social sciences}, \emph{prone} oder \emph{tense}, die vom neuronalen Netz fälschlich als Entitäten identifiziert werden.
+
+Interessanterweise findet der \emph{Entity Recognizer} den Begriff \emph{suicide ideation} (Suizidgedanken), obwohl dieser Begriff nicht im trainierten Vokabular enthalten ist. Das in dieser Arbeit aus der \emph{MetaMapLite}-Datenbank abgeleitete Trainingsvokabular kennt nur die Pluralform \emph{suicidal ideations} und verwendet das Wort \emph{suicidal} anstelle von \emph{suicide}. Daher findet der Medextractor den Begriff nicht in dem Wikipedia-Text über Agoraphobie und auch nicht in den anderen Texten, die von ihm analysiert wurden, so dass er nicht in der Wissensrepräsentation und auch nicht in der Datei \emph{all\_entity\_linker\_export.xml} enthalten ist. Auch den Begriff \emph{suicide} findet der Medextractor nicht, da dieses Wort nicht im Symptom-Vokabular enthalten ist.
+
+In den vom Medextractor gefundenen Trainingssätzen kommt der Begriff \emph{suicidal ideation} im Singular dagegen mehrfach vor, da der Medextractor in diesen Sätzen andere Symptome gefunden hat. Man mag in dem Umstand, dass der \emph{Entity Recognizer} den Begriff \emph{suicide ideation} findet, ein `intelligentes' Verhalten des zugrundeliegenden neuronalen Netzes sehen. Jedoch zeigt der Vergleich insgesamt, dass der \emph{Entity Ruler} zuverlässiger arbeitet als der \emph{Entity Recognizer}. Um die Vorteile eines statistischen Modells nutzen zu können (z.B. kontextsensitive Worterkennung), bedarf es offenbar noch mehr Trainingsdaten.
+
+
+
+
+
+

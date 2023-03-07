@@ -1,86 +1,59 @@
-\subsection{Auswirkungen von pysbd auf das Preprocessing}
+\subsection{Stärken und Schwächen des Preprocessors}
+\label{sec:evaluation_preprocessor}
+\subsubsection{Funktionen}
+[TODO]
 
-\subsubsection{Vergleich der Einteilung von Texten in Sätze mit und ohne pysbd}
-Es soll untersucht werden worin die Vor- und Nachteile beim Einteilen von Texten in Sätze mit der Bibliothek ‚pysbd‘ liegen. Dafür wurde zunächst die Verarbeitung einzelner Texte in der python-Datei \emph{pysbd\_evaluation\_sentences.py} des Repositories verglichen.\\
+\subsubsection{Einschränkungen} 
+Bei einigen Formatierungen von Sätzen / Informationsauflistungen hat die aktuelle Implementierung des Preprocessors noch Probleme.
+So kann zum Beispiel der folgende (verkürzte) Abschnitt einer Informationsseite zum Thema \emph{Drug-Dependent People} (\cite{drug_dependent_people}) noch nicht in sinnvolle Sätze transformiert werden:\\
+\begin{addmargin}{10pt}
+	\emph{
+		All drug dependency exhibits similar characteristics— • Chronic, progressive, and relapsing disease • Denial • Lying and deceit • Changes in normal behavior
+	}
+\end{addmargin}
+\vspace*{5mm}
 
-Der Hauptunterschied in der Einteilung von Texten in einzelne Sätze mit und ohne pysbd besteht darin, dass ein Zeilenumbruch unterschiedlich interpretiert wird.
-Ohne pysbd wird zum Beispiel der Satz
+\subsection{PySBD}
+\label{evaluation_pysbd}
+PySBD (\cite{sadvilkar_pysbd_2020}) ist ein regelbasierter \emph{Sentence Boundary Detector/Disambiguater} (Satzgrenzen-Finder). Golden Rules Set (\cite{golden_rules}) ...[TODO]
+
+\subsubsection{Vergleich der Einteilung von Texten in Sätze mit und ohne PySBD}
+Es soll untersucht werden worin die Vor- und Nachteile beim Einteilen von Texten in Sätze mit der Bibliothek \emph{PySBD} liegen. 
+Alternativ gibt es die Möglichkeit den Sentencizer von SpaCy zu nutzen. Für den Vergleich wird die Verarbeitung der 51 Texte in 
+\emph{medextractor/resources/to\_analyze} verglichen. Dies geschieht in der python-Datei \emph{medextractor/preprocessor/pysbd\_evaluation\_sentences.py}.\\
+
+Es fällt schnell auf, dass der Hauptunterschied in der Einteilung von Texten in einzelne Sätze mit und ohne PySBD darin besteht, 
+dass ein Zeilenumbruch unterschiedlich interpretiert wird.
+Aus dem folgenden Textabschnitt in der Datei \emph{agorophobia.txt}\\
 
 \begin{quotation}
-	'\verb!\n!Symptoms - Agoraphobia\verb!\n!\verb!\n!The severity of agoraphobia can vary significantly between individuals.'
+	\glqq \verb!\n!Symptoms - Agoraphobia\verb!\n!\verb!\n!The severity of agoraphobia can vary significantly between individuals.\grqq
 \end{quotation}
 
-gefunden, während die Aufteilung in Sätze mit pysbd folgendermaßen aussieht:
+erhält man mit dem SpaCy Sentencizer zum Beispiel den Satz
 
-\begin{enumerate}
-	\item 'Symptoms - Agoraphobia\verb!\n!\verb!\n!'
-	\item 'The severity of agoraphobia can vary significantly between individuals.\verb!\n!\verb!\n!'
-\end{enumerate}
-
-Ein weiteres Beispiel:\\
-
-ohne pysbd: 
 \begin{quotation}
-	'The symptoms of agoraphobia can be broadly classified into 3 types:\verb!\n!\verb!\n!    physical\verb!\n!    cognitive\verb!\n!    behavioural\verb!\n!\verb!\n!Physical symptoms\verb!\n!\verb!\n!The physical symptoms of agoraphobia usually only occur when you find yourself in a situation or environment that causes anxiety.\verb!\n!\verb!\n!'
+	\glqq \verb!\n!Symptoms - Agoraphobia\verb!\n!\verb!\n!The severity of agoraphobia can vary significantly between individuals.\grqq,
 \end{quotation}
 
-mit pysbd:
+während die Aufteilung in Sätze mit PySBD folgendermaßen aussieht:
+
 \begin{enumerate}
-	\item 'The symptoms of agoraphobia can be broadly classified into 3 types:\verb!\n!\verb!\n!    '
-	\item 'physical\verb!\n!    '
-	\item 'cognitive\verb!\n!    '
-	\item 'behavioural\verb!\n!\verb!\n!'
-	\item 'Physical symptoms\verb!\n!\verb!\n!'
-	\item 'The physical symptoms of agoraphobia usually only occur when you find yourself in a situation or environment that causes anxiety.\verb!\n!\verb!\n!'
+	\item \glqq Symptoms - Agoraphobia\verb!\n!\verb!\n!\grqq
+	\item \glqq The severity of agoraphobia can vary significantly between individuals.\verb!\n!\verb!\n!\grqq
 \end{enumerate}
 
-Eine Gemeinsamkeit ist, dass mit beide Arten zur Satzerkennung \emph{leere} Sätze wie z.B. \verb!\n! oder \verb!\n!\verb!\n! finden.
-
-\subsubsection{Vergleich der Ergebnisse des Preprocessings mit und ohne pysbd}
-
-Als nächstes wurde untersucht inwieweit die Sätze, die durch das Preprocessing des MedExtractors entstehen, sich unterscheiden, wenn man pysbd zur Verarbeitung nutzt bzw. nicht nutzt.
-Dafür wurde zunächst \emph{with\_pysbd} als Attribut der Klasse \emph{RuleBasedPreprocessor} eingeführt. Je nachdem, welchen Wert dieses Attribut annimmt (True oder False), erfolgt die Vorverarbeitung des übergebenen Textes mit (True) oder ohne (False) pysbd. Anschließend wurden mithilfe des Python-Skriptes \emph{pysbd\_evaluation\_preprocessor.py} 51 der Beispieltexte mit jeweils beiden Methoden verarbeitet und das Ergebnis verglichen. 21 der 51 Texte (d. h. etwa 41\%) der Texte wurden exakt gleich verarbeitet, d.h. für diese Texte wäre es egal, ob man pysbd nutzt oder nicht.\\
-In den Texten, die nicht gleich verarbeitet wurden, sind die Unterschiede teilweise vernachlässigbar. Z. B. wird in dem Text \emph{fabricatedIllness.txt} ohne pysbd der Satz 
-\begin{quotation}
-	'For more information, you can read the NICE guidance about when to suspect child maltreatment in under 18s...symptoms only appear when the parent or carer is present'
-\end{quotation}
-ausgegeben, während dieser mit pysbd in die folgenden beiden Sätze aufgeteilt wurde:
+Insgesamt wird von den 51 Texten nur einer vom PySBD- und SpaCy-Sentencizer auf die gleiche Art in Sätze eingeteilt.\\
+Wendet man nun die folgende Art der Nachverarbeitung der Texte an:
 \begin{enumerate}
-	\item 'For more information, you can read the NICE guidance about when to suspect child maltreatment in under 18s'
-	\item 'symptoms only appear when the parent or carer is present'
+	\item Sätze, die ein \glqq \verb!\n!\grqq enthalten, werden an dieser Stelle in zwei Sätze aufgesplittet,
+	\item Leerzeichen am Anfang und am Ende von Sätzen werden entfernt,
+	\item leere Sätze werden entfernt,
 \end{enumerate}
-Der Originalabschnitt im Text ist in diesem Fall
-\begin{quotation}
-	[$\dots$]
-	For more information, you can read the NICE guidance about when to suspect child maltreatment in under 18s.\\
-	
-	They should also look out for 1 or more of the following warning signs:\\
-	
-	symptoms only appear when the parent or carer is present\\
-	the only person claiming to notice symptoms is the parent or carer\\
-	the parent or carer does not let healthcare professionals see the child on their own
-	[$\dots$]
-\end{quotation}
-Der Start der Aufzählung wird hier nicht wie erwartet verarbeitet, wodurch der Satz \emph{They should also look out for 1 or more of the following warning signs:} für beide Methoden aus dem verarbeiteten Text herausfällt.\\
+ werden schon 41 der 51 Texte komplett gleich verarbeitet. Ausnahmen bilden dann (fast) nur noch Sätze, die Zeichen wie z.B. \glqq ]\grqq, \glqq :\grqq und \glqq -\grqq enthalten (diese speziellen Zeichen werden vom PySBD- und SpaCy-Sentencizer unterschiedlich behandelt), oder Satzanfänge ohne vorhergehendes Leerzeichen.\\
 
-Teilweise sind auch nur einzelne Satzzeichen und/oder \emph{leere} Sätze der Unterschied zwischen den Verarbeitungsmethoden, z. B. für den Text SkinPickingDisorder.txt. Ohne pysbd werden die beiden Sätze
-\begin{enumerate}
-	\item ''
-	\item 'Also called dermatillomania or excoriation disorder, skin picking disorder is where you cannot stop picking at your skin'
-\end{enumerate}
-gefunden.
-Mit pysbd wird stattdessen nur der Satz 
-\begin{quotation}
-	'.Also called dermatillomania or excoriation disorder, skin picking disorder is where you cannot stop picking at your skin'
-\end{quotation}
-gefunden.\\
-
-Teilweise sind die Unterschiede aber schwerwiegender, z. B. für den Text \emph{Psychosis-2.txt} werden in dem mit pysbd verarbeiteten Text Sätze ausgegeben, die man in dem ohne pysbd verarbeiteten Text nicht wiederfindet. Diese zusätzlichen Texte sind die folgenden:
-\begin{enumerate}
-	\item 'Research supports a variety of treatments for early psychosis, especially coordinated specialty care'
-	\item 'In 2008, the National Institute of Mental Health (NIMH) launched the research initiative, Recovery After an Initial Schizophrenia Episode (RAISE) project'
-	\item 'RAISE studied coordinated specialty care treatments and the best ways to intervene after people begin to experience psychotic symptoms and to help them return to a path toward productive, independent lives'
-\end{enumerate}
-
-[TODO: herausfinden, woher dieser Unterschied kommt; ggfs. weitere Unterschiede; Fazit, ob pysbd besser ist oder nicht; allgemeine Infos zu pysbd]
+ 
+\subsubsection{Fazit zu PySBD}
+Der Preprocessing-Schritt des MedExtractors enthält nicht nur das Erkennen von Satzgrenzen, sondern noch weitere Schritte um die Sätze so umzuformen, dass sie in der weiteren Verarbeitung mit dem MedExtractor gut genutzt werden können (siehe Kapitel [TODO]). Für die Zwecke des MedExtractors und für die zur Evaluierung genutzten Texte war PySBD sehr hilfreich. Während der Evaluierung ist aber auch aufgefallen, dass mit Berücksichtigung der Eigenheiten des SpaCy Sentencizers wahrscheinlich ähnlich gute Ergebnisse im Preprocessing-Schritt hätten erzielt werden können. Somit kann PySBD für die Zwecke des MedExtractors zwar empfohlen werden, mit anderen Sentence Boundary Detectorn könnten aber voraussichtlich ähnlich gute Ergebnisse erzielt werden. \\
+In der weiteren Entwicklung des Preprocessors, bzw. des MedExtractors, könnte man versuchen mit einer besseren Einstellung der Parameter von PySBD bessere Ergebnisse zu erzielen, oder mit einem anderen \emph{Sentence Boundary Detector} (mehrere Alternativen werden in \cite{sadvilkar_pysbd_2020} genannt) zu arbeiten.
 

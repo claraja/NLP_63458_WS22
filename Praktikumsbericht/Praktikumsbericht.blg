@@ -1,0 +1,17 @@
+[0] Config.pm:306> INFO - This is Biber 2.18
+[0] Config.pm:309> INFO - Logfile is 'Praktikumsbericht.blg'
+[175] biber-MSWIN64:340> INFO - === 
+[230] Biber.pm:418> INFO - Reading 'Praktikumsbericht.bcf'
+[383] Biber.pm:978> INFO - Found 24 citekeys in bib section 0
+[403] Biber.pm:4401> INFO - Processing section 0
+[420] Biber.pm:4592> INFO - Looking for bibtex file 'Praktikumsbericht.bib' for section 0
+[489] bibtex.pm:1713> INFO - LaTeX decoding ...
+[561] bibtex.pm:1518> INFO - Found BibTeX data source 'Praktikumsbericht.bib'
+[730] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[731] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[731] Biber.pm:4221> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[731] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
+[763] bbl.pm:654> INFO - Writing 'Praktikumsbericht.bbl' with encoding 'UTF-8'
+[776] bbl.pm:757> INFO - Output to Praktikumsbericht.bbl
+[777] Biber.pm:130> WARN - I didn't find a database entry for 'drug_dependent_people' (section 0)
+[777] Biber.pm:132> INFO - WARNINGS: 1

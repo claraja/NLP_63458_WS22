@@ -1,0 +1,11 @@
+__pycache__
+*.pyc
+.idea
+*.pyi
+*.bat
+*.aux
+*.bbl
+*.blg
+*.bcf
+*.log
+*.gz
