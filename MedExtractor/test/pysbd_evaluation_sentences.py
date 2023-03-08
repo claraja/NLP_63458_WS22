@@ -19,12 +19,12 @@ def pysbd_sentence_boundaries(doc):
     return doc
 
 
-filenames = [filename for filename in glob.glob("resources/to_analyze" + "/*.txt")]
+filenames = [filename for filename in glob.glob("../resources/to_analyze_wikipedia" + "/*.txt")]
 #doc_name = filenames[4]
 number_of_files = len(filenames)
 same_sentence_separation = 0
 with_some_preprocessing = True  # whether some processing should be done after the sentence boundary detection
-for doc_name in filenames[:-1]:
+for doc_name in filenames[1:]:
     print(f'====================== {doc_name} ==================')
 
     nlp_pysbd = spacy.blank('en')
@@ -79,11 +79,11 @@ for doc_name in filenames[:-1]:
         
         if nopysbd_list!=pysbd_list:
             print(f'ohne pysbd: ')
-            for sentence in [x for x in nopysbd_list if x not in pysbd_list]:
+            for sentence in pysbd_list:#[x for x in nopysbd_list if x not in pysbd_list]:
                 print('- ', [sentence])
-            print(f'\nmit pysbd: ')
-            for sentence in [x for x in pysbd_list if x not in nopysbd_list]:
-                print('- ', [sentence])
+            #print(f'\nmit pysbd: ')
+            #for sentence in [x for x in pysbd_list if x not in nopysbd_list]:
+            #    print('- ', [sentence])
         else: 
             #print('same sentence separation')
             same_sentence_separation += 1
