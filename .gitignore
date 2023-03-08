@@ -8,4 +8,4 @@ __pycache__
 *.blg
 *.bcf
 *.log
-*.gz
+*.synctex.gz
