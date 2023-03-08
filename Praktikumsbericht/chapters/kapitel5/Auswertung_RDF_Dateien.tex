@@ -3,11 +3,24 @@
 \subsection{Vergleich der manuell und vom MedExtractor erstellten RDF-Dateien}
 \label{subsec:RDF-Vergleich} 
 
+Zur Evaluierung des Systems wurden von zehn der verwendeten Texte manuelle RDF-Dateien erstellt, um diese mit dem vom MedExtractor erstellten RDF-Dateien zu vergleichen. 
 
-Beispielauswertung des Depressionstextes. In Tabelle \ref{tab:vergleich_manuell_medextractor} ist gegenübergestellt, welchen Entitäten in der manuell erstellten Wissensrepräsentation Entsprechungen in der MedExtractor-Wissensrepräsentation gegenüberstehen. Umgekehrt stellt Tabelle \ref{tab:vergleich_manuell_medextractor} dar, welche Entitäten in der manuell erstellten Wissensrepräsentation den vom MedExtractor gefundenen Entitäten entsprechen, sofern jeweils welche gefunden wurden.
+Da der MedExtractor Krankheiten Symptome zuordnet, wurden ebenso bei der manuellen Dateierstellung aus den Texten Symptome ausgewählt, die in die RDF-Dateien aufgenommen wurden. Diese manuelle Erstellung erfordert jedoch Augenmaß, da es kein absolutes Kriterium dafür gibt, was als Symptom einer Krankheit anzusehen ist. Insbesondere enthalten die Arbeitstexte häufig Konjunktionen wie „feeling irritable and intolerant of others“, die an sich als zwei separate Symptome „feeling irritable“ sowie „feeling intolerant of others“ zu betrachten sind. Da der MedExtractor regelbasiert arbeitet und keine Funktionalität enthält, die den Bezug zwischen „feeling“ und dem hinter der Konjunktion folgenden „intolerant of others“ herstellen könnte, wurden Gesamtwortgruppen in die manuellen RDF-Dateien aufgenommen mit dem Risiko, dass nur ein Teil der Wortgruppen erkannt wird.
+
+Zur Auswertung wurden die erstellten Dateien miteinander verglichen und Precision (Genauigkeitsquote) und Recall (Vollständigkeitsquote) ermittelt:
+
+\[ Precision = \frac{True\ Positive}{True\ Positive + False\ Positive} \]
+
+\[ Recall = \frac{True\ Positive}{True\ Positive + False\ Negative} \]
+
+Dabei wurden diese Werte wie folgt berechnet:
+\begin{itemize}
+\item True Positive: als korrekt gefundene Symptome wurden Symptome gewertet, die der MedExtractor erkannt hat und die in der vom MedExtractor erkannten Form einer Teilzeichenkette eines manuell aufgenommenen Symptoms entsprechen. 
+\item False Positive: als falsch gefundene Symptome wurden Symptome gewertet, die der MedExtractor erkannt hat und die in der vom MedExtractor erkannten Form keiner Teilzeichenkette eines manuell aufgenommenen Symptoms entsprechen.
+\item False Negative: als nicht gefundene Symptome wurden Symptome gewertet, die manuell aufgenommenen wurden, vom MedExtractor jedoch nicht (auch nicht in Form einer Teilzeichenkette) erkannt wurden.
+\end{itemize}
 
 
-\lipsum[1-1]
 
 \begin{table}
 \begin{center}
@@ -49,6 +62,9 @@ having difficulties in your home, work or famil... &                            
 \end{center}
 \end{table}
 
+Als Beispiel wird hier die Auswertung des Depressionstextes angeführt. In Tabelle \ref{tab:vergleich_manuell_medextractor} ist gegenübergestellt, welchen Entitäten in der manuell erstellten Wissensrepräsentation Entsprechungen in der MedExtractor-Wissensrepräsentation gegenüberstehen. Die Gesamtanzahl Symptome in der manuell erstellten Datei (entspricht True Positives + False Positives) beträgt 27. Von diesen 27 manuell ermittelten Symptomen wurden vom Medextractor 14 Symptome in Teilen erkannt (teilweise erkannte Symptome werden in dieser Evaluierung als positiv erkannt gezählt). Damit ergibt sich eine Precision von xxxx.
+
+
 
 \begin{table}
 \begin{center}
@@ -79,25 +95,40 @@ psychological symptoms &                                                    \\
 \bottomrule
 \end{tabular}
 \caption{Vom MedExtractor gefundene Entitäten verglichen mit den Entsprechungen in der manuell erstellten Wissensrepräsentation}
-\label{tab:vergleich_manuell_medextractor}
+\label{tab:vergleich_medextractor_manuell}
 \end{center}
 \end{table}
 
-Auswertung der Beispieltexte:
+Umgekehrt stellt Tabelle \ref{tab:vergleich_medextractor_manuell} dar, welche Entitäten in der manuell erstellten Wissensrepräsentation die vom MedExtractor gefundenen Entitäten entsprechen. Der MedExtractor hat insgesamt 20 Symptome gefunden (entspricht True Positives + False Positives). 18 dieser Symptome entsprechen Symptomen, die in der manuell erstellten Datei enthalten sind (True Positives) und 2 der vom MedExtractor gefundenen Symptome sind nicht in der manuell erstellten Datei enthalten (False Positives). Damit ergibt sich ein Recall von 90%. 
+
+Von den beiden False Positives ist „psychological symptoms“ kein Symptom an sich und „low self esteem“ ist in der Form als „low self-esteem“ im ursprünglichen Text und daher auch in der manuellen Datei enthalten, aber bei der Vorverarbeitung des MedExtractors wurden die Bindestriche entfernt, und deshalb konnte diese Übereinstimmung nicht gefunden werden.
+
+
+Tabelle \ref{tab:precision_recall} führt die Auswertungsergebnisse aller Beispieltexte an. 
+
+Klaustrophobie, Stress
 
 \begin{table}
 \begin{center}
-\begin{tabular}{lll}
+\begin{tabular}{lllll}
 \toprule
-      Text & Precision & Recall \\
+            Text & No. entries        & No. entries              & Precision & Recall \\
+                 & manual             &  Medextractor            &           &        \\
 \midrule
-Depression &     0.900 &  0.581 \\
-Anxiety Disorders &     -- &  --- \\
--- &     -- &  --- \\
+      depression &                 27 &                       20 &     0.900 &  0.875 \\
+anxietydisorders &                 42 &                       16 &     0.500 &  0.529 \\
+         bulimia &                 25 &                        5 &     0.800 &  0.800 \\
+  claustrophobia &                 37 &                        0 &     0.000 &  0.000 \\
+        dementia &                 21 &                       15 &     0.267 &  0.214 \\
+ eatingdisorders &                 41 &                        5 &     0.600 &  0.500 \\
+   panicdisorder &                 24 &                        5 &     0.800 &  0.800 \\
+       psychosis &                 22 &                        5 &     1.000 &  1.000 \\
+   socialanxiety &                 16 &                        3 &     0.000 &  0.000 \\
+          stress &                 18 &                        0 &     0.000 &  0.000 \\
 \bottomrule
 \end{tabular}
 \caption{Precision und Recall der Beispieltexte}
-\label{tab:vergleich_manuell_medextractor}
+\label{tab:precision_recall}
 \end{center}
 \end{table}
 
