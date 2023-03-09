@@ -1,0 +1,3 @@
+<entity_linker_export><entities><entity typ="str">stress</entity></entities><aliases><alias typ="str">stressed<alias_entities><alias_entity>stress</alias_entity></alias_entities></alias></aliases><training><sample typ="str">Stress
+
+Most people feel stressed sometimes and some people find stress helpful or even motivating.<links><alias_type typ="str">SYMPTOM</alias_type><position typ="tuple">(25,33)<entities_training><training_entity typ="str">stress<probability><prob typ="float">1.0</prob></probability></training_entity></entities_training></position></links></sample></training></entity_linker_export>

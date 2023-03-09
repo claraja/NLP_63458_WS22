@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:nlp="http://fapranlp.de/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://fapranlp.de/hot_flushes">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sweating"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:tachycardia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sick"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:pins_and_needles"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:chest_pain"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:numbness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:claustrophobia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:psychological_symptoms"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:rapid_heartbeat"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:fear_of_dying"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_faint"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:fear_of_fainting"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:dizziness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:trembling"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:choking_sensation"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:difficulty_breathing"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:shortness_of_breath"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:headaches"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:disorientated"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic_attack"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/claustrophobia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:claustrophobia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sweating"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:tachycardia"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sick"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:pins_and_needles"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:chest_pain"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:numbness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:psychological_symptoms"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:rapid_heartbeat"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:fear_of_dying"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_faint"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:fear_of_fainting"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:dizziness"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:trembling"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:choking_sensation"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:difficulty_breathing"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:shortness_of_breath"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:headaches"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:disorientated"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic_attack"/>
+  </rdf:Description>
+</rdf:RDF>
