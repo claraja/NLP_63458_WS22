@@ -26,7 +26,7 @@ Dabei wurden diese Werte wie folgt berechnet:
 \begin{center}
 \begin{tabular}{ll}
 \toprule
-                                    Symptom\_manual &                 Symptom\_found \\
+                      Manuell extrahiertes Symptom &       MedExtractor-Symptom(e) \\
 \midrule
              not getting any enjoyment out of life &                               \\
                     low sex drive (loss of libido) &  low sex drive;loss of libido \\
@@ -62,7 +62,7 @@ having difficulties in your home, work or famil... &                            
 \end{center}
 \end{table}
 
-Als Beispiel wird hier die Auswertung des Depressionstextes angeführt. In Tabelle \ref{tab:vergleich_manuell_medextractor} ist gegenübergestellt, welchen Entitäten in der manuell erstellten Wissensrepräsentation Entsprechungen in der MedExtractor-Wissensrepräsentation gegenüberstehen. Die Gesamtanzahl Symptome in der manuell erstellten Datei (entspricht True Positives + False Positives) beträgt 27. Von diesen 27 manuell ermittelten Symptomen wurden vom Medextractor 14 Symptome in Teilen erkannt (teilweise erkannte Symptome werden in dieser Evaluierung als positiv erkannt gezählt). Damit ergibt sich eine Precision von xxxx.
+Als Beispiel wird hier die Auswertung des Depressionstextes angeführt. In Tabelle \ref{tab:vergleich_manuell_medextractor} ist gegenübergestellt, welchen Entitäten in der manuell erstellten Wissensrepräsentation Entsprechungen in der MedExtractor-Wissens\-reprä\-sentation gegenüberstehen. Die Gesamtanzahl Symptome in der manuell erstellten Datei (entspricht True Positives + False Positives) beträgt 27. Von diesen 27 manuell ermittelten Symptomen wurden vom Medextractor 14 Symptome in Teilen erkannt (teilweise erkannte Symptome werden in dieser Evaluierung als positiv erkannt gezählt). Damit ergibt sich eine Precision von 52\%.
 
 
 
@@ -70,7 +70,7 @@ Als Beispiel wird hier die Auswertung des Depressionstextes angeführt. In Tabel
 \begin{center}
 \begin{tabular}{ll}
 \toprule
-  Symptom\_Medextractor &                                   Original\_Symptom \\
+  Medextractor-Symptom &                       Manuell extrahiertes Symptom \\
 \midrule
         lack of energy &                                     lack of energy \\
              interests &              neglecting your hobbies and interests \\
@@ -99,14 +99,14 @@ psychological symptoms &                                                    \\
 \end{center}
 \end{table}
 
-Umgekehrt stellt Tabelle \ref{tab:vergleich_medextractor_manuell} dar, welche Entitäten in der manuell erstellten Wissensrepräsentation die vom MedExtractor gefundenen Entitäten entsprechen. Der MedExtractor hat insgesamt 20 Symptome gefunden (entspricht True Positives + False Positives). 18 dieser Symptome entsprechen Symptomen, die in der manuell erstellten Datei enthalten sind (True Positives) und 2 der vom MedExtractor gefundenen Symptome sind nicht in der manuell erstellten Datei enthalten (False Positives). Damit ergibt sich ein Recall von 90%. 
+Umgekehrt stellt Tabelle \ref{tab:vergleich_medextractor_manuell} dar, welchen Entitäten in der manuell erstellten Wissensrepräsentation die vom MedExtractor gefundenen Entitäten entsprechen. Der MedExtractor hat insgesamt 20 Symptome gefunden (entspricht True Positives + False Positives). 18 dieser Symptome entsprechen Symptomen, die in der manuell erstellten Datei enthalten sind (True Positives) und 2 der vom MedExtractor gefundenen Symptome sind nicht in der manuell erstellten Datei enthalten (False Positives). Damit ergibt sich ein Recall von 90\%. 
 
 Von den beiden False Positives ist „psychological symptoms“ kein Symptom an sich und „low self esteem“ ist in der Form als „low self-esteem“ im ursprünglichen Text und daher auch in der manuellen Datei enthalten, aber bei der Vorverarbeitung des MedExtractors wurden die Bindestriche entfernt, und deshalb konnte diese Übereinstimmung nicht gefunden werden.
 
 
-Tabelle \ref{tab:precision_recall} führt die Auswertungsergebnisse aller Beispieltexte an. 
+Tabelle \ref{tab:precision_recall} führt die Auswertungsergebnisse aller Beispieltexte an. Bei der Durchsicht der XML-Dateien fiel auf, dass die Dateien für Klaustrophobie und Stress keine Einträge enthielten. Die Ursache dafür ist, dass beide Erkrankungen nicht in der Trainingsdatei der Erkrankungen enthalten sind. Um zu untersuchen, welche Ergebnisse erzielt werden, wenn die Krankheit doch erkannt wird, wurden die Namen der Krankheiten manuell im Vokabular ergänzt und der MedExtractor erneut ausgeführt. Für Klaustrophobie ergeben sich dann gute Werte. Bei Stress jedoch ist kein nennenswerter Unterschied festzustellen, da Stress sowohl Krankheit als auch Symptom sein kann.
 
-Klaustrophobie, Stress
+Insgesamt sind die Precision-Werte relativ hoch aber die Recall-Werte nicht so gut. Dies erklärt sich damit, dass die manuell ermittelten Symptome teilweise sehr komplex sind und vom MedExtractor in dieser Form nicht erkannt werden können.
 
 \begin{table}
 \begin{center}
@@ -115,16 +115,18 @@ Klaustrophobie, Stress
             Text & No. entries        & No. entries              & Precision & Recall \\
                  & manual             &  Medextractor            &           &        \\
 \midrule
-      depression &                 27 &                       20 &     0.900 &  0.875 \\
-anxietydisorders &                 42 &                       16 &     0.500 &  0.529 \\
-         bulimia &                 25 &                        5 &     0.800 &  0.800 \\
-  claustrophobia &                 37 &                        0 &     0.000 &  0.000 \\
-        dementia &                 21 &                       15 &     0.267 &  0.214 \\
- eatingdisorders &                 41 &                        5 &     0.600 &  0.500 \\
-   panicdisorder &                 24 &                        5 &     0.800 &  0.800 \\
-       psychosis &                 22 &                        5 &     1.000 &  1.000 \\
-   socialanxiety &                 16 &                        3 &     0.000 &  0.000 \\
-          stress &                 18 &                        0 &     0.000 &  0.000 \\
+      Depression &                 27 &                       20 &     0.900 &  0.519 \\
+Anxiety Disorders &                 42 &                       16 &     0.500 &  0.214 \\
+         Bulimia &                 25 &                        5 &     0.800 &  0.160 \\
+  Claustrophobia &                 37 &                   0 / 42 & 0.0 / 0.905 & 0.0 / 0.541 \\
+        Dementia &                 21 &                       15 &     0.267 &  0.143 \\
+ Eating Disorders &                 41 &                        5 &     0.600 &  0.049 \\
+   Panic Disorder &                 24 &                        5 &     0.800 &  0.167 \\
+       Psychosis &                 22 &                        5 &     1.000 &  0.182 \\
+   Social Anxiety &                 16 &                        3 &     0.000 &  0.000 \\
+          Stress &                 18 &                    0 / 1 & 0.0 / 0.0 & 0.0 / 0.0 \\
+\midrule
+       MEAN &                27.33 &     9.75 & 0.48 & 0.16 \\
 \bottomrule
 \end{tabular}
 \caption{Precision und Recall der Beispieltexte}
