@@ -1,26 +1,78 @@
-\subsection{Stärken und Schwächen des Preprocessors}
-\label{sec:evaluation_preprocessor}
-\subsubsection{Funktionen}
-[TODO]
+Zur Evaluierung des Preprocessors wurden sowohl allgemeine Untersuchungen des Preprocessors angestellt als auch eine Analyse des Sentence Boundary Detectors \emph{PySBD} durchgeführt.
 
-\subsubsection{Einschränkungen} 
-Bei einigen Formatierungen von Sätzen / Informationsauflistungen hat die aktuelle Implementierung des Preprocessors noch Probleme.
-So kann zum Beispiel der folgende (verkürzte) Abschnitt einer Informationsseite zum Thema \emph{Drug-Dependent People} (\cite{drug_dependent_people}) noch nicht in sinnvolle Sätze transformiert werden:\\
-\begin{addmargin}{10pt}
-	\emph{
-		All drug dependency exhibits similar characteristics— • Chronic, progressive, and relapsing disease • Denial • Lying and deceit • Changes in normal behavior
-	}
-\end{addmargin}
-\vspace*{5mm}
+\subsection{Allgemeine Evaluation des Preprocessors}
+\label{sec:evaluation_preprocessor}
+
+Ziel des Preprocessors ist es, die gegebenen Texte so umzuwandeln, dass der anschließend angewandte SpaCy-Sentencizer den Text in möglichst sinnvolle Sätze aufteilt, die dann weiterverarbeitet werden. Ein Hauptaugenmerk während der Implementierung lag auf der sinnvollen Aufteilung von Aufzählungen. Wie schon im Kapitel \ref{ch:implementierung} geschrieben gelingt das.
+
+Ohne den Preprocessor würde man der weiteren Verarbeitung z. B. den \glqq Satz\grqq aus dem \emph{TextToAnalyze.txt} übergeben:
+
+\begin{quotation}
+	\glqq Psychological symptoms\verb!\n!\verb!\n!The psychological symptoms of depression include:\verb!\n!- continuous low mood or sadness\verb!\n!- feeling hopeless and helpless\verb!\n!- having low self-esteem\verb!\n!- feeling tearful\verb!\n!- feeling guilt-ridden\verb!\n!- feeling irritable and intolerant of others\verb!\n!- having no motivation or interest in things\verb!\n!- finding it difficult to make decisions\verb!\n!- not getting any enjoyment out of life\verb!\n!- feeling anxious or worried\verb!\n!- having suicidal thoughts or thoughts of harming yourself\verb!\n!\verb!\n!Physical symptoms\verb!\n!\verb!\n!The physical symptoms of depression include:\verb!\n!- moving or speaking more slowly than usual\verb!\n!- changes in appetite or weight (usually decreased, but sometimes increased)\verb!\n!- constipation\verb!\n!- unexplained aches and pains\verb!\n!- lack of energy\verb!\n!- low sex drive (loss of libido)\verb!\n!- changes to your menstrual cycle\verb!\n!- disturbed sleep – for example, finding it difficult to fall asleep at night or waking up very early in the morning\verb!\n!\verb!\n!Social symptoms\verb!\n!\verb!\n!The social symptoms of depression include:\verb!\n!- avoiding contact with friends and taking part in fewer social activities\verb!\n!- neglecting your hobbies and interests\verb!\n!- having difficulties in your home, work or family life\verb!\n!\verb!\n!Severities of depression\verb!\n!\verb!\n!Depression can often come on gradually, so it can be difficult to notice something is wrong.\grqq
+\end{quotation} 
+
+Mit Anwendung des Preprocessors übergibt man stattdessen die folgenden Sätze:
+\begin{enumerate}
+	\item \glqq The psychological symptoms of depression include continuous low mood or sadness.\verb!\n!\grqq
+	\item \glqq The psychological symptoms of depression include feeling hopeless and helpless.\verb!\n!\grqq
+	\item \glqq The psychological symptoms of depression include having low self esteem.\verb!\n!\grqq
+	\item \glqq The psychological symptoms of depression include feeling tearful.\verb!\n!\grqq
+	\item \glqq The psychological symptoms of depression include feeling guilt ridden.\verb!\n!\grqq
+	\item \glqq The psychological symptoms of depression include feeling irritable and intolerant of others.\verb!\n!\grqq
+	\item \glqq The psychological symptoms of depression include having no motivation or interest in things.\verb!\n!\grqq
+	\item \glqq The psychological symptoms of depression include finding it difficult to make decisions.\verb!\n!\grqq
+	\item \glqq The psychological symptoms of depression include not getting any enjoyment out of life.\verb!\n!\grqq
+	\item \glqq The psychological symptoms of depression include feeling anxious or worried.\verb!\n!\grqq
+	\item \glqq The psychological symptoms of depression include having suicidal thoughts or thoughts of harming yourself.\verb!\n!\grqq
+	\item \glqq Physical symptoms.\verb!\n!\grqq
+	\item \glqq The physical symptoms of depression include moving or speaking more slowly than usual.\verb!\n!\grqq
+	\item \glqq The physical symptoms of depression include changes in appetite or weight (usually decreased, but sometimes increased).\verb!\n!\grqq
+	\item \glqq The physical symptoms of depression include constipation.\verb!\n!\grqq
+	\item \glqq The physical symptoms of depression include unexplained aches and pains.\verb!\n!\grqq
+	\item \glqq The physical symptoms of depression include lack of energy.\verb!\n!\grqq
+	\item \glqq The physical symptoms of depression include low sex drive (loss of libido).\verb!\n!\grqq
+	\item \glqq The physical symptoms of depression include changes to your menstrual cycle.\verb!\n!\grqq
+	\item \glqq The physical symptoms of depression include disturbed sleep for example, finding it difficult to fall asleep at night or waking up very early in the morning.\verb!\n!\grqq
+	\item \glqq Social symptoms.\verb!\n!\grqq
+	\item \glqq The social symptoms of depression include avoiding contact with friends and taking part in fewer social activities.\verb!\n!\grqq
+	\item \glqq The social symptoms of depression include neglecting your hobbies and interests.\verb!\n!\grqq
+	\item \glqq The social symptoms of depression include having difficulties in your home, work or family life.\verb!\n!\grqq
+	\item \glqq Severities of depression.\verb!\n!\grqq
+	\item \glqq Depression can often come on gradually, so it can be difficult to notice something is wrong.\verb!\n!\grqq 
+\end{enumerate}
+
+Der Preprocessor wurde unter Berücksichtigung der gewählten Beispieltexte aufgebaut. Diese Texte haben alle eine ähnliche Struktur (z. B. viele Texte mit Aufzählungen, wenige Literaturangaben, keine Dialog-Texte). Es kann sein, dass Texte mit stark abweichender Struktur von dem Preprocessor nicht optimal verarbeitet werden.
+
+Während der Evaluation des Preprocessors wurde getestet, wie sich die Ergebnisse des MedExtractors unterscheiden, wenn man die Texte mit dem Preprocessor vorverarbeitet bzw. dies nicht tut. 
+Dabei ist aufgefallen, dass ohne die Vorverarbeitung des Preprocessors (d. h. wenn die Texte nur mit dem SpaCy-Sentencizer aufgeteilt werden), anschließend mehr Einträge in der resultierenden KnowledgeBase gespeichert sind. Dieser Test wurde auf zwei verschiedenen Textmengen durchgeführt. Die Anzahl der jeweiligen KnowledgeBase-Einträge sind in folgender Tabelle dokumentiert:
+
+\begin{tabular}[h]{lrr}
+	\hline
+	 & mit Preprocessing & ohne Preprocessing\\
+	 \hline
+	Textmenge 1 & 1566 & 2089 \\
+	Textmenge 2 & 432 & 903\\
+	\hline
+\end{tabular}\\
+
+Bei einer Weiterentwicklung des Preprocessors sollte näher untersucht werden wodurch diese Unterschiede entstehen und überlegt werden, wie man damit umgeht.
 
 \subsection{PySBD}
 \label{evaluation_pysbd}
-PySBD (\cite{sadvilkar_pysbd_2020}) ist ein regelbasierter \emph{Sentence Boundary Detector/Disambiguater} (Satzgrenzen-Finder). Golden Rules Set (\cite{golden_rules}) ...[TODO]
+PySBD (\cite{sadvilkar_pysbd_2020}) ist ein regelbasierter \emph{Sentence Boundary Detector/Disambiguater} (Satzgrenzen-Finder). Die Entwicklung von PySBD basiert auf einem Golden Rule Set (\cite{golden_rules}). Diese Golden Rules sind Spezialfälle in Sätzen, nach deren richtiger Bearbeitung ein Sentence Boundary Detector beurteilt werden kann. Eine der Golden Rules ist zum Beispiel\\
+
+\begin{quotation}
+	\textbf{\glqq U.S. as non sentence boundary\grqq}\\
+	I have lived in the U.S. for 20 years. \\
+	=> [\glqq I have lived in the U.S. for 20 years.\grqq]
+\end{quotation}
+
+Im Vergleich mit anderen Sentence Boundary Detectors erfüllt PySBD diese Golden Rules sehr gut, siehe \cite{sadvilkar_pysbd_2020}.
 
 \subsubsection{Vergleich der Einteilung von Texten in Sätze mit und ohne PySBD}
 Es soll untersucht werden worin die Vor- und Nachteile beim Einteilen von Texten in Sätze mit der Bibliothek \emph{PySBD} liegen. 
 Alternativ gibt es die Möglichkeit den Sentencizer von SpaCy zu nutzen. Für den Vergleich wird die Verarbeitung der 51 Texte in 
-\emph{medextractor/resources/to\_analyze} verglichen. Dies geschieht in der python-Datei \emph{medextractor/preprocessor/pysbd\_evaluation\_sentences.py}.\\
+\emph{medextractor/resources/to\_analyze} verglichen. Dies geschieht in der python-Datei \emph{test/pysbd\_evaluation\_sentences.py}.\\
 
 Es fällt schnell auf, dass der Hauptunterschied in der Einteilung von Texten in einzelne Sätze mit und ohne PySBD darin besteht, 
 dass ein Zeilenumbruch unterschiedlich interpretiert wird.
