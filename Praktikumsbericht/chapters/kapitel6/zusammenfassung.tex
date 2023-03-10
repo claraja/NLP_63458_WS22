@@ -14,24 +14,23 @@
 
 -----
 
+In diesem Kapitel wird die Praktikumsarbeit zusammengefasst und ein Ausblick auf sinnvolle weiterführende Arbeiten gegeben.
 
-In dieser Praktikumsarbeit wurde eine prototypische Konsolenapplikation entwickelt, die englischsprachige medizinische Texte analysiert und das darin enthaltene Wissen strukturiert in einem RDF-Graphen hinterlegt. Die in RDF-Form gespeicherte Wissensbasis soll nachfolgenden Programmen, wie beispielsweise medizinischen Chatbots, als Wissensgrundlage für Argumentationen und Empfehlungen dienen können.
 
-Die Applikation \emph{MedExtractor} besteht aus drei Hauptkomponenten. Einer Komponente zur Vorverarbeitung von Texten, die die zu verarbeitenden Texte so vorbereitet, dass die Inhalte für die nachfolgende Komponente gut zu verarbeiten sind. Die Hauptkomponente wird mit Begriffen aus einer medizinischen Datenbank trainiert, extrahiert dann aus den zu verarbeitenden Texten Krankheiten und Symptome und speichert diese in einer programminternen Wissensbasis ab. Die letzte Komponente in der Applikationspipeline serialisiert die Wissensbasis in Form einer RDF-Datei.
 
 
 \section{Zusammenfassung}
 \label{sec:Zusammenfassung} 
 
-In der vorliegenden Arbeit wurde die prototypische \emph{MedExtractor}-Software entwickelt, mit der automatisiert Wissensrepräsentationen von medizinischen Texten erstellt werden können. Diese Wissensrepräsentationen sollen dabei als Vorarbeit für einen Chatbot dienen, der Menschen mit psychischen Problemen beraten können soll. Im Rahmen dieses Praktikumsbeitrages beschränken sich die Wissensrepräsentationen auf die Erstellung einer Liste von psychologischen Krankheiten und ihren Symptomen. 
+In der vorliegenden Arbeit wurde die prototypische \emph{MedExtractor}-Software entwickelt, mit der automatisiert Wissensrepräsentationen englischsprachiger medizinischer Texte erstellt werden können. Diese Wissensrepräsentationen sollen dabei als Vorarbeit für einen Chatbot dienen, der Menschen mit psychischen Problemen beraten können soll. Im Rahmen dieses Praktikumsbeitrages beschränken sich die Wissensrepräsentationen auf die Erstellung einer Liste von psychologischen Krankheiten und ihren Symptomen. 
 
 Die prototypische Software wurde in Python geschrieben und verwendet \emph{spaCy} als zentrale auf \emph{Natural Language Processing (NLP)} spezialisierte Programmbibliothek. Der Schwerpunkt lag dabei auf der Einbindung einer \emph{Named Entity Recognition (NER)}-Komponente zur Erkennung und Kategorisierung von medizinischen Fachbegriffen.
 
 Als Quelle für medizinische Fachbegriffe diente das \emph{MetaMapLite}-Projekt der \emph{National Library of Medicine}, das Tausende von Einträgen enthält und insbesondere zahlreiche Begriffe als \emph{disorder/disease} bzw. \emph{finding} kategorisiert und damit sehr einfach für das Training einer \emph{NER}-Komponente verwendet werden kann. Als \emph{NER}-Komponente von \emph{spaCy} wurde der \emph{Entity Ruler} ausgewählt, da dieser konventionell die trainierten Begriffe in einem Text sucht und kein statistisches mit (zu Beginn des Praktikums nicht vorhandenen) Beispielsätzen trainiertes Modell verwendet.
 
-Die prototypische Software enthält drei zentrale Module. Zum einen ist dies ein \emph{Präprozessor}, der den zu analysierenden Text vorstrukturiert, so dass dieser einfacher analysiert werden kann - z.B. durch Umwandlung von Aufzählungen in eine Reihe von Sätzen, die für sich allein stehen können. In dem so vorbereiteten Text sucht anschließend das \emph{KnowledgeExtractor}-Modul nach Symptomen und Krankheiten und bringt diese in einen Zusammenhang, wenn sie in demselben Satz gefunden werden. Abschließend erzeugt des \emph{RDFSerializer}-Model die Wissensrepräsentation auf Basis des \emph{Resource Description Frameworks (RDF)}.
+Die prototypische Software enthält drei zentrale Module. Zum einen ist dies ein \emph{Präprozessor}, der den zu analysierenden Text vorstrukturiert, so dass dieser einfacher analysiert werden kann - z.B. durch Umwandlung von Aufzählungen in eine Reihe von Sätzen, die für sich allein stehen können. In dem so vorbereiteten Text sucht anschließend das Hauptmodul der Software, der mit dem medizinischem Fachvokabular vortrainierte \emph{KnowledgeExtractor}, nach Symptomen und Krankheiten und bringt diese in einen Zusammenhang, wenn sie in demselben Satz gefunden werden, und speichert diese in einer programminternen Wissensbasis ab. Abschließend serialisiert das \emph{RDFSerializer}-Modul die Wissensrepräsentation in Form einer \emph{Resource Description Frameworks (RDF)}.
 
-Der \emph{Medextractor} wurde mit zahlreichen Texten getestet und erzielte in mehreren Text trotz seiner sehr einfachen Logik eine sehr hohen Präzession, d.h. die vom \emph{MedExtractor} gefundenen Zusammenhänge konnten auch durch manuelle Überprüfung bestätigt werden. Etwas weniger erfolgreich war der \emph{MedExtractor} hinsichtlich der Vollständigkeit der gefundenen Zusammenhänge.
+Der \emph{MedExtractor} wurde mit zahlreichen Texten getestet und erzielte in mehreren Texten trotz seiner sehr einfachen Logik eine sehr hohen Genauigkeit, d.h. die vom \emph{MedExtractor} gefundenen Zusammenhänge waren auch in manuell erstellten Wissensrepräsentationen der Texte enthalten. Etwas weniger erfolgreich war der \emph{MedExtractor} hinsichtlich der Vollständigkeit der gefundenen Zusammenhänge.
 
 
 \section{Ausblick}
