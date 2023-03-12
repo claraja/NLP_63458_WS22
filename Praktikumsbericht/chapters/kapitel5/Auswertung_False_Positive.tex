@@ -1,4 +1,4 @@
-\subsection{Auswertung von falsch erkannten Beziehungen}
+\subsection{Auswertung von Fehlern des Medextractors}
 \label{subsec:detaillierteAuswertung} 
 
 Im Folgenden sollen die Fälle untersucht werden, in denen der Medextractor falsche Symptom-Krankheit-Zuordnungen findet. Die vom Medextractor analysierten Texte stammen dabei aus drei Quellen:
@@ -11,7 +11,7 @@ Im Folgenden sollen die Fälle untersucht werden, in denen der Medextractor fals
 
 Zur Auswertung dienen die xml-Dateien für den Entity-Linker, da diese auch die Sätze enthalten, in denen Krankheiten bzw. Symptome gefunden wurden. Die Anzahl gefundener Krankheiten, Symptome und Trainingssätze lässt sich einfach durch Zählen der Tags <\textbackslash entity>, <\textbackslash alias> und <\textbackslash sample> ermitteln. Das Ergebnis zeigt Tabelle \ref{tab:zaehlung}. Entitäten bedeuten hierbei Krankheiten und Aliase bedeuten Symptome.
 
-Das in MetaMapLite enthaltene Vokabular erweist sich dabei als umfangreich genug, um zahlreiche richtige Symptom-Krankheit-Relationen zu finden. Man erkennt insbesondere an der Analyse des Handbuchs, dass die Zahl gefundener Begriffe nicht mit dem Umfang des Dokumentes skaliert. Dies liegt (neben der Begrenztheit des Trainingsvokabulars) daran, dass mentale Krankheiten bereits durch die Analyse der kürzeren Texte bereits weitgehend erfasst werden.
+Das in \emph{MetaMapLite} enthaltene Vokabular erweist sich dabei als umfangreich genug, um zahlreiche richtige Symptom-Krankheit-Relationen zu finden. Man erkennt insbesondere an der Analyse des Handbuchs, dass die Zahl gefundener Begriffe nicht mit dem Umfang des Dokumentes skaliert. Dies liegt (neben der Begrenztheit des Trainingsvokabulars und ausführlicheren Erläuterungen im Handbuch) daran, dass viele psychische Erkrankungen bereits durch die Analyse der kürzeren Texte erfasst werden.
 
 Neben den meist richtig erkannten Zusammenhänge finden sich in den xml-Dateien auch einige Zusammenhänge, die vom Medextractor falsch erkannt werden. Häufig liegt dies daran, dass im Trainingsvokabular ungeeignete Begriffe enthalten sind oder dass Grammatik und Semantik eines Satzes unzureichend analysiert werden. Es werden nun in den folgenden Abschnitten typische Fälle untersucht und Wege aufgezeigt, wie insbesondere durch Verwendung der \emph{spaCy}-Pipeline eine Verbesserung des Medextractors erzielt werden könnte.
 
@@ -36,13 +36,13 @@ Handbook & 3,5 MB & 204 & 485  & 917 \\
 \subsubsection{Verben im Symptomvokabular}
 \label{subsec: verben} 
 
-Bei Durchsicht der gefundenen Symptom-Krankheit-Relationen fällt zunächst auf, dass das Trainingsvokabular aus MetaMapLite Verben enthält, die zwar bei der Beschreibung von Krankheiten oder Symptomen häufig verwendet werden, für sich allein aber keine Rückschlüsse auf eine Krankheit oder ein Symptom erlauben.
+Bei Durchsicht der gefundenen Symptom-Krankheit-Relationen fällt zunächst auf, dass das Trainingsvokabular aus \emph{MetaMapLite} Verben enthält, die zwar bei der Beschreibung von Krankheiten oder Symptomen häufig verwendet werden, für sich allein aber keine Rückschlüsse auf eine Krankheit oder ein Symptom erlauben.
 
 Dazu gehört z.B. das Verb \emph{aggravate}, das auch in den Formen \emph{aggraveted by} und \emph{aggravating} im Vokabular enthalten ist. So wird z.B. in folgendem Satz der Begriff \emph{aggravate} als Symptom einer \emph{anxiety disorder} (Angststörung) gefunden:\\
 
 \emph{\glqq Certain substances such as caffeine ... may aggravate the symptoms of anxiety disorders or interact with prescribed medication.\grqq}\\
 
-Da das Verb \emph{aggravate} allein kein Symptom ist, stellt sich die Frage, wie der Medextractor entscheiden könnte, den hier nun gefundenen Zusammenhang zu verwerfen. Eine Lösung könnte mit Hilfe von \emph{spaCy} erfolgen: der Text lässt sich nämlich auch mit der normale \emph{spaCy}-Pipeline analysieren. Das Ergebnis der grammatikalische Analyse ist in Tabelle \ref{tab:spaCy} wiedergegeben.
+Da das Verb \emph{aggravate} allein kein Symptom ist, stellt sich die Frage, wie der Medextractor entscheiden könnte, den hier nun gefundenen Zusammenhang zu verwerfen. Eine Lösung könnte mit Hilfe der grammatikalischen Analyse durch die \emph{spaCy}-Pipeline erfolgen. Die \emph{spaCy}-Pipeline besteht aus mehreren Komponenten. Liegt ein Text segmentiert in Sätzen vor, zerlegt der regelbasierten \emph{Tokenizer} die Sätze in einzelne Wörter. Die auf einem statistischen Modell beruhende \emph{Tagger}-Komponente bestimmt die genaue Wortart, während der regelbasierte \emph{Attribute-Ruler} aus der genauen Wortart die grobe Einordnung ableitet. Für das Funktionieren der statischen Modelle ist die \emph{tok2vec}-Komponente von zentraler Bedeutung, mit der die Wörter (Token) des Satzes auf einen vieldimensionalen Vektor abgebildet werden, der die semantische Bedeutung parametrisiert und Wörter semantisch vergleichbar macht. Alle Komponenten können durch neue Regeln oder Trainingsbeispiele weiterentwickelt werden oder anwendungsspezifisch neu aufgebaut werden. 
 
 \begin{table}
 \centering
@@ -73,10 +73,10 @@ medication & medication & NOUN & NN & pobj \\
 \label{tab:spaCy}
 \end{table}
 
-In der Spalte \emph{Text} befinden sich die einzelnen Wörter des zu analysierenden Satzes. Als \emph{Lemma} wird das Grundwort verstanden, also z.B. der Singular (\emph{substance}) eines im Plural stehenden Begriffs (\emph{substances}). 
-Das Kürzel \emph{POS} steht für \emph{Part of Speech Tag}. Dies entspricht der Wortart der einzelnen Begriffe. Die grobe Einordnung der Wortarten steht in der Spalte \emph{POS}, während in der Spalte \emph{Tag} eine genauere Bestimmung der Wortart eingetragen ist. Dazu gehört u.a. bei Substantiven die Unterscheidung zwischen Singular und Plural sowie bei Verben die Zeitform.
+Das Ergebnis der grammatikalische Analyse ist in Tabelle \ref{tab:spaCy} wiedergegeben. In der Spalte \emph{Text} befinden sich die einzelnen Wörter des zu analysierenden Satzes. Als \emph{Lemma} wird das Grundwort verstanden, also z.B. der Singular (\emph{substance}) eines im Plural stehenden Begriffs (\emph{substances}). 
+Das Kürzel \emph{POS} steht für \emph{Part of Speech Tag}. Dies entspricht der Wortart der einzelnen Begriffe. Die grobe Einordnung der Wortarten steht in der Spalte \emph{POS}, während in der Spalte \emph{Tag} eine genauere Bestimmung der Wortart eingetragen ist. Dazu gehört u.a. bei Substantiven die Unterscheidung zwischen Singular und Plural sowie bei Verben die Zeitform. Die Spalte \emph{DEP} charakterisiert die Abhängigkeiten der Wörter untereinander. Für diese Charakterisierung ist der \emph{Dependency Parser} zuständig, der eine der wichtigsten Komponenten ist, um die Semantik eines Satzes untersuchen zu können. Der \emph{Dependency Parser} erzeugt ein hierarchisches Modell des Satzes (vgl. Abbildungen \ref{fig:dep_parser} und \ref{fig:typ_phrase}).
 
-An dieser Stelle kann bereits festgehalten werden, dass die Wortart des Verbs \emph{aggravate} von \emph{spaCy} richtig erkannt wird. Der Tag \emph{VB} drückt aus, dass das Verb in der Infinitiv-Form vorliegt. In der Spalte \emph{DEP} werden Abhängigkeiten der Wörter untereinander charakterisiert. So wird \emph{aggravate} als zentrales Verb (\emph{root}) des Satzes identifiziert. Mit \emph{nsubj} wird das Subjekt des Satzes markiert, hier also der Begriff \emph{substances}.
+An dieser Stelle kann bereits festgehalten werden, dass die Wortart des Verbs \emph{aggravate} von \emph{spaCy} richtig erkannt wird. Der Tag \emph{VB} drückt aus, dass das Verb in der Infinitiv-Form vorliegt.  So wird \emph{aggravate} als zentrales Verb (\emph{root}) des Satzes identifiziert. Mit \emph{nsubj} wird das Subjekt des Satzes markiert, hier also der Begriff \emph{substances}.
 
 Eine Verbesserung des Medextractors könnte nun dadurch erfolgen, dass die Sätze, in denen Symptome und Krankheiten gefunden wurden, zusätzlich durch die \emph{spaCy}-Pipeline analysiert werden und einfache Verben, die sich im Trainingsvokabular befinden, ignoriert werden.
 
@@ -147,7 +147,7 @@ Problematischer ist es aber z.B. mit dem Zusammenhang \emph{agoraphobia} - \emph
 
 \emph{\glqq The physical symptoms of agoraphobia can be similar to those of a panic attack and may include chest pain.\grqq}\\
 
-gefunden wird. Da nur Texte über psychische Erkrankungen untersucht wurden, erscheinen Brustschmerzen nun als eindeutig der Agoraphobie (Angst vor Menschenansammlungen) zugeordnet zu sein. Würde man auch andere medizinische Texte untersuchen, so würde deutlicher werden, dass Brustschmerzen allein keinen deutlichen Hinweis auf eine Agoraphobie geben. Es erscheint daher sinnvoll, den Umfang analysierter Texte auf allgemeine medizinische Texte zu erweitern, auch wenn ein Projekt sich nur auf psychologische Themen beschränkt.
+gefunden wird. Da nur Texte über psychische Erkrankungen untersucht wurden, erscheinen Brustschmerzen nun als eindeutig der Agoraphobie (Angst vor großen Plätzen und Menschenansammlungen) zugeordnet zu sein. Würde man auch andere medizinische Texte untersuchen, so würde deutlicher werden, dass Brustschmerzen allein keinen deutlichen Hinweis auf eine Agoraphobie geben. Es erscheint daher sinnvoll, den Umfang analysierter Texte auf allgemeine medizinische Texte zu erweitern, auch wenn ein Projekt sich nur auf psychologische Themen beschränkt.
 
 In vielen Fällen kann ein voreiliger Rückschluss von Symptom auf Krankheit auch zu Stigmatisierungen führen. So ist zwar ein dementer Mensch oft alt, alte Menschen dürfen aber nicht pauschal für dement gehalten werden. Da der Begriff \emph{aging} im Symptom-Vokabular enthalten ist, findet der Medextractor in dem Satz:\\
 
@@ -157,7 +157,12 @@ den Zusammenhang \emph{dementia} - \emph{aging}. Ähnlich verhält es sich mit d
 
 \emph{\glqq ...alcohol misuse can lead to social problems ... such as unemployment ...\grqq},\\
 
-in dem der Zusammenhang \emph{alcohol misuse} - \emph{unemployment} gefunden wird. Auch wenn Alter und (Langzeit-)Arbeitslosigkeit keine unbegründeten Indikatoren für psychische oder mentale Probleme sind, muss darauf geachtet werden, dass eine Software nicht stigmatisierend agiert. Hier kann wahrscheinlich nicht auf ein automatisches Erkennen gesetzt werden, sondern die Software-Entwickler müssen sicherstellen, dass ihre Software mit Begriffen wie Arbeitslosigkeit und Alter angemessen umgeht. Im Fall des Medextractors könnten solche Begriffe z.B. manuell aus dem Vokabular entfernt oder durch Einführung einen Attributes als problematisch markiert werden.
+in dem der Zusammenhang \emph{alcohol misuse} - \emph{unemployment} gefunden wird. Auch wenn Alter und (Langzeit-)Arbeitslosigkeit keine unbegründeten Indikatoren für psychische Probleme sind, muss darauf geachtet werden, dass eine Software nicht stigmatisierend agiert. Hier kann wahrscheinlich nicht auf ein automatisches Erkennen gesetzt werden, sondern die Software-Entwickler müssen sicherstellen, dass ihre Software mit Begriffen wie Arbeitslosigkeit und Alter angemessen umgeht. Im Fall des Medextractors könnten solche Begriffe z.B. manuell aus dem Vokabular entfernt oder durch Einführung einen Attributes als problematisch markiert werden.
+
+\subsubsection{Keine exakte Übereinstimmung zwischen Trainingsvokabular und Text}
+\label{subsec: nomatch} 
+
+In einigen Fällen werden Krankheiten und Symptome in einem Text nicht gefunden, obwohl ähnliche (aber nicht nicht genau gleiche) Begriffe im Trainingsvokabular enthalten sind. Gemäß Tabelle \ref{tab:vergleich_manuell_medextractor} wird z.B. der Zusammenhang \emph{\glqq ... changes to your menstrual cycle ....\grqq} und \emph{Depression} vom Medextractor nicht erkannt. Das Trainingsvokabular enthält jedoch mehrere relevante Einträge, etwa \emph{abnormal menstrual cycle} oder auch nur im Plural \emph{menstrual cycles}. Eine einfache, wenn auch nur in einigen Fällen wirksame Lösung, wäre es, den \emph{Lemmatizer} zu nutzen und sowohl Text als auch Trainingsvokabular in die Grundwörter zu überführen. In diesem Fall wäre dann auch der Begriff {menstrual cycle} im Singular im Trainingsvokabular enthalten und würde in dem Text über Depression gefunden, so dass zumindest der Zusammenhang \emph{depression} - \emph{menstrual cycle} erkannt würde.
 
 \subsubsection{Bedeutung von Aussagen}
 \label{subsec: bedeutung} 
@@ -166,7 +171,7 @@ Die einfache Auswertung der gefundenen Entitäten ermöglicht es dem Medextracto
 
 \emph{\glqq These challenges came ... from gay rights activists who criticised the APA's listing of homosexuality as a mental disorder.\grqq}\\
 
-Hier wird, da auch in dem MetaMapLite Vokabular \emph{homosexuality} als Befund - aber nicht als Krankheit/Störung - enthalten ist, ein Zusammenhang zwischen Homosexualität und einer geistigen Störung gefunden. Dies entspricht aber natürlich nicht der Aussage des Satzes. Um die Bedeutung von Aussagen zu erfassen, ist ein höherer Aufwand zu treiben als in den bisherigen Beispielen. Ein Ansatz könnte sein, in den bisher gefundenen Beispielsätzen nach Satzmustern zu suchen, mit denen typischerweise Symptome beschrieben werden. Betrachten wir hierzu den Satz\\
+Hier wird, da auch in dem \emph{MetaMapLite} Vokabular \emph{homosexuality} als Befund - aber nicht als Krankheit/Störung - enthalten ist, ein Zusammenhang zwischen Homosexualität und einer geistigen Störung gefunden. Dies entspricht aber natürlich nicht der Aussage des Satzes. Um die Bedeutung von Aussagen zu erfassen, ist ein höherer Aufwand zu treiben als in den bisherigen Beispielen. Ein Ansatz könnte sein, in den bisher gefundenen Beispielsätzen nach Satzmustern zu suchen, mit denen typischerweise Symptome beschrieben werden. Betrachten wir hierzu den Satz\\
 
 \emph{\glqq Other typical symptoms of severe depression are changes in appetite.\grqq}\\
 
@@ -214,4 +219,6 @@ Man kann nun einen typischen Satz folgendermaßen charakterisieren:
 	\item Das Kind des Begriffs \emph{of} muss ein Begriff aus dem Krankheiten-Vokabular sein (ggf. zusammengesetzt)
 \end{enumerate}
 
-Auf diese Weise können auch andere Satzkonstrukte festgelegt werden, mit denen üblicherweise die Symptome von Krankheiten beschrieben werden. Vorteil der bisher sehr einfachen Logik des Medextractors ist, dass alle Beziehungen von Krankheiten und Symptomen in einem Text gefunden werden, sofern die Begriffe im Vokabular enthalten sind. Die vom Medextractor gefundene Sammlung von Beispielsätzen ist daher eine gute Grundlage, um typische Sätze finden zu können.
+Auf diese Weise können auch andere Satzkonstrukte festgelegt werden, mit denen üblicherweise die Symptome von Krankheiten beschrieben werden. Da der \emph{Dependency Parser} trainierbar ist, ist es möglich die hierarchische Gliederung von Sätzen auch anwendungsspezifisch erfolgen zu lassen, um dadurch das Auffinden typischer Sätze zu vereinfachen (vgl. Kapitel 10, Abschnitt `Creating a new Dependency Parser' in \cite{vasiliev2020natural}).
+
+Nach all den Aufzählungen der Schwächen des Medextractors sei abschließend angemerkt, dass die sehr einfache Logik des Medextractors den Vorteil besitzt, dass alle Beziehungen von Krankheiten und Symptomen in einem Text gefunden werden, sofern die Begriffe im Vokabular enthalten sind. Die vom Medextractor gefundene Sammlung von Beispielsätzen ist daher eine gute Grundlage, um typische Sätze finden zu können.

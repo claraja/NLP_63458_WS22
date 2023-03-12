@@ -5,7 +5,7 @@
 \section{FZ 1.3 Implementierung zur Vorverarbeitung medizinischer Texte}
 \label{sec:FZ1.3} 
 
-Da die zu verarbeitenden medizinischen Texte nicht nur Fließtext enthalten, sondern auch Überschriften und Aufzählungen, ist als erster Schritt eine sinnvolle Unterteilung in Satzeinheiten erforderlich. Dazu kommt der \emph{Sentence Boundary Detector} PySBD (\cite{sadvilkar_pysbd_2020}) zum Einsatz. Diese unterteilt den Text zunächst in einzelne Sätze, siehe \ref{sec:evaluation_pysbd} für weitere Informationen zu PySBD. Anschließend werden die Satzeinheiten noch so bearbeitet und zusammengefügt, dass möglichst sinnvolle Sätze für die weitere Verarbeitung entstehen. Ist eine erkannte Satzeinheit zum Beispiel ein leerer String, so wird diese nicht weiter verarbeitet. Nachgestellte Leerzeichen werden gelöscht. Außerdem werden Aufzählungen möglichst in einzelne Sätze verwandelt. So wird beispielsweise aus der Auflistung\\
+Da die zu verarbeitenden medizinischen Texte nicht nur Fließtext enthalten, sondern auch Überschriften und Aufzählungen, ist als erster Schritt eine sinnvolle Unterteilung in Satzeinheiten erforderlich, dies geschieht im \emph{Preprocessor}. Dazu wird zunächst der gesamte Text eingelesen. Für die Unterteilung in Satzeinheiten kommt der Satzgrenzendetektor \emph{PySBD} (\cite{sadvilkar_pysbd_2020}) zum Einsatz. Dieser unterteilt den Text zunächst in einzelne Satzeinheiten, siehe \ref{sec:evaluation_preprocessor} für weitere Informationen zu \emph{PySBD}. Anschließend werden die Satzeinheiten so bearbeitet und zusammengefügt, dass möglichst sinnvolle Sätze für die weitere Verarbeitung entstehen. Ist eine erkannte Satzeinheit zum Beispiel ein leerer String, so wird diese nicht weiter verarbeitet. Nachgestellte Leerzeichen in Satzeinheiten werden gelöscht. Außerdem werden Aufzählungen möglichst in einzelne Sätze verwandelt. So wird beispielsweise aus der Auflistung\\
 \begin{addmargin}{10pt}
 \emph{
 	The psychological symptoms of depression include:\\
@@ -20,10 +20,10 @@ eine Reihe von Sätzen:\\
 \emph{
 	The psychological symptoms of depression include continuous low mood or sadness.\\
 	The psychological symptoms of depression include feeling hopeless and helpless.\\
-	The psychological symptoms of depression include having low self-esteem.
+	The psychological symptoms of depression include having low self-esteem.\\
 }
 \end{addmargin}
-Um dies zu erreichen wird bei jedem zu verarbeitenden Satz z.B. versucht herauszufinden, ob dieser Satz eine Aufzählung einleitet (\emph{enumeration} im Skript), und während einer Aufzählung wird das Aufzählungszeichen zum Abgleich gespeichert (\emph{bullet\_point} im Skript). \\
+Um dies zu erreichen wird bei jedem zu verarbeitenden Satz z.B. versucht herauszufinden, ob dieser Satz eine Aufzählung einleitet (\emph{enumeration} im Skript), und während einer Aufzählung wird das Aufzählungszeichen zum Abgleich gespeichert (\emph{bullet\_point} im Skript). Zum Schluss werden die durch die Verarbeitung erhaltenen Sätze wieder zu einem Text zusammengefügt und dieser wird an den \emph{KnowledgeExtractor} übergeben.\\
 Insgesamt wurde sich bei der Implementierung sehr an den vorhandenen Textbeispielen orientiert, sodass bei einer Verallgemeinerung auf Texte unterschiedlichster Art voraussichtlich noch weitere Anpassungen gemacht werden müssten, siehe auch Abschnitt \ref{sec:evaluation_preprocessor}. 
 \vspace*{5mm}
 \section[FZ 2.4 Implementierung zur Überf. med. Fachvokabulars]{FZ 2.4 Implementierung zur Überführung medizinischen Fachvokabulars in maschinenlesbare Form zur weiteren Verarbeitung durch NLP}
