@@ -1,0 +1,6 @@
+- Vorstellung medextractor.py
+- Vorstellung config.json
+- Start medextractor.py (zuschauen beim Durchlaufen, derweil erklären, was gerade passiert)
+- Zeigen der erstellten Dateien.
+
+
