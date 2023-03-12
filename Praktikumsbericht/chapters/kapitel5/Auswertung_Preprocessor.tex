@@ -1,17 +1,30 @@
-Zur Evaluierung des Preprocessors wurden sowohl allgemeine Untersuchungen des Preprocessors angestellt als auch eine Analyse des Sentence Boundary Detectors \emph{PySBD} durchgeführt.
+Zur Evaluierung des \emph{Preprocessors} wurden sowohl allgemeine Untersuchungen des \emph{Preprocessors} angestellt als auch eine Analyse des Satzgrenzendetektors \emph{PySBD} durchgeführt.
 
 \subsection{Allgemeine Evaluation des Preprocessors}
 \label{sec:evaluation_preprocessor}
 
-Ziel des Preprocessors ist es, die gegebenen Texte so umzuwandeln, dass der anschließend angewandte SpaCy-Sentencizer den Text in möglichst sinnvolle Sätze aufteilt, die dann weiterverarbeitet werden. Ein Hauptaugenmerk während der Implementierung lag auf der sinnvollen Aufteilung von Aufzählungen. Wie schon im Kapitel \ref{ch:implementierung} geschrieben gelingt das.
+Ziel des \emph{Preprocessors} ist es, die gegebenen Texte so umzuwandeln, dass der anschließend angewandte spaCy-Sentencizer den Text in möglichst sinnvolle Sätze aufteilt, die dann weiterverarbeitet werden. Ein Hauptaugenmerk während der Implementierung lag auf der sinnvollen Aufteilung von Aufzählungen. Dies gelingt wie schon im Kapitel \ref{ch:implementierung} beschrieben. Dabei wurde der \emph{Preprocessor} unter Berücksichtigung der gewählten Beispieltexte aufgebaut. Diese Texte haben alle eine ähnliche Struktur (z. B. viele Texte mit Aufzählungen, wenige Literaturangaben, keine Dialog-Texte). Es kann sein, dass Texte mit stark abweichender Struktur von dem \emph{Preprocessor} nicht optimal verarbeitet werden.\\
 
-Ohne den Preprocessor würde man der weiteren Verarbeitung z. B. den \glqq Satz\grqq aus dem \emph{TextToAnalyze.txt} übergeben:
+Während der Evaluation des \emph{Preprocessors} wurde getestet, wie sich die Ergebnisse des \emph{MedExtractors} unterscheiden, wenn man die Texte mit dem \emph{Preprocessor} vorverarbeitet bzw. dies nicht tut. 
+Dabei ist aufgefallen, dass ohne die Vorverarbeitung des \emph{Preprocessors} (d. h. wenn die Texte nur mit dem SpaCy-Sentencizer aufgeteilt werden), anschließend mehr Einträge in der resultierenden \emph{KnowledgeBase} gespeichert sind. Dieser Test wurde auf zwei verschiedenen Textmengen durchgeführt. Die Anzahl der jeweiligen \emph{KnowledgeBase}-Einträge sind in folgender Tabelle dokumentiert:
+
+\begin{tabular}[h]{lrr}
+	\hline
+	& mit Preprocessing & ohne Preprocessing\\
+	\hline
+	Textmenge 1 & 1566 & 2089 \\
+	Textmenge 2 & 432 & 903\\
+	\hline
+\end{tabular}\\
+
+Zunächst denkt man, dass dadurch der Preprocessor seine eigentliche Aufgabe verfehlt, schaut man sich jedoch die Textverarbeitung ohne Preprocessor an, fällt das Folgende auf.
+Ohne den \emph{Preprocessor} würde man der weiteren Verarbeitung z. B. den \glqq Satz\grqq aus dem \emph{TextToAnalyze.txt} übergeben:
 
 \begin{quotation}
 	\glqq Psychological symptoms\verb!\n!\verb!\n!The psychological symptoms of depression include:\verb!\n!- continuous low mood or sadness\verb!\n!- feeling hopeless and helpless\verb!\n!- having low self-esteem\verb!\n!- feeling tearful\verb!\n!- feeling guilt-ridden\verb!\n!- feeling irritable and intolerant of others\verb!\n!- having no motivation or interest in things\verb!\n!- finding it difficult to make decisions\verb!\n!- not getting any enjoyment out of life\verb!\n!- feeling anxious or worried\verb!\n!- having suicidal thoughts or thoughts of harming yourself\verb!\n!\verb!\n!Physical symptoms\verb!\n!\verb!\n!The physical symptoms of depression include:\verb!\n!- moving or speaking more slowly than usual\verb!\n!- changes in appetite or weight (usually decreased, but sometimes increased)\verb!\n!- constipation\verb!\n!- unexplained aches and pains\verb!\n!- lack of energy\verb!\n!- low sex drive (loss of libido)\verb!\n!- changes to your menstrual cycle\verb!\n!- disturbed sleep – for example, finding it difficult to fall asleep at night or waking up very early in the morning\verb!\n!\verb!\n!Social symptoms\verb!\n!\verb!\n!The social symptoms of depression include:\verb!\n!- avoiding contact with friends and taking part in fewer social activities\verb!\n!- neglecting your hobbies and interests\verb!\n!- having difficulties in your home, work or family life\verb!\n!\verb!\n!Severities of depression\verb!\n!\verb!\n!Depression can often come on gradually, so it can be difficult to notice something is wrong.\grqq
 \end{quotation} 
 
-Mit Anwendung des Preprocessors übergibt man stattdessen die folgenden Sätze:
+Mit Anwendung des \emph{Preprocessors} übergibt man stattdessen die folgenden Sätze:
 \begin{enumerate}
 	\item \glqq The psychological symptoms of depression include continuous low mood or sadness.\verb!\n!\grqq
 	\item \glqq The psychological symptoms of depression include feeling hopeless and helpless.\verb!\n!\grqq
@@ -41,40 +54,26 @@ Mit Anwendung des Preprocessors übergibt man stattdessen die folgenden Sätze:
 	\item \glqq Depression can often come on gradually, so it can be difficult to notice something is wrong.\verb!\n!\grqq 
 \end{enumerate}
 
-Der Preprocessor wurde unter Berücksichtigung der gewählten Beispieltexte aufgebaut. Diese Texte haben alle eine ähnliche Struktur (z. B. viele Texte mit Aufzählungen, wenige Literaturangaben, keine Dialog-Texte). Es kann sein, dass Texte mit stark abweichender Struktur von dem Preprocessor nicht optimal verarbeitet werden.
-
-Während der Evaluation des Preprocessors wurde getestet, wie sich die Ergebnisse des MedExtractors unterscheiden, wenn man die Texte mit dem Preprocessor vorverarbeitet bzw. dies nicht tut. 
-Dabei ist aufgefallen, dass ohne die Vorverarbeitung des Preprocessors (d. h. wenn die Texte nur mit dem SpaCy-Sentencizer aufgeteilt werden), anschließend mehr Einträge in der resultierenden KnowledgeBase gespeichert sind. Dieser Test wurde auf zwei verschiedenen Textmengen durchgeführt. Die Anzahl der jeweiligen KnowledgeBase-Einträge sind in folgender Tabelle dokumentiert:
-
-\begin{tabular}[h]{lrr}
-	\hline
-	 & mit Preprocessing & ohne Preprocessing\\
-	 \hline
-	Textmenge 1 & 1566 & 2089 \\
-	Textmenge 2 & 432 & 903\\
-	\hline
-\end{tabular}\\
-
-Bei einer Weiterentwicklung des Preprocessors sollte näher untersucht werden wodurch diese Unterschiede entstehen und überlegt werden, wie man damit umgeht.
+Würde man nun den Satz ohne die \emph{Preprocessor}-Vorverarbeitung übergeben und wären die beiden einzelnen Aufzählungen nicht thematisch zusammenhängend, würde der \emph{KnowledgeExtractor} in seinem Ergebnis diese beiden Themen zusammenmischen und es würden eventuell inhaltlich falsche Ergebnisse entstehen. Bei einer Weiterentwicklung des \emph{Preprocessors} sollte daher näher untersucht werden wo der \emph{Preprocessor} eventuell sinnvolle Informationen verliert und überlegt werden, wie man damit umgeht.
 
 \subsection{PySBD}
 \label{evaluation_pysbd}
-PySBD (\cite{sadvilkar_pysbd_2020}) ist ein regelbasierter \emph{Sentence Boundary Detector/Disambiguater} (Satzgrenzen-Finder). Die Entwicklung von PySBD basiert auf einem Golden Rule Set (\cite{golden_rules}). Diese Golden Rules sind Spezialfälle in Sätzen, nach deren richtiger Bearbeitung ein Sentence Boundary Detector beurteilt werden kann. Eine der Golden Rules ist zum Beispiel\\
+\emph{PySBD} (\cite{sadvilkar_pysbd_2020}) ist ein regelbasierter Satzgrenzendetektor (\emph{Sentence Boundary Detector / Disambiguater}). Die Entwicklung von \emph{PySBD} basiert auf einem Golden Rule Set (\cite{golden_rules}). Diese Golden Rules sind Spezialfälle in Sätzen, nach deren richtiger Bearbeitung ein Satzgrenzendetektor beurteilt werden kann. Eine der Golden Rules ist zum Beispiel\\
 
 \begin{quotation}
 	\textbf{\glqq U.S. as non sentence boundary\grqq}\\
 	I have lived in the U.S. for 20 years. \\
-	=> [\glqq I have lived in the U.S. for 20 years.\grqq]
+	=> [\glqq I have lived in the U.S. for 20 years.\grqq]\\
 \end{quotation}
 
-Im Vergleich mit anderen Sentence Boundary Detectors erfüllt PySBD diese Golden Rules sehr gut, siehe \cite{sadvilkar_pysbd_2020}.
+Im Vergleich mit anderen Satzgrenzendetektoren erfüllt \emph{PySBD} diese Golden Rules sehr gut, siehe \cite{sadvilkar_pysbd_2020}.
 
 \subsubsection{Vergleich der Einteilung von Texten in Sätze mit und ohne PySBD}
-Es soll untersucht werden worin die Vor- und Nachteile beim Einteilen von Texten in Sätze mit der Bibliothek \emph{PySBD} liegen. 
-Alternativ gibt es die Möglichkeit den Sentencizer von SpaCy zu nutzen. Für den Vergleich wird die Verarbeitung der 51 Texte in 
-\emph{medextractor/resources/to\_analyze} verglichen. Dies geschieht in der python-Datei \emph{test/pysbd\_evaluation\_sentences.py}.\\
+Es sollte nun untersucht werden, worin die Vor- und Nachteile beim Einteilen von Texten in Sätze mit der Bibliothek \emph{PySBD} liegen. 
+Alternativ gibt es die Möglichkeit den Sentencizer von \emph{spaCy }zu nutzen. Für den Vergleich wird die Verarbeitung der 51 Texte in 
+\emph{medextractor/resources/to\_analyze} verglichen. Dies geschieht in der Python-Datei \emph{test/pysbd\_evaluation\_sentences.py}.\\
 
-Es fällt schnell auf, dass der Hauptunterschied in der Einteilung von Texten in einzelne Sätze mit und ohne PySBD darin besteht, 
+Es fällt schnell auf, dass der Hauptunterschied in der Einteilung von Texten in einzelne Sätze mit und ohne \emph{PySBD} darin besteht, 
 dass ein Zeilenumbruch unterschiedlich interpretiert wird.
 Aus dem folgenden Textabschnitt in der Datei \emph{agorophobia.txt}\\
 
@@ -82,30 +81,30 @@ Aus dem folgenden Textabschnitt in der Datei \emph{agorophobia.txt}\\
 	\glqq \verb!\n!Symptoms - Agoraphobia\verb!\n!\verb!\n!The severity of agoraphobia can vary significantly between individuals.\grqq
 \end{quotation}
 
-erhält man mit dem SpaCy Sentencizer zum Beispiel den Satz
+erhält man mit dem \emph{spaCy}-Sentencizer zum Beispiel den Satz
 
 \begin{quotation}
 	\glqq \verb!\n!Symptoms - Agoraphobia\verb!\n!\verb!\n!The severity of agoraphobia can vary significantly between individuals.\grqq,
 \end{quotation}
 
-während die Aufteilung in Sätze mit PySBD folgendermaßen aussieht:
+während die Aufteilung in Sätze mit \emph{PySBD} folgendermaßen aussieht:
 
 \begin{enumerate}
 	\item \glqq Symptoms - Agoraphobia\verb!\n!\verb!\n!\grqq
 	\item \glqq The severity of agoraphobia can vary significantly between individuals.\verb!\n!\verb!\n!\grqq
 \end{enumerate}
 
-Insgesamt wird von den 51 Texten nur einer vom PySBD- und SpaCy-Sentencizer auf die gleiche Art in Sätze eingeteilt.\\
+Insgesamt wird von den 51 Texten nur einer vom \emph{PySBD}- und \emph{spaCy}-Sentencizer auf die gleiche Art in Sätze eingeteilt.\\
 Wendet man nun die folgende Art der Nachverarbeitung der Texte an:
 \begin{enumerate}
 	\item Sätze, die ein \glqq \verb!\n!\grqq enthalten, werden an dieser Stelle in zwei Sätze aufgesplittet,
 	\item Leerzeichen am Anfang und am Ende von Sätzen werden entfernt,
 	\item leere Sätze werden entfernt,
 \end{enumerate}
- werden schon 41 der 51 Texte komplett gleich verarbeitet. Ausnahmen bilden dann (fast) nur noch Sätze, die Zeichen wie z.B. \glqq ]\grqq, \glqq :\grqq und \glqq -\grqq enthalten (diese speziellen Zeichen werden vom PySBD- und SpaCy-Sentencizer unterschiedlich behandelt), oder Satzanfänge ohne vorhergehendes Leerzeichen.\\
+ werden schon 41 der 51 Texte komplett gleich verarbeitet. Ausnahmen bilden dann (fast) nur noch Sätze, die Zeichen wie z.B. \glqq ]\grqq, \glqq :\grqq und \glqq -\grqq enthalten (diese speziellen Zeichen werden vom \emph{PySBD}- und \emph{spaCy}-Sentencizer unterschiedlich behandelt), oder Satzanfänge ohne vorhergehendes Leerzeichen.\\
 
  
 \subsubsection{Fazit zu PySBD}
-Der Preprocessing-Schritt des MedExtractors enthält nicht nur das Erkennen von Satzgrenzen, sondern noch weitere Schritte um die Sätze so umzuformen, dass sie in der weiteren Verarbeitung mit dem MedExtractor gut genutzt werden können (siehe Kapitel [TODO]). Für die Zwecke des MedExtractors und für die zur Evaluierung genutzten Texte war PySBD sehr hilfreich. Während der Evaluierung ist aber auch aufgefallen, dass mit Berücksichtigung der Eigenheiten des SpaCy Sentencizers wahrscheinlich ähnlich gute Ergebnisse im Preprocessing-Schritt hätten erzielt werden können. Somit kann PySBD für die Zwecke des MedExtractors zwar empfohlen werden, mit anderen Sentence Boundary Detectorn könnten aber voraussichtlich ähnlich gute Ergebnisse erzielt werden. \\
-In der weiteren Entwicklung des Preprocessors, bzw. des MedExtractors, könnte man versuchen mit einer besseren Einstellung der Parameter von PySBD bessere Ergebnisse zu erzielen, oder mit einem anderen \emph{Sentence Boundary Detector} (mehrere Alternativen werden in \cite{sadvilkar_pysbd_2020} genannt) zu arbeiten.
+Der Preprocessing-Schritt des \emph{MedExtractors} enthält nicht nur das Erkennen von Satzgrenzen, sondern noch weitere Schritte um die Sätze so umzuformen, dass sie in der weiteren Verarbeitung mit dem \emph{MedExtractor} gut genutzt werden können (siehe Kapitel \ref{sec:FZ1.3}). Für die Zwecke des \emph{MedExtractors} und für die zur Evaluierung genutzten Texte war \emph{PySBD} hilfreich. Während der Evaluierung ist aber auch aufgefallen, dass mit Berücksichtigung der Eigenheiten des \emph{spaCy}-Sentencizers wahrscheinlich ähnlich gute Ergebnisse im Preprocessing-Schritt hätten erzielt werden können. Somit kann \emph{PySBD} für die Zwecke des \emph{MedExtractors} zwar empfohlen werden, mit anderen Satzgrenzendetektoren könnten aber voraussichtlich ähnlich gute Ergebnisse erzielt werden. \\
+In der weiteren Entwicklung des \emph{Preprocessors}, bzw. des \emph{MedExtractors}, könnte man versuchen mit einer besseren Einstellung der Parameter von \emph{PySBD} bessere Ergebnisse zu erzielen, oder mit einem anderen Satzgrenzendetektor (mehrere Alternativen werden in \cite{sadvilkar_pysbd_2020} genannt) zu arbeiten.
 
