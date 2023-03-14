@@ -19,8 +19,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="medextractor.knowledge_extractor package" href="medextractor.knowledge_extractor.html" />
-    <link rel="prev" title="medextractor.interfaces package" href="medextractor.interfaces.html" /> 
+    <link rel="next" title="medextractor.preprocessor package" href="medextractor.preprocessor.html" />
+    <link rel="prev" title="medextractor package" href="medextractor.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -40,7 +40,9 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="readme.html">Medextractor - Konsolenapplikation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">Fachpraktikum WS 22/23 - Natural Language Processing (NLP) mit spaCy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#medextractor-konsolenapplikation">Medextractor - Konsolenapplikation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#ordnerstruktur">Ordnerstruktur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="readme.html#konfigurationsdatei-config-json">Konfigurationsdatei config.json</a></li>
 <li class="toctree-l1"><a class="reference internal" href="readme.html#vokabular-dateien">Vokabular-Dateien</a></li>
 <li class="toctree-l1"><a class="reference internal" href="readme.html#aufruf-des-programms">Aufruf des Programms</a></li>
@@ -48,16 +50,14 @@
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">medextractor</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="medextractor.html">medextractor package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="medextractor.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="medextractor.interfaces.html">medextractor.interfaces package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">medextractor.knowledge package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="medextractor.knowledge_extractor.html">medextractor.knowledge_extractor package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="medextractor.preprocessor.html">medextractor.preprocessor package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="medextractor.rdf.html">medextractor.rdf package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#submodules">Submodules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor.config_manager">medextractor.config_manager module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor.manual_rdf_graph">medextractor.manual_rdf_graph module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor.create_manual_rdf_graph">medextractor.create_manual_rdf_graph module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor.medextractor">medextractor.medextractor module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor.ruler_creator">medextractor.ruler_creator module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor">Module contents</a></li>
@@ -149,12 +149,15 @@ load(str)</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="medextractor.knowledge.base.KnowledgeBase.give_entities">
-<span class="sig-name descname"><span class="pre">give_entities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alias</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#medextractor.knowledge.base.KnowledgeBase.give_entities" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="medextractor.knowledge.base.KnowledgeBase.get_entities">
+<span class="sig-name descname"><span class="pre">get_entities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alias</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#medextractor.knowledge.base.KnowledgeBase.get_entities" title="Permalink to this definition"></a></dt>
 <dd><p>Return a list of entities that are related to symptoms in SemanticRelations stored in the KnowledgeBase</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>alias</strong> (<em>str</em>) – the name of a symptom</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of Entity</p>
 </dd>
 </dl>
 </dd></dl>
@@ -224,6 +227,137 @@ If the KnowledgeBase does not contain any SemanticRelations, no file is saved.</
 <dt class="sig sig-object py" id="medextractor.knowledge.entity.EntityType.UNDEFINED">
 <span class="sig-name descname"><span class="pre">UNDEFINED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#medextractor.knowledge.entity.EntityType.UNDEFINED" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-medextractor.knowledge.knowledge_extractor">
+<span id="medextractor-knowledge-knowledge-extractor-module"></span><h2>medextractor.knowledge.knowledge_extractor module<a class="headerlink" href="#module-medextractor.knowledge.knowledge_extractor" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="medextractor.knowledge.knowledge_extractor.KnowledgeExtractor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">medextractor.knowledge.knowledge_extractor.</span></span><span class="sig-name descname"><span class="pre">KnowledgeExtractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="medextractor.html#medextractor.config_manager.ConfigManager" title="medextractor.config_manager.ConfigManager"><span class="pre">ConfigManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge.knowledge_extractor.KnowledgeExtractor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>KnowledgeExtractor searches a text string for entities and for relations between these entities</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="medextractor.knowledge.knowledge_extractor.KnowledgeExtractor.analyze_linguistically">
+<span class="sig-name descname"><span class="pre">analyze_linguistically</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge.knowledge_extractor.KnowledgeExtractor.analyze_linguistically" title="Permalink to this definition"></a></dt>
+<dd><p>Method that finds entities in a given text and outputs them on the command line
+together with part-of-speech tags and the syntactic dependency within the sentence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>string</em>) – The text string to be analyzed by the method</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="medextractor.knowledge.knowledge_extractor.KnowledgeExtractor.export_for_entity_linker">
+<span class="sig-name descname"><span class="pre">export_for_entity_linker</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge.knowledge_extractor.KnowledgeExtractor.export_for_entity_linker" title="Permalink to this definition"></a></dt>
+<dd><p>Exports all entities, aliases and example sentences into an xml-File. The data
+is prepared for easy import into spaCy’s Entity Linker. The xml-File is human
+readable and allows reviewing the data that will be used by the Entity Linker.
+Path and filename are defined in config.json.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="medextractor.knowledge.knowledge_extractor.KnowledgeExtractor.get_knowledge_base">
+<span class="sig-name descname"><span class="pre">get_knowledge_base</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge.knowledge_extractor.KnowledgeExtractor.get_knowledge_base" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the knowledgebase that contains all entities and
+sample sentences. Samples sentences can be used for training
+statistical models (e.g. Entity Linker)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#medextractor.knowledge.base.KnowledgeBase" title="medextractor.knowledge.base.KnowledgeBase">KnowledgeBase</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="medextractor.knowledge.knowledge_extractor.KnowledgeExtractor.is_related">
+<span class="sig-name descname"><span class="pre">is_related</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge.knowledge_extractor.KnowledgeExtractor.is_related" title="Permalink to this definition"></a></dt>
+<dd><p>Returns relation type of entity1 and entity2. If both entities are
+found to be unrelated, RelationType.NO_RELATION is returned.</p>
+<p>Parameter sent is not used because this function currently only implements a
+very simple relation check without analyzing the syntax of the sentence. Such
+analysis could be added at a later stage.</p>
+<p>At the moment is_related() just checks whether entity1 is a disease and whether
+entity2 is a symptom. Thus possible results are only RelationType.NO_RELATION
+and RelationType.HAS_SYMPTOM.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entity1</strong> (<em>spacy.Span</em>) – </p></li>
+<li><p><strong>entity2</strong> (<em>spacy.Span</em>) – </p></li>
+<li><p><strong>sent</strong> (<em>spacy.Span</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#medextractor.knowledge.relations.RelationType" title="medextractor.knowledge.relations.RelationType">RelationType</a> (Enum)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="medextractor.knowledge.knowledge_extractor.KnowledgeExtractor.process_texts">
+<span class="sig-name descname"><span class="pre">process_texts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge.knowledge_extractor.KnowledgeExtractor.process_texts" title="Permalink to this definition"></a></dt>
+<dd><p>Analyzes all text documents in the folder specified in config.json</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="medextractor.knowledge.knowledge_extractor.KnowledgeExtractor.saveKB">
+<span class="sig-name descname"><span class="pre">saveKB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge.knowledge_extractor.KnowledgeExtractor.saveKB" title="Permalink to this definition"></a></dt>
+<dd><p>Saves the database persistently. Optionally, path and file name are given
+as a string parameter when calling this function. If no path and file name
+are given, the function will use the path and file name in attribute
+self._config.knowledgebase_filename.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_name</strong> (<em>string optional</em>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="medextractor.knowledge.knowledge_extractor.KnowledgeExtractor.set_context">
+<span class="sig-name descname"><span class="pre">set_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.knowledge.knowledge_extractor.KnowledgeExtractor.set_context" title="Permalink to this definition"></a></dt>
+<dd><p>This function allows defining a context. The context is described by
+named entities included in the Entity Ruler (self._ruler). These entities will
+be added to the set of entities when searching for disease/symptom relations
+between entities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>context</strong> (<em>{}</em><em> (</em><em>set of spacy.Spans = Entities of Entity Ruler</em><em>)</em>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -301,8 +435,8 @@ If the KnowledgeBase does not contain any SemanticRelations, no file is saved.</
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="medextractor.interfaces.html" class="btn btn-neutral float-left" title="medextractor.interfaces package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="medextractor.knowledge_extractor.html" class="btn btn-neutral float-right" title="medextractor.knowledge_extractor package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="medextractor.html" class="btn btn-neutral float-left" title="medextractor package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="medextractor.preprocessor.html" class="btn btn-neutral float-right" title="medextractor.preprocessor package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

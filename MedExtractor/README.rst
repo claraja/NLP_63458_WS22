@@ -1,4 +1,5 @@
-Fachpraktikum WS 22/23 Natural Language Processing (NLP) mit spaCy
+Fachpraktikum WS 22/23 - Natural Language Processing (NLP) mit spaCy
+====================================================================
 
 Medextractor - Konsolenapplikation
 ==================================
@@ -11,6 +12,33 @@ miteinander in Beziehung setzt. Die Wissensrepräsentation wird im RDF
 der Medextractor eine xml-Datei mit Daten für den Entity Linker von
 spaCy sowie eine Datei name.kb, in dem die erstellte Wissensbasis in
 Binärcode abgespeichert wird.
+
+Ordnerstruktur
+==============
+
+-  **docs**: mit Sphinx erstellte Dokumentation des
+   MedExtractor-Programms, mit Öffnen der html-Dateien in docs/build
+   kommt man zu einer ansprechenden Dokumentation des Programms
+-  **medextractor**: enthält die Programme, die für die Erstellung der
+   Wissensbasis zuständig sind
+
+   -  **preprocessor**: Programm, das einen gegebenen Text
+      vorverarbeitet, sodass es in weiteren Schritten besser verarbeitet
+      werden kann
+   -  **knowledge**: verarbeitet vorverarbeiteten Text, extrahiert
+      Krankheiten und dazugehörige Symptome und speichert sie in einer
+      Knowledgebase
+   -  **rdf**: Serialisiert die erstellte Knowledgebase und speichert
+      sie als xml-Datei im RDF-Format
+
+-  **resources**: alle Ressourcen, die zum Ausführen des Programms
+   benötigt werde, sowie Ausgabedateien
+
+   -  **to_analyze**: Texte, die vom Programm analysiert und ausgewertet
+      werden können
+   -  **training_data**: Vokabular-Dateien (siehe Abschnitt unten)
+
+-  **test**: Testprogramme
 
 Konfigurationsdatei config.json
 ===============================
@@ -38,7 +66,7 @@ Die Pfade müssen relativ zu dem Order angegeben werden, in dem sich
 medextractor.py befindet. Alternativ können auch absolute Pfade angeben
 werden.
 
-Es werden alle Textdateien (\*.txt) analysiert, die sich in dem in der
+Es werden alle Textdateien (*.txt) analysiert, die sich in dem in der
 config.json-Datei angegebenen Ordner befinden. Die von Medextractor
 erzeugten xml- und Knowledgebase- Dateien enthalten ein über alle
 analysierten Texte akkumuliertes Ergebnis.
@@ -65,6 +93,8 @@ Aufruf des Programms
 Voraussetzungen
 ---------------
 
+-  eine Python Version 3.6-3.8 (empfohlen und getestet: 3.8) muss
+   installiert sein (SpaCy ist noch nicht kompatibel mit Python >3.8)
 -  Packages, die in requirements.txt aufgelistet sind, sind installiert
    (Installation aller Packages möglich mit dem Befehl
    ``pip install -r requirements.txt``)
@@ -84,8 +114,8 @@ Zu beachten ist, dass in der System-Path-Umgebungsvariable der Pfad zur
 spaCy installiert wurde. Ggf. sollte hierzu activate.bat im Verzeichnis
 der virtuellen Umgebung der Python-Installation aufgerufen werden.
 
-Da die Vokabulardateien umfangreich sind, dauert allein das Trainieren
-des Entity-Rulers typischerweise eine knappe Minute.
+Da die Vokabulardateien umfangreich sind, kann allein das Trainieren des
+Entity-Rulers (je nach Rechner) eine Minute übersteigen.
 
 Nach Beendigung des Programms befinden sich die xml-Dateien mit der
 RDF-Repräsentation sowie die xml-Datei für den Entity Linker in dem in
@@ -94,7 +124,8 @@ config.json angegebenen Ordner.
 Entity-Linker
 =============
 
-Das Jupyter-notebook entity_linker_demo.ipynb demonstriert, wie die
+Das Jupyter-Notebook entity_linker_demo.ipynb (zu finden im Ordner
+NLP_63458_WS22/notebooks/entity_linker_demo.ipynb) demonstriert, wie die
 Daten aus der xml-Export-Datei gelesen und für das Training von Entity
 Ruler und Entity Linker verwendet werden. Findet der Entity Ruler in
 einem Text Symptome, dann ordnet der Entity Linker diesen Symptome

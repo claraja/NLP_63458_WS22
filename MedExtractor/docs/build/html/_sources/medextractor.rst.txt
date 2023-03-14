@@ -7,9 +7,7 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   medextractor.interfaces
    medextractor.knowledge
-   medextractor.knowledge_extractor
    medextractor.preprocessor
    medextractor.rdf
 
@@ -24,10 +22,10 @@ medextractor.config\_manager module
    :undoc-members:
    :show-inheritance:
 
-medextractor.manual\_rdf\_graph module
---------------------------------------
+medextractor.create\_manual\_rdf\_graph module
+----------------------------------------------
 
-.. automodule:: medextractor.manual_rdf_graph
+.. automodule:: medextractor.create_manual_rdf_graph
    :members:
    :undoc-members:
    :show-inheritance:

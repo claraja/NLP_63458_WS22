@@ -20,6 +20,14 @@ medextractor.knowledge.entity module
    :undoc-members:
    :show-inheritance:
 
+medextractor.knowledge.knowledge\_extractor module
+--------------------------------------------------
+
+.. automodule:: medextractor.knowledge.knowledge_extractor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 medextractor.knowledge.relations module
 ---------------------------------------
 

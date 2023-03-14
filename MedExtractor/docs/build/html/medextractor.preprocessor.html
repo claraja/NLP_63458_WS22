@@ -20,7 +20,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="medextractor.rdf package" href="medextractor.rdf.html" />
-    <link rel="prev" title="medextractor.knowledge_extractor package" href="medextractor.knowledge_extractor.html" /> 
+    <link rel="prev" title="medextractor.knowledge package" href="medextractor.knowledge.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -40,7 +40,9 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="readme.html">Medextractor - Konsolenapplikation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">Fachpraktikum WS 22/23 - Natural Language Processing (NLP) mit spaCy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#medextractor-konsolenapplikation">Medextractor - Konsolenapplikation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#ordnerstruktur">Ordnerstruktur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="readme.html#konfigurationsdatei-config-json">Konfigurationsdatei config.json</a></li>
 <li class="toctree-l1"><a class="reference internal" href="readme.html#vokabular-dateien">Vokabular-Dateien</a></li>
 <li class="toctree-l1"><a class="reference internal" href="readme.html#aufruf-des-programms">Aufruf des Programms</a></li>
@@ -48,16 +50,14 @@
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">medextractor</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="medextractor.html">medextractor package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="medextractor.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="medextractor.interfaces.html">medextractor.interfaces package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="medextractor.knowledge.html">medextractor.knowledge package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="medextractor.knowledge_extractor.html">medextractor.knowledge_extractor package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">medextractor.preprocessor package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="medextractor.rdf.html">medextractor.rdf package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#submodules">Submodules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor.config_manager">medextractor.config_manager module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor.manual_rdf_graph">medextractor.manual_rdf_graph module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor.create_manual_rdf_graph">medextractor.create_manual_rdf_graph module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor.medextractor">medextractor.medextractor module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor.ruler_creator">medextractor.ruler_creator module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor">Module contents</a></li>
@@ -102,8 +102,8 @@
 <span id="medextractor-preprocessor-preprocessor-module"></span><h2>medextractor.preprocessor.preprocessor module<a class="headerlink" href="#module-medextractor.preprocessor.preprocessor" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="medextractor.preprocessor.preprocessor.RuleBasedPreprocessor">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">medextractor.preprocessor.preprocessor.</span></span><span class="sig-name descname"><span class="pre">RuleBasedPreprocessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.preprocessor.preprocessor.RuleBasedPreprocessor" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PreprocessingInterface</span></code></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">medextractor.preprocessor.preprocessor.</span></span><span class="sig-name descname"><span class="pre">RuleBasedPreprocessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_pysbd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.preprocessor.preprocessor.RuleBasedPreprocessor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.preprocessor.preprocessor.RuleBasedPreprocessor.get_preprocessed_text">
 <span class="sig-name descname"><span class="pre">get_preprocessed_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#medextractor.preprocessor.preprocessor.RuleBasedPreprocessor.get_preprocessed_text" title="Permalink to this definition"></a></dt>
@@ -122,16 +122,16 @@ processes this text such that it is in a good format for further processing.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.preprocessor.preprocessor.RuleBasedPreprocessor.pysbd_sentence_boundaries">
 <span class="sig-name descname"><span class="pre">pysbd_sentence_boundaries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.preprocessor.preprocessor.RuleBasedPreprocessor.pysbd_sentence_boundaries" title="Permalink to this definition"></a></dt>
-<dd><p>TODO:Beschreibung</p>
+<dd><p>Creates a SpaCy pipeline component to segment a text into sentences using pysbd.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>doc</strong> (<em>TODO:dtype</em>) – TODO:Beschreibung</p>
+<dd class="field-odd"><p><strong>doc</strong> (<em>Doc</em>) – SpaCy Doc object</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>TODO</strong></p>
+<dd class="field-even"><p><strong>doc</strong> – SpaCy Doc object</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dtype</p>
+<dd class="field-odd"><p>Doc</p>
 </dd>
 </dl>
 </dd></dl>
@@ -148,7 +148,7 @@ processes this text such that it is in a good format for further processing.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="medextractor.knowledge_extractor.html" class="btn btn-neutral float-left" title="medextractor.knowledge_extractor package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="medextractor.knowledge.html" class="btn btn-neutral float-left" title="medextractor.knowledge package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="medextractor.rdf.html" class="btn btn-neutral float-right" title="medextractor.rdf package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

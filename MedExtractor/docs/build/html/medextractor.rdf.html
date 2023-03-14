@@ -39,7 +39,9 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="readme.html">Medextractor - Konsolenapplikation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">Fachpraktikum WS 22/23 - Natural Language Processing (NLP) mit spaCy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#medextractor-konsolenapplikation">Medextractor - Konsolenapplikation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#ordnerstruktur">Ordnerstruktur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="readme.html#konfigurationsdatei-config-json">Konfigurationsdatei config.json</a></li>
 <li class="toctree-l1"><a class="reference internal" href="readme.html#vokabular-dateien">Vokabular-Dateien</a></li>
 <li class="toctree-l1"><a class="reference internal" href="readme.html#aufruf-des-programms">Aufruf des Programms</a></li>
@@ -47,16 +49,14 @@
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">medextractor</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="medextractor.html">medextractor package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="medextractor.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="medextractor.interfaces.html">medextractor.interfaces package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="medextractor.knowledge.html">medextractor.knowledge package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="medextractor.knowledge_extractor.html">medextractor.knowledge_extractor package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="medextractor.preprocessor.html">medextractor.preprocessor package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">medextractor.rdf package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#submodules">Submodules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor.config_manager">medextractor.config_manager module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor.manual_rdf_graph">medextractor.manual_rdf_graph module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor.create_manual_rdf_graph">medextractor.create_manual_rdf_graph module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor.medextractor">medextractor.medextractor module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor.ruler_creator">medextractor.ruler_creator module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="medextractor.html#module-medextractor">Module contents</a></li>
@@ -102,11 +102,11 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="medextractor.rdf.RDFSerialiser.RDFSerialiser">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">medextractor.rdf.RDFSerialiser.</span></span><span class="sig-name descname"><span class="pre">RDFSerialiser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">knowledgebase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace_prefix</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.rdf.RDFSerialiser.RDFSerialiser" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">RDFSerialiserInterface</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.rdf.RDFSerialiser.RDFSerialiser.knowledgebase_to_graph">
 <span class="sig-name descname"><span class="pre">knowledgebase_to_graph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.rdf.RDFSerialiser.RDFSerialiser.knowledgebase_to_graph" title="Permalink to this definition"></a></dt>
-<dd><p>Transfers the content of the knowledgebase into a rdflib-graph</p>
+<dd><p>Transfers the content of the knowledgebase into an rdflib-graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>None</strong> – </p>
@@ -120,25 +120,10 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.rdf.RDFSerialiser.RDFSerialiser.serialise_knowledgebase">
 <span class="sig-name descname"><span class="pre">serialise_knowledgebase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.rdf.RDFSerialiser.RDFSerialiser.serialise_knowledgebase" title="Permalink to this definition"></a></dt>
-<dd><p>Serialise knowledge base into RDF file</p>
+<dd><p>Serialises knowledge base into an RDF file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>output_path</strong> (<em>string</em>) – path to which the xml-document resulting from the rdflib-Graph will be saved</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>None</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="medextractor.rdf.RDFSerialiser.RDFSerialiser.set_serialisation_format">
-<span class="sig-name descname"><span class="pre">set_serialisation_format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serialisation_format</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.rdf.RDFSerialiser.RDFSerialiser.set_serialisation_format" title="Permalink to this definition"></a></dt>
-<dd><p>Gives the possibility to change the serialisation format to which the rdflib-graph is serialised
-Possible formats: see <a class="reference external" href="https://rdflib.readthedocs.io/en/stable/intro_to_parsing.html#saving-rdf">https://rdflib.readthedocs.io/en/stable/intro_to_parsing.html#saving-rdf</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>serialisation_format</strong> (<em>string</em>) – </p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
@@ -158,11 +143,12 @@ Possible formats: see <a class="reference external" href="https://rdflib.readthe
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.rdf.graphmanager.GraphManager.add_symptom">
 <span class="sig-name descname"><span class="pre">add_symptom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">disease</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symptom</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.rdf.graphmanager.GraphManager.add_symptom" title="Permalink to this definition"></a></dt>
-<dd><p>Adds the found symptom together with the corresponding disease the the rdflib-graph.</p>
+<dd><p>Adds the given symptom together with the given disease to the rdflib-graph
+and saves the given disease in the set of diseases.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>diesease</strong> (<em>string</em>) – </p></li>
+<li><p><strong>disease</strong> (<em>string</em>) – </p></li>
 <li><p><strong>symptom</strong> (<em>string</em>) – </p></li>
 </ul>
 </dd>
@@ -175,7 +161,20 @@ Possible formats: see <a class="reference external" href="https://rdflib.readthe
 <dl class="py method">
 <dt class="sig sig-object py" id="medextractor.rdf.graphmanager.GraphManager.get_serialized_graph">
 <span class="sig-name descname"><span class="pre">get_serialized_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serialization_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pretty-xml'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#medextractor.rdf.graphmanager.GraphManager.get_serialized_graph" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Serializes the graph according to the given serialization_format and
+saves the resulting document to the given output_path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>output_path</strong> (<em>string</em>) – </p></li>
+<li><p><strong>serialization_format</strong> (<em>string</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
