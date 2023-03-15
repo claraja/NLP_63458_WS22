@@ -20,7 +20,11 @@ Dabei wurden diese Werte wie folgt berechnet:
 \item False Negative: als nicht gefundene Symptome wurden Symptome gewertet, die manuell aufgenommenen wurden, vom MedExtractor jedoch nicht (auch nicht in Form einer Teilzeichenkette) erkannt wurden.
 \end{itemize}
 
+Häufig wird bei derartigen Auswertungen auch die Anzahl der True Negatives ermittelt, um aus allen vier Werten eine gemeinsame Übersicht als Konfusionsmatrix aufstellen zu können. Dies würde im vorliegenden Fall jedoch eine Aufstellung aller möglichen Krankheitssymptome erfordern, die nicht Symptom einer bestimmten Erkrankung sind. Dies erscheint unpraktikabel und daher wurde auf die Ermittlung der True Negatives und die Aufstellung einer Konfusionsmatrix verzichtet.
 
+Precision und Recall lassen sich zum F-Maß kombinieren, um die Qualität des Information Retrieval in einer einzigen Kennzahl wiederzugeben. Das F-Maß berechnet sich wie folgt:
+
+\[ F =  2\cdot\frac{Precision\cdot Recall }{Precision + Recall} \]
 
 \begin{table}
 \begin{center}
