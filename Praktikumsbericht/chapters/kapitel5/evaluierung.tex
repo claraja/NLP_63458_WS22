@@ -15,7 +15,6 @@ Für die Evaluierung der erzeugten RDF-Dateien werden zudem von einem Teil der v
 \input{chapters/kapitel5/Auswertung_Preprocessor}
 
 
-
 \section[FZ 2.5 Evaluierung zur Überführung med. Fachvokabulars]{FZ 2.5 Evaluierung zur Überführung medizinischen Fachvokabulars in maschinenlesbare Form zur weiteren Verarbeitung durch NLP}
 \label{sec:FZ2.5}
 
@@ -31,9 +30,12 @@ In Abschnitt \ref{subsec:RDF-Vergleich} erfolgt eine statistische Auswertung der
 \input{chapters/kapitel5/Auswertung_False_Positive}
 
 
-
-
-
 \section{Zusammenfassung}
 \label{sec:zusammenfassung_evaluierung} 
 
+
+Im ersten Abschnitt der Evaluierung wurde zunächst der Einfluss des Preprocessors auf die Anzahl der gefundenen Beziehungen zwischen Krankheiten und Symptomen analysiert. Dabei fiel auf, dass ohne die Vorverarbeitung durch den Preprocessor mehr Beziehungen gefunden werden. Es wurde auch erklärt, warum das nicht unbedingt negativ ist und worauf man bei der weiteren Entwicklung achten sollte. Anschließend wurden die Unterschiede zwischen dem Satzgrenzendetektor \emph{PySBD} und dem Standard-\emph{spaCy}-Sentencizer analysiert.
+
+Der zweite Abschnitt enthält eine Gegenüberstellung des \emph{Entity Rulers} und des \emph{Entity Recognizers} von \emph{spaCy}.
+
+Im dritten Abschnitt wurden manuell erstellte RDF-Dateien mit den zugehörigen vom MedExtractor erstellten RDF-Dateien verglichen. Für den Vergleich wurden die statistischen Werte \emph{Precision} und \emph{Recall} berechnet. Es wurden außerdem die Gründe analysiert, warum der MedExtractor keine optimalen Werte bei Präzision und Sensitivität erzielte. Außerdem wurden verschiedene Fehler des MedExtractors, wie zum Beispiel der Umgang mit mehrdeutigen Begriffen und Negationen, aufgezeigt.
