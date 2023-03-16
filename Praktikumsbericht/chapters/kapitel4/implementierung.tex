@@ -53,6 +53,10 @@ Allerdings funktioniert dieses einfache Konzept für obigen Beispielsatz nicht b
 \section{FZ 3.3 Implementierung zur Wissensrepräsentation}
 \label{sec:FZ3.3} 
 
+Zur Überführung der entstandenen Wissensbasis in das RDF-Format wird die Python-Bibliothek \emph{RDFLib} genutzt. Die wichtigste Klasse von \emph{RDFLib} ist \emph{Graph}, welche eine Struktur zum Speichern von RDF-Tripeln zur Verfügung stellt. Alle Beziehungen zwischen Krankheiten und Symptomen, die in der Wissensbasis gespeichert sind, werden mit der Funktion \emph{knowledgebase\_to\_graph} der Klasse \emph{RDFSerialiser} des \emph{MedExtractors} nacheinander in einen RDF-Graphen überführt. Anschließend wird der Graph mit der Funktion \emph{serialise\_knowledgebase} der Klasse \emph{RDFSerialiser} in ein XML-Format übertragen und als Datei gespeichert. 
+
+Zusätzlich zu der Klasse \emph{RDFSerialiser} nutzt der \emph{MedExtractor} die Klasse \emph{GraphManager}, welche die auf den \emph{MedExtractor} abgestimmten Funktionen zum Umgang mit dem RDF-Graph enthält.
+
 \section{Implementierung weiterer Funktionalität}
 
 Zusätzlich zu den ausgearbeiteten Forschungszielen haben sich während der Implementierung die folgenden Funktionalitäten herauskristallisiert, die einen Mehrwert für das Programm darstellen.
