@@ -69,7 +69,8 @@ Abbildung \ref{fig:komponentendiagramm} stellt das Komponentenmodell der Applika
 \section{FZ 1.2 Theoriebildung zur Vorverarbeitung medizinischer Texte}
 \label{sec:FZ1.2} 
 
-Um die Vorverarbeitung medizinischer Texte durchführen zu können, wird dem Präprozessor (Abbildung \ref{fig:preprocessor}) der Originaltext übergeben. Die Umwandlung und Ausgabe des Textes erfolgt über die Methode get\_preprocessed\_text(). Der Text wird in vollständige Sätze umgewandelt, die für sich alleine stehen können. D.h. Aufzählungen werden in Sätze umgewandelt und Pronomen durch konkrete Substantive ersetzt. 
+Um die Vorverarbeitung medizinischer Texte durchführen zu können, wird dem Präprozessor (Abbildung \ref{fig:preprocessor}) der Originaltext übergeben. Die Umwandlung und Ausgabe des Textes erfolgt über die Methode \\
+get\_preprocessed\_text(). Der Text wird in vollständige Sätze umgewandelt, die für sich alleine stehen können. D.h. Aufzählungen werden in Sätze umgewandelt und Pronomen durch konkrete Substantive ersetzt. 
 
 Für die Erkennung der Satzeinheiten kann die Bibliothek \emph{pySBD - python Sentence Boundary Disambiguation} verwendet werden, die regelbasiert auf Grundlage von 100 \glqq Goldenen Regeln\grqq{} arbeitet.
 
@@ -87,7 +88,9 @@ Falls möglich, soll auch eine Indexstruktur (Kapitel-/Abschnittsüberschrif\-te
 
 Beim Starten des MedExtractors wird eine KnowledgeExtractor-Instanz erzeugt (Abbildung \ref{fig:KnowledgeExtractor}). Zur Instanziierung wird der Dateiname der persistent gespeicherten Wissensbasis übergeben. Das KnowledgeExtractor-Objekt verwaltet das KnowledgeBase-Objekt. Der EntityRuler wird der spaCy-Pipeline hinzugefügt.
 
-Dieser Instanz kann durch den Aufruf KnowledgeExtractor(text:String) ein vom Preprocessor vorbereiteter Abschnitt oder Satz zur Analyse übergeben werden. Daher muss KnowledgeExtractor die Methode \_\_call\_\_(text:String) implementieren. Zusätzlich kann über die Methode set\_context(Entity[]) dem KnowledgeExtractor mitgeteilt werden, um welches Thema es in dem Abschnitt oder Satz geht. Das Thema ergibt sich aus Entitäten, die in Kapitel- oder Abschnittsüberschriften gefunden werden.
+Dieser Instanz kann durch den Aufruf KnowledgeExtractor(text:String) ein vom Preprocessor vorbereiteter Abschnitt oder Satz zur Analyse übergeben werden. Daher muss KnowledgeExtractor die Methode\\
+\_\_call\_\_(text:String) implementieren. Zusätzlich kann über die Methode\\
+set\_context(Entity[]) dem KnowledgeExtractor mitgeteilt werden, um welches Thema es in dem Abschnitt oder Satz geht. Das Thema ergibt sich aus Entitäten, die in Kapitel- oder Abschnittsüberschriften gefunden werden.
 
 is\_related() ist eine private Methode, die vom KnowledgeExtractor-Objekt verwendet wird, um zu prüfen, ob zwei beliebige vom EntityRuler gefundene Entitäten in Beziehung zueinander stehen. Die SemanticRelation-Objekte werden auf Basis eines wiederholten Aufrufs von is\_related() mit unterschiedlichen Kombinationen gefundener Entitäten erzeugt. 
 

@@ -7,7 +7,8 @@ Zur Evaluierung des Systems wurden von zehn der verwendeten Texte manuelle RDF-D
 
 Da der MedExtractor Krankheiten Symptome zuordnet, wurden ebenso bei der manuellen Dateierstellung aus den Texten Symptome ausgewählt, die in die RDF-Dateien aufgenommen wurden. Diese manuelle Erstellung erfordert jedoch Augenmaß, da es kein absolutes Kriterium dafür gibt, was als Symptom einer Krankheit anzusehen ist. Insbesondere enthalten die Arbeitstexte häufig Konjunktionen wie „feeling irritable and intolerant of others“, die an sich als zwei separate Symptome „feeling irritable“ sowie „feeling intolerant of others“ zu betrachten sind. Da der MedExtractor regelbasiert arbeitet und keine Funktionalität enthält, die den Bezug zwischen „feeling“ und dem hinter der Konjunktion folgenden „intolerant of others“ herstellen könnte, wurden Gesamtwortgruppen in die manuellen RDF-Dateien aufgenommen mit dem Risiko, dass nur ein Teil der Wortgruppen erkannt wird.
 
-Zur Auswertung wurden die erstellten Dateien mittels des Jupyter-Notebooks unter /Notebooks/compare\_rdfs2.ipynb miteinander verglichen und Precision (Genauigkeitsquote) und Recall (Vollständigkeitsquote) ermittelt:
+Zur Auswertung wurden die erstellten Dateien mittels des \\
+Jupyter-Notebooks unter /Notebooks/compare\_rdfs2.ipynb miteinander verglichen und Precision (Genauigkeitsquote) und Recall (Vollständigkeitsquote) ermittelt:
 
 \[ Precision = \frac{True\ Positive}{True\ Positive + False\ Positive} \]
 
