@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:nlp="http://fapranlp.de/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://fapranlp.de/cold">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:physical_signs"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:dizzy"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:tired"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/panic_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic_attacks"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic_attack"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:attack"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:attacks"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stress"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:social_anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/bulimia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:binge_eating"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:tense"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:mood_changes"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_guilty"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:physical_signs"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/depression">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:memory_problems"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stress"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:social_anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:low_mood"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:psychological_symptoms"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_hopeless"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:low_self_esteem"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:tearful"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_guilt"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:feeling_irritable"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:interest"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:no_motivation"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:worried"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:suicidal_thoughts"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:changes_in_appetite"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:constipation"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:aches"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:pains"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:lack_of_energy"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:low_sex_drive"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:loss_of_libido"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:neglecting"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:interests"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/delirium">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:memory_problems"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stress"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/social_anxiety_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:trembling"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sweating"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:racing_heart"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:body_posture"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:soft_voice"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/anxiety_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:fear_of_being_watched"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:panic"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:attacks"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/postnatal_psychosis">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:elated"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:lack_of_energy"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:low_mood"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:loss_of_appetite"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/dementia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:aging"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stop_working"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:getting_lost"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:interest"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:delusions"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:genetic_mutations"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:memory_problems"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:stress"/>
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/eating_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:worried"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/paranoia">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:delusions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/wound">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:restless"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/generalised_anxiety_disorder">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:social_anxiety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/eating_disorders">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:sick"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fapranlp.de/mania">
+    <nlp:hasSymptom rdf:resource="http://fapranlp.de/symptom:elated"/>
+  </rdf:Description>
+</rdf:RDF>
