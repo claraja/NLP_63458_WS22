@@ -1,8 +1,7 @@
 - Welche Alternativen zu einer Implementierung einer vergleichbaren Funktionaliät gegenüber spaCy gibt es. Wo liegen ggf. Vor- und Nachteile?
 
-Für den im November 2022 veröffentlichten Chatbot ChatGPT von OpenAI steht eine Python-API (https://platform.openai.com/docs/guides/chat/chat-vs-completions) zur Verfügung, über die Antworten des bereits trainierten Chatbot eingeholt werden können. Der Vorteil von ChatGPT ist seine sehr umfassende Datenbasis. Als Nachteile stehen dem jedoch die unklare und unsichere Datenschutzsituation gegenüber, was ihn in der derzeitigen Form keinesfalls für einen tatsächlichen Einsatz in Beratungssituationen disqualifizieren würde. Zudem ist er nicht auf psychotherapeutische Fachgespräche trainiert, sondern liefert sehr allgemein gehaltene Antworten, die keine verlässlichen Therapieaussagen enthalten.
-
-ChatGPT kann auch RDF-Datei aus Text erstellen.
+Für den im November 2022 veröffentlichten Chatbot ChatGPT von OpenAI steht eine Python-API (https://platform.openai.com/docs/guides/chat/chat-vs-completions) zur Verfügung, über die Antworten des bereits trainierten Chatbot eingeholt werden können. Man kann dem Chatbot zum Beispiel sagen "Erstelle eine Ausgabe im RDF-Format mit Krankheiten und Symptomen aus dem folgenden Text: <Beispiel-Text>". Daraufhin erstellt ChatGPT eine Ausgabe im RDF-Format, die für einige getestete Texte sehr ähnlich der entsprechenden Ausgabe des MedExtractors ist.
+Der Vorteil von ChatGPT ist seine sehr umfassende Datenbasis. Als Nachteile stehen dem jedoch die unklare und unsichere Datenschutzsituation gegenüber, was ihn in der derzeitigen Form keinesfalls für einen tatsächlichen Einsatz in Beratungssituationen disqualifizieren würde. Zudem ist er nicht auf psychotherapeutische Fachgespräche trainiert, sondern liefert sehr allgemein gehaltene Antworten, die keine verlässlichen Therapieaussagen enthalten.
 
 Die kommerziellen Entwicklungen im NLP-Bereich sind derzeit sehr aktiv und neben ChatGPT existieren weitere trainierte Modelle:
 BERT
@@ -16,8 +15,8 @@ dann überprüft, ob dieser Krankheiten und Symptome enthält, und diese Krankhe
 den Symptomen in Verbindung gebracht.
 Das wäre eine Alternativlösung, weil es bisher nur die Unterteilung in Symptome und 
 Krankheiten gibt. Wollte man weitere Informationen aus den Texten extrahieren, müsste
-man Kategorien einführen, mit denen es schnell unübersichtlicher werden könnte als mit dem 
-EntityRuler.
+man weitere Kategorien einführen, mit denen es schnell unübersichtlicher (und vermutlich auch 
+weniger performant) werden könnte als mit dem EntityRuler.
 
 Beispiel:
 from itertools import product
@@ -38,5 +37,6 @@ Sollte es möglich sein, Zugriff auf Skripte von Gesprächen zwischen psychologi
 
 Insgesamt sind in dem sehr sensiblen Bereich der Kommunikation zu medizinischen Sachverhalten besonders hohe Datenschutzanforderungen zu erfüllen, damit keine personengebundenen Daten in (öffentlich zugängliches) Trainingsmaterial für Sprachmodelle gelangen.
 
-- automatisiert nach einschlägigen Text-Datenbasen suchen
+Weiterhin könnte man sich damit beschäftigen, wie möglichst automatisiert (mit einem Webcrawler) weitere medizinische Texte zum Trainieren der Modelle im Web gefunden werden können.
+
 - Fehlerkorrektur, Sentiment Analysis
