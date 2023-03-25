@@ -1,0 +1,19 @@
+- Welche Alternativen zu einer Implementierung einer vergleichbaren Funktionaliät gegenüber spaCy gibt es. Wo liegen ggf. Vor- und Nachteile?
+
+Für den im November 2022 veröffentlichten Chatbot ChatGPT von OpenAI steht eine Python-API (https://platform.openai.com/docs/guides/chat/chat-vs-completions) zur Verfügung, über die Antworten des bereits trainierten Chatbot eingeholt werden können. Der Vorteil von ChatGPT ist sein sehr umfassende Datenbasis. Als Nachteile stehen dem jedoch die unklare und unsichere Datenschutzsituation gegenüber, was ihn in der derzeitigen Form keinesfalls für einen tatsächlichen Einsatz in Beratungssituationen disqualifizieren würde. Zudem ist er nicht auf psychotherapeutische Fachgespräche trainiert, sondern liefert sehr allgemein gehaltene Antworten, die keine verlässlichen Therapieaussagen enthalten.
+
+Die kommerziellen Entwicklungen im NLP-Bereich sind derzeit sehr aktiv und neben ChatGPT existieren weitere trainierte Modelle:
+BERT
+Stanford CoreNLP
+Gensim
+(LaMDA, BARD)
+
+
+- Ihr Ausblick bezieht sich auf die weitere Verwendung einer weiteren spaCy Komponente. Wo sehen Sie weiteres Potenzial für künftige aufbauende Forschungsarbeiten (ggf. auch aus "strategischer" Sicht)?
+
+
+Auf der Hugging-Face-Plattform werden vortrainierte Modelle und Datensätze bereitgestellt, unter anderem auch zu psychologischen Themen wie https://huggingface.co/nlp4good/psych-search?text=If+you%27re+depressed%2C+you+may+feel+%5BMASK%5D, auf die mit einem spaCy-Paket zugegriffen werden kann (https://spacy.io/universe/project/spacy-transformers).
+
+Sollte es möglich sein, Zugriff auf Skripte von Gesprächen zwischen psychologischen Fachkräften und Patient:innen zu erhalten, können diese als Grundlage für das Training von Sprachmodellen dienen.
+
+Insgesamt sind in dem sehr sensiblen Bereich der Kommunikation zu medizinischen Sachverhalten besonders hohe Datenschutzanforderungen zu erfüllen, damit keine personengebundenen Daten in (öffentlich zugängliches) Trainingsmaterial für Sprachmodelle gelangen.
